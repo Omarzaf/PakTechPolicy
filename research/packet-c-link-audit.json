@@ -1,0 +1,148 @@
+{
+  "checked_at": "2026-07-25T18:34:56.459Z",
+  "input": "research/packet-c.json",
+  "record_count": 14,
+  "reachable_count": 14,
+  "results": [
+    {
+      "id": "digital-pakistan-policy-2018",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/DIGITAL%20PAKISTAN%20POLICY.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 2258,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "digital-nation-pakistan-act-2025",
+      "verification": "Verified",
+      "url": "https://na.gov.pk/uploads/documents/679b239e8d57f_451.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1988,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "data-governance-policy-2026-draft",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/Data%20Governance%20Policy%20June%202026.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1940,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "wasl-reference-architecture-2026",
+      "verification": "Verified",
+      "url": "https://standards.pda.gov.pk/dnp-d.002ra.html",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1634,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "pakistan-cloud-first-policy-2022",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/Pakistan%20Cloud%20First%20Policy-Final-25-02-2022%20%281%29.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1946,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "cloud-service-provider-accreditation-criteria-2024",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/AccreditationCriteriaCSP.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1796,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "cloud-services-procurement-framework-2024",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/SBD_Cloud%20Procurement_PPRA_MOITT.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 3339,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "sbp-cloud-outsourcing-framework-2023",
+      "verification": "Verified",
+      "url": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2023",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 3456,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "secp-cloud-adoption-guidelines-2021-draft",
+      "verification": "Verified",
+      "url": "https://www.secp.gov.pk/document/draft-cloud-adoption-guidelines-for-incorporated-companies/",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 3502,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "national-ai-policy-2025",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20AI%20Policy.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1747,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "national-semiconductor-policy-2024-draft",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/Semiconuctor%20Policy.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1767,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "national-broadband-policy-2021-draft",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 2249,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "5g-readiness-plan-2021-draft",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/World%20Bank-%20TA%20Advisory-%205G%20Readiness%20Plan%20for%20Pakistan.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 5600,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "5g-strategic-plan-policy-guidelines-2021-draft",
+      "verification": "Verified",
+      "url": "https://www.moitt.gov.pk/SiteImage/Policies/5G%20Policy%20Guidelines%20_Final_15%20Dec%2021.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1658,
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

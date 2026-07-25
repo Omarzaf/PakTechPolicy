@@ -1,0 +1,583 @@
+[
+  {
+    "id": "peca-2016",
+    "title": "Prevention of Electronic Crimes Act, 2016",
+    "short_name": "PECA",
+    "domains": [
+      "Cybercrime & online speech",
+      "Data protection & privacy"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2016-08-18",
+    "last_amended": "2025-01-29",
+    "summary": "Pakistan's principal federal statute on offences involving information systems and data, related investigation and evidence-gathering powers, service-provider duties, and online-content controls.",
+    "key_provisions": [
+      "Creates offences involving unauthorized access, copying or interference with systems and data, identity information, interception, cyberstalking, and specified forms of online content.",
+      "Requires service providers to retain specified traffic data for at least one year and provide it when supported by a court warrant.",
+      "Provides procedures for preservation, search, seizure, disclosure, real-time collection, confidentiality, prosecution, trial, and international cooperation."
+    ],
+    "affects": [
+      "Citizens",
+      "Service providers",
+      "Social media platforms",
+      "Law enforcement",
+      "Courts"
+    ],
+    "related": [
+      "criminal-laws-amendment-2023",
+      "peca-amendment-2025",
+      "removal-blocking-online-content-rules-2021",
+      "investigation-fair-trial-act-2013",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+    "secondary_sources": [
+      "https://na.gov.pk/uploads/documents/64f840c325916_768.pdf",
+      "https://na.gov.pk/uploads/documents/679b243193585_457.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "criminal-laws-amendment-2023",
+    "title": "Criminal Laws (Amendment) Act, 2023",
+    "short_name": "Criminal Laws Amendment 2023",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-07-18",
+    "last_amended": null,
+    "summary": "An amending act that added child-focused online offences, cyberbullying provisions, investigation procedures, and victim protections to PECA and made related changes to evidence and criminal law.",
+    "key_provisions": [
+      "Adds PECA offences concerning online grooming, child sexual exploitation, and use of information systems for kidnapping, abduction, or trafficking of a minor.",
+      "Adds a cyberbullying offence and a route for a minor, through a guardian, to seek removal or blocking of the relevant content.",
+      "Adds investigation timelines, remand rules, victim and witness protections, in-camera trial provisions, and a victim-support mechanism."
+    ],
+    "affects": [
+      "Children",
+      "Guardians",
+      "Law enforcement",
+      "Courts",
+      "Social media users"
+    ],
+    "related": [
+      "peca-2016",
+      "peca-amendment-2025"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/64f840c325916_768.pdf",
+    "secondary_sources": [
+      "https://senate.gov.pk/en/pbna.php?catid=186&cattitle=Bills&leftcatid=278&subcatid=276",
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "peca-amendment-2025",
+    "title": "Prevention of Electronic Crimes (Amendment) Act, 2025",
+    "short_name": "PECA Amendment 2025",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2025-01-29",
+    "last_amended": null,
+    "summary": "An amendment to PECA that creates a new social-media regulatory structure, revises online-content provisions, adds a false-information offence, and assigns PECA investigations to the National Cyber Crime Investigation Agency.",
+    "key_provisions": [
+      "Provides for a Social Media Protection and Regulatory Authority, a Social Media Complaint Council, and a Social Media Protection Tribunal.",
+      "Establishes enlistment and complaint-handling provisions for social media platforms and defines categories of unlawful or offensive online content.",
+      "Adds an offence concerning intentional dissemination of false or fake information and substitutes the National Cyber Crime Investigation Agency as the investigation agency."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Regulators",
+      "Law enforcement",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "criminal-laws-amendment-2023",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/679b243193585_457.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "https://na.gov.pk/en/print_act.php"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "citizens-protection-online-harm-rules-2020",
+    "title": "Citizens Protection (Against Online Harm) Rules, 2020",
+    "short_name": "Citizens Protection Rules 2020",
+    "domains": [
+      "Cybercrime & online speech",
+      "Data protection & privacy"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Repealed",
+    "date_enacted": "2020-01-21",
+    "last_amended": null,
+    "summary": "A repealed ruleset that established a national coordinator and imposed content-removal, local-presence, data-disclosure, and enforcement obligations on social media companies.",
+    "key_provisions": [
+      "Required notified unlawful content to be removed or disabled within twenty-four hours, or six hours in an emergency.",
+      "Required covered companies to register, establish a local office and focal person, and establish database servers in Pakistan.",
+      "Authorized service blocking and financial penalties for non-compliance."
+    ],
+    "affects": [
+      "Social media platforms",
+      "Citizens",
+      "Regulators",
+      "Law enforcement"
+    ],
+    "related": [
+      "peca-2016",
+      "removal-blocking-online-content-rules-2020",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/CP%20%28Against%20Online%20Harm%29%20Rules%2C%202020.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "removal-blocking-online-content-rules-2020",
+    "title": "Removal and Blocking of Unlawful Online Content (Procedure, Oversight and Safeguards) Rules, 2020",
+    "short_name": "Online Content Rules 2020",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Repealed",
+    "date_enacted": "2020-10-06",
+    "last_amended": null,
+    "summary": "A repealed ruleset that prescribed a Pakistan Telecommunication Authority process for complaints, removal or blocking orders, platform obligations, review, and appeal concerning unlawful online content.",
+    "key_provisions": [
+      "Established complaint and hearing procedures for Pakistan Telecommunication Authority decisions on unlawful online content.",
+      "Set compliance requirements for service providers and social media companies.",
+      "Provided review within the Authority and a subsequent appeal route to the High Court."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Service providers",
+      "Pakistan Telecommunication Authority",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "citizens-protection-online-harm-rules-2020",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Corrected%20Version%20of%20Rules.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "removal-blocking-online-content-rules-2021",
+    "title": "Removal and Blocking of Unlawful Online Content (Procedure, Oversight and Safeguards) Rules, 2021",
+    "short_name": "Online Content Rules 2021",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2021-10-12",
+    "last_amended": null,
+    "summary": "Rules governing Pakistan Telecommunication Authority complaints, notices, hearings, removal or blocking directions, platform obligations, enforcement, review, and appeal under PECA's online-content provisions.",
+    "key_provisions": [
+      "Provides a complaint process and generally requires an opportunity to be heard before a removal or blocking order.",
+      "Sets a forty-eight-hour compliance period for directions, with a shorter period for emergency cases.",
+      "Provides for review by the Authority and appeal to the High Court, and repeals both federal online-content rulesets issued in 2020."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Service providers",
+      "Pakistan Telecommunication Authority",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "peca-amendment-2025",
+      "citizens-protection-online-harm-rules-2020",
+      "removal-blocking-online-content-rules-2020"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/MTBmMGQ3NDItOWM2Mi00N2M0LWE1ZGUtMjRlNWJlOGYwZGU0",
+      "https://moitt.gov.pk/SiteImage/Downloads/MoITT-YB-21-22.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "personal-data-protection-bill-2023",
+    "title": "Personal Data Protection Bill, 2023",
+    "short_name": "PDP Bill 2023",
+    "domains": [
+      "Data protection & privacy"
+    ],
+    "type": "Bill",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2023-05-01",
+    "last_amended": null,
+    "summary": "A federal draft bill proposing rules for collection, processing, use, disclosure, security, and cross-border transfer of personal data, together with data-subject rights and a national data-protection commission.",
+    "key_provisions": [
+      "Sets proposed obligations for lawful and fair processing, consent, purpose limitation, security, and breach notification.",
+      "Proposes rights including access, correction, erasure, grievance redress, portability, and protections concerning automated processing.",
+      "Proposes a National Commission for Personal Data Protection with complaint, enforcement, and penalty functions."
+    ],
+    "affects": [
+      "Citizens",
+      "Children",
+      "Data controllers",
+      "Data processors",
+      "Government bodies",
+      "Businesses"
+    ],
+    "related": [
+      "peca-2016",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Personal%20Data%20Protection%20Bill%20May%202023.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/YjVmNzU0MWMtYzBkMC00Yjg5LTk1ODktOTJiODYzZTY5ZWRk"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "electronic-transactions-ordinance-2002",
+    "title": "Electronic Transactions Ordinance, 2002",
+    "short_name": "ETO",
+    "domains": [
+      "Data protection & privacy"
+    ],
+    "type": "Ordinance",
+    "issuing_body": "President of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2002-09-11",
+    "last_amended": "2016-08-18",
+    "summary": "Pakistan's framework for legal recognition of electronic documents, communications, signatures, and certification services; its original privacy and information-system damage offences were omitted by PECA in 2016.",
+    "key_provisions": [
+      "Recognizes electronic documents, records, communications, and signatures and sets rules for attribution, acknowledgement, and retention.",
+      "Establishes the Electronic Certification Accreditation Council and a framework for certification service providers.",
+      "Permits regulations addressing privacy and protection of certification-service subscriber data; PECA omitted the Ordinance's former sections 36 and 37."
+    ],
+    "affects": [
+      "Citizens",
+      "Businesses",
+      "Certification service providers",
+      "Government bodies"
+    ],
+    "related": [
+      "peca-2016",
+      "personal-data-protection-bill-2023"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratordbc98dd49f2df3b1d07bb986dcceb9a3.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "investigation-fair-trial-act-2013",
+    "title": "Investigation for Fair Trial Act, 2013",
+    "short_name": "Fair Trial Act",
+    "domains": [
+      "Data protection & privacy"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2013-02-20",
+    "last_amended": null,
+    "summary": "A federal statute regulating warrants for surveillance and interception in investigations of scheduled offences, including executive authorization, High Court oversight, service-provider cooperation, and controls on use of intercepted material.",
+    "key_provisions": [
+      "Requires an authorized officer to obtain ministerial permission before applying to a High Court judge for a surveillance or interception warrant.",
+      "Directs the judge to consider evidentiary need and privacy interference when deciding whether and how to issue a warrant.",
+      "Provides for review, complaints concerning misuse, confidentiality, admissibility, and offences for unauthorized surveillance or misuse of intercepted material."
+    ],
+    "affects": [
+      "Citizens",
+      "Law enforcement",
+      "Intelligence agencies",
+      "Service providers",
+      "High Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "pakistan-telecommunication-reorganization-act-1996"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administrator289aee517e7b8512e341194f9e846738.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2FqbZw%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-telecommunication-reorganization-act-1996",
+    "title": "Pakistan Telecommunication (Re-organization) Act, 1996",
+    "short_name": "Telecom Reorganization Act",
+    "domains": [
+      "Internet governance & access",
+      "Data protection & privacy"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "Amended",
+    "date_enacted": "1996-10-13",
+    "last_amended": "2024-09-20",
+    "summary": "The foundational statute for Pakistan's telecommunications institutions and licensing system, including the Pakistan Telecommunication Authority, universal-service funding, right-of-way rules, national-security powers, and sector appeals.",
+    "key_provisions": [
+      "Establishes the Pakistan Telecommunication Authority and assigns it licensing, regulatory, consumer-protection, competition, and universal-service functions.",
+      "Establishes the Universal Service Fund for access in unserved, underserved, rural, and remote areas.",
+      "Authorizes specified interception and service-priority measures for national-security purposes and provides for a Telecommunication Appellate Tribunal."
+    ],
+    "affects": [
+      "Citizens",
+      "Telecom licensees",
+      "Pakistan Telecommunication Authority",
+      "Federal Government",
+      "Courts"
+    ],
+    "related": [
+      "investigation-fair-trial-act-2013",
+      "public-private-right-of-way-policy-directive-2020",
+      "telecommunications-policy-2015",
+      "universal-service-fund-rules-2006",
+      "universal-service-fund-amendment-rules-2023"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratorcf6de2451af9e9d016e5fef2ac7e1562.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apqWaw%3D%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "public-private-right-of-way-policy-directive-2020",
+    "title": "Public & Private Right of Way Policy Directive",
+    "short_name": "RoW Policy Directive",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Directive",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2020-10-09",
+    "last_amended": null,
+    "summary": "A federal directive to facilitate deployment and maintenance of telecommunications infrastructure across public and private rights of way.",
+    "key_provisions": [
+      "Sets a policy framework for right-of-way permissions and fee determination for telecommunications infrastructure.",
+      "Addresses dispute resolution, infrastructure protection, sharing of rights of way, and common service corridors.",
+      "Directs the Pakistan Telecommunication Authority on implementation under the telecommunications statute."
+    ],
+    "affects": [
+      "Telecom licensees",
+      "Public authorities",
+      "Private property owners",
+      "Pakistan Telecommunication Authority",
+      "Internet users"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "telecommunications-policy-2015",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/ROW%20Policy%20Directive%20.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl",
+      "https://moitt.gov.pk/NewsDetail/YWU1NWUwNjUtOWEzNS00MzQzLTgzZGQtYTZmZDc4NjdiNmUy"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "telecommunications-policy-2015",
+    "title": "Telecommunications Policy 2015",
+    "short_name": "Telecom Policy 2015",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology",
+    "status": "In force",
+    "date_enacted": "2015-12-11",
+    "last_amended": null,
+    "summary": "A national policy for universal, affordable, and quality telecommunications through competitive markets, covering broadband expansion, spectrum, competition, convergence, satellite services, and universal service.",
+    "key_provisions": [
+      "Sets universal access, affordability, quality, and competition as central policy objectives.",
+      "Provides policy direction on spectrum strategy and sharing, broadband infrastructure, satellite communications, and over-the-top services.",
+      "Reframes universal service to support broadband demand and connectivity in rural and underserved areas."
+    ],
+    "affects": [
+      "Citizens",
+      "Telecom operators",
+      "Internet service providers",
+      "Regulators",
+      "Rural communities"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "public-private-right-of-way-policy-directive-2020",
+      "universal-service-fund-rules-2006",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1635420671-telecommunications-policy-2015-approvedpdf.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
+      "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "universal-service-fund-rules-2006",
+    "title": "Universal Service Fund Rules, 2006",
+    "short_name": "USF Rules",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2006-11-01",
+    "last_amended": "2023-02-22",
+    "summary": "Rules for administering and managing Pakistan's Universal Service Fund and its programs for extending telecommunications and broadband access to unserved and underserved areas.",
+    "key_provisions": [
+      "Defines the Fund's governance through a policy committee, fund secretariat, and state-owned Universal Service Fund company.",
+      "Provides for competitive allocation of subsidies and projects serving unserved and underserved areas.",
+      "Sets budgeting, contribution, disbursement, contracting, monitoring, and reporting arrangements for universal-service projects."
+    ],
+    "affects": [
+      "Rural communities",
+      "Underserved communities",
+      "Telecom licensees",
+      "Universal Service Fund Company",
+      "Federal Government"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "telecommunications-policy-2015",
+      "universal-service-fund-amendment-rules-2023"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1644386968-usf-rules-updated-2021pdf.pdf",
+    "secondary_sources": [
+      "https://www.usf.org.pk/storage/rules-policies/1744350850-usf-rules-ammendments-2023pdf.pdf",
+      "https://www.usf.org.pk/rules-policies-guidelines"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "universal-service-fund-amendment-rules-2023",
+    "title": "USF Rules Amendments 2023",
+    "short_name": "USF Rules Amendments 2023",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-02-22",
+    "last_amended": null,
+    "summary": "Amendments to the Universal Service Fund Rules that revise definitions, governance, board composition, and company budgeting and reporting arrangements.",
+    "key_provisions": [
+      "Reconstitutes the Universal Service Fund company board with government, industry, executive, and independent members.",
+      "Specifies independent legal, financial, and telecommunications or information-technology expertise on the board.",
+      "Updates definitions and selected fund, company, budget, and reporting provisions in the 2006 rules."
+    ],
+    "affects": [
+      "Universal Service Fund Company",
+      "Telecom licensees",
+      "Federal Government",
+      "Rural communities",
+      "Underserved communities"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "universal-service-fund-rules-2006"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1744350850-usf-rules-ammendments-2023pdf.pdf",
+    "secondary_sources": [
+      "https://www.usf.org.pk/rules-policies-guidelines",
+      "https://www.usf.org.pk/storage/publications/1731922213-universal-service-fund-usf-annual-report-2023-2024-1o1-compressedpdf.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-broadband-policy-2021-draft",
+    "title": "National Broadband Policy 2021, Consultation Draft v3.0",
+    "short_name": "National Broadband Policy Draft",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Unverified",
+    "date_enacted": "2021-12-07",
+    "last_amended": null,
+    "summary": "A consultation draft proposing a national framework for universal, affordable high-speed internet, digital inclusion, infrastructure expansion, service quality, market development, digital trust, and technology evolution.",
+    "key_provisions": [
+      "Proposes national broadband targets and measures to reduce access gaps in unserved and underserved areas.",
+      "Proposes infrastructure-sharing, fiberization, spectrum, right-of-way, affordability, and quality-of-service measures.",
+      "Organizes implementation around inclusivity and accessibility, usability and market enablement, digital trust, and transformation and evolution."
+    ],
+    "affects": [
+      "Citizens",
+      "Internet service providers",
+      "Telecom operators",
+      "Regulators",
+      "Rural communities"
+    ],
+    "related": [
+      "telecommunications-policy-2015",
+      "public-private-right-of-way-policy-directive-2020",
+      "universal-service-fund-rules-2006"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/SiteImage/Misc/files/National%20Broadband%20Policy%202021%20Consultation%20Draft%281%29.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified"
+  }
+]

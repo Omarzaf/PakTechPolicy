@@ -1,0 +1,30 @@
+{
+  "pakistan-telecommunication-reorganization-act-1996": {
+    "prefer_packet": "packet-a.json",
+    "reason": "The Pakistan Code text is current and Packet A uses the more informative Amended status because the consolidated Act identifies later amendments."
+  },
+  "public-private-right-of-way-policy-directive-2020": {
+    "prefer_packet": "packet-b.json",
+    "reason": "The official document URL returned HTTP 404 during independent QA, so the editorial contract requires an Unverified record and status."
+  },
+  "telecommunications-policy-2015": {
+    "prefer_packet": "packet-a.json",
+    "reason": "Both official copies returned HTTP 200; the Universal Service Fund copy is retained and the PKCERT copy remains a secondary official source.",
+    "patch": {
+      "secondary_sources": [
+        "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
+        "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
+        "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl"
+      ]
+    }
+  },
+  "national-broadband-policy-2021-draft": {
+    "prefer_packet": "packet-c.json",
+    "reason": "The current MoITT policy catalog labels the document Draft and its official Policies URL returned HTTP 200 during research.",
+    "patch": {
+      "secondary_sources": [
+        "https://www.moitt.gov.pk/Policies"
+      ]
+    }
+  }
+}

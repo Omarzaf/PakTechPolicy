@@ -1,0 +1,547 @@
+[
+  {
+    "id": "digital-pakistan-policy-2018",
+    "title": "Digital Pakistan Policy",
+    "short_name": "Digital Pakistan Policy",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2018-07-02",
+    "last_amended": null,
+    "summary": "A national policy for expanding Pakistan's digital economy and public-service digitisation through infrastructure, skills, e-government, sectoral applications, technology adoption, and support for the IT industry.",
+    "key_provisions": [
+      "Sets a whole-of-government direction for digital infrastructure, human-resource development, software exports, e-government, and digitisation of major socioeconomic sectors.",
+      "Calls for adoption and domestic capacity building in artificial intelligence, robotics, the Internet of Things, cloud computing, and big-data technologies.",
+      "Promotes integration of government databases, cloud-based citizen services, and common infrastructure for public- and private-sector applications."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "IT and telecom businesses",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "pakistan-cloud-first-policy-2022",
+      "national-ai-policy-2025",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/DIGITAL%20PAKISTAN%20POLICY.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "digital-nation-pakistan-act-2025",
+    "title": "Digital Nation Pakistan Act, 2025",
+    "short_name": "Digital Nation Pakistan Act",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2025-01-29",
+    "last_amended": null,
+    "summary": "An Act establishing national institutions and planning mechanisms for Pakistan's digital transformation, including digital public infrastructure, data exchange, and coordinated digital governance.",
+    "key_provisions": [
+      "Establishes the National Digital Commission to provide strategic direction for national digital transformation.",
+      "Establishes the Pakistan Digital Authority to formulate, coordinate, and monitor the National Digital Masterplan and sectoral plans.",
+      "Provides for digital public infrastructure, digital citizen journeys, and a secure and interoperable data exchange layer."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "Public-sector organisations",
+      "Private enterprises accessing public digital services",
+      "Citizens"
+    ],
+    "related": [
+      "data-governance-policy-2026-draft",
+      "wasl-reference-architecture-2026"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/679b239e8d57f_451.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5praQ%3D%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "data-governance-policy-2026-draft",
+    "title": "Data Governance Policy 2026",
+    "short_name": "Data Governance Policy",
+    "domains": [
+      "Cloud & data localisation",
+      "National digital strategy",
+      "AI & emerging tech"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2026-06-26",
+    "last_amended": null,
+    "summary": "A draft national policy for governing federal public-sector data across its lifecycle, including sovereignty, residency, openness, sharing, privacy, cross-border transfers, emerging technologies, and institutional implementation.",
+    "key_provisions": [
+      "Proposes sovereignty by default, federated data custody, authoritative-source discipline, minimum disclosure, interoperability, and privacy-by-design as national principles.",
+      "Would apply to federal public bodies and organisations processing government data on their behalf, while promoting coordination with provincial governments.",
+      "Proposes governance requirements for data residency, cross-border transfer, artificial intelligence, open data, and data sharing."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Government contractors and processors",
+      "Public-sector data custodians",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "wasl-reference-architecture-2026",
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Data%20Governance%20Policy%20June%202026.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "wasl-reference-architecture-2026",
+    "title": "WASL — Pakistan National Data Exchange Layer: Reference Architecture",
+    "short_name": "WASL Reference Architecture",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Framework",
+    "issuing_body": "Pakistan Digital Authority",
+    "status": "In force",
+    "date_enacted": "2026-05-13",
+    "last_amended": null,
+    "summary": "The published pilot-maturity reference architecture for Pakistan's national data exchange layer, defining a centrally routed but data-blind platform with federated data custody and consent-governed exchange.",
+    "key_provisions": [
+      "Defines central control and routing components while keeping operational data custody and cryptographic key control with participating entities.",
+      "Requires end-to-end encrypted exchange, citizen consent controls, transaction proofs, standardised schemas, and interoperable client nodes.",
+      "Defines integration surfaces for authorised AI consumers and a roadmap for post-quantum cryptographic agility."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "Regulated private-sector institutions",
+      "Authorised digital platforms",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "data-governance-policy-2026-draft"
+    ],
+    "primary_source_url": "https://standards.pda.gov.pk/dnp-d.002ra.html",
+    "secondary_sources": [
+      "https://standards.pda.gov.pk/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-cloud-first-policy-2022",
+    "title": "Pakistan Cloud First Policy",
+    "short_name": "PCFP",
+    "domains": [
+      "Cloud & data localisation",
+      "National digital strategy"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2022-02-18",
+    "last_amended": null,
+    "summary": "A federal policy directing public-sector entities toward cloud-based ICT investment, with governance arrangements for service-provider accreditation, data classification, procurement, security, and cloud adoption.",
+    "key_provisions": [
+      "Applies to federal public-sector entities making new ICT investments and provides guidance for regulated and private-sector organisations.",
+      "Establishes a Cloud Office to oversee cloud adoption, accreditation, compliance, exemptions, and coordination with provinces.",
+      "Requires public-sector entities to procure from accredited cloud service providers and links cloud selection to government-data classification.",
+      "Allows consultation with the Cloud Office for legitimate cross-border data-flow use cases and associated security controls."
+    ],
+    "affects": [
+      "Federal public-sector entities",
+      "Cloud service providers",
+      "Provincial governments",
+      "Government technology suppliers"
+    ],
+    "related": [
+      "cloud-service-provider-accreditation-criteria-2024",
+      "cloud-services-procurement-framework-2024",
+      "data-governance-policy-2026-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Pakistan%20Cloud%20First%20Policy-Final-25-02-2022%20%281%29.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "cloud-service-provider-accreditation-criteria-2024",
+    "title": "Accreditation Criteria for Cloud Service Providers",
+    "short_name": "Cloud CSP Accreditation Criteria",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Interim Cloud Office, Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2024-06-25",
+    "last_amended": null,
+    "summary": "Criteria and procedures for accrediting cloud service providers that seek to supply cloud services to Pakistan's public-sector entities.",
+    "key_provisions": [
+      "Sets general, security, privacy, service-management, quality-management, and data-centre requirements for applicant cloud providers.",
+      "Requires documentation supporting certifications, service commitments, technical capacity, and compliance with the Pakistan Cloud First Policy.",
+      "Provides for accreditation, audits, suspension, and termination, with the Cloud Office maintaining the accredited-provider list."
+    ],
+    "affects": [
+      "Cloud service providers",
+      "Federal public-sector entities",
+      "Government technology procurement teams"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022",
+      "cloud-services-procurement-framework-2024"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/AccreditationCriteriaCSP.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "cloud-services-procurement-framework-2024",
+    "title": "Standard Bidding Document/Procurement Framework for Cloud Services",
+    "short_name": "Cloud Procurement Framework",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Framework",
+    "issuing_body": "Public Procurement Regulatory Authority and Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2024-07-05",
+    "last_amended": null,
+    "summary": "A national standard procurement document for federal public bodies acquiring cloud services, designed to align tendering and contract practices with public-procurement rules and the Pakistan Cloud First Policy.",
+    "key_provisions": [
+      "Standardises proposal instructions, evaluation procedures, technical requirements, and contract conditions for cloud-service procurement.",
+      "Provides cloud-specific proposal data and service requirements that procuring agencies can complete for individual acquisitions.",
+      "Links federal cloud procurement to the Public Procurement Rules and the Pakistan Cloud First Policy."
+    ],
+    "affects": [
+      "Federal procuring agencies",
+      "Cloud service providers",
+      "Government procurement officials"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022",
+      "cloud-service-provider-accreditation-criteria-2024"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/SBD_Cloud%20Procurement_PPRA_MOITT.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies",
+      "https://www.ppra.org.pk/sbd.asp"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "sbp-cloud-outsourcing-framework-2023",
+    "title": "Framework on Outsourcing to Cloud Service Providers",
+    "short_name": "SBP Cloud Outsourcing Framework",
+    "domains": [
+      "Cloud & data localisation",
+      "Fintech & digital payments"
+    ],
+    "type": "Framework",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-01-16",
+    "last_amended": null,
+    "summary": "A regulatory framework setting minimum risk-management requirements for cloud outsourcing by banks, digital banks, microfinance banks, development finance institutions, electronic money institutions, and payment-system operators and providers.",
+    "key_provisions": [
+      "Applies a risk-based framework to outsourcing material and non-material workloads to domestic or offshore cloud service providers.",
+      "Requires governance, risk assessment, due diligence, contractual protections, information security, audit access, business continuity, and exit planning.",
+      "Required regulated entities to align existing cloud-outsourcing arrangements with the framework by 31 December 2023."
+    ],
+    "affects": [
+      "Banks",
+      "Digital banks",
+      "Microfinance banks",
+      "Development finance institutions",
+      "Electronic money institutions",
+      "Payment system operators and providers",
+      "Cloud service providers"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2023",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/assets/documents/circulars/C1-Annix-A.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "secp-cloud-adoption-guidelines-2021-draft",
+    "title": "Draft Cloud Adoption Guidelines for Incorporated Companies",
+    "short_name": "SECP Cloud Adoption Guidelines",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Securities and Exchange Commission of Pakistan",
+    "status": "Draft",
+    "date_enacted": "2021-07-30",
+    "last_amended": null,
+    "summary": "Draft guidance for companies and other business entities incorporated with the Securities and Exchange Commission of Pakistan when assessing, adopting, migrating to, and managing cloud services.",
+    "key_provisions": [
+      "Describes analysis, planning, adoption, migration, and ongoing management phases for cloud transitions.",
+      "Recommends board-level cloud governance, data classification, data portability, service-level agreements, and compliance checks.",
+      "Directs entities subject to sector-specific regulators to follow those regulators' cloud requirements."
+    ],
+    "affects": [
+      "SECP-incorporated companies",
+      "Non-bank financial companies",
+      "Insurers",
+      "Cloud service providers"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.secp.gov.pk/document/draft-cloud-adoption-guidelines-for-incorporated-companies/",
+    "secondary_sources": [
+      "https://www.secp.gov.pk/media-center/press-releases/secp-issues-draft-cloud-adoption-guidelines-for-companies/",
+      "https://www.secp.gov.pk/laws/guidelines/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-ai-policy-2025",
+    "title": "National Artificial Intelligence Policy",
+    "short_name": "National AI Policy",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Cloud & data localisation"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2025-07-31",
+    "last_amended": null,
+    "summary": "Pakistan's approved national policy for developing and adopting artificial intelligence through innovation, skills, responsible-use safeguards, sectoral transformation, compute and data infrastructure, and international cooperation.",
+    "key_provisions": [
+      "Organises implementation around six pillars: innovation, awareness and readiness, secure AI, transformation, infrastructure, and international partnerships.",
+      "Calls for a National AI Fund, centres of excellence, research and commercialisation support, workforce training, scholarships, and internships.",
+      "Proposes transparency, human oversight, data protection, open-source governance, and regulatory sandboxes for AI systems.",
+      "Provides for national AI compute capacity, datasets, hubs, and an implementation mechanism led through the Ministry."
+    ],
+    "affects": [
+      "Federal and provincial public bodies",
+      "AI developers and deployers",
+      "Researchers and universities",
+      "Startups and investors",
+      "Workers and students",
+      "Citizens"
+    ],
+    "related": [
+      "digital-pakistan-policy-2018",
+      "digital-nation-pakistan-act-2025",
+      "data-governance-policy-2026-draft",
+      "national-semiconductor-policy-2024-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20AI%20Policy.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies",
+      "https://www.moitt.gov.pk/SliderDetail/NWIyMzEwYzktYTIwYy00ZTk0LWI5ODUtYjg5NjZmYTYyMTg2"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-semiconductor-policy-2024-draft",
+    "title": "Draft Semiconductor Policy and Action Plan",
+    "short_name": "Draft Semiconductor Policy",
+    "domains": [
+      "AI & emerging tech",
+      "IT industry & exports"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2024-11-25",
+    "last_amended": null,
+    "summary": "A draft policy and action plan for developing Pakistan's semiconductor workforce, design and packaging capabilities, research base, domestic industry, and participation in global supply chains.",
+    "key_provisions": [
+      "Proposes incentives, a single-window interface, intellectual-property support, tax measures, and a national semiconductor fund.",
+      "Calls for shared electronic-design-automation infrastructure, semiconductor parks, and integration with special economic zones.",
+      "Proposes education and research clusters, workforce training, startup support, public-private partnerships, and international collaboration.",
+      "Sets a long-term objective of indigenous design, testing, packaging, and fabrication capability for critical integrated circuits by 2047."
+    ],
+    "affects": [
+      "Semiconductor businesses",
+      "Technology startups",
+      "Universities and researchers",
+      "Students and technology workers",
+      "Investors"
+    ],
+    "related": [
+      "national-ai-policy-2025"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Semiconuctor%20Policy.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-broadband-policy-2021-draft",
+    "title": "National Broadband Policy 2021 — Consultation Draft v3.0",
+    "short_name": "Draft National Broadband Policy",
+    "domains": [
+      "National digital strategy",
+      "AI & emerging tech",
+      "Internet governance & access"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-12-07",
+    "last_amended": null,
+    "summary": "A consultation draft proposing national broadband targets and policy measures for digital inclusion, market development, trust, infrastructure, and adoption of future network technologies.",
+    "key_provisions": [
+      "Organises proposed measures under inclusivity and accessibility, usability and market enablement, digital trust, and transformation and evolution.",
+      "Proposes phased broadband, device-adoption, speed, affordability, skills, and connectivity targets through 2025 and 2030.",
+      "Addresses spectrum, fibre, data centres, internet exchanges, satellite connectivity, competition, quality of service, and emerging technologies."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Internet service providers",
+      "Federal public bodies",
+      "Businesses",
+      "Citizens"
+    ],
+    "related": [
+      "digital-pakistan-policy-2018",
+      "5g-readiness-plan-2021-draft",
+      "5g-strategic-plan-policy-guidelines-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "5g-readiness-plan-2021-draft",
+    "title": "5G Readiness Plan for Pakistan",
+    "short_name": "5G Readiness Plan",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Telecom regulation"
+    ],
+    "type": "Framework",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-09-01",
+    "last_amended": null,
+    "summary": "A World Bank-supported final draft assessing Pakistan's readiness for 5G and presenting recommendations on spectrum, investment, infrastructure, regulation, and use cases; the document states that its recommendations do not necessarily represent the government's position.",
+    "key_provisions": [
+      "Assesses market readiness, spectrum availability and pricing, device affordability, fibre backhaul, and infrastructure conditions.",
+      "Reviews regulatory measures involving rights of way, infrastructure sharing, competition, cloud infrastructure, and access to towers and fibre.",
+      "Presents recommendations for sequencing spectrum release and supporting 5G applications and use cases."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Telecom regulators",
+      "Spectrum authorities",
+      "Infrastructure providers",
+      "Technology businesses",
+      "Citizens"
+    ],
+    "related": [
+      "national-broadband-policy-2021-draft",
+      "5g-strategic-plan-policy-guidelines-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/World%20Bank-%20TA%20Advisory-%205G%20Readiness%20Plan%20for%20Pakistan.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "5g-strategic-plan-policy-guidelines-2021-draft",
+    "title": "5G Strategic Plan and Policy Guidelines — Consultation Draft",
+    "short_name": "Draft 5G Policy Guidelines",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Telecom regulation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-12-15",
+    "last_amended": null,
+    "summary": "Draft policy guidelines proposing a coordinated path toward 5G deployment through spectrum planning, regulatory preparation, infrastructure facilitation, investment incentives, trials, skills, and public awareness.",
+    "key_provisions": [
+      "Proposes spectrum-band preparation, consultant-led auction design, licensing recommendations, and a spectrum-refarming framework.",
+      "Calls for review of rights-of-way rules and possible fiscal incentives for 5G equipment, devices, and local manufacturing.",
+      "Proposes innovation and test centres, non-commercial trials, 5G skills programmes, and public-awareness activity.",
+      "The document's original milestones targeted preparatory actions in 2022 and a commercial launch in early 2023."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Telecom regulators",
+      "Spectrum authorities",
+      "Equipment vendors",
+      "Researchers and universities",
+      "Citizens"
+    ],
+    "related": [
+      "national-broadband-policy-2021-draft",
+      "5g-readiness-plan-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/5G%20Policy%20Guidelines%20_Final_15%20Dec%2021.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  }
+]

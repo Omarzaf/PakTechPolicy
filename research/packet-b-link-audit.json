@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-07-25T18:35:14.386Z",
+  "input": "research/packet-b.json",
+  "record_count": 13,
+  "reachable_count": 10,
+  "results": [
+    {
+      "id": "pakistan-telecommunication-reorganization-act-1996",
+      "verification": "Verified",
+      "url": "https://pakistancode.gov.pk/pdffiles/administratorcf6de2451af9e9d016e5fef2ac7e1562.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 2212,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "pakistan-telecommunication-rules-2000",
+      "verification": "Unverified",
+      "url": "https://moitt.gov.pk/SiteImage/Misc/files/Pakistan%20telecom%20rules.pdf",
+      "http_code": 404,
+      "reachable": false,
+      "elapsed_ms": 1037,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "telecommunications-policy-2015",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 3816,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "broadband-quality-of-service-regulations-2014",
+      "verification": "Unverified",
+      "url": "https://moitt.gov.pk/SiteImage/Misc/files/2_%20Broadband%20Quality%20of%20Service%20Regulations%2C%202014.pdf",
+      "http_code": 404,
+      "reachable": false,
+      "elapsed_ms": 986,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "public-private-right-of-way-policy-directive-2020",
+      "verification": "Unverified",
+      "url": "https://moitt.gov.pk/SiteImage/Misc/files/ROW%20Policy%20Directive%20.pdf",
+      "http_code": 404,
+      "reachable": false,
+      "elapsed_ms": 965,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "critical-telecom-data-infrastructure-security-regulations-2020",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2023/06/critical_telecom_data_reg_20112020.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 4260,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "national-cyber-security-policy-2021",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2023/06/2021-National-Cyber-Security-Policy-Final.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 5251,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "computer-emergency-response-team-rules-2023",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2023/10/GAZETTE-CERT-Rules-2023.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 9752,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "policy-evaluation-algorithms-security-devices-2020",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2023/06/evaluation-policy-20-3-2020.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 2937,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "national-cyber-security-framework-for-telecom-2022",
+      "verification": "Verified",
+      "url": "https://ntcert.pta.gov.pk/sops/national_cs_framework_for_telecom_07-07-2022.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 1783,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "pakistan-security-standard-itsec-guidebook-2023",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_itsec_guidebook_01-03-2024.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 8406,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "pakistan-security-standard-cryptographic-guidebook-2023",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_crypto_guidebook_01-03-2024.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 9706,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "id": "pakistan-information-security-framework-2026",
+      "verification": "Verified",
+      "url": "https://pkcert.gov.pk/uploads/2026/03/PISF-Merged-Version.pdf",
+      "http_code": 200,
+      "reachable": true,
+      "elapsed_ms": 17240,
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

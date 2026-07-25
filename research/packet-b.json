@@ -1,0 +1,351 @@
+[
+  {
+    "id": "pakistan-telecommunication-reorganization-act-1996",
+    "title": "Pakistan Telecommunication (Re-organization) Act, 1996",
+    "short_name": "Telecommunication Re-organization Act",
+    "domains": ["Telecom regulation"],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "1996-10-13",
+    "last_amended": null,
+    "summary": "The foundational statute for Pakistan's telecommunications sector. It establishes the Pakistan Telecommunication Authority and other sector institutions and provides the legal basis for licensing, regulation, spectrum administration, rights of way, and sector funds.",
+    "key_provisions": [
+      "Establishes the Pakistan Telecommunication Authority and defines its functions and powers.",
+      "Creates a licensing framework for telecommunication systems and services.",
+      "Provides for the Frequency Allocation Board, the Universal Service Fund, and the Research and Development Fund.",
+      "Authorizes the Federal Government to issue policy directives on telecommunications matters."
+    ],
+    "affects": ["Telecom operators", "Government agencies", "Consumers"],
+    "related": [
+      "pakistan-telecommunication-rules-2000",
+      "telecommunications-policy-2015",
+      "broadband-quality-of-service-regulations-2014",
+      "public-private-right-of-way-policy-directive-2020",
+      "critical-telecom-data-infrastructure-security-regulations-2020"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratorcf6de2451af9e9d016e5fef2ac7e1562.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-telecommunication-rules-2000",
+    "title": "Pakistan Telecommunication Rules, 2000",
+    "short_name": "Telecommunication Rules",
+    "domains": ["Telecom regulation"],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2000-11-02",
+    "last_amended": null,
+    "summary": "Rules made under the Pakistan Telecommunication (Re-organization) Act that set out procedures and general conditions for telecommunications licensing and related regulatory matters.",
+    "key_provisions": [
+      "Specifies procedures for applying for and issuing telecommunications licences.",
+      "Includes general licence conditions governing authorized systems and services.",
+      "Addresses interconnection and contracting by licensees."
+    ],
+    "affects": ["Telecom operators", "Licence applicants", "Pakistan Telecommunication Authority"],
+    "related": ["pakistan-telecommunication-reorganization-act-1996"],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Pakistan%20telecom%20rules.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified"
+  },
+  {
+    "id": "telecommunications-policy-2015",
+    "title": "Telecommunications Policy 2015",
+    "short_name": "Telecom Policy 2015",
+    "domains": ["Telecom regulation"],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2015-12-11",
+    "last_amended": null,
+    "summary": "A consolidated federal policy for telecommunications markets, services, infrastructure, spectrum, regulation, universal service, research funding, satellite services, and sector convergence.",
+    "key_provisions": [
+      "Sets policy goals for competition, licensing, service provision, interconnection, and consumer services.",
+      "Addresses broadband, rights of way, infrastructure sharing, national roaming, and disaster communications.",
+      "Provides policy direction on spectrum planning, assignment, refarming, trading, and sharing.",
+      "Sets priorities for universal service and the national ICT research and development fund."
+    ],
+    "affects": ["Telecom operators", "Pakistan Telecommunication Authority", "Frequency Allocation Board", "Consumers"],
+    "related": ["pakistan-telecommunication-reorganization-act-1996"],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "broadband-quality-of-service-regulations-2014",
+    "title": "Broadband Quality of Service Regulations, 2014",
+    "short_name": "Broadband QoS Regulations",
+    "domains": ["Telecom regulation"],
+    "type": "Regulation",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "Unverified",
+    "date_enacted": "2014-06-27",
+    "last_amended": null,
+    "summary": "Regulations issued by the Pakistan Telecommunication Authority to establish quality-of-service requirements and a compliance framework for broadband services.",
+    "key_provisions": [
+      "Establishes quality-of-service parameters for broadband services.",
+      "Provides for measurement and reporting of broadband service performance.",
+      "Enables regulatory monitoring of service-provider compliance."
+    ],
+    "affects": ["Broadband providers", "Pakistan Telecommunication Authority", "Consumers"],
+    "related": ["pakistan-telecommunication-reorganization-act-1996"],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/2_%20Broadband%20Quality%20of%20Service%20Regulations%2C%202014.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified"
+  },
+  {
+    "id": "public-private-right-of-way-policy-directive-2020",
+    "title": "Public & Private Right of Way Policy Directive",
+    "short_name": "Right of Way Policy Directive",
+    "domains": ["Telecom regulation"],
+    "type": "Directive",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Unverified",
+    "date_enacted": "2020-10-09",
+    "last_amended": null,
+    "summary": "A federal policy directive on access to public and private rights of way for installing and maintaining telecommunications infrastructure.",
+    "key_provisions": [
+      "Directs public authorities to assess right-of-way fees on a no-profit, no-loss basis.",
+      "Bars discriminatory or preferential right-of-way fee treatment among licensees.",
+      "Provides a process for escalating disputes over access, fees, or conditions to the appropriate government.",
+      "Addresses infrastructure sharing, safety, national security, and common service corridors."
+    ],
+    "affects": ["Telecom operators", "Public authorities", "Private right-of-way owners"],
+    "related": ["pakistan-telecommunication-reorganization-act-1996"],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/ROW%20Policy%20Directive%20.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified"
+  },
+  {
+    "id": "critical-telecom-data-infrastructure-security-regulations-2020",
+    "title": "Critical Telecom Data and Infrastructure Security Regulations, 2020",
+    "short_name": "CTDISR",
+    "domains": ["Telecom regulation", "Cybersecurity"],
+    "type": "Regulation",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "In force",
+    "date_enacted": "2020-09-08",
+    "last_amended": null,
+    "summary": "Cybersecurity regulations applying to all Pakistan Telecommunication Authority licensees for the protection of critical telecom data and critical telecom infrastructure.",
+    "key_provisions": [
+      "Requires licensees to establish cybersecurity governance, policies, roles, and awareness measures.",
+      "Requires controls for monitoring, malware protection, incident management, continuity, and backups.",
+      "Requires protection and classification of critical and personal telecom data.",
+      "Requires controls for critical telecom infrastructure, including access management and vulnerability remediation."
+    ],
+    "affects": ["Telecom licensees", "Pakistan Telecommunication Authority", "Telecom customers"],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "national-cyber-security-framework-for-telecom-2022"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/critical_telecom_data_reg_20112020.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-cyber-security-policy-2021",
+    "title": "National Cyber Security Policy 2021",
+    "short_name": "NCSP 2021",
+    "domains": ["Cybersecurity"],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2021-07-27",
+    "last_amended": null,
+    "summary": "Pakistan's national policy for cybersecurity governance, protection of critical information infrastructure and government systems, security assurance, capacity building, research, cooperation, and cybercrime response.",
+    "key_provisions": [
+      "Creates a national cybersecurity governance and oversight structure.",
+      "Calls for protection and resilience measures for critical information infrastructure and government information systems.",
+      "Provides for an information security assurance framework and risk-based security practices.",
+      "Sets directions for capacity building, public awareness, research, public-private partnership, and international cooperation."
+    ],
+    "affects": ["Government agencies", "Critical infrastructure operators", "Businesses", "Citizens"],
+    "related": [
+      "computer-emergency-response-team-rules-2023",
+      "pakistan-information-security-framework-2026"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/2021-National-Cyber-Security-Policy-Final.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "computer-emergency-response-team-rules-2023",
+    "title": "Computer Emergency Response Team Rules, 2023",
+    "short_name": "CERT Rules 2023",
+    "domains": ["Cybersecurity"],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-09-26",
+    "last_amended": null,
+    "summary": "Rules establishing a national framework for computer emergency response teams, including national, government, sectoral, and provincial CERT functions and coordination.",
+    "key_provisions": [
+      "Defines the categories, constituencies, and functions of computer emergency response teams.",
+      "Provides for incident handling, vulnerability management, artefact handling, advisories, and coordination.",
+      "Creates reporting and cooperation mechanisms among the National CERT and other CERTs.",
+      "Addresses accreditation, audit, capacity building, and protection of critical information infrastructure."
+    ],
+    "affects": ["National CERT", "Government agencies", "Sectoral regulators", "Critical infrastructure operators"],
+    "related": [
+      "national-cyber-security-policy-2021",
+      "pakistan-information-security-framework-2026"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/10/GAZETTE-CERT-Rules-2023.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "policy-evaluation-algorithms-security-devices-2020",
+    "title": "Policy for Evaluation of Algorithms and Security Devices",
+    "short_name": "Security Device Evaluation Policy",
+    "domains": ["Cybersecurity"],
+    "type": "Policy",
+    "issuing_body": "National Telecommunication and Information Technology Security Board",
+    "status": "In force",
+    "date_enacted": "2020-03-20",
+    "last_amended": null,
+    "summary": "A Cabinet Division policy describing how private vendors may submit cryptographic algorithms and information-security devices to the National Telecommunication and Information Technology Security Board for evaluation and certification.",
+    "key_provisions": [
+      "Allows private vendors to request evaluation of security devices and algorithms through the NTISB.",
+      "Provides a staged submission, laboratory review, evaluation, and certification process.",
+      "Lists evaluation categories, indicative time frames, and fees for document, algorithm, and equipment evaluation."
+    ],
+    "affects": ["Security technology vendors", "Evaluation laboratories", "Government agencies", "Private-sector buyers"],
+    "related": [
+      "pakistan-security-standard-itsec-guidebook-2023",
+      "pakistan-security-standard-cryptographic-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/evaluation-policy-20-3-2020.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "national-cyber-security-framework-for-telecom-2022",
+    "title": "National Cyber Security Framework for Telecom — Assessment Criteria & Guidelines",
+    "short_name": "Telecom Cybersecurity Framework",
+    "domains": ["Telecom regulation", "Cybersecurity"],
+    "type": "Framework",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "In force",
+    "date_enacted": "2022-06-15",
+    "last_amended": null,
+    "summary": "A Pakistan Telecommunication Authority assessment framework for audits of licensee compliance with the Critical Telecom Data and Infrastructure Security Regulations, 2020.",
+    "key_provisions": [
+      "Defines audit responsibilities for telecom licensees and approved auditors.",
+      "Sets assessment criteria, finding categories, and compliance scoring for CTDISR reviews.",
+      "Provides control-by-control audit guidance and expected evidence.",
+      "Covers reporting, confidentiality, breach handling, and continual improvement."
+    ],
+    "affects": ["Telecom licensees", "Approved auditors", "Pakistan Telecommunication Authority"],
+    "related": ["critical-telecom-data-infrastructure-security-regulations-2020"],
+    "primary_source_url": "https://ntcert.pta.gov.pk/sops/national_cs_framework_for_telecom_07-07-2022.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-security-standard-itsec-guidebook-2023",
+    "title": "Pakistan Security Standard for Cryptographic & IT Security Devices — IT Security Guide Book",
+    "short_name": "PSS ITSec Guide Book",
+    "domains": ["Cybersecurity"],
+    "type": "Guideline",
+    "issuing_body": "Pakistan Standards and Quality Control Authority",
+    "status": "In force",
+    "date_enacted": "2023-06-14",
+    "last_amended": null,
+    "summary": "The public IT-security guidebook within the Pakistan Security Standard for Cryptographic and IT Security Devices. It describes security levels, evaluation expectations, and technical requirements for products and services that claim cybersecurity functions.",
+    "key_provisions": [
+      "Defines four increasing qualitative security levels for covered products and services.",
+      "Provides IT-security requirements and evaluation guidance pending a separate national certification scheme.",
+      "Applies to products claiming functions such as firewalling, intrusion prevention, endpoint security, secure access, and malware protection.",
+      "Provides a transition schedule toward mandatory product conformance beginning in June 2028."
+    ],
+    "affects": ["Government procuring entities", "Critical sectors", "Security technology vendors", "Evaluation laboratories"],
+    "related": [
+      "policy-evaluation-algorithms-security-devices-2020",
+      "pakistan-security-standard-cryptographic-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_itsec_guidebook_01-03-2024.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-security-standard-cryptographic-guidebook-2023",
+    "title": "Pakistan Security Standard for Cryptographic & IT Security Devices — Cryptographic Security Guide Book",
+    "short_name": "PSS Crypto Guide Book",
+    "domains": ["Cybersecurity"],
+    "type": "Guideline",
+    "issuing_body": "Pakistan Standards and Quality Control Authority",
+    "status": "In force",
+    "date_enacted": "2023-06-14",
+    "last_amended": null,
+    "summary": "The public cryptographic-security guidebook within the Pakistan Security Standard for Cryptographic and IT Security Devices. It sets evaluation and security guidance for cryptographic equipment, algorithms, primitives, and supporting systems.",
+    "key_provisions": [
+      "Defines four increasing qualitative security levels for cryptographic equipment and primitives.",
+      "Covers cryptographic algorithms, equipment, key-management systems, and network-management systems.",
+      "Provides an evaluation and validation process involving the NTISB and accredited laboratories.",
+      "Provides a transition schedule toward mandatory product conformance beginning in June 2028."
+    ],
+    "affects": ["Government procuring entities", "Critical sectors", "Cryptographic technology vendors", "Evaluation laboratories"],
+    "related": [
+      "policy-evaluation-algorithms-security-devices-2020",
+      "pakistan-security-standard-itsec-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_crypto_guidebook_01-03-2024.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "pakistan-information-security-framework-2026",
+    "title": "Pakistan Information Security Framework",
+    "short_name": "PISF",
+    "domains": ["Cybersecurity"],
+    "type": "Framework",
+    "issuing_body": "National Cyber Emergency Response Team",
+    "status": "In force",
+    "date_enacted": "2026-01-01",
+    "last_amended": null,
+    "summary": "A national information-security framework establishing baseline controls for federal and provincial government bodies, autonomous bodies, corporations, CERTs, and designated critical information infrastructure.",
+    "key_provisions": [
+      "Establishes baseline controls across governance, risk, training, system protection, identity, data, incident response, physical security, hosting, software development, supply chain, audit, and critical infrastructure.",
+      "Sets a phased implementation roadmap from governance and risk management through core controls and audit.",
+      "Uses defined control applicability and maturity criteria for compliance assessment.",
+      "Makes baseline controls mandatory for federal departments under the National Cyber Security Policy and CERT Rules."
+    ],
+    "affects": ["Government agencies", "Autonomous bodies", "Corporations", "CERTs", "Critical infrastructure operators"],
+    "related": [
+      "national-cyber-security-policy-2021",
+      "computer-emergency-response-team-rules-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2026/03/PISF-Merged-Version.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  }
+]
