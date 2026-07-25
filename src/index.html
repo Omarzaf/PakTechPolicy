@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A source-first directory and timeline of technology policy in Pakistan."
+    />
+    <meta name="theme-color" content="#f4f1e8" />
+    <title>Pakistan Technology Policy Index</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#policy-results">Skip to policy directory</a>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Pakistan Technology Policy Index home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M8 6.5h16v19H8z" />
+            <path d="M12 11h8M12 16h8M12 21h5" />
+          </svg>
+        </span>
+        <span>
+          <strong>Policy Index</strong>
+          <small>Pakistan · Technology</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#landscape">Landscape</a>
+        <a href="#directory">Directory</a>
+        <a href="#methodology">Methodology</a>
+      </nav>
+      <a class="header-cta" href="#directory">Explore the index</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span></span>
+            Public-interest policy infrastructure
+          </p>
+          <h1 id="hero-title">Pakistan’s technology rules, <em>mapped.</em></h1>
+          <p class="hero-intro">
+            A structured, sourced index of the laws, bills, regulations, and
+            public policies shaping Pakistan’s digital life.
+          </p>
+          <form class="hero-search" id="hero-search-form" role="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="m16 16 4 4"></path>
+            </svg>
+            <label class="sr-only" for="hero-query">Search the policy index</label>
+            <input
+              id="hero-query"
+              type="search"
+              placeholder="Search PECA, data protection, fintech…"
+              autocomplete="off"
+            />
+            <button type="submit">Search index</button>
+          </form>
+          <div class="hero-links" aria-label="Popular topics">
+            <span>Start with</span>
+            <button type="button" data-quick-domain="Cybercrime & online speech">Online speech</button>
+            <button type="button" data-quick-domain="Data protection & privacy">Privacy</button>
+            <button type="button" data-quick-domain="AI & emerging tech">AI policy</button>
+          </div>
+        </div>
+
+        <aside class="hero-note" aria-label="About the index">
+          <span class="note-number">01</span>
+          <p>
+            Every entry points to an official document. Where the source or
+            current legal status is uncertain, the record is visibly flagged.
+          </p>
+          <a href="#methodology">How verification works <span>↗</span></a>
+        </aside>
+      </section>
+
+      <section class="metric-band" aria-label="Index summary">
+        <article>
+          <span class="metric-label">Indexed instruments</span>
+          <strong id="metric-total">—</strong>
+          <small>Acts, rules, policies & directives</small>
+        </article>
+        <article>
+          <span class="metric-label">Official sources checked</span>
+          <strong id="metric-verified">—</strong>
+          <small id="metric-verified-note">Human-readable provenance</small>
+        </article>
+        <article>
+          <span class="metric-label">Policy domains</span>
+          <strong id="metric-domains">12</strong>
+          <small>Across the digital policy landscape</small>
+        </article>
+        <article>
+          <span class="metric-label">Issuing bodies</span>
+          <strong id="metric-bodies">—</strong>
+          <small>Parliament, ministries & regulators</small>
+        </article>
+        <p class="snapshot-note">
+          Curated snapshot
+          <time id="snapshot-date" datetime="2026-07-25">25 Jul 2026</time>
+        </p>
+      </section>
+
+      <section class="landscape section-shell" id="landscape" aria-labelledby="landscape-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">The landscape</p>
+            <h2 id="landscape-title">Where policy attention is concentrated</h2>
+          </div>
+          <p>
+            Record counts show the current coverage of this curated index—not
+            the importance or effectiveness of a policy domain.
+          </p>
+        </div>
+
+        <div class="landscape-grid">
+          <article class="chart-card chart-card-wide">
+            <div class="card-heading">
+              <div>
+                <span class="card-index">A</span>
+                <h3>Coverage by domain</h3>
+              </div>
+              <small>Click a row to filter</small>
+            </div>
+            <div id="domain-chart" class="domain-chart" aria-label="Policy records by domain"></div>
+          </article>
+
+          <article class="chart-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-index">B</span>
+                <h3>Policy activity</h3>
+              </div>
+              <small>By year</small>
+            </div>
+            <div id="year-chart" class="year-chart" aria-label="Policy records by year"></div>
+            <p class="chart-footnote">Based on enactment, introduction, or publication date.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="directory section-shell" id="directory" aria-labelledby="directory-title">
+        <div class="section-heading directory-heading">
+          <div>
+            <p class="section-kicker">The directory</p>
+            <h2 id="directory-title">Find the instrument behind the rule</h2>
+          </div>
+          <p id="results-summary" aria-live="polite">Loading policy records…</p>
+        </div>
+
+        <div class="explorer">
+          <aside class="filters" aria-label="Policy filters">
+            <div class="filter-title">
+              <h3>Refine</h3>
+              <button id="clear-filters" type="button">Clear all</button>
+            </div>
+
+            <label class="filter-search">
+              <span>Search</span>
+              <span class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5"></circle>
+                  <path d="m16 16 4 4"></path>
+                </svg>
+                <input id="filter-query" type="search" placeholder="Title or summary" />
+              </span>
+            </label>
+
+            <label>
+              <span>Domain</span>
+              <select id="domain-filter">
+                <option value="">All domains</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Status</span>
+              <select id="status-filter">
+                <option value="">All statuses</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Issuing body</span>
+              <select id="body-filter">
+                <option value="">All bodies</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Year</span>
+              <select id="year-filter">
+                <option value="">All years</option>
+              </select>
+            </label>
+
+            <div class="verification-key">
+              <span class="key-dot verified"></span>
+              <p><strong>Verified</strong> Official source opened and checked.</p>
+              <span class="key-dot unverified"></span>
+              <p><strong>Unverified</strong> Source or current status needs review.</p>
+            </div>
+          </aside>
+
+          <div class="results-panel">
+            <div class="results-toolbar">
+              <div class="view-switcher" aria-label="View">
+                <button class="is-active" type="button" data-view="directory" aria-pressed="true">
+                  Directory
+                </button>
+                <button type="button" data-view="timeline" aria-pressed="false">Timeline</button>
+              </div>
+              <label>
+                <span class="sr-only">Sort policies</span>
+                <select id="sort-control">
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="title">Title A–Z</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="active-filters" class="active-filters" aria-label="Active filters"></div>
+            <div id="policy-results" class="policy-results" tabindex="-1"></div>
+            <div id="empty-state" class="empty-state" hidden>
+              <span>∅</span>
+              <h3>No instruments match those filters</h3>
+              <p>Try a broader search or clear one of the filters.</p>
+              <button type="button" data-clear-all>Reset the directory</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="methodology" id="methodology" aria-labelledby="methodology-title">
+        <div class="method-number" aria-hidden="true">02</div>
+        <div>
+          <p class="section-kicker">Editorial method</p>
+          <h2 id="methodology-title">Source first. Caution where certainty ends.</h2>
+        </div>
+        <div class="method-copy">
+          <p>
+            The index is a research aid, not legal advice. Records are written
+            from official instruments and neutral supporting material. A green
+            verification mark means the linked primary source was opened during
+            the latest review; it does not guarantee that no later amendment,
+            judgment, or notification exists.
+          </p>
+          <ol>
+            <li><span>01</span> Locate the official instrument</li>
+            <li><span>02</span> Record scope, dates, issuer, and relationships</li>
+            <li><span>03</span> Write a neutral plain-language summary</li>
+            <li><span>04</span> Flag unresolved status or source gaps</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M8 6.5h16v19H8z" />
+            <path d="M12 11h8M12 16h8M12 21h5" />
+          </svg>
+        </span>
+        <span>
+          <strong>Policy Index</strong>
+          <small>Pakistan · Technology</small>
+        </span>
+      </div>
+      <p>An independent public-interest research index. No legal advice.</p>
+      <a href="#hero-title">Back to top ↑</a>
+    </footer>
+
+    <dialog id="policy-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" aria-label="Close policy details">×</button>
+        <div id="dialog-content"></div>
+      </div>
+    </dialog>
+
+    <noscript>
+      <p class="noscript">
+        This directory needs JavaScript for search and filtering. Each policy
+        source remains available in <code>data/policies.json</code>.
+      </p>
+    </noscript>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
