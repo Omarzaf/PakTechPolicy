@@ -1,2 +1,2082 @@
-[]
-
+[
+  {
+    "id": "data-governance-policy-2026-draft",
+    "title": "Data Governance Policy 2026",
+    "short_name": "Data Governance Policy",
+    "domains": [
+      "Cloud & data localisation",
+      "National digital strategy",
+      "AI & emerging tech"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2026-06-26",
+    "last_amended": null,
+    "summary": "A draft national policy for governing federal public-sector data across its lifecycle, including sovereignty, residency, openness, sharing, privacy, cross-border transfers, emerging technologies, and institutional implementation.",
+    "key_provisions": [
+      "Proposes sovereignty by default, federated data custody, authoritative-source discipline, minimum disclosure, interoperability, and privacy-by-design as national principles.",
+      "Would apply to federal public bodies and organisations processing government data on their behalf, while promoting coordination with provincial governments.",
+      "Proposes governance requirements for data residency, cross-border transfer, artificial intelligence, open data, and data sharing."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Government contractors and processors",
+      "Public-sector data custodians",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "wasl-reference-architecture-2026",
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Data%20Governance%20Policy%20June%202026.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "wasl-reference-architecture-2026",
+    "title": "WASL — Pakistan National Data Exchange Layer: Reference Architecture",
+    "short_name": "WASL Reference Architecture",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Framework",
+    "issuing_body": "Pakistan Digital Authority",
+    "status": "In force",
+    "date_enacted": "2026-05-13",
+    "last_amended": null,
+    "summary": "The published pilot-maturity reference architecture for Pakistan's national data exchange layer, defining a centrally routed but data-blind platform with federated data custody and consent-governed exchange.",
+    "key_provisions": [
+      "Defines central control and routing components while keeping operational data custody and cryptographic key control with participating entities.",
+      "Requires end-to-end encrypted exchange, citizen consent controls, transaction proofs, standardised schemas, and interoperable client nodes.",
+      "Defines integration surfaces for authorised AI consumers and a roadmap for post-quantum cryptographic agility."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "Regulated private-sector institutions",
+      "Authorised digital platforms",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "data-governance-policy-2026-draft"
+    ],
+    "primary_source_url": "https://standards.pda.gov.pk/dnp-d.002ra.html",
+    "secondary_sources": [
+      "https://standards.pda.gov.pk/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "pakistan-information-security-framework-2026",
+    "title": "Pakistan Information Security Framework",
+    "short_name": "PISF",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Framework",
+    "issuing_body": "National Cyber Emergency Response Team",
+    "status": "In force",
+    "date_enacted": "2026-01-01",
+    "last_amended": null,
+    "summary": "A national information-security framework establishing baseline controls for federal and provincial government bodies, autonomous bodies, corporations, CERTs, and designated critical information infrastructure.",
+    "key_provisions": [
+      "Establishes baseline controls across governance, risk, training, system protection, identity, data, incident response, physical security, hosting, software development, supply chain, audit, and critical infrastructure.",
+      "Sets a phased implementation roadmap from governance and risk management through core controls and audit.",
+      "Uses defined control applicability and maturity criteria for compliance assessment.",
+      "Makes baseline controls mandatory for federal departments under the National Cyber Security Policy and CERT Rules."
+    ],
+    "affects": [
+      "Government agencies",
+      "Autonomous bodies",
+      "Corporations",
+      "CERTs",
+      "Critical infrastructure operators"
+    ],
+    "related": [
+      "national-cyber-security-policy-2021",
+      "computer-emergency-response-team-rules-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2026/03/PISF-Merged-Version.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "year",
+    "last_amended_precision": null
+  },
+  {
+    "id": "national-ai-policy-2025",
+    "title": "National Artificial Intelligence Policy",
+    "short_name": "National AI Policy",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Cloud & data localisation"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2025-07-31",
+    "last_amended": null,
+    "summary": "Pakistan's approved national policy for developing and adopting artificial intelligence through innovation, skills, responsible-use safeguards, sectoral transformation, compute and data infrastructure, and international cooperation.",
+    "key_provisions": [
+      "Organises implementation around six pillars: innovation, awareness and readiness, secure AI, transformation, infrastructure, and international partnerships.",
+      "Calls for a National AI Fund, centres of excellence, research and commercialisation support, workforce training, scholarships, and internships.",
+      "Proposes transparency, human oversight, data protection, open-source governance, and regulatory sandboxes for AI systems.",
+      "Provides for national AI compute capacity, datasets, hubs, and an implementation mechanism led through the Ministry."
+    ],
+    "affects": [
+      "Federal and provincial public bodies",
+      "AI developers and deployers",
+      "Researchers and universities",
+      "Startups and investors",
+      "Workers and students",
+      "Citizens"
+    ],
+    "related": [
+      "digital-pakistan-policy-2018",
+      "digital-nation-pakistan-act-2025",
+      "data-governance-policy-2026-draft",
+      "national-semiconductor-policy-2024-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20AI%20Policy.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies",
+      "https://www.moitt.gov.pk/SliderDetail/NWIyMzEwYzktYTIwYy00ZTk0LWI5ODUtYjg5NjZmYTYyMTg2"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "digital-nation-pakistan-act-2025",
+    "title": "Digital Nation Pakistan Act, 2025",
+    "short_name": "Digital Nation Pakistan Act",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2025-01-29",
+    "last_amended": null,
+    "summary": "An Act establishing national institutions and planning mechanisms for Pakistan's digital transformation, including digital public infrastructure, data exchange, and coordinated digital governance.",
+    "key_provisions": [
+      "Establishes the National Digital Commission to provide strategic direction for national digital transformation.",
+      "Establishes the Pakistan Digital Authority to formulate, coordinate, and monitor the National Digital Masterplan and sectoral plans.",
+      "Provides for digital public infrastructure, digital citizen journeys, and a secure and interoperable data exchange layer."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "Public-sector organisations",
+      "Private enterprises accessing public digital services",
+      "Citizens"
+    ],
+    "related": [
+      "data-governance-policy-2026-draft",
+      "wasl-reference-architecture-2026"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/679b239e8d57f_451.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5praQ%3D%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "peca-amendment-2025",
+    "title": "Prevention of Electronic Crimes (Amendment) Act, 2025",
+    "short_name": "PECA Amendment 2025",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2025-01-29",
+    "last_amended": null,
+    "summary": "An amendment to PECA that creates a new social-media regulatory structure, revises online-content provisions, adds a false-information offence, and assigns PECA investigations to the National Cyber Crime Investigation Agency.",
+    "key_provisions": [
+      "Provides for a Social Media Protection and Regulatory Authority, a Social Media Complaint Council, and a Social Media Protection Tribunal.",
+      "Establishes enlistment and complaint-handling provisions for social media platforms and defines categories of unlawful or offensive online content.",
+      "Adds an offence concerning intentional dissemination of false or fake information and substitutes the National Cyber Crime Investigation Agency as the investigation agency."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Regulators",
+      "Law enforcement",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "criminal-laws-amendment-2023",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/679b243193585_457.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "https://na.gov.pk/en/print_act.php"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "national-semiconductor-policy-2024-draft",
+    "title": "Draft Semiconductor Policy and Action Plan",
+    "short_name": "Draft Semiconductor Policy",
+    "domains": [
+      "AI & emerging tech",
+      "IT industry & exports"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2024-11-25",
+    "last_amended": null,
+    "summary": "A draft policy and action plan for developing Pakistan's semiconductor workforce, design and packaging capabilities, research base, domestic industry, and participation in global supply chains.",
+    "key_provisions": [
+      "Proposes incentives, a single-window interface, intellectual-property support, tax measures, and a national semiconductor fund.",
+      "Calls for shared electronic-design-automation infrastructure, semiconductor parks, and integration with special economic zones.",
+      "Proposes education and research clusters, workforce training, startup support, public-private partnerships, and international collaboration.",
+      "Sets a long-term objective of indigenous design, testing, packaging, and fabrication capability for critical integrated circuits by 2047."
+    ],
+    "affects": [
+      "Semiconductor businesses",
+      "Technology startups",
+      "Universities and researchers",
+      "Students and technology workers",
+      "Investors"
+    ],
+    "related": [
+      "national-ai-policy-2025"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Semiconuctor%20Policy.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "cloud-services-procurement-framework-2024",
+    "title": "Standard Bidding Document/Procurement Framework for Cloud Services",
+    "short_name": "Cloud Procurement Framework",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Framework",
+    "issuing_body": "Public Procurement Regulatory Authority and Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2024-07-05",
+    "last_amended": null,
+    "summary": "A national standard procurement document for federal public bodies acquiring cloud services, designed to align tendering and contract practices with public-procurement rules and the Pakistan Cloud First Policy.",
+    "key_provisions": [
+      "Standardises proposal instructions, evaluation procedures, technical requirements, and contract conditions for cloud-service procurement.",
+      "Provides cloud-specific proposal data and service requirements that procuring agencies can complete for individual acquisitions.",
+      "Links federal cloud procurement to the Public Procurement Rules and the Pakistan Cloud First Policy."
+    ],
+    "affects": [
+      "Federal procuring agencies",
+      "Cloud service providers",
+      "Government procurement officials"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022",
+      "cloud-service-provider-accreditation-criteria-2024"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/SBD_Cloud%20Procurement_PPRA_MOITT.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies",
+      "https://www.ppra.org.pk/sbd.asp"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "cloud-service-provider-accreditation-criteria-2024",
+    "title": "Accreditation Criteria for Cloud Service Providers",
+    "short_name": "Cloud CSP Accreditation Criteria",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Interim Cloud Office, Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2024-06-25",
+    "last_amended": null,
+    "summary": "Criteria and procedures for accrediting cloud service providers that seek to supply cloud services to Pakistan's public-sector entities.",
+    "key_provisions": [
+      "Sets general, security, privacy, service-management, quality-management, and data-centre requirements for applicant cloud providers.",
+      "Requires documentation supporting certifications, service commitments, technical capacity, and compliance with the Pakistan Cloud First Policy.",
+      "Provides for accreditation, audits, suspension, and termination, with the Cloud Office maintaining the accredited-provider list."
+    ],
+    "affects": [
+      "Cloud service providers",
+      "Federal public-sector entities",
+      "Government technology procurement teams"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022",
+      "cloud-services-procurement-framework-2024"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/AccreditationCriteriaCSP.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "computer-emergency-response-team-rules-2023",
+    "title": "Computer Emergency Response Team Rules, 2023",
+    "short_name": "CERT Rules 2023",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-09-26",
+    "last_amended": null,
+    "summary": "Rules establishing a national framework for computer emergency response teams, including national, government, sectoral, and provincial CERT functions and coordination.",
+    "key_provisions": [
+      "Defines the categories, constituencies, and functions of computer emergency response teams.",
+      "Provides for incident handling, vulnerability management, artefact handling, advisories, and coordination.",
+      "Creates reporting and cooperation mechanisms among the National CERT and other CERTs.",
+      "Addresses accreditation, audit, capacity building, and protection of critical information infrastructure."
+    ],
+    "affects": [
+      "National CERT",
+      "Government agencies",
+      "Sectoral regulators",
+      "Critical infrastructure operators"
+    ],
+    "related": [
+      "national-cyber-security-policy-2021",
+      "pakistan-information-security-framework-2026"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/10/GAZETTE-CERT-Rules-2023.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "criminal-laws-amendment-2023",
+    "title": "Criminal Laws (Amendment) Act, 2023",
+    "short_name": "Criminal Laws Amendment 2023",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-07-18",
+    "last_amended": null,
+    "summary": "An amending act that added child-focused online offences, cyberbullying provisions, investigation procedures, and victim protections to PECA and made related changes to evidence and criminal law.",
+    "key_provisions": [
+      "Adds PECA offences concerning online grooming, child sexual exploitation, and use of information systems for kidnapping, abduction, or trafficking of a minor.",
+      "Adds a cyberbullying offence and a route for a minor, through a guardian, to seek removal or blocking of the relevant content.",
+      "Adds investigation timelines, remand rules, victim and witness protections, in-camera trial provisions, and a victim-support mechanism."
+    ],
+    "affects": [
+      "Children",
+      "Guardians",
+      "Law enforcement",
+      "Courts",
+      "Social media users"
+    ],
+    "related": [
+      "peca-2016",
+      "peca-amendment-2025"
+    ],
+    "primary_source_url": "https://na.gov.pk/uploads/documents/64f840c325916_768.pdf",
+    "secondary_sources": [
+      "https://senate.gov.pk/en/pbna.php?catid=186&cattitle=Bills&leftcatid=278&subcatid=276",
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "pakistan-security-standard-cryptographic-guidebook-2023",
+    "title": "Pakistan Security Standard for Cryptographic & IT Security Devices — Cryptographic Security Guide Book",
+    "short_name": "PSS Crypto Guide Book",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Pakistan Standards and Quality Control Authority",
+    "status": "In force",
+    "date_enacted": "2023-06-14",
+    "last_amended": null,
+    "summary": "The public cryptographic-security guidebook within the Pakistan Security Standard for Cryptographic and IT Security Devices. It sets evaluation and security guidance for cryptographic equipment, algorithms, primitives, and supporting systems.",
+    "key_provisions": [
+      "Defines four increasing qualitative security levels for cryptographic equipment and primitives.",
+      "Covers cryptographic algorithms, equipment, key-management systems, and network-management systems.",
+      "Provides an evaluation and validation process involving the NTISB and accredited laboratories.",
+      "Provides a transition schedule toward mandatory product conformance beginning in June 2028."
+    ],
+    "affects": [
+      "Government procuring entities",
+      "Critical sectors",
+      "Cryptographic technology vendors",
+      "Evaluation laboratories"
+    ],
+    "related": [
+      "policy-evaluation-algorithms-security-devices-2020",
+      "pakistan-security-standard-itsec-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_crypto_guidebook_01-03-2024.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "pakistan-security-standard-itsec-guidebook-2023",
+    "title": "Pakistan Security Standard for Cryptographic & IT Security Devices — IT Security Guide Book",
+    "short_name": "PSS ITSec Guide Book",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Pakistan Standards and Quality Control Authority",
+    "status": "In force",
+    "date_enacted": "2023-06-14",
+    "last_amended": null,
+    "summary": "The public IT-security guidebook within the Pakistan Security Standard for Cryptographic and IT Security Devices. It describes security levels, evaluation expectations, and technical requirements for products and services that claim cybersecurity functions.",
+    "key_provisions": [
+      "Defines four increasing qualitative security levels for covered products and services.",
+      "Provides IT-security requirements and evaluation guidance pending a separate national certification scheme.",
+      "Applies to products claiming functions such as firewalling, intrusion prevention, endpoint security, secure access, and malware protection.",
+      "Provides a transition schedule toward mandatory product conformance beginning in June 2028."
+    ],
+    "affects": [
+      "Government procuring entities",
+      "Critical sectors",
+      "Security technology vendors",
+      "Evaluation laboratories"
+    ],
+    "related": [
+      "policy-evaluation-algorithms-security-devices-2020",
+      "pakistan-security-standard-cryptographic-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2024/07/public_pss_itsec_guidebook_01-03-2024.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "personal-data-protection-bill-2023",
+    "title": "Personal Data Protection Bill, 2023",
+    "short_name": "PDP Bill 2023",
+    "domains": [
+      "Data protection & privacy"
+    ],
+    "type": "Bill",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Unverified",
+    "date_enacted": "2023-05-01",
+    "last_amended": null,
+    "summary": "A federal draft bill proposing rules for collection, processing, use, disclosure, security, and cross-border transfer of personal data, together with data-subject rights and a national data-protection commission.",
+    "key_provisions": [
+      "Sets proposed obligations for lawful and fair processing, consent, purpose limitation, security, and breach notification.",
+      "Proposes rights including access, correction, erasure, grievance redress, portability, and protections concerning automated processing.",
+      "Proposes a National Commission for Personal Data Protection with complaint, enforcement, and penalty functions."
+    ],
+    "affects": [
+      "Citizens",
+      "Children",
+      "Data controllers",
+      "Data processors",
+      "Government bodies",
+      "Businesses"
+    ],
+    "related": [
+      "peca-2016",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Personal%20Data%20Protection%20Bill%20May%202023.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/YjVmNzU0MWMtYzBkMC00Yjg5LTk1ODktOTJiODYzZTY5ZWRk"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "month",
+    "last_amended_precision": null
+  },
+  {
+    "id": "universal-service-fund-amendment-rules-2023",
+    "title": "USF Rules Amendments 2023",
+    "short_name": "USF Rules Amendments 2023",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-02-22",
+    "last_amended": null,
+    "summary": "Amendments to the Universal Service Fund Rules that revise definitions, governance, board composition, and company budgeting and reporting arrangements.",
+    "key_provisions": [
+      "Reconstitutes the Universal Service Fund company board with government, industry, executive, and independent members.",
+      "Specifies independent legal, financial, and telecommunications or information-technology expertise on the board.",
+      "Updates definitions and selected fund, company, budget, and reporting provisions in the 2006 rules."
+    ],
+    "affects": [
+      "Universal Service Fund Company",
+      "Telecom licensees",
+      "Federal Government",
+      "Rural communities",
+      "Underserved communities"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "universal-service-fund-rules-2006"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1744350850-usf-rules-ammendments-2023pdf.pdf",
+    "secondary_sources": [
+      "https://www.usf.org.pk/rules-policies-guidelines",
+      "https://www.usf.org.pk/storage/publications/1731922213-universal-service-fund-usf-annual-report-2023-2024-1o1-compressedpdf.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "sbp-cloud-outsourcing-framework-2023",
+    "title": "Framework on Outsourcing to Cloud Service Providers",
+    "short_name": "SBP Cloud Outsourcing Framework",
+    "domains": [
+      "Cloud & data localisation",
+      "Fintech & digital payments"
+    ],
+    "type": "Framework",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "In force",
+    "date_enacted": "2023-01-16",
+    "last_amended": null,
+    "summary": "A regulatory framework setting minimum risk-management requirements for cloud outsourcing by banks, digital banks, microfinance banks, development finance institutions, electronic money institutions, and payment-system operators and providers.",
+    "key_provisions": [
+      "Applies a risk-based framework to outsourcing material and non-material workloads to domestic or offshore cloud service providers.",
+      "Requires governance, risk assessment, due diligence, contractual protections, information security, audit access, business continuity, and exit planning.",
+      "Required regulated entities to align existing cloud-outsourcing arrangements with the framework by 31 December 2023."
+    ],
+    "affects": [
+      "Banks",
+      "Digital banks",
+      "Microfinance banks",
+      "Development finance institutions",
+      "Electronic money institutions",
+      "Payment system operators and providers",
+      "Cloud service providers"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2023",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/assets/documents/circulars/C1-Annix-A.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "software-development-export-strategy-2023-2027",
+    "title": "Pakistan Export Strategy 2023–2027: Software Development",
+    "short_name": "Software Development Export Strategy",
+    "domains": [
+      "IT industry & exports"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Commerce",
+    "status": "In force",
+    "date_enacted": "2023-01-01",
+    "last_amended": null,
+    "summary": "A sector export strategy and action plan for strengthening Pakistan's software-development exports through skills, firm upgrading, service quality, market expansion, investment, inclusion, and coordination between government and industry.",
+    "key_provisions": [
+      "Identifies export constraints and proposes a five-year plan of action for public- and private-sector implementation.",
+      "Prioritizes advanced technical skills, emerging technologies, service quality, user experience, intellectual-property creation, and scaling domestic firms into global markets.",
+      "Calls for greater participation by women, stronger links between education and employment, export promotion, investment attraction, and financing support for international expansion."
+    ],
+    "affects": [
+      "Software and IT-enabled-services firms",
+      "Technology workers and freelancers",
+      "Universities and training institutions",
+      "Export-promotion bodies",
+      "Investors"
+    ],
+    "related": [
+      "special-technology-zones-authority-act-2021",
+      "ecommerce-policy-pakistan-2019"
+    ],
+    "primary_source_url": "https://tdap.gov.pk/wp-content/uploads/2022/08/Software-Development-Export-Strategy-Pakistan-3_web.pdf",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/remit/",
+      "https://www.commerce.gov.pk/wp-content/uploads/2024/05/Software-Development-Export-Strategy-Pakistan-3_web-1.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "year",
+    "last_amended_precision": null
+  },
+  {
+    "id": "national-cyber-security-framework-for-telecom-2022",
+    "title": "National Cyber Security Framework for Telecom — Assessment Criteria & Guidelines",
+    "short_name": "Telecom Cybersecurity Framework",
+    "domains": [
+      "Telecom regulation",
+      "Cybersecurity"
+    ],
+    "type": "Framework",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "In force",
+    "date_enacted": "2022-06-15",
+    "last_amended": null,
+    "summary": "A Pakistan Telecommunication Authority assessment framework for audits of licensee compliance with the Critical Telecom Data and Infrastructure Security Regulations, 2020.",
+    "key_provisions": [
+      "Defines audit responsibilities for telecom licensees and approved auditors.",
+      "Sets assessment criteria, finding categories, and compliance scoring for CTDISR reviews.",
+      "Provides control-by-control audit guidance and expected evidence.",
+      "Covers reporting, confidentiality, breach handling, and continual improvement."
+    ],
+    "affects": [
+      "Telecom licensees",
+      "Approved auditors",
+      "Pakistan Telecommunication Authority"
+    ],
+    "related": [
+      "critical-telecom-data-infrastructure-security-regulations-2020"
+    ],
+    "primary_source_url": "https://ntcert.pta.gov.pk/sops/national_cs_framework_for_telecom_07-07-2022.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "pakistan-cloud-first-policy-2022",
+    "title": "Pakistan Cloud First Policy",
+    "short_name": "PCFP",
+    "domains": [
+      "Cloud & data localisation",
+      "National digital strategy"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2022-02-18",
+    "last_amended": null,
+    "summary": "A federal policy directing public-sector entities toward cloud-based ICT investment, with governance arrangements for service-provider accreditation, data classification, procurement, security, and cloud adoption.",
+    "key_provisions": [
+      "Applies to federal public-sector entities making new ICT investments and provides guidance for regulated and private-sector organisations.",
+      "Establishes a Cloud Office to oversee cloud adoption, accreditation, compliance, exemptions, and coordination with provinces.",
+      "Requires public-sector entities to procure from accredited cloud service providers and links cloud selection to government-data classification.",
+      "Allows consultation with the Cloud Office for legitimate cross-border data-flow use cases and associated security controls."
+    ],
+    "affects": [
+      "Federal public-sector entities",
+      "Cloud service providers",
+      "Provincial governments",
+      "Government technology suppliers"
+    ],
+    "related": [
+      "cloud-service-provider-accreditation-criteria-2024",
+      "cloud-services-procurement-framework-2024",
+      "data-governance-policy-2026-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/Pakistan%20Cloud%20First%20Policy-Final-25-02-2022%20%281%29.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "digital-banks-framework-2022",
+    "title": "Licensing and Regulatory Framework for Digital Banks",
+    "short_name": "Digital Banks Framework",
+    "domains": [
+      "Fintech & digital payments"
+    ],
+    "type": "Framework",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "In force",
+    "date_enacted": "2022-01-03",
+    "last_amended": null,
+    "summary": "A licensing and regulatory framework for banks that provide financial services primarily through digital or electronic channels, with separate retail and full-bank licence categories and phased progression.",
+    "key_provisions": [
+      "Creates Digital Retail Bank and Digital Full Bank licence categories, including conventional and Islamic variants.",
+      "Sets sponsor-eligibility, ownership, capital, governance, technology, cybersecurity, outsourcing, business-plan, and application requirements.",
+      "Provides for phased progression from licensing and pilot operations toward commercial operations, subject to State Bank approvals and performance."
+    ],
+    "affects": [
+      "Digital-bank applicants and sponsors",
+      "Licensed digital banks",
+      "Banks and microfinance banks",
+      "Fintech and digital-financial-service providers",
+      "Retail and business customers"
+    ],
+    "related": [
+      "payment-systems-electronic-fund-transfers-act-2007",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2022",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/bprd/2022/C1-Annex.pdf",
+      "https://www.sbp.org.pk/our-operations/banking-regulation-and-supervision"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "5g-strategic-plan-policy-guidelines-2021-draft",
+    "title": "5G Strategic Plan and Policy Guidelines — Consultation Draft",
+    "short_name": "Draft 5G Policy Guidelines",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Telecom regulation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-12-15",
+    "last_amended": null,
+    "summary": "Draft policy guidelines proposing a coordinated path toward 5G deployment through spectrum planning, regulatory preparation, infrastructure facilitation, investment incentives, trials, skills, and public awareness.",
+    "key_provisions": [
+      "Proposes spectrum-band preparation, consultant-led auction design, licensing recommendations, and a spectrum-refarming framework.",
+      "Calls for review of rights-of-way rules and possible fiscal incentives for 5G equipment, devices, and local manufacturing.",
+      "Proposes innovation and test centres, non-commercial trials, 5G skills programmes, and public-awareness activity.",
+      "The document's original milestones targeted preparatory actions in 2022 and a commercial launch in early 2023."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Telecom regulators",
+      "Spectrum authorities",
+      "Equipment vendors",
+      "Researchers and universities",
+      "Citizens"
+    ],
+    "related": [
+      "national-broadband-policy-2021-draft",
+      "5g-readiness-plan-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/5G%20Policy%20Guidelines%20_Final_15%20Dec%2021.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "national-broadband-policy-2021-draft",
+    "title": "National Broadband Policy 2021 — Consultation Draft v3.0",
+    "short_name": "Draft National Broadband Policy",
+    "domains": [
+      "Internet governance & access",
+      "National digital strategy",
+      "AI & emerging tech"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-12-07",
+    "last_amended": null,
+    "summary": "A consultation draft proposing national broadband targets and policy measures for digital inclusion, market development, trust, infrastructure, and adoption of future network technologies.",
+    "key_provisions": [
+      "Proposes phased targets through 2025 and 2030 for broadband access, speed, affordability, device adoption, skills, and connectivity.",
+      "Addresses fibre, spectrum, rights of way, data centres, internet exchanges, satellite connectivity, infrastructure sharing, and quality of service.",
+      "Organises proposed measures around inclusion and accessibility, market enablement, digital trust, and technological evolution.",
+      "Proposes competition and investment measures intended to narrow access gaps in unserved and underserved areas."
+    ],
+    "affects": [
+      "Citizens",
+      "Internet service providers",
+      "Telecom operators",
+      "Regulators",
+      "Rural communities",
+      "Federal public bodies",
+      "Businesses"
+    ],
+    "related": [
+      "telecommunications-policy-2015",
+      "public-private-right-of-way-policy-directive-2020",
+      "universal-service-fund-rules-2006",
+      "digital-pakistan-policy-2018",
+      "5g-readiness-plan-2021-draft",
+      "5g-strategic-plan-policy-guidelines-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "removal-blocking-online-content-rules-2021",
+    "title": "Removal and Blocking of Unlawful Online Content (Procedure, Oversight and Safeguards) Rules, 2021",
+    "short_name": "Online Content Rules 2021",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2021-10-12",
+    "last_amended": null,
+    "summary": "Rules governing Pakistan Telecommunication Authority complaints, notices, hearings, removal or blocking directions, platform obligations, enforcement, review, and appeal under PECA's online-content provisions.",
+    "key_provisions": [
+      "Provides a complaint process and generally requires an opportunity to be heard before a removal or blocking order.",
+      "Sets a forty-eight-hour compliance period for directions, with a shorter period for emergency cases.",
+      "Provides for review by the Authority and appeal to the High Court, and repeals both federal online-content rulesets issued in 2020."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Service providers",
+      "Pakistan Telecommunication Authority",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "peca-amendment-2025",
+      "citizens-protection-online-harm-rules-2020",
+      "removal-blocking-online-content-rules-2020"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/MTBmMGQ3NDItOWM2Mi00N2M0LWE1ZGUtMjRlNWJlOGYwZGU0",
+      "https://moitt.gov.pk/SiteImage/Downloads/MoITT-YB-21-22.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "special-technology-zones-authority-act-2021",
+    "title": "Special Technology Zones Authority Act, 2021",
+    "short_name": "STZA Act",
+    "domains": [
+      "IT industry & exports"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2021-10-04",
+    "last_amended": null,
+    "summary": "A federal Act establishing the Special Technology Zones Authority and a licensing and governance system for technology zones, zone developers, and zone enterprises.",
+    "key_provisions": [
+      "Establishes the Special Technology Zones Authority, its Board of Governors, approvals committee, fund, governance, audit, and reporting arrangements.",
+      "Authorizes the planning, approval, notification, development, regulation, and monitoring of physical or virtual technology zones.",
+      "Provides for zone-developer and zone-enterprise licensing, one-window facilitation, infrastructure, investment promotion, and coordination with federal, provincial, and local bodies.",
+      "Provides statutory mechanisms for incentives, exemptions, appeals, offences, penalties, and subordinate rules and regulations."
+    ],
+    "affects": [
+      "Technology companies",
+      "Zone developers and zone enterprises",
+      "Investors",
+      "Federal and provincial public bodies",
+      "Technology workers and researchers"
+    ],
+    "related": [
+      "software-development-export-strategy-2023-2027"
+    ],
+    "primary_source_url": "https://www.stza.gov.pk/wp-content/uploads/2025/12/STZA-Act-2021.pdf",
+    "secondary_sources": [
+      "https://www.stza.gov.pk/resources/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "5g-readiness-plan-2021-draft",
+    "title": "5G Readiness Plan for Pakistan",
+    "short_name": "5G Readiness Plan",
+    "domains": [
+      "AI & emerging tech",
+      "National digital strategy",
+      "Telecom regulation"
+    ],
+    "type": "Framework",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Draft",
+    "date_enacted": "2021-09-01",
+    "last_amended": null,
+    "summary": "A World Bank-supported final draft assessing Pakistan's readiness for 5G and presenting recommendations on spectrum, investment, infrastructure, regulation, and use cases; the document states that its recommendations do not necessarily represent the government's position.",
+    "key_provisions": [
+      "Assesses market readiness, spectrum availability and pricing, device affordability, fibre backhaul, and infrastructure conditions.",
+      "Reviews regulatory measures involving rights of way, infrastructure sharing, competition, cloud infrastructure, and access to towers and fibre.",
+      "Presents recommendations for sequencing spectrum release and supporting 5G applications and use cases."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Telecom regulators",
+      "Spectrum authorities",
+      "Infrastructure providers",
+      "Technology businesses",
+      "Citizens"
+    ],
+    "related": [
+      "national-broadband-policy-2021-draft",
+      "5g-strategic-plan-policy-guidelines-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/World%20Bank-%20TA%20Advisory-%205G%20Readiness%20Plan%20for%20Pakistan.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "secp-cloud-adoption-guidelines-2021-draft",
+    "title": "Draft Cloud Adoption Guidelines for Incorporated Companies",
+    "short_name": "SECP Cloud Adoption Guidelines",
+    "domains": [
+      "Cloud & data localisation"
+    ],
+    "type": "Guideline",
+    "issuing_body": "Securities and Exchange Commission of Pakistan",
+    "status": "Draft",
+    "date_enacted": "2021-07-30",
+    "last_amended": null,
+    "summary": "Draft guidance for companies and other business entities incorporated with the Securities and Exchange Commission of Pakistan when assessing, adopting, migrating to, and managing cloud services.",
+    "key_provisions": [
+      "Describes analysis, planning, adoption, migration, and ongoing management phases for cloud transitions.",
+      "Recommends board-level cloud governance, data classification, data portability, service-level agreements, and compliance checks.",
+      "Directs entities subject to sector-specific regulators to follow those regulators' cloud requirements."
+    ],
+    "affects": [
+      "SECP-incorporated companies",
+      "Non-bank financial companies",
+      "Insurers",
+      "Cloud service providers"
+    ],
+    "related": [
+      "pakistan-cloud-first-policy-2022"
+    ],
+    "primary_source_url": "https://www.secp.gov.pk/document/draft-cloud-adoption-guidelines-for-incorporated-companies/",
+    "secondary_sources": [
+      "https://www.secp.gov.pk/media-center/press-releases/secp-issues-draft-cloud-adoption-guidelines-for-companies/",
+      "https://www.secp.gov.pk/laws/guidelines/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "national-cyber-security-policy-2021",
+    "title": "National Cyber Security Policy 2021",
+    "short_name": "NCSP 2021",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2021-07-27",
+    "last_amended": null,
+    "summary": "Pakistan's national policy for cybersecurity governance, protection of critical information infrastructure and government systems, security assurance, capacity building, research, cooperation, and cybercrime response.",
+    "key_provisions": [
+      "Creates a national cybersecurity governance and oversight structure.",
+      "Calls for protection and resilience measures for critical information infrastructure and government information systems.",
+      "Provides for an information security assurance framework and risk-based security practices.",
+      "Sets directions for capacity building, public awareness, research, public-private partnership, and international cooperation."
+    ],
+    "affects": [
+      "Government agencies",
+      "Critical infrastructure operators",
+      "Businesses",
+      "Citizens"
+    ],
+    "related": [
+      "computer-emergency-response-team-rules-2023",
+      "pakistan-information-security-framework-2026"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/2021-National-Cyber-Security-Policy-Final.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "balochistan-rti-act-2021",
+    "title": "Balochistan Right to Information Act, 2021",
+    "short_name": "Balochistan RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Balochistan",
+    "status": "In force",
+    "date_enacted": "2021-02-15",
+    "last_amended": null,
+    "summary": "Balochistan's provincial access-to-information statute, enacted as Act No. II of 2021, establishing rights and procedures for access to information held by provincial public bodies.",
+    "key_provisions": [
+      "Provides for proactive disclosure and access requests to covered provincial public bodies.",
+      "Requires public information officers and procedures for receiving, processing, transferring, and deciding requests.",
+      "Creates oversight and complaint mechanisms through a provincial information commission.",
+      "Defines exceptions, record-management duties, appeal or complaint routes, and penalties."
+    ],
+    "affects": [
+      "Balochistan public bodies",
+      "Public information officers",
+      "Balochistan Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016"
+    ],
+    "primary_source_url": "https://dpr.gob.pk/document-library/",
+    "secondary_sources": [
+      "https://dpr.gob.pk/wp-content/uploads/2023/11/BALOCHISTAN-right-to-information-act-2021.pdf",
+      "https://pabalochistan.gov.pk/public/acts",
+      "https://balochistancode.gob.pk/lawdir/03e08992-0c6a-40ac-9a9d-913d1bca9f6a.pdf"
+    ],
+    "controversy": "The provincial Assembly identifies the statute as Act No. II of 2021, while the later official rules PDF appears to cite it as Act No. 11 of 2021; the Assembly numbering is used and the discrepancy remains unresolved.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "import-export-ecommerce-rules-2021",
+    "title": "Import and Export of E-Commerce Rules",
+    "short_name": "E-Commerce Customs Rules",
+    "domains": [
+      "E-commerce"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Board of Revenue",
+    "status": "In force",
+    "date_enacted": "2021-01-06",
+    "last_amended": null,
+    "summary": "Customs rules added as Chapter XXXVIII of the Customs Rules, 2001 for assessment and clearance of qualifying business-to-consumer goods imported or exported through authorized dealers and designated customs stations.",
+    "key_provisions": [
+      "Applies to assessment and clearance of business-to-consumer import and export goods handled through authorized dealers at designated customs stations.",
+      "Defines e-commerce and sets procedures for authorized-dealer registration, electronic declarations, customs processing, payment, examination, release, and returns.",
+      "Excludes listed categories such as sample-testing goods, animals, perishables, food and beverages, medicines, alcohol, prohibited goods, and certain restricted goods."
+    ],
+    "affects": [
+      "Cross-border e-commerce merchants",
+      "Consumers",
+      "Authorized dealers and couriers",
+      "Customs authorities",
+      "Online marketplaces"
+    ],
+    "related": [
+      "ecommerce-policy-pakistan-2019",
+      "electronic-transactions-ordinance-2002",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://download1.fbr.gov.pk/SROs/202510311510162884CustomsRules2001.pdf",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/wp-content/uploads/2021/03/SRO14-2021_opt.pdf",
+      "https://www.commerce.gov.pk/sros/",
+      "https://www.pcp.gov.pk/SiteImage/Downloads/29%2821%29Ex%20Gaz-II.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "public-private-right-of-way-policy-directive-2020",
+    "title": "Public & Private Right of Way Policy Directive",
+    "short_name": "Right of Way Policy Directive",
+    "domains": [
+      "Internet governance & access",
+      "Telecom regulation"
+    ],
+    "type": "Directive",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "Unverified",
+    "date_enacted": "2020-10-09",
+    "last_amended": null,
+    "summary": "A federal policy directive on access to public and private rights of way for installing and maintaining telecommunications infrastructure.",
+    "key_provisions": [
+      "Sets a permission and fee framework for telecommunications infrastructure across public and private rights of way.",
+      "Directs public authorities to use no-profit, no-loss fees and avoid discriminatory treatment among licensees.",
+      "Addresses infrastructure sharing, protection, safety, national security, and common service corridors.",
+      "Provides a process for escalating access, fee, and condition disputes and directs PTA implementation under the telecommunications statute."
+    ],
+    "affects": [
+      "Telecom licensees",
+      "Public authorities",
+      "Private property owners",
+      "Pakistan Telecommunication Authority",
+      "Internet users",
+      "Telecom operators",
+      "Private right-of-way owners"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "telecommunications-policy-2015",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/ROW%20Policy%20Directive%20.pdf",
+    "secondary_sources": [
+      "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl",
+      "https://moitt.gov.pk/NewsDetail/YWU1NWUwNjUtOWEzNS00MzQzLTgzZGQtYTZmZDc4NjdiNmUy"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "removal-blocking-online-content-rules-2020",
+    "title": "Removal and Blocking of Unlawful Online Content (Procedure, Oversight and Safeguards) Rules, 2020",
+    "short_name": "Online Content Rules 2020",
+    "domains": [
+      "Cybercrime & online speech"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2020-10-06",
+    "last_amended": null,
+    "summary": "A 2020 ruleset describing a Pakistan Telecommunication Authority process for complaints, removal or blocking orders, platform obligations, review, and appeal concerning unlawful online content. The linked official text is currently inaccessible, so this snapshot does not assert its present legal status.",
+    "key_provisions": [
+      "Established complaint and hearing procedures for Pakistan Telecommunication Authority decisions on unlawful online content.",
+      "Set compliance requirements for service providers and social media companies.",
+      "Provided review within the Authority and a subsequent appeal route to the High Court."
+    ],
+    "affects": [
+      "Citizens",
+      "Social media platforms",
+      "Service providers",
+      "Pakistan Telecommunication Authority",
+      "Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "citizens-protection-online-harm-rules-2020",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Corrected%20Version%20of%20Rules.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "critical-telecom-data-infrastructure-security-regulations-2020",
+    "title": "Critical Telecom Data and Infrastructure Security Regulations, 2020",
+    "short_name": "CTDISR",
+    "domains": [
+      "Telecom regulation",
+      "Cybersecurity"
+    ],
+    "type": "Regulation",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "In force",
+    "date_enacted": "2020-09-08",
+    "last_amended": null,
+    "summary": "Cybersecurity regulations applying to all Pakistan Telecommunication Authority licensees for the protection of critical telecom data and critical telecom infrastructure.",
+    "key_provisions": [
+      "Requires licensees to establish cybersecurity governance, policies, roles, and awareness measures.",
+      "Requires controls for monitoring, malware protection, incident management, continuity, and backups.",
+      "Requires protection and classification of critical and personal telecom data.",
+      "Requires controls for critical telecom infrastructure, including access management and vulnerability remediation."
+    ],
+    "affects": [
+      "Telecom licensees",
+      "Pakistan Telecommunication Authority",
+      "Telecom customers"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "national-cyber-security-framework-for-telecom-2022"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/critical_telecom_data_reg_20112020.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "right-access-information-rules-2019",
+    "title": "Right of Access to Information Rules, 2019",
+    "short_name": "Federal RTI Rules",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2020-05-05",
+    "last_amended": null,
+    "summary": "Procedural rules under the federal Right of Access to Information Act covering designated officers, requests, assistance, notices, records, fees, and delivery of information.",
+    "key_provisions": [
+      "Allows applications on plain paper or a Commission form and limits required applicant details to the information sought, desired format, and contact details.",
+      "Defines designated-officer assistance, transfers, third-party notice and hearing, reasons for denial or delay, and publication of application and cost procedures.",
+      "Provides for record maintenance and computerization, appeals to the Information Commission, Commission meetings, an online complaints facility, and biannual public-body implementation reports."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Public information officers",
+      "Information applicants",
+      "Pakistan Information Commission"
+    ],
+    "related": [
+      "right-access-information-act-2017"
+    ],
+    "primary_source_url": "https://moib.gov.pk/Downloads/RTI/The-Right-of-Access-to-Information-Rules-2019.pdf",
+    "secondary_sources": [
+      "https://www.moib.gov.pk/Pages/15/Media-laws-Rules"
+    ],
+    "controversy": "The official document is titled Rules, 2019 but its notification is dated 5 May 2020; this record uses the notification date.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "policy-evaluation-algorithms-security-devices-2020",
+    "title": "Policy for Evaluation of Algorithms and Security Devices",
+    "short_name": "Security Device Evaluation Policy",
+    "domains": [
+      "Cybersecurity"
+    ],
+    "type": "Policy",
+    "issuing_body": "National Telecommunication and Information Technology Security Board",
+    "status": "In force",
+    "date_enacted": "2020-03-20",
+    "last_amended": null,
+    "summary": "A Cabinet Division policy describing how private vendors may submit cryptographic algorithms and information-security devices to the National Telecommunication and Information Technology Security Board for evaluation and certification.",
+    "key_provisions": [
+      "Allows private vendors to request evaluation of security devices and algorithms through the NTISB.",
+      "Provides a staged submission, laboratory review, evaluation, and certification process.",
+      "Lists evaluation categories, indicative time frames, and fees for document, algorithm, and equipment evaluation."
+    ],
+    "affects": [
+      "Security technology vendors",
+      "Evaluation laboratories",
+      "Government agencies",
+      "Private-sector buyers"
+    ],
+    "related": [
+      "pakistan-security-standard-itsec-guidebook-2023",
+      "pakistan-security-standard-cryptographic-guidebook-2023"
+    ],
+    "primary_source_url": "https://pkcert.gov.pk/uploads/2023/06/evaluation-policy-20-3-2020.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "citizens-protection-online-harm-rules-2020",
+    "title": "Citizens Protection (Against Online Harm) Rules, 2020",
+    "short_name": "Citizens Protection Rules 2020",
+    "domains": [
+      "Cybercrime & online speech",
+      "Data protection & privacy"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2020-01-21",
+    "last_amended": null,
+    "summary": "A 2020 ruleset that established a national coordinator and set content-removal, local-presence, data-disclosure, and enforcement obligations for social media companies. The linked official text is currently inaccessible, so this snapshot does not assert its present legal status.",
+    "key_provisions": [
+      "Required notified unlawful content to be removed or disabled within twenty-four hours, or six hours in an emergency.",
+      "Required covered companies to register, establish a local office and focal person, and establish database servers in Pakistan.",
+      "Authorized service blocking and financial penalties for non-compliance."
+    ],
+    "affects": [
+      "Social media platforms",
+      "Citizens",
+      "Regulators",
+      "Law enforcement"
+    ],
+    "related": [
+      "peca-2016",
+      "removal-blocking-online-content-rules-2020",
+      "removal-blocking-online-content-rules-2021"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/CP%20%28Against%20Online%20Harm%29%20Rules%2C%202020.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/SiteImage/Misc/files/Final%20Draft%20Rules%20-%20RULES%20FOR%20REMOVAL%20AND%20BLOCKING%20OF%20UNLAWFUL%20ONLINE%20CONTENT%20%28PROCEDURE%2C%20OVERSIGHT%2C%20AND%20SAFEGUARDS%29%20RULES%2C%202020.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "ecommerce-policy-pakistan-2019",
+    "title": "e-Commerce Policy of Pakistan",
+    "short_name": "e-Commerce Policy",
+    "domains": [
+      "E-commerce",
+      "IT industry & exports",
+      "Fintech & digital payments"
+    ],
+    "type": "Policy",
+    "issuing_body": "Commerce Division, Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2019-10-01",
+    "last_amended": null,
+    "summary": "Pakistan's first national e-commerce policy, approved by the federal Cabinet in 2019 to coordinate legal, payment, taxation, logistics, consumer-protection, trade, skills, and enterprise measures for domestic and cross-border e-commerce.",
+    "key_provisions": [
+      "Creates a National e-Commerce Council to coordinate implementation across federal and provincial bodies and private-sector stakeholders.",
+      "Sets policy directions for payment digitization, financial inclusion, consumer protection, taxation, logistics, and cross-border e-commerce procedures.",
+      "Seeks to improve participation by micro, small, and medium enterprises, women, youth, freelancers, and exporters in digital trade."
+    ],
+    "affects": [
+      "Online marketplaces and merchants",
+      "Consumers",
+      "Exporters and freelancers",
+      "Payment and logistics providers",
+      "Federal and provincial public bodies"
+    ],
+    "related": [
+      "electronic-transactions-ordinance-2002",
+      "import-export-ecommerce-rules-2021",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://www.commerce.gov.pk/wp-content/uploads/2019/11/e-Commerce_Policy_of_Pakistan_Print.pdf",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/ecommerce-policy-2019/",
+      "https://cabinet.gov.pk/SiteImage/Misc/files/SEP-FURTHER%20TO%20AMEND%20%28Memos%29.pdf",
+      "https://pid.gov.pk/site/press_detail/14752"
+    ],
+    "controversy": "The Ministry of Commerce describes the instrument as the 2019-24 policy, while a replacement policy for 2025-30 remained under finalization in July 2026; this record does not infer whether the earlier policy continues to operate.",
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "electronic-money-institutions-regulations-2019",
+    "title": "Regulations for Electronic Money Institutions",
+    "short_name": "EMI Regulations",
+    "domains": [
+      "Fintech & digital payments",
+      "E-commerce"
+    ],
+    "type": "Regulation",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2019-04-01",
+    "last_amended": "2023-06-21",
+    "summary": "State Bank regulations for licensing and supervising non-bank electronic-money institutions, revised in 2023 to broaden permitted payment services and wallet use cases while retaining staged authorization and safeguarding requirements.",
+    "key_provisions": [
+      "Uses staged authorization for electronic-money institutions: in-principle approval, pilot-operations approval, and final commercial authorization.",
+      "Covers electronic wallets and payment instruments, customer funds, governance, risk management, technology and security, outsourcing, consumer protection, and regulatory reporting.",
+      "The 2023 revision expanded permissible services to include payment and bill aggregation, payment initiation, account information, domestic e-commerce escrow, API services, and inward cross-border remittances."
+    ],
+    "affects": [
+      "Electronic-money institutions",
+      "Fintech companies",
+      "Banks and payment-service providers",
+      "Merchants and e-commerce platforms",
+      "Wallet users"
+    ],
+    "related": [
+      "payment-systems-electronic-fund-transfers-act-2007",
+      "ecommerce-policy-pakistan-2019",
+      "import-export-ecommerce-rules-2021"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/assets/documents/circulars/psd/2023/C3-Enclosure-Regulations-EMIs.pdf",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/circulars/pspod-circular-no-03-of-2023",
+      "https://www.sbp.org.pk/our-operations/payments-ecosystem-and-infrastructure/emis-and-pso-psps"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "day"
+  },
+  {
+    "id": "digital-pakistan-policy-2018",
+    "title": "Digital Pakistan Policy",
+    "short_name": "Digital Pakistan Policy",
+    "domains": [
+      "National digital strategy",
+      "Cloud & data localisation",
+      "AI & emerging tech"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology and Telecommunication",
+    "status": "In force",
+    "date_enacted": "2018-07-02",
+    "last_amended": null,
+    "summary": "A national policy for expanding Pakistan's digital economy and public-service digitisation through infrastructure, skills, e-government, sectoral applications, technology adoption, and support for the IT industry.",
+    "key_provisions": [
+      "Sets a whole-of-government direction for digital infrastructure, human-resource development, software exports, e-government, and digitisation of major socioeconomic sectors.",
+      "Calls for adoption and domestic capacity building in artificial intelligence, robotics, the Internet of Things, cloud computing, and big-data technologies.",
+      "Promotes integration of government databases, cloud-based citizen services, and common infrastructure for public- and private-sector applications."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Provincial public bodies",
+      "IT and telecom businesses",
+      "Citizens"
+    ],
+    "related": [
+      "digital-nation-pakistan-act-2025",
+      "pakistan-cloud-first-policy-2022",
+      "national-ai-policy-2025",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://www.moitt.gov.pk/SiteImage/Policies/DIGITAL%20PAKISTAN%20POLICY.pdf",
+    "secondary_sources": [
+      "https://www.moitt.gov.pk/Policies"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "right-access-information-act-2017",
+    "title": "Right of Access to Information Act, 2017",
+    "short_name": "Federal RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2017-10-12",
+    "last_amended": null,
+    "summary": "The federal access-to-information statute implementing Article 19A for information held by federal public bodies, subject to the Act's procedures, exceptions, and oversight arrangements.",
+    "key_provisions": [
+      "Requires federal public bodies to maintain, index, computerize, and proactively publish specified categories of records.",
+      "Creates procedures for information requests, designated officials, responses, fees, transfers, refusals, and internal handling.",
+      "Establishes the Pakistan Information Commission to decide appeals, issue directions, support implementation, and report to Parliament.",
+      "Defines exceptions, public-interest considerations, offences, penalties, and protections concerning disclosure."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Public information officers",
+      "Pakistan Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-rules-2019",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://www.moib.gov.pk/Downloads/RTI/The-Right-of-Access-to-Information-Act-2017-Gazette.pdf",
+    "secondary_sources": [
+      "https://www.moib.gov.pk/Pages/180/PIC",
+      "https://na.gov.pk/en/acts-tenure.php?tenure_id=11."
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "sindh-transparency-rti-act-2016",
+    "title": "Sindh Transparency and Right to Information Act, 2016",
+    "short_name": "Sindh RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Sindh",
+    "status": "In force",
+    "date_enacted": "2017-04-12",
+    "last_amended": null,
+    "summary": "Sindh's provincial access-to-information statute, enacted as Sindh Act No. XV of 2017, providing a right to information held by public authorities and creating an information commission and request system.",
+    "key_provisions": [
+      "Requires transparency of actions, proper record maintenance, proactive disclosure, and appointment of designated officials.",
+      "Sets procedures for applications, responses, transfers, fees, refusals, review, and complaints.",
+      "Establishes the Sindh Information Commission and defines its enforcement, guidance, monitoring, and reporting functions.",
+      "Defines exemptions, severability, public-interest considerations, offences, and penalties."
+    ],
+    "affects": [
+      "Sindh public authorities",
+      "Designated officials",
+      "Sindh Information Commission",
+      "Citizens and registered legal persons",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-20-000002.pdf",
+    "secondary_sources": [
+      "https://www.sindhlaws.gov.pk/SindhGazetteDetailDepartment.aspx?DepID=DSC-000002&X=ACT",
+      "https://www.sindhlaws.gov.pk/Library.aspx"
+    ],
+    "controversy": "The Act's title uses 2016, while the official Sindh Code identifies it as Sindh Act No. XV of 2017 and publishes it under 12 April 2017; this record uses the official publication date.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "peca-2016",
+    "title": "Prevention of Electronic Crimes Act, 2016",
+    "short_name": "PECA",
+    "domains": [
+      "Cybercrime & online speech",
+      "Data protection & privacy"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2016-08-18",
+    "last_amended": "2025-01-29",
+    "summary": "Pakistan's principal federal statute on offences involving information systems and data, related investigation and evidence-gathering powers, service-provider duties, and online-content controls.",
+    "key_provisions": [
+      "Creates offences involving unauthorized access, copying or interference with systems and data, identity information, interception, cyberstalking, and specified forms of online content.",
+      "Requires service providers to retain specified traffic data for at least one year and provide it when supported by a court warrant.",
+      "Provides procedures for preservation, search, seizure, disclosure, real-time collection, confidentiality, prosecution, trial, and international cooperation."
+    ],
+    "affects": [
+      "Citizens",
+      "Service providers",
+      "Social media platforms",
+      "Law enforcement",
+      "Courts"
+    ],
+    "related": [
+      "criminal-laws-amendment-2023",
+      "peca-amendment-2025",
+      "removal-blocking-online-content-rules-2021",
+      "investigation-fair-trial-act-2013",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+    "secondary_sources": [
+      "https://na.gov.pk/uploads/documents/64f840c325916_768.pdf",
+      "https://na.gov.pk/uploads/documents/679b243193585_457.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "day"
+  },
+  {
+    "id": "telecommunications-policy-2015",
+    "title": "Telecommunications Policy 2015",
+    "short_name": "Telecom Policy 2015",
+    "domains": [
+      "Internet governance & access",
+      "Telecom regulation"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Information Technology",
+    "status": "In force",
+    "date_enacted": "2015-12-11",
+    "last_amended": null,
+    "summary": "A national policy for universal, affordable, and quality telecommunications through competitive markets, covering broadband expansion, spectrum, competition, convergence, satellite services, and universal service.",
+    "key_provisions": [
+      "Sets universal access, affordability, service quality, competition, and consumer protection as central policy objectives.",
+      "Provides direction on licensing, interconnection, convergence, service provision, and over-the-top communications.",
+      "Addresses spectrum planning, assignment, refarming, trading, sharing, and satellite communications.",
+      "Links broadband, rights of way, infrastructure sharing, roaming, disaster communications, universal service, and ICT research funding."
+    ],
+    "affects": [
+      "Citizens",
+      "Telecom operators",
+      "Internet service providers",
+      "Regulators",
+      "Rural communities",
+      "Pakistan Telecommunication Authority",
+      "Frequency Allocation Board",
+      "Consumers"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "public-private-right-of-way-policy-directive-2020",
+      "universal-service-fund-rules-2006",
+      "national-broadband-policy-2021-draft"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1635420671-telecommunications-policy-2015-approvedpdf.pdf",
+    "secondary_sources": [
+      "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
+      "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
+      "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "broadband-quality-of-service-regulations-2014",
+    "title": "Broadband Quality of Service Regulations, 2014",
+    "short_name": "Broadband QoS Regulations",
+    "domains": [
+      "Telecom regulation"
+    ],
+    "type": "Regulation",
+    "issuing_body": "Pakistan Telecommunication Authority",
+    "status": "Unverified",
+    "date_enacted": "2014-06-27",
+    "last_amended": null,
+    "summary": "Regulations issued by the Pakistan Telecommunication Authority to establish quality-of-service requirements and a compliance framework for broadband services.",
+    "key_provisions": [
+      "Establishes quality-of-service parameters for broadband services.",
+      "Provides for measurement and reporting of broadband service performance.",
+      "Enables regulatory monitoring of service-provider compliance."
+    ],
+    "affects": [
+      "Broadband providers",
+      "Pakistan Telecommunication Authority",
+      "Consumers"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/2_%20Broadband%20Quality%20of%20Service%20Regulations%2C%202014.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "punjab-transparency-rti-act-2013",
+    "title": "Punjab Transparency and Right to Information Act, 2013",
+    "short_name": "Punjab RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of the Punjab",
+    "status": "Unverified",
+    "date_enacted": "2013-12-16",
+    "last_amended": null,
+    "summary": "Punjab's provincial access-to-information framework describes access to records held by provincial public bodies and oversight through the Punjab Information Commission. The linked official Act text timed out during this review, so this snapshot does not assert its present legal status.",
+    "key_provisions": [
+      "Provides access to information held by public bodies and requires proactive disclosure, record maintenance, indexing, and annual reporting.",
+      "Creates the Punjab Information Commission and defines its functions.",
+      "Sets application, transfer, internal-review, exception, penalty, offence, and rulemaking procedures."
+    ],
+    "affects": [
+      "Punjab public bodies",
+      "Public information officers",
+      "Punjab Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://lah.punjab.gov.pk/system/files/RIGHT%20TO%20INFORMATION%20ACT%202013.pdf",
+    "secondary_sources": [
+      "https://ppra.punjab.gov.pk/AR"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "kp-rti-act-2013",
+    "title": "Khyber Pakhtunkhwa Right to Information Act, 2013",
+    "short_name": "KP RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Khyber Pakhtunkhwa",
+    "status": "Amended",
+    "date_enacted": "2013-11-05",
+    "last_amended": "2015-01-01",
+    "summary": "Khyber Pakhtunkhwa's provincial access-to-information statute, providing access to information held by covered public bodies and establishing disclosure, request, complaint, and oversight mechanisms.",
+    "key_provisions": [
+      "Requires proactive disclosure and designated public information officers in covered public bodies.",
+      "Establishes procedures and time limits for requests, responses, refusals, and complaints.",
+      "Creates the Khyber Pakhtunkhwa Information Commission and gives it complaint, direction, implementation, and reporting functions.",
+      "Defines exemptions, public-interest tests, record-management duties, and penalties."
+    ],
+    "affects": [
+      "Khyber Pakhtunkhwa public bodies",
+      "Public information officers",
+      "Khyber Pakhtunkhwa Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_RIGHT_TO_INFORMATION_ACT_2013.pdf",
+    "secondary_sources": [
+      "https://kpcode.kp.gov.pk/homepage/lawDetails/590",
+      "https://dgipr.kp.gov.pk/acts-laws-policies/"
+    ],
+    "controversy": "The official consolidated text records substitutions made by Khyber Pakhtunkhwa Act No. XXIV of 2015, but the precise amendment date was not stated in the checked source; the year-only placeholder is used.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "year"
+  },
+  {
+    "id": "investigation-fair-trial-act-2013",
+    "title": "Investigation for Fair Trial Act, 2013",
+    "short_name": "Fair Trial Act",
+    "domains": [
+      "Data protection & privacy"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2013-02-20",
+    "last_amended": null,
+    "summary": "A federal statute regulating warrants for surveillance and interception in investigations of scheduled offences, including executive authorization, High Court oversight, service-provider cooperation, and controls on use of intercepted material.",
+    "key_provisions": [
+      "Requires an authorized officer to obtain ministerial permission before applying to a High Court judge for a surveillance or interception warrant.",
+      "Directs the judge to consider evidentiary need and privacy interference when deciding whether and how to issue a warrant.",
+      "Provides for review, complaints concerning misuse, confidentiality, admissibility, and offences for unauthorized surveillance or misuse of intercepted material."
+    ],
+    "affects": [
+      "Citizens",
+      "Law enforcement",
+      "Intelligence agencies",
+      "Service providers",
+      "High Courts"
+    ],
+    "related": [
+      "peca-2016",
+      "pakistan-telecommunication-reorganization-act-1996"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administrator289aee517e7b8512e341194f9e846738.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2FqbZw%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "payment-systems-electronic-fund-transfers-act-2007",
+    "title": "Payment Systems and Electronic Fund Transfers Act, 2007",
+    "short_name": "PS&EFT Act",
+    "domains": [
+      "Fintech & digital payments"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2007-06-30",
+    "last_amended": null,
+    "summary": "The principal federal statute for supervising and regulating payment systems and electronic fund transfers in Pakistan, including the roles of the State Bank, payment-system operators, service providers, financial institutions, and consumers.",
+    "key_provisions": [
+      "Empowers the State Bank of Pakistan to issue rules, standards, directions, and other requirements for payment systems, service providers, operators, and payment instruments.",
+      "Provides for designation and oversight of payment systems and instruments, real-time gross settlement, clearing houses, settlement finality, and electronic-money institutions.",
+      "Sets requirements concerning transaction records, disclosures, error correction, security, consumer liability, complaint resolution, privacy, penalties, and court actions."
+    ],
+    "affects": [
+      "State Bank of Pakistan",
+      "Banks and financial institutions",
+      "Payment-system operators and service providers",
+      "Electronic-money institutions",
+      "Consumers"
+    ],
+    "related": [
+      "electronic-money-institutions-regulations-2019",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://www.pakistancode.gov.pk/pdffiles/administrator9e50d2bf17dfbb768e37f4561c16e859.pdf",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/our-operations/payment-systems"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "universal-service-fund-rules-2006",
+    "title": "Universal Service Fund Rules, 2006",
+    "short_name": "USF Rules",
+    "domains": [
+      "Internet governance & access"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2006-11-01",
+    "last_amended": "2023-02-22",
+    "summary": "Rules for administering and managing Pakistan's Universal Service Fund and its programs for extending telecommunications and broadband access to unserved and underserved areas.",
+    "key_provisions": [
+      "Defines the Fund's governance through a policy committee, fund secretariat, and state-owned Universal Service Fund company.",
+      "Provides for competitive allocation of subsidies and projects serving unserved and underserved areas.",
+      "Sets budgeting, contribution, disbursement, contracting, monitoring, and reporting arrangements for universal-service projects."
+    ],
+    "affects": [
+      "Rural communities",
+      "Underserved communities",
+      "Telecom licensees",
+      "Universal Service Fund Company",
+      "Federal Government"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996",
+      "telecommunications-policy-2015",
+      "universal-service-fund-amendment-rules-2023"
+    ],
+    "primary_source_url": "https://www.usf.org.pk/storage/rules-policies/1644386968-usf-rules-updated-2021pdf.pdf",
+    "secondary_sources": [
+      "https://www.usf.org.pk/storage/rules-policies/1744350850-usf-rules-ammendments-2023pdf.pdf",
+      "https://www.usf.org.pk/rules-policies-guidelines"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "day"
+  },
+  {
+    "id": "electronic-transactions-ordinance-2002",
+    "title": "Electronic Transactions Ordinance, 2002",
+    "short_name": "ETO",
+    "domains": [
+      "Data protection & privacy",
+      "E-commerce",
+      "Fintech & digital payments"
+    ],
+    "type": "Ordinance",
+    "issuing_body": "President of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2002-09-11",
+    "last_amended": "2016-08-18",
+    "summary": "Pakistan's framework for legal recognition of electronic documents, communications, signatures, and certification services; its original privacy and information-system damage offences were omitted by PECA in 2016.",
+    "key_provisions": [
+      "Prevents electronic form alone from being a ground for denying legal recognition, admissibility, validity, proof, or enforceability.",
+      "Defines when electronic records satisfy writing, original, retention, signature, attribution, acknowledgment, dispatch, and receipt requirements.",
+      "Establishes the Electronic Certification Accreditation Council and an accreditation and data-protection framework for certification service providers.",
+      "Provides for specified offences, network-service-provider liability limits, and rulemaking; PECA later omitted the Ordinance's former sections 36 and 37."
+    ],
+    "affects": [
+      "Citizens",
+      "Businesses",
+      "Certification service providers",
+      "Government bodies",
+      "Businesses and online merchants",
+      "Consumers",
+      "Public authorities",
+      "Courts and legal practitioners"
+    ],
+    "related": [
+      "peca-2016",
+      "personal-data-protection-bill-2023",
+      "ecommerce-policy-pakistan-2019",
+      "import-export-ecommerce-rules-2021",
+      "payment-systems-electronic-fund-transfers-act-2007"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratordbc98dd49f2df3b1d07bb986dcceb9a3.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "https://www.sbp.org.pk/our-operations/payment-systems"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "day"
+  },
+  {
+    "id": "pakistan-telecommunication-rules-2000",
+    "title": "Pakistan Telecommunication Rules, 2000",
+    "short_name": "Telecommunication Rules",
+    "domains": [
+      "Telecom regulation"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2000-11-02",
+    "last_amended": null,
+    "summary": "Rules made under the Pakistan Telecommunication (Re-organization) Act that set out procedures and general conditions for telecommunications licensing and related regulatory matters.",
+    "key_provisions": [
+      "Specifies procedures for applying for and issuing telecommunications licences.",
+      "Includes general licence conditions governing authorized systems and services.",
+      "Addresses interconnection and contracting by licensees."
+    ],
+    "affects": [
+      "Telecom operators",
+      "Licence applicants",
+      "Pakistan Telecommunication Authority"
+    ],
+    "related": [
+      "pakistan-telecommunication-reorganization-act-1996"
+    ],
+    "primary_source_url": "https://moitt.gov.pk/SiteImage/Misc/files/Pakistan%20telecom%20rules.pdf",
+    "secondary_sources": [],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Unverified",
+    "date_precision": "day",
+    "last_amended_precision": null
+  },
+  {
+    "id": "pakistan-telecommunication-reorganization-act-1996",
+    "title": "Pakistan Telecommunication (Re-organization) Act, 1996",
+    "short_name": "Telecom Reorganization Act",
+    "domains": [
+      "Internet governance & access",
+      "Data protection & privacy",
+      "Telecom regulation"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "Amended",
+    "date_enacted": "1996-10-13",
+    "last_amended": "2024-09-20",
+    "summary": "The foundational statute for Pakistan's telecommunications institutions and licensing system, including the Pakistan Telecommunication Authority, universal-service funding, right-of-way rules, national-security powers, and sector appeals.",
+    "key_provisions": [
+      "Establishes the Pakistan Telecommunication Authority and assigns licensing, regulation, consumer-protection, competition, and universal-service functions.",
+      "Creates the telecommunications licensing system, Frequency Allocation Board, Universal Service Fund, and Research and Development Fund.",
+      "Authorizes federal policy directives and universal-service support for unserved, underserved, rural, and remote areas.",
+      "Provides specified national-security interception and service-priority powers and a Telecommunication Appellate Tribunal."
+    ],
+    "affects": [
+      "Citizens",
+      "Telecom licensees",
+      "Pakistan Telecommunication Authority",
+      "Federal Government",
+      "Courts",
+      "Telecom operators",
+      "Government agencies",
+      "Consumers"
+    ],
+    "related": [
+      "investigation-fair-trial-act-2013",
+      "public-private-right-of-way-policy-directive-2020",
+      "telecommunications-policy-2015",
+      "universal-service-fund-rules-2006",
+      "universal-service-fund-amendment-rules-2023",
+      "pakistan-telecommunication-rules-2000",
+      "broadband-quality-of-service-regulations-2014",
+      "critical-telecom-data-infrastructure-security-regulations-2020"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratorcf6de2451af9e9d016e5fef2ac7e1562.pdf",
+    "secondary_sources": [
+      "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apqWaw%3D%3D-sg-jjjjjjjjjjjjj"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified",
+    "date_precision": "day",
+    "last_amended_precision": "day"
+  }
+]

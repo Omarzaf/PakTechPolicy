@@ -1,7 +1,7 @@
 # Packet B sourcing notes
 
-Checked: 2026-07-25  
-Domains: Telecom regulation; Cybersecurity  
+Checked: 2026-07-25
+Domains: Telecom regulation; Cybersecurity
 Records: 13 total — 5 telecom-only, 6 cybersecurity-only, and 2 cross-domain.
 
 ## Primary sources checked

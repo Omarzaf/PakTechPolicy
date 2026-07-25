@@ -10,6 +10,8 @@
     "consolidate": "node tools/consolidate.mjs",
     "dev": "node tools/serve.mjs",
     "test": "node --test",
-    "verify": "node tools/verify.mjs"
+    "verify": "node tools/verify.mjs --release",
+    "verify:packet": "node tools/verify.mjs",
+    "verify:site": "node tools/verify-site.mjs"
   }
 }

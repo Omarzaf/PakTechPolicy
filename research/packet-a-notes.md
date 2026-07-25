@@ -1,7 +1,7 @@
 # Packet A sourcing notes
 
-Research date: 2026-07-25  
-Scope: Cybercrime & online speech; Data protection & privacy; Internet governance & access  
+Research date: 2026-07-25
+Scope: Cybercrime & online speech; Data protection & privacy; Internet governance & access
 Records: 15
 
 This packet is a neutral federal-level research inventory, not legal advice. `Verified`

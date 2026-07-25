@@ -590,6 +590,10 @@ a {
   opacity: 1;
 }
 
+.year-column:focus-visible .year-count {
+  opacity: 1;
+}
+
 .year-bar {
   display: block;
   width: 100%;
@@ -814,7 +818,12 @@ a {
 }
 
 .policy-results {
-  outline: none;
+  outline: 0;
+}
+
+.policy-results:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--saffron) 75%, white);
+  outline-offset: 6px;
 }
 
 .policy-card {
@@ -843,6 +852,18 @@ a {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.8rem;
+}
+
+.card-badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: end;
+}
+
+.mobile-status {
+  display: none;
 }
 
 .domain-pills,
@@ -1519,7 +1540,7 @@ dialog::backdrop {
   }
 
   .header-cta {
-    display: none;
+    font-size: 0.58rem;
   }
 
   .hero {
@@ -1628,9 +1649,7 @@ dialog::backdrop {
   }
 
   .policy-card-side {
-    position: absolute;
-    right: 0;
-    bottom: 1.5rem;
+    display: none;
   }
 
   .policy-arrow {
@@ -1646,8 +1665,8 @@ dialog::backdrop {
     padding-right: 0;
   }
 
-  .policy-card-side .status-badge {
-    display: none;
+  .mobile-status {
+    display: inline-flex;
   }
 
   .policy-meta {

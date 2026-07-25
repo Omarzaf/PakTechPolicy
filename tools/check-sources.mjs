@@ -33,7 +33,7 @@ const check = (policy) =>
       "--max-time",
       "20",
       "-w",
-      "%{http_code}",
+      "%{http_code}\t%{content_type}\t%{url_effective}\t%{size_download}",
       policy.primary_source_url,
     ]);
     let stdout = "";
@@ -45,13 +45,31 @@ const check = (policy) =>
       stderr += chunk;
     });
     child.on("close", (exitCode) => {
-      const httpCode = Number.parseInt(stdout.trim(), 10) || 0;
+      const [statusValue, contentType = "", finalUrl = "", sizeValue = "0"] = stdout
+        .trim()
+        .split("\t");
+      const httpCode = Number.parseInt(statusValue, 10) || 0;
+      const sizeBytes = Number.parseInt(sizeValue, 10) || 0;
+      const supportedContent = /^(application\/pdf|text\/html|application\/octet-stream|binary\/octet-stream|application\/msword|application\/vnd\.openxmlformats)/i.test(
+        contentType,
+      );
+      const authenticationRedirect = /(?:\/|[?&])(login|sign-?in|auth)(?:\/|[?&#=]|$)/i.test(
+        finalUrl,
+      );
       complete({
         id: policy.id,
         verification: policy.verification,
         url: policy.primary_source_url,
+        final_url: finalUrl || null,
         http_code: httpCode,
-        reachable: httpCode >= 200 && httpCode < 400,
+        content_type: contentType || null,
+        size_bytes: sizeBytes,
+        reachable:
+          httpCode >= 200 &&
+          httpCode < 300 &&
+          supportedContent &&
+          !authenticationRedirect &&
+          sizeBytes >= 512,
         elapsed_ms: Date.now() - started,
         exit_code: exitCode,
         error: stderr.trim() || null,

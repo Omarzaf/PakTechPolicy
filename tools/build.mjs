@@ -1,5 +1,6 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { assertV1RecordCount } from "./release-contract.mjs";
 
 const projectRoot = resolve(import.meta.dirname, "..");
 const sourceDir = resolve(projectRoot, "src");
@@ -7,9 +8,7 @@ const dataFile = resolve(projectRoot, "data", "policies.json");
 const outputDir = resolve(projectRoot, "dist");
 
 const policies = JSON.parse(await readFile(dataFile, "utf8"));
-if (!Array.isArray(policies)) {
-  throw new TypeError("data/policies.json must contain an array");
-}
+assertV1RecordCount(policies);
 
 await rm(outputDir, { recursive: true, force: true });
 await mkdir(resolve(outputDir, "data"), { recursive: true });

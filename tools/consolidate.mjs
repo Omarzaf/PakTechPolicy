@@ -5,6 +5,7 @@ const root = resolve(import.meta.dirname, "..");
 const researchDir = resolve(root, "research");
 const outputFile = resolve(root, "data", "policies.json");
 const decisionsFile = resolve(researchDir, "consolidation-decisions.json");
+const reportFile = resolve(researchDir, "consolidation-report.json");
 const packetNames = (await readdir(researchDir))
   .filter((name) => /^packet-[a-d]\.json$/.test(name))
   .toSorted();
@@ -29,6 +30,7 @@ for (const packetName of packetNames) {
 }
 
 const policies = [];
+const duplicateDecisions = [];
 for (const [id, entries] of candidates) {
   const decision = decisions[id];
   if (entries.length > 1 && !decision) {
@@ -47,8 +49,35 @@ for (const [id, entries] of candidates) {
   }
 
   const records = entries.map(({ record }) => record);
+  if (entries.length > 1) {
+    const keys = unique(records.flatMap((record) => Object.keys(record))).toSorted();
+    const differences = Object.fromEntries(
+      keys
+        .map((key) => {
+          const values = unique(
+            records.map((record) => JSON.stringify(record[key]) ?? "__MISSING__"),
+          );
+          return values.length > 1
+            ? [key, entries.map(({ packet, record }) => ({ packet, value: record[key] }))]
+            : null;
+        })
+        .filter(Boolean),
+    );
+    duplicateDecisions.push({
+      id,
+      packets: entries.map(({ packet }) => packet),
+      preferred_packet: preferred.packet,
+      reason: decision.reason,
+      differing_fields: differences,
+      patch: decision.patch ?? null,
+    });
+  }
   const merged = {
     ...preferred.record,
+    date_precision: preferred.record.date_precision ?? "day",
+    last_amended_precision: preferred.record.last_amended
+      ? preferred.record.last_amended_precision ?? "day"
+      : null,
     domains: unique(records.flatMap(({ domains = [] }) => domains)),
     key_provisions: unique(records.flatMap(({ key_provisions = [] }) => key_provisions)),
     affects: unique(records.flatMap(({ affects = [] }) => affects)),
@@ -68,6 +97,24 @@ policies.sort(
 );
 
 await writeFile(outputFile, `${JSON.stringify(policies, null, 2)}\n`, "utf8");
+await writeFile(
+  reportFile,
+  `${JSON.stringify(
+    {
+      generated_at: new Date().toISOString(),
+      packets: packetNames,
+      candidate_records: [...candidates.values()].reduce(
+        (sum, entries) => sum + entries.length,
+        0,
+      ),
+      output_records: policies.length,
+      duplicate_decisions: duplicateDecisions,
+    },
+    null,
+    2,
+  )}\n`,
+  "utf8",
+);
 console.log(
   `Consolidated ${policies.length} unique records from ${packetNames.join(", ")} with ${
     Object.keys(decisions).length

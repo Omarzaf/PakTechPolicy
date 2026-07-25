@@ -14,15 +14,13 @@ const types = new Map([
 ]);
 
 const server = createServer(async (request, response) => {
-  const requestPath = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
-  const candidate = resolve(root, `.${requestPath === "/" ? "/index.html" : requestPath}`);
-
-  if (candidate !== root && !candidate.startsWith(`${root}${sep}`)) {
-    response.writeHead(403).end("Forbidden");
-    return;
-  }
-
   try {
+    const requestPath = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
+    const candidate = resolve(root, `.${requestPath === "/" ? "/index.html" : requestPath}`);
+    if (candidate !== root && !candidate.startsWith(`${root}${sep}`)) {
+      response.writeHead(403).end("Forbidden");
+      return;
+    }
     const metadata = await stat(candidate);
     if (!metadata.isFile()) throw new Error("Not a file");
     response.writeHead(200, {
@@ -30,7 +28,12 @@ const server = createServer(async (request, response) => {
       "Cache-Control": "no-store",
     });
     createReadStream(candidate).pipe(response);
-  } catch {
+  } catch (error) {
+    if (error instanceof URIError) {
+      response.writeHead(400, { "Content-Type": "text/plain; charset=utf-8" });
+      response.end("Bad request");
+      return;
+    }
     response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Not found");
   }

@@ -7,6 +7,7 @@ import {
   getIndexStats,
   uniqueValues,
 } from "./policy-engine.js";
+import { decodePolicyIdHash, formatPolicyDate } from "./ui-utils.js";
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -57,17 +58,7 @@ const safeUrl = (value) => {
   }
 };
 
-const dateLabel = (value, options = {}) => {
-  if (!value) return "Date unavailable";
-  const date = new Date(`${value}T00:00:00Z`);
-  if (Number.isNaN(date.valueOf())) return value;
-  return new Intl.DateTimeFormat("en-GB", {
-    day: options.yearOnly ? undefined : "numeric",
-    month: options.yearOnly ? undefined : "short",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(date);
-};
+const dateLabel = formatPolicyDate;
 
 const domainLabel = (domain) =>
   domain
@@ -177,7 +168,12 @@ function policyCard(policy, index) {
       <div class="policy-card-main">
         <div class="policy-card-topline">
           <div class="domain-pills">${domains}</div>
-          ${verificationBadge(policy)}
+          <div class="card-badge-group">
+            <span class="status-badge mobile-status status-${escapeHtml(
+              policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+            )}">${escapeHtml(policy.status)}</span>
+            ${verificationBadge(policy)}
+          </div>
         </div>
         <h3>
           <button type="button" data-open-policy="${escapeHtml(policy.id)}">
@@ -190,11 +186,12 @@ function policyCard(policy, index) {
           <span>${escapeHtml(policy.issuing_body)}</span>
           <time datetime="${escapeHtml(policy.date_enacted)}">${dateLabel(
             policy.date_enacted,
+            { precision: policy.date_precision },
           )}</time>
         </div>
       </div>
       <div class="policy-card-side">
-        <span class="status-badge status-${escapeHtml(
+        <span class="status-badge desktop-status status-${escapeHtml(
           policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
         )}">${escapeHtml(policy.status)}</span>
         <button class="policy-arrow" type="button" data-open-policy="${escapeHtml(
@@ -219,6 +216,7 @@ function timelineCard(policy, index, policies) {
       <div class="timeline-marker" aria-hidden="true"></div>
       <time datetime="${escapeHtml(policy.date_enacted)}">${dateLabel(
         policy.date_enacted,
+        { precision: policy.date_precision },
       )}</time>
       <div>
         <p>${escapeHtml(policy.type)} · ${escapeHtml(policy.issuing_body)}</p>
@@ -390,9 +388,15 @@ function openPolicy(id, updateHash = true) {
         <h3>Instrument record</h3>
         <dl>
           <div><dt>Issuing body</dt><dd>${escapeHtml(policy.issuing_body)}</dd></div>
-          <div><dt>Date</dt><dd>${dateLabel(policy.date_enacted)}</dd></div>
+          <div><dt>Date</dt><dd>${dateLabel(policy.date_enacted, {
+            precision: policy.date_precision,
+          })}</dd></div>
           <div><dt>Last amended</dt><dd>${
-            policy.last_amended ? dateLabel(policy.last_amended) : "Not recorded"
+            policy.last_amended
+              ? dateLabel(policy.last_amended, {
+                  precision: policy.last_amended_precision,
+                })
+              : "Not recorded"
           }</dd></div>
           <div><dt>Last verified</dt><dd>${dateLabel(policy.last_verified)}</dd></div>
         </dl>
@@ -507,6 +511,7 @@ function bindEvents() {
     const removeButton = event.target.closest("[data-remove-filter]");
     if (removeButton) {
       updateState({ [removeButton.dataset.removeFilter]: "" });
+      elements.results.focus({ preventScroll: true });
     }
   });
 
@@ -519,9 +524,7 @@ function bindEvents() {
     closeDialog();
   });
   window.addEventListener("hashchange", () => {
-    const id = location.hash.startsWith("#policy=")
-      ? decodeURIComponent(location.hash.replace("#policy=", ""))
-      : null;
+    const id = decodePolicyIdHash(location.hash);
     if (id) openPolicy(id, false);
     else if (elements.dialog.open) elements.dialog.close();
   });
@@ -541,9 +544,8 @@ async function init() {
     syncControls();
     renderResults();
 
-    if (location.hash.startsWith("#policy=")) {
-      openPolicy(decodeURIComponent(location.hash.replace("#policy=", "")), false);
-    }
+    const policyId = decodePolicyIdHash(location.hash);
+    if (policyId) openPolicy(policyId, false);
   } catch (error) {
     console.error(error);
     elements.summary.textContent = "The policy dataset could not be loaded.";

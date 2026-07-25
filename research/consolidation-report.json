@@ -1,0 +1,754 @@
+{
+  "generated_at": "2026-07-25T18:57:15.629Z",
+  "packets": [
+    "packet-a.json",
+    "packet-b.json",
+    "packet-c.json",
+    "packet-d.json"
+  ],
+  "candidate_records": 56,
+  "output_records": 51,
+  "duplicate_decisions": [
+    {
+      "id": "electronic-transactions-ordinance-2002",
+      "packets": [
+        "packet-a.json",
+        "packet-d.json"
+      ],
+      "preferred_packet": "packet-a.json",
+      "reason": "Packet A checks the ordinance against PECA section 54 and uses Amended to reflect omitted provisions; Packet D contributes the e-commerce and fintech domains.",
+      "differing_fields": {
+        "affects": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Citizens",
+              "Businesses",
+              "Certification service providers",
+              "Government bodies"
+            ]
+          },
+          {
+            "packet": "packet-d.json",
+            "value": [
+              "Businesses and online merchants",
+              "Consumers",
+              "Public authorities",
+              "Certification service providers",
+              "Courts and legal practitioners"
+            ]
+          }
+        ],
+        "domains": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Data protection & privacy"
+            ]
+          },
+          {
+            "packet": "packet-d.json",
+            "value": [
+              "E-commerce",
+              "Fintech & digital payments"
+            ]
+          }
+        ],
+        "key_provisions": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Recognizes electronic documents, records, communications, and signatures and sets rules for attribution, acknowledgement, and retention.",
+              "Establishes the Electronic Certification Accreditation Council and a framework for certification service providers.",
+              "Permits regulations addressing privacy and protection of certification-service subscriber data; PECA omitted the Ordinance's former sections 36 and 37."
+            ]
+          },
+          {
+            "packet": "packet-d.json",
+            "value": [
+              "Prevents electronic form alone from being a ground for denying legal recognition, admissibility, effect, validity, proof, or enforceability.",
+              "Defines when electronic forms satisfy writing, original, retention, signature, and evidentiary requirements.",
+              "Sets rules for attribution, acknowledgment, dispatch and receipt of electronic communications and creates the Electronic Certification Accreditation Council.",
+              "Provides for certification-service-provider accreditation, specified offences, network-service-provider liability limits, and rulemaking."
+            ]
+          }
+        ],
+        "last_amended": [
+          {
+            "packet": "packet-a.json",
+            "value": "2016-08-18"
+          },
+          {
+            "packet": "packet-d.json",
+            "value": null
+          }
+        ],
+        "related": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "peca-2016",
+              "personal-data-protection-bill-2023"
+            ]
+          },
+          {
+            "packet": "packet-d.json",
+            "value": [
+              "ecommerce-policy-pakistan-2019",
+              "import-export-ecommerce-rules-2021",
+              "payment-systems-electronic-fund-transfers-act-2007"
+            ]
+          }
+        ],
+        "secondary_sources": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf"
+            ]
+          },
+          {
+            "packet": "packet-d.json",
+            "value": [
+              "https://www.sbp.org.pk/our-operations/payment-systems"
+            ]
+          }
+        ],
+        "status": [
+          {
+            "packet": "packet-a.json",
+            "value": "Amended"
+          },
+          {
+            "packet": "packet-d.json",
+            "value": "In force"
+          }
+        ],
+        "summary": [
+          {
+            "packet": "packet-a.json",
+            "value": "Pakistan's framework for legal recognition of electronic documents, communications, signatures, and certification services; its original privacy and information-system damage offences were omitted by PECA in 2016."
+          },
+          {
+            "packet": "packet-d.json",
+            "value": "A federal ordinance that gives legal recognition to electronic documents, communications, transactions, and signatures and establishes an accreditation framework for certification service providers."
+          }
+        ]
+      },
+      "patch": {
+        "key_provisions": [
+          "Prevents electronic form alone from being a ground for denying legal recognition, admissibility, validity, proof, or enforceability.",
+          "Defines when electronic records satisfy writing, original, retention, signature, attribution, acknowledgment, dispatch, and receipt requirements.",
+          "Establishes the Electronic Certification Accreditation Council and an accreditation and data-protection framework for certification service providers.",
+          "Provides for specified offences, network-service-provider liability limits, and rulemaking; PECA later omitted the Ordinance's former sections 36 and 37."
+        ]
+      }
+    },
+    {
+      "id": "pakistan-telecommunication-reorganization-act-1996",
+      "packets": [
+        "packet-a.json",
+        "packet-b.json"
+      ],
+      "preferred_packet": "packet-a.json",
+      "reason": "The Pakistan Code text is current and Packet A uses the more informative Amended status because the consolidated Act identifies later amendments.",
+      "differing_fields": {
+        "affects": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Citizens",
+              "Telecom licensees",
+              "Pakistan Telecommunication Authority",
+              "Federal Government",
+              "Courts"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom operators",
+              "Government agencies",
+              "Consumers"
+            ]
+          }
+        ],
+        "domains": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Internet governance & access",
+              "Data protection & privacy"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom regulation"
+            ]
+          }
+        ],
+        "key_provisions": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Establishes the Pakistan Telecommunication Authority and assigns it licensing, regulatory, consumer-protection, competition, and universal-service functions.",
+              "Establishes the Universal Service Fund for access in unserved, underserved, rural, and remote areas.",
+              "Authorizes specified interception and service-priority measures for national-security purposes and provides for a Telecommunication Appellate Tribunal."
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Establishes the Pakistan Telecommunication Authority and defines its functions and powers.",
+              "Creates a licensing framework for telecommunication systems and services.",
+              "Provides for the Frequency Allocation Board, the Universal Service Fund, and the Research and Development Fund.",
+              "Authorizes the Federal Government to issue policy directives on telecommunications matters."
+            ]
+          }
+        ],
+        "last_amended": [
+          {
+            "packet": "packet-a.json",
+            "value": "2024-09-20"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": null
+          }
+        ],
+        "related": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "investigation-fair-trial-act-2013",
+              "public-private-right-of-way-policy-directive-2020",
+              "telecommunications-policy-2015",
+              "universal-service-fund-rules-2006",
+              "universal-service-fund-amendment-rules-2023"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "pakistan-telecommunication-rules-2000",
+              "telecommunications-policy-2015",
+              "broadband-quality-of-service-regulations-2014",
+              "public-private-right-of-way-policy-directive-2020",
+              "critical-telecom-data-infrastructure-security-regulations-2020"
+            ]
+          }
+        ],
+        "secondary_sources": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apqWaw%3D%3D-sg-jjjjjjjjjjjjj"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": []
+          }
+        ],
+        "short_name": [
+          {
+            "packet": "packet-a.json",
+            "value": "Telecom Reorganization Act"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Telecommunication Re-organization Act"
+          }
+        ],
+        "status": [
+          {
+            "packet": "packet-a.json",
+            "value": "Amended"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "In force"
+          }
+        ],
+        "summary": [
+          {
+            "packet": "packet-a.json",
+            "value": "The foundational statute for Pakistan's telecommunications institutions and licensing system, including the Pakistan Telecommunication Authority, universal-service funding, right-of-way rules, national-security powers, and sector appeals."
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "The foundational statute for Pakistan's telecommunications sector. It establishes the Pakistan Telecommunication Authority and other sector institutions and provides the legal basis for licensing, regulation, spectrum administration, rights of way, and sector funds."
+          }
+        ]
+      },
+      "patch": {
+        "key_provisions": [
+          "Establishes the Pakistan Telecommunication Authority and assigns licensing, regulation, consumer-protection, competition, and universal-service functions.",
+          "Creates the telecommunications licensing system, Frequency Allocation Board, Universal Service Fund, and Research and Development Fund.",
+          "Authorizes federal policy directives and universal-service support for unserved, underserved, rural, and remote areas.",
+          "Provides specified national-security interception and service-priority powers and a Telecommunication Appellate Tribunal."
+        ]
+      }
+    },
+    {
+      "id": "public-private-right-of-way-policy-directive-2020",
+      "packets": [
+        "packet-a.json",
+        "packet-b.json"
+      ],
+      "preferred_packet": "packet-b.json",
+      "reason": "The official document URL returned HTTP 404 during independent QA, so the editorial contract requires an Unverified record and status.",
+      "differing_fields": {
+        "affects": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Telecom licensees",
+              "Public authorities",
+              "Private property owners",
+              "Pakistan Telecommunication Authority",
+              "Internet users"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom operators",
+              "Public authorities",
+              "Private right-of-way owners"
+            ]
+          }
+        ],
+        "domains": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Internet governance & access"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom regulation"
+            ]
+          }
+        ],
+        "issuing_body": [
+          {
+            "packet": "packet-a.json",
+            "value": "Federal Government of Pakistan"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Ministry of Information Technology and Telecommunication"
+          }
+        ],
+        "key_provisions": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Sets a policy framework for right-of-way permissions and fee determination for telecommunications infrastructure.",
+              "Addresses dispute resolution, infrastructure protection, sharing of rights of way, and common service corridors.",
+              "Directs the Pakistan Telecommunication Authority on implementation under the telecommunications statute."
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Directs public authorities to assess right-of-way fees on a no-profit, no-loss basis.",
+              "Bars discriminatory or preferential right-of-way fee treatment among licensees.",
+              "Provides a process for escalating disputes over access, fees, or conditions to the appropriate government.",
+              "Addresses infrastructure sharing, safety, national security, and common service corridors."
+            ]
+          }
+        ],
+        "related": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "pakistan-telecommunication-reorganization-act-1996",
+              "telecommunications-policy-2015",
+              "national-broadband-policy-2021-draft"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "pakistan-telecommunication-reorganization-act-1996"
+            ]
+          }
+        ],
+        "secondary_sources": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl",
+              "https://moitt.gov.pk/NewsDetail/YWU1NWUwNjUtOWEzNS00MzQzLTgzZGQtYTZmZDc4NjdiNmUy"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": []
+          }
+        ],
+        "short_name": [
+          {
+            "packet": "packet-a.json",
+            "value": "RoW Policy Directive"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Right of Way Policy Directive"
+          }
+        ],
+        "status": [
+          {
+            "packet": "packet-a.json",
+            "value": "In force"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Unverified"
+          }
+        ],
+        "summary": [
+          {
+            "packet": "packet-a.json",
+            "value": "A federal directive to facilitate deployment and maintenance of telecommunications infrastructure across public and private rights of way."
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "A federal policy directive on access to public and private rights of way for installing and maintaining telecommunications infrastructure."
+          }
+        ],
+        "verification": [
+          {
+            "packet": "packet-a.json",
+            "value": "Verified"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Unverified"
+          }
+        ]
+      },
+      "patch": {
+        "key_provisions": [
+          "Sets a permission and fee framework for telecommunications infrastructure across public and private rights of way.",
+          "Directs public authorities to use no-profit, no-loss fees and avoid discriminatory treatment among licensees.",
+          "Addresses infrastructure sharing, protection, safety, national security, and common service corridors.",
+          "Provides a process for escalating access, fee, and condition disputes and directs PTA implementation under the telecommunications statute."
+        ]
+      }
+    },
+    {
+      "id": "telecommunications-policy-2015",
+      "packets": [
+        "packet-a.json",
+        "packet-b.json"
+      ],
+      "preferred_packet": "packet-a.json",
+      "reason": "Both official copies returned HTTP 200; the Universal Service Fund copy is retained and the PKCERT copy remains a secondary official source.",
+      "differing_fields": {
+        "affects": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Citizens",
+              "Telecom operators",
+              "Internet service providers",
+              "Regulators",
+              "Rural communities"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom operators",
+              "Pakistan Telecommunication Authority",
+              "Frequency Allocation Board",
+              "Consumers"
+            ]
+          }
+        ],
+        "domains": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Internet governance & access"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Telecom regulation"
+            ]
+          }
+        ],
+        "issuing_body": [
+          {
+            "packet": "packet-a.json",
+            "value": "Ministry of Information Technology"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "Ministry of Information Technology and Telecommunication"
+          }
+        ],
+        "key_provisions": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Sets universal access, affordability, quality, and competition as central policy objectives.",
+              "Provides policy direction on spectrum strategy and sharing, broadband infrastructure, satellite communications, and over-the-top services.",
+              "Reframes universal service to support broadband demand and connectivity in rural and underserved areas."
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "Sets policy goals for competition, licensing, service provision, interconnection, and consumer services.",
+              "Addresses broadband, rights of way, infrastructure sharing, national roaming, and disaster communications.",
+              "Provides policy direction on spectrum planning, assignment, refarming, trading, and sharing.",
+              "Sets priorities for universal service and the national ICT research and development fund."
+            ]
+          }
+        ],
+        "primary_source_url": [
+          {
+            "packet": "packet-a.json",
+            "value": "https://www.usf.org.pk/storage/rules-policies/1635420671-telecommunications-policy-2015-approvedpdf.pdf"
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf"
+          }
+        ],
+        "related": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "pakistan-telecommunication-reorganization-act-1996",
+              "public-private-right-of-way-policy-directive-2020",
+              "universal-service-fund-rules-2006",
+              "national-broadband-policy-2021-draft"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": [
+              "pakistan-telecommunication-reorganization-act-1996"
+            ]
+          }
+        ],
+        "secondary_sources": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
+              "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl"
+            ]
+          },
+          {
+            "packet": "packet-b.json",
+            "value": []
+          }
+        ],
+        "summary": [
+          {
+            "packet": "packet-a.json",
+            "value": "A national policy for universal, affordable, and quality telecommunications through competitive markets, covering broadband expansion, spectrum, competition, convergence, satellite services, and universal service."
+          },
+          {
+            "packet": "packet-b.json",
+            "value": "A consolidated federal policy for telecommunications markets, services, infrastructure, spectrum, regulation, universal service, research funding, satellite services, and sector convergence."
+          }
+        ]
+      },
+      "patch": {
+        "key_provisions": [
+          "Sets universal access, affordability, service quality, competition, and consumer protection as central policy objectives.",
+          "Provides direction on licensing, interconnection, convergence, service provision, and over-the-top communications.",
+          "Addresses spectrum planning, assignment, refarming, trading, sharing, and satellite communications.",
+          "Links broadband, rights of way, infrastructure sharing, roaming, disaster communications, universal service, and ICT research funding."
+        ],
+        "secondary_sources": [
+          "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
+          "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
+          "https://moitt.gov.pk/Detail/ZTA5MTI4ZWUtMzdhMS00ZDRhLWE0YmUtZjJjNThhYTdjNzdl"
+        ]
+      }
+    },
+    {
+      "id": "national-broadband-policy-2021-draft",
+      "packets": [
+        "packet-a.json",
+        "packet-c.json"
+      ],
+      "preferred_packet": "packet-c.json",
+      "reason": "The current MoITT policy catalog labels the document Draft and its official Policies URL returned HTTP 200 during research.",
+      "differing_fields": {
+        "affects": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Citizens",
+              "Internet service providers",
+              "Telecom operators",
+              "Regulators",
+              "Rural communities"
+            ]
+          },
+          {
+            "packet": "packet-c.json",
+            "value": [
+              "Telecom operators",
+              "Internet service providers",
+              "Federal public bodies",
+              "Businesses",
+              "Citizens"
+            ]
+          }
+        ],
+        "domains": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Internet governance & access"
+            ]
+          },
+          {
+            "packet": "packet-c.json",
+            "value": [
+              "National digital strategy",
+              "AI & emerging tech",
+              "Internet governance & access"
+            ]
+          }
+        ],
+        "key_provisions": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "Proposes national broadband targets and measures to reduce access gaps in unserved and underserved areas.",
+              "Proposes infrastructure-sharing, fiberization, spectrum, right-of-way, affordability, and quality-of-service measures.",
+              "Organizes implementation around inclusivity and accessibility, usability and market enablement, digital trust, and transformation and evolution."
+            ]
+          },
+          {
+            "packet": "packet-c.json",
+            "value": [
+              "Organises proposed measures under inclusivity and accessibility, usability and market enablement, digital trust, and transformation and evolution.",
+              "Proposes phased broadband, device-adoption, speed, affordability, skills, and connectivity targets through 2025 and 2030.",
+              "Addresses spectrum, fibre, data centres, internet exchanges, satellite connectivity, competition, quality of service, and emerging technologies."
+            ]
+          }
+        ],
+        "primary_source_url": [
+          {
+            "packet": "packet-a.json",
+            "value": "https://moitt.gov.pk/SiteImage/Misc/files/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf"
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "https://www.moitt.gov.pk/SiteImage/Policies/National%20Broadband%20Policy%202021%20Consultation%20Draft%20V3.pdf"
+          }
+        ],
+        "related": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "telecommunications-policy-2015",
+              "public-private-right-of-way-policy-directive-2020",
+              "universal-service-fund-rules-2006"
+            ]
+          },
+          {
+            "packet": "packet-c.json",
+            "value": [
+              "digital-pakistan-policy-2018",
+              "5g-readiness-plan-2021-draft",
+              "5g-strategic-plan-policy-guidelines-2021-draft"
+            ]
+          }
+        ],
+        "secondary_sources": [
+          {
+            "packet": "packet-a.json",
+            "value": [
+              "https://moitt.gov.pk/SiteImage/Misc/files/National%20Broadband%20Policy%202021%20Consultation%20Draft%281%29.pdf"
+            ]
+          },
+          {
+            "packet": "packet-c.json",
+            "value": [
+              "https://www.moitt.gov.pk/Policies"
+            ]
+          }
+        ],
+        "short_name": [
+          {
+            "packet": "packet-a.json",
+            "value": "National Broadband Policy Draft"
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "Draft National Broadband Policy"
+          }
+        ],
+        "status": [
+          {
+            "packet": "packet-a.json",
+            "value": "Unverified"
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "Draft"
+          }
+        ],
+        "summary": [
+          {
+            "packet": "packet-a.json",
+            "value": "A consultation draft proposing a national framework for universal, affordable high-speed internet, digital inclusion, infrastructure expansion, service quality, market development, digital trust, and technology evolution."
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "A consultation draft proposing national broadband targets and policy measures for digital inclusion, market development, trust, infrastructure, and adoption of future network technologies."
+          }
+        ],
+        "title": [
+          {
+            "packet": "packet-a.json",
+            "value": "National Broadband Policy 2021, Consultation Draft v3.0"
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "National Broadband Policy 2021 — Consultation Draft v3.0"
+          }
+        ],
+        "verification": [
+          {
+            "packet": "packet-a.json",
+            "value": "Unverified"
+          },
+          {
+            "packet": "packet-c.json",
+            "value": "Verified"
+          }
+        ]
+      },
+      "patch": {
+        "key_provisions": [
+          "Proposes phased targets through 2025 and 2030 for broadband access, speed, affordability, device adoption, skills, and connectivity.",
+          "Addresses fibre, spectrum, rights of way, data centres, internet exchanges, satellite connectivity, infrastructure sharing, and quality of service.",
+          "Organises proposed measures around inclusion and accessibility, market enablement, digital trust, and technological evolution.",
+          "Proposes competition and investment measures intended to narrow access gaps in unserved and underserved areas."
+        ],
+        "secondary_sources": [
+          "https://www.moitt.gov.pk/Policies"
+        ]
+      }
+    }
+  ]
+}

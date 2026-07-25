@@ -12,7 +12,9 @@ The `data/policies.json` file is an array of records with this shape:
   "issuing_body": "Parliament of Pakistan",
   "status": "In force",
   "date_enacted": "2016-08-18",
+  "date_precision": "day",
   "last_amended": null,
+  "last_amended_precision": null,
   "summary": "A neutral, plain-language summary.",
   "key_provisions": ["A concise provision."],
   "affects": ["Citizens", "Platforms"],
@@ -51,6 +53,11 @@ or `Unverified`.
 `verification` uses `Verified` or `Unverified`. A record is `Verified` only
 when its official primary source was opened and checked during research.
 
+`date_precision` uses `day`, `month`, or `year` and controls how
+`date_enacted` is displayed. `last_amended_precision` uses the same values and
+must be `null` when `last_amended` is `null`. ISO dates retain sortable machine
+values without implying precision that the source does not establish.
+
 ## Research rules
 
 - Prefer official government, regulator, central-bank, or parliamentary pages.
@@ -61,4 +68,3 @@ when its official primary source was opened and checked during research.
 - Do not infer current legal effect from an old source. Use `Unverified` where
   current status cannot be established.
 - Never invent a missing URL, provision, date, relationship, or status.
-

@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve, sep } from "node:path";
 import { DOMAIN_TAXONOMY } from "../src/policy-engine.js";
+import { assertV1RecordCount } from "./release-contract.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const fileFlagIndex = process.argv.indexOf("--file");
@@ -22,15 +23,18 @@ const required = [
   "issuing_body",
   "status",
   "date_enacted",
+  "last_amended",
   "summary",
   "key_provisions",
   "affects",
   "related",
   "primary_source_url",
   "secondary_sources",
+  "controversy",
   "last_verified",
   "verification",
 ];
+if (releaseMode) required.push("date_precision", "last_amended_precision");
 const allowedStatus = new Set([
   "In force",
   "Draft",
@@ -40,8 +44,25 @@ const allowedStatus = new Set([
   "Lapsed",
   "Unverified",
 ]);
+const allowedType = new Set([
+  "Act",
+  "Bill",
+  "Ordinance",
+  "Rules",
+  "Policy",
+  "Regulation",
+  "Directive",
+  "Framework",
+  "Guideline",
+]);
+const allowedPrecision = new Set(["day", "month", "year"]);
 const ids = new Set();
 const failures = [];
+const isIsoDate = (value) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value ?? ""))) return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(date.valueOf()) && date.toISOString().slice(0, 10) === value;
+};
 
 for (const [index, policy] of policies.entries()) {
   const label = policy.id || `record ${index + 1}`;
@@ -60,6 +81,7 @@ for (const [index, policy] of policies.entries()) {
     if (!DOMAIN_TAXONOMY.includes(domain)) failures.push(`${label}: invalid domain ${domain}`);
   }
   if (!allowedStatus.has(policy.status)) failures.push(`${label}: invalid status`);
+  if (!allowedType.has(policy.type)) failures.push(`${label}: invalid type`);
   if (!["Verified", "Unverified"].includes(policy.verification)) {
     failures.push(`${label}: invalid verification`);
   }
@@ -75,10 +97,21 @@ for (const [index, policy] of policies.entries()) {
   ) {
     failures.push(`${label}: verified record needs an HTTPS primary source`);
   }
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(policy.date_enacted)) {
+  if (!isIsoDate(policy.date_enacted)) {
     failures.push(`${label}: date_enacted must be YYYY-MM-DD`);
   }
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(policy.last_verified)) {
+  if ("date_precision" in policy || releaseMode) {
+    if (!allowedPrecision.has(policy.date_precision)) {
+      failures.push(`${label}: invalid date_precision`);
+    }
+    if (policy.date_precision === "month" && !String(policy.date_enacted).endsWith("-01")) {
+      failures.push(`${label}: month-precision date must use day 01`);
+    }
+    if (policy.date_precision === "year" && !String(policy.date_enacted).endsWith("-01-01")) {
+      failures.push(`${label}: year-precision date must use month/day 01-01`);
+    }
+  }
+  if (!isIsoDate(policy.last_verified)) {
     failures.push(`${label}: last_verified must be YYYY-MM-DD`);
   }
   if (!Array.isArray(policy.key_provisions) || policy.key_provisions.length === 0) {
@@ -86,6 +119,54 @@ for (const [index, policy] of policies.entries()) {
   }
   if (!Array.isArray(policy.affects) || policy.affects.length === 0) {
     failures.push(`${label}: affects must be a non-empty array`);
+  }
+  for (const key of ["related", "secondary_sources"]) {
+    if (!Array.isArray(policy[key])) failures.push(`${label}: ${key} must be an array`);
+  }
+  if (
+    policy.last_amended !== null &&
+    !isIsoDate(policy.last_amended)
+  ) {
+    failures.push(`${label}: last_amended must be null or YYYY-MM-DD`);
+  }
+  if ("last_amended_precision" in policy || releaseMode) {
+    if (policy.last_amended === null && policy.last_amended_precision !== null) {
+      failures.push(`${label}: last_amended_precision must be null without a date`);
+    }
+    if (
+      policy.last_amended !== null &&
+      !allowedPrecision.has(policy.last_amended_precision)
+    ) {
+      failures.push(`${label}: invalid last_amended_precision`);
+    }
+    if (
+      policy.last_amended_precision === "year" &&
+      !String(policy.last_amended).endsWith("-01-01")
+    ) {
+      failures.push(`${label}: year-precision amendment must use month/day 01-01`);
+    }
+  }
+  if (policy.controversy !== null && typeof policy.controversy !== "string") {
+    failures.push(`${label}: controversy must be null or a string`);
+  }
+  if (!String(policy.title ?? "").trim()) failures.push(`${label}: title is empty`);
+  if (!String(policy.short_name ?? "").trim()) failures.push(`${label}: short_name is empty`);
+  if (!String(policy.issuing_body ?? "").trim()) {
+    failures.push(`${label}: issuing_body is empty`);
+  }
+  try {
+    const source = new URL(policy.primary_source_url);
+    if (source.protocol !== "https:") throw new Error("not HTTPS");
+  } catch {
+    failures.push(`${label}: primary_source_url must be a valid HTTPS URL`);
+  }
+  for (const sourceUrl of policy.secondary_sources ?? []) {
+    try {
+      const source = new URL(sourceUrl);
+      if (source.protocol !== "https:") throw new Error("not HTTPS");
+    } catch {
+      failures.push(`${label}: invalid secondary source URL`);
+    }
   }
   if (String(policy.summary ?? "").trim().length < 60) {
     failures.push(`${label}: summary is too short`);
@@ -98,8 +179,12 @@ for (const policy of policies) {
   }
 }
 
-if (releaseMode && (policies.length < 40 || policies.length > 60)) {
-  failures.push(`v1 release requires 40–60 records; found ${policies.length}`);
+if (releaseMode) {
+  try {
+    assertV1RecordCount(policies);
+  } catch (error) {
+    failures.push(error.message);
+  }
 }
 
 if (failures.length) {

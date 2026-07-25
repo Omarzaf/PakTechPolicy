@@ -1,16 +1,120 @@
 {
+  "citizens-protection-online-harm-rules-2020": {
+    "prefer_packet": "packet-a.json",
+    "reason": "The official instrument URL returned HTTP 404 during independent QA; v1 keeps the record but cannot present its legal status as verified.",
+    "patch": {
+      "status": "Unverified",
+      "verification": "Unverified",
+      "summary": "A 2020 ruleset that established a national coordinator and set content-removal, local-presence, data-disclosure, and enforcement obligations for social media companies. The linked official text is currently inaccessible, so this snapshot does not assert its present legal status."
+    }
+  },
+  "removal-blocking-online-content-rules-2020": {
+    "prefer_packet": "packet-a.json",
+    "reason": "The official instrument URL returned HTTP 404 during independent QA; v1 keeps the record but cannot present its legal status as verified.",
+    "patch": {
+      "status": "Unverified",
+      "verification": "Unverified",
+      "summary": "A 2020 ruleset describing a Pakistan Telecommunication Authority process for complaints, removal or blocking orders, platform obligations, review, and appeal concerning unlawful online content. The linked official text is currently inaccessible, so this snapshot does not assert its present legal status."
+    }
+  },
+  "removal-blocking-online-content-rules-2021": {
+    "prefer_packet": "packet-a.json",
+    "reason": "The current ministry catalog and yearbook support the instrument's existence, but the linked instrument itself returned HTTP 404, so the editorial rule requires an Unverified status.",
+    "patch": {
+      "status": "Unverified",
+      "verification": "Unverified"
+    }
+  },
+  "personal-data-protection-bill-2023": {
+    "prefer_packet": "packet-a.json",
+    "reason": "The current ministry draft-legislation catalog lists the draft, but the linked bill PDF returned HTTP 404, so the exact text remains unverified in this snapshot.",
+    "patch": {
+      "status": "Unverified",
+      "verification": "Unverified",
+      "date_precision": "month"
+    }
+  },
+  "electronic-transactions-ordinance-2002": {
+    "prefer_packet": "packet-a.json",
+    "reason": "Packet A checks the ordinance against PECA section 54 and uses Amended to reflect omitted provisions; Packet D contributes the e-commerce and fintech domains.",
+    "patch": {
+      "key_provisions": [
+        "Prevents electronic form alone from being a ground for denying legal recognition, admissibility, validity, proof, or enforceability.",
+        "Defines when electronic records satisfy writing, original, retention, signature, attribution, acknowledgment, dispatch, and receipt requirements.",
+        "Establishes the Electronic Certification Accreditation Council and an accreditation and data-protection framework for certification service providers.",
+        "Provides for specified offences, network-service-provider liability limits, and rulemaking; PECA later omitted the Ordinance's former sections 36 and 37."
+      ]
+    }
+  },
+  "software-development-export-strategy-2023-2027": {
+    "prefer_packet": "packet-d.json",
+    "reason": "The Commerce ReMIT landing page returned HTTP 403 during independent QA, while the complete official TDAP-hosted strategy PDF returned HTTP 200.",
+    "patch": {
+      "primary_source_url": "https://tdap.gov.pk/wp-content/uploads/2022/08/Software-Development-Export-Strategy-Pakistan-3_web.pdf",
+      "date_precision": "year",
+      "secondary_sources": [
+        "https://www.commerce.gov.pk/remit/",
+        "https://www.commerce.gov.pk/wp-content/uploads/2024/05/Software-Development-Export-Strategy-Pakistan-3_web-1.pdf"
+      ]
+    }
+  },
+  "punjab-transparency-rti-act-2013": {
+    "prefer_packet": "packet-d.json",
+    "reason": "The official Act PDF and Punjab Code page timed out during independent QA. Current Punjab government implementation pages corroborate the framework, but the exact primary text is not reachable in this snapshot.",
+    "patch": {
+      "status": "Unverified",
+      "verification": "Unverified",
+      "summary": "Punjab's provincial access-to-information framework describes access to records held by provincial public bodies and oversight through the Punjab Information Commission. The linked official Act text timed out during this review, so this snapshot does not assert its present legal status."
+    }
+  },
+  "pakistan-information-security-framework-2026": {
+    "prefer_packet": "packet-b.json",
+    "reason": "The official framework establishes only the publication year, so v1 must render the date at year precision.",
+    "patch": {
+      "date_precision": "year"
+    }
+  },
+  "kp-rti-act-2013": {
+    "prefer_packet": "packet-d.json",
+    "reason": "The official consolidated text establishes a 2015 amendment year but not its exact day, so the amendment date must render at year precision.",
+    "patch": {
+      "last_amended_precision": "year"
+    }
+  },
   "pakistan-telecommunication-reorganization-act-1996": {
     "prefer_packet": "packet-a.json",
-    "reason": "The Pakistan Code text is current and Packet A uses the more informative Amended status because the consolidated Act identifies later amendments."
+    "reason": "The Pakistan Code text is current and Packet A uses the more informative Amended status because the consolidated Act identifies later amendments.",
+    "patch": {
+      "key_provisions": [
+        "Establishes the Pakistan Telecommunication Authority and assigns licensing, regulation, consumer-protection, competition, and universal-service functions.",
+        "Creates the telecommunications licensing system, Frequency Allocation Board, Universal Service Fund, and Research and Development Fund.",
+        "Authorizes federal policy directives and universal-service support for unserved, underserved, rural, and remote areas.",
+        "Provides specified national-security interception and service-priority powers and a Telecommunication Appellate Tribunal."
+      ]
+    }
   },
   "public-private-right-of-way-policy-directive-2020": {
     "prefer_packet": "packet-b.json",
-    "reason": "The official document URL returned HTTP 404 during independent QA, so the editorial contract requires an Unverified record and status."
+    "reason": "The official document URL returned HTTP 404 during independent QA, so the editorial contract requires an Unverified record and status.",
+    "patch": {
+      "key_provisions": [
+        "Sets a permission and fee framework for telecommunications infrastructure across public and private rights of way.",
+        "Directs public authorities to use no-profit, no-loss fees and avoid discriminatory treatment among licensees.",
+        "Addresses infrastructure sharing, protection, safety, national security, and common service corridors.",
+        "Provides a process for escalating access, fee, and condition disputes and directs PTA implementation under the telecommunications statute."
+      ]
+    }
   },
   "telecommunications-policy-2015": {
     "prefer_packet": "packet-a.json",
     "reason": "Both official copies returned HTTP 200; the Universal Service Fund copy is retained and the PKCERT copy remains a secondary official source.",
     "patch": {
+      "key_provisions": [
+        "Sets universal access, affordability, service quality, competition, and consumer protection as central policy objectives.",
+        "Provides direction on licensing, interconnection, convergence, service provision, and over-the-top communications.",
+        "Addresses spectrum planning, assignment, refarming, trading, sharing, and satellite communications.",
+        "Links broadband, rights of way, infrastructure sharing, roaming, disaster communications, universal service, and ICT research funding."
+      ],
       "secondary_sources": [
         "https://pkcert.gov.pk/uploads/2023/06/2015-Telecommunications-Policy-APPROVED.pdf",
         "https://moitt.gov.pk/SiteImage/Misc/files/ECC%20Approval%20of%20Telecom%20Policy%202015%20.pdf",
@@ -22,6 +126,12 @@
     "prefer_packet": "packet-c.json",
     "reason": "The current MoITT policy catalog labels the document Draft and its official Policies URL returned HTTP 200 during research.",
     "patch": {
+      "key_provisions": [
+        "Proposes phased targets through 2025 and 2030 for broadband access, speed, affordability, device adoption, skills, and connectivity.",
+        "Addresses fibre, spectrum, rights of way, data centres, internet exchanges, satellite connectivity, infrastructure sharing, and quality of service.",
+        "Organises proposed measures around inclusion and accessibility, market enablement, digital trust, and technological evolution.",
+        "Proposes competition and investment measures intended to narrow access gaps in unserved and underserved areas."
+      ],
       "secondary_sources": [
         "https://www.moitt.gov.pk/Policies"
       ]

@@ -1,0 +1,553 @@
+[
+  {
+    "id": "payment-systems-electronic-fund-transfers-act-2007",
+    "title": "Payment Systems and Electronic Fund Transfers Act, 2007",
+    "short_name": "PS&EFT Act",
+    "domains": [
+      "Fintech & digital payments"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2007-06-30",
+    "last_amended": null,
+    "summary": "The principal federal statute for supervising and regulating payment systems and electronic fund transfers in Pakistan, including the roles of the State Bank, payment-system operators, service providers, financial institutions, and consumers.",
+    "key_provisions": [
+      "Empowers the State Bank of Pakistan to issue rules, standards, directions, and other requirements for payment systems, service providers, operators, and payment instruments.",
+      "Provides for designation and oversight of payment systems and instruments, real-time gross settlement, clearing houses, settlement finality, and electronic-money institutions.",
+      "Sets requirements concerning transaction records, disclosures, error correction, security, consumer liability, complaint resolution, privacy, penalties, and court actions."
+    ],
+    "affects": [
+      "State Bank of Pakistan",
+      "Banks and financial institutions",
+      "Payment-system operators and service providers",
+      "Electronic-money institutions",
+      "Consumers"
+    ],
+    "related": [
+      "electronic-money-institutions-regulations-2019",
+      "electronic-transactions-ordinance-2002"
+    ],
+    "primary_source_url": "https://www.pakistancode.gov.pk/pdffiles/administrator9e50d2bf17dfbb768e37f4561c16e859.pdf",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/our-operations/payment-systems"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "electronic-money-institutions-regulations-2019",
+    "title": "Regulations for Electronic Money Institutions",
+    "short_name": "EMI Regulations",
+    "domains": [
+      "Fintech & digital payments",
+      "E-commerce"
+    ],
+    "type": "Regulation",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "Amended",
+    "date_enacted": "2019-04-01",
+    "last_amended": "2023-06-21",
+    "summary": "State Bank regulations for licensing and supervising non-bank electronic-money institutions, revised in 2023 to broaden permitted payment services and wallet use cases while retaining staged authorization and safeguarding requirements.",
+    "key_provisions": [
+      "Uses staged authorization for electronic-money institutions: in-principle approval, pilot-operations approval, and final commercial authorization.",
+      "Covers electronic wallets and payment instruments, customer funds, governance, risk management, technology and security, outsourcing, consumer protection, and regulatory reporting.",
+      "The 2023 revision expanded permissible services to include payment and bill aggregation, payment initiation, account information, domestic e-commerce escrow, API services, and inward cross-border remittances."
+    ],
+    "affects": [
+      "Electronic-money institutions",
+      "Fintech companies",
+      "Banks and payment-service providers",
+      "Merchants and e-commerce platforms",
+      "Wallet users"
+    ],
+    "related": [
+      "payment-systems-electronic-fund-transfers-act-2007",
+      "ecommerce-policy-pakistan-2019",
+      "import-export-ecommerce-rules-2021"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/assets/documents/circulars/psd/2023/C3-Enclosure-Regulations-EMIs.pdf",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/circulars/pspod-circular-no-03-of-2023",
+      "https://www.sbp.org.pk/our-operations/payments-ecosystem-and-infrastructure/emis-and-pso-psps"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "digital-banks-framework-2022",
+    "title": "Licensing and Regulatory Framework for Digital Banks",
+    "short_name": "Digital Banks Framework",
+    "domains": [
+      "Fintech & digital payments"
+    ],
+    "type": "Framework",
+    "issuing_body": "State Bank of Pakistan",
+    "status": "In force",
+    "date_enacted": "2022-01-03",
+    "last_amended": null,
+    "summary": "A licensing and regulatory framework for banks that provide financial services primarily through digital or electronic channels, with separate retail and full-bank licence categories and phased progression.",
+    "key_provisions": [
+      "Creates Digital Retail Bank and Digital Full Bank licence categories, including conventional and Islamic variants.",
+      "Sets sponsor-eligibility, ownership, capital, governance, technology, cybersecurity, outsourcing, business-plan, and application requirements.",
+      "Provides for phased progression from licensing and pilot operations toward commercial operations, subject to State Bank approvals and performance."
+    ],
+    "affects": [
+      "Digital-bank applicants and sponsors",
+      "Licensed digital banks",
+      "Banks and microfinance banks",
+      "Fintech and digital-financial-service providers",
+      "Retail and business customers"
+    ],
+    "related": [
+      "payment-systems-electronic-fund-transfers-act-2007",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2022",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/bprd/2022/C1-Annex.pdf",
+      "https://www.sbp.org.pk/our-operations/banking-regulation-and-supervision"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "electronic-transactions-ordinance-2002",
+    "title": "Electronic Transactions Ordinance, 2002",
+    "short_name": "ETO",
+    "domains": [
+      "E-commerce",
+      "Fintech & digital payments"
+    ],
+    "type": "Ordinance",
+    "issuing_body": "President of Pakistan",
+    "status": "In force",
+    "date_enacted": "2002-09-11",
+    "last_amended": null,
+    "summary": "A federal ordinance that gives legal recognition to electronic documents, communications, transactions, and signatures and establishes an accreditation framework for certification service providers.",
+    "key_provisions": [
+      "Prevents electronic form alone from being a ground for denying legal recognition, admissibility, effect, validity, proof, or enforceability.",
+      "Defines when electronic forms satisfy writing, original, retention, signature, and evidentiary requirements.",
+      "Sets rules for attribution, acknowledgment, dispatch and receipt of electronic communications and creates the Electronic Certification Accreditation Council.",
+      "Provides for certification-service-provider accreditation, specified offences, network-service-provider liability limits, and rulemaking."
+    ],
+    "affects": [
+      "Businesses and online merchants",
+      "Consumers",
+      "Public authorities",
+      "Certification service providers",
+      "Courts and legal practitioners"
+    ],
+    "related": [
+      "ecommerce-policy-pakistan-2019",
+      "import-export-ecommerce-rules-2021",
+      "payment-systems-electronic-fund-transfers-act-2007"
+    ],
+    "primary_source_url": "https://pakistancode.gov.pk/pdffiles/administratordbc98dd49f2df3b1d07bb986dcceb9a3.pdf",
+    "secondary_sources": [
+      "https://www.sbp.org.pk/our-operations/payment-systems"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "ecommerce-policy-pakistan-2019",
+    "title": "e-Commerce Policy of Pakistan",
+    "short_name": "e-Commerce Policy",
+    "domains": [
+      "E-commerce",
+      "IT industry & exports",
+      "Fintech & digital payments"
+    ],
+    "type": "Policy",
+    "issuing_body": "Commerce Division, Government of Pakistan",
+    "status": "Unverified",
+    "date_enacted": "2019-10-01",
+    "last_amended": null,
+    "summary": "Pakistan's first national e-commerce policy, approved by the federal Cabinet in 2019 to coordinate legal, payment, taxation, logistics, consumer-protection, trade, skills, and enterprise measures for domestic and cross-border e-commerce.",
+    "key_provisions": [
+      "Creates a National e-Commerce Council to coordinate implementation across federal and provincial bodies and private-sector stakeholders.",
+      "Sets policy directions for payment digitization, financial inclusion, consumer protection, taxation, logistics, and cross-border e-commerce procedures.",
+      "Seeks to improve participation by micro, small, and medium enterprises, women, youth, freelancers, and exporters in digital trade."
+    ],
+    "affects": [
+      "Online marketplaces and merchants",
+      "Consumers",
+      "Exporters and freelancers",
+      "Payment and logistics providers",
+      "Federal and provincial public bodies"
+    ],
+    "related": [
+      "electronic-transactions-ordinance-2002",
+      "import-export-ecommerce-rules-2021",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://www.commerce.gov.pk/wp-content/uploads/2019/11/e-Commerce_Policy_of_Pakistan_Print.pdf",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/ecommerce-policy-2019/",
+      "https://cabinet.gov.pk/SiteImage/Misc/files/SEP-FURTHER%20TO%20AMEND%20%28Memos%29.pdf",
+      "https://pid.gov.pk/site/press_detail/14752"
+    ],
+    "controversy": "The Ministry of Commerce describes the instrument as the 2019-24 policy, while a replacement policy for 2025-30 remained under finalization in July 2026; this record does not infer whether the earlier policy continues to operate.",
+    "last_verified": "2026-07-25",
+    "verification": "Unverified"
+  },
+  {
+    "id": "import-export-ecommerce-rules-2021",
+    "title": "Import and Export of E-Commerce Rules",
+    "short_name": "E-Commerce Customs Rules",
+    "domains": [
+      "E-commerce"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Board of Revenue",
+    "status": "In force",
+    "date_enacted": "2021-01-06",
+    "last_amended": null,
+    "summary": "Customs rules added as Chapter XXXVIII of the Customs Rules, 2001 for assessment and clearance of qualifying business-to-consumer goods imported or exported through authorized dealers and designated customs stations.",
+    "key_provisions": [
+      "Applies to assessment and clearance of business-to-consumer import and export goods handled through authorized dealers at designated customs stations.",
+      "Defines e-commerce and sets procedures for authorized-dealer registration, electronic declarations, customs processing, payment, examination, release, and returns.",
+      "Excludes listed categories such as sample-testing goods, animals, perishables, food and beverages, medicines, alcohol, prohibited goods, and certain restricted goods."
+    ],
+    "affects": [
+      "Cross-border e-commerce merchants",
+      "Consumers",
+      "Authorized dealers and couriers",
+      "Customs authorities",
+      "Online marketplaces"
+    ],
+    "related": [
+      "ecommerce-policy-pakistan-2019",
+      "electronic-transactions-ordinance-2002",
+      "electronic-money-institutions-regulations-2019"
+    ],
+    "primary_source_url": "https://download1.fbr.gov.pk/SROs/202510311510162884CustomsRules2001.pdf",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/wp-content/uploads/2021/03/SRO14-2021_opt.pdf",
+      "https://www.commerce.gov.pk/sros/",
+      "https://www.pcp.gov.pk/SiteImage/Downloads/29%2821%29Ex%20Gaz-II.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "software-development-export-strategy-2023-2027",
+    "title": "Pakistan Export Strategy 2023–2027: Software Development",
+    "short_name": "Software Development Export Strategy",
+    "domains": [
+      "IT industry & exports"
+    ],
+    "type": "Policy",
+    "issuing_body": "Ministry of Commerce",
+    "status": "In force",
+    "date_enacted": "2023-01-01",
+    "last_amended": null,
+    "summary": "A sector export strategy and action plan for strengthening Pakistan's software-development exports through skills, firm upgrading, service quality, market expansion, investment, inclusion, and coordination between government and industry.",
+    "key_provisions": [
+      "Identifies export constraints and proposes a five-year plan of action for public- and private-sector implementation.",
+      "Prioritizes advanced technical skills, emerging technologies, service quality, user experience, intellectual-property creation, and scaling domestic firms into global markets.",
+      "Calls for greater participation by women, stronger links between education and employment, export promotion, investment attraction, and financing support for international expansion."
+    ],
+    "affects": [
+      "Software and IT-enabled-services firms",
+      "Technology workers and freelancers",
+      "Universities and training institutions",
+      "Export-promotion bodies",
+      "Investors"
+    ],
+    "related": [
+      "special-technology-zones-authority-act-2021",
+      "ecommerce-policy-pakistan-2019"
+    ],
+    "primary_source_url": "https://www.commerce.gov.pk/remit/",
+    "secondary_sources": [
+      "https://www.commerce.gov.pk/wp-content/uploads/2024/05/Software-Development-Export-Strategy-Pakistan-3_web-1.pdf"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "special-technology-zones-authority-act-2021",
+    "title": "Special Technology Zones Authority Act, 2021",
+    "short_name": "STZA Act",
+    "domains": [
+      "IT industry & exports"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2021-10-04",
+    "last_amended": null,
+    "summary": "A federal Act establishing the Special Technology Zones Authority and a licensing and governance system for technology zones, zone developers, and zone enterprises.",
+    "key_provisions": [
+      "Establishes the Special Technology Zones Authority, its Board of Governors, approvals committee, fund, governance, audit, and reporting arrangements.",
+      "Authorizes the planning, approval, notification, development, regulation, and monitoring of physical or virtual technology zones.",
+      "Provides for zone-developer and zone-enterprise licensing, one-window facilitation, infrastructure, investment promotion, and coordination with federal, provincial, and local bodies.",
+      "Provides statutory mechanisms for incentives, exemptions, appeals, offences, penalties, and subordinate rules and regulations."
+    ],
+    "affects": [
+      "Technology companies",
+      "Zone developers and zone enterprises",
+      "Investors",
+      "Federal and provincial public bodies",
+      "Technology workers and researchers"
+    ],
+    "related": [
+      "software-development-export-strategy-2023-2027"
+    ],
+    "primary_source_url": "https://www.stza.gov.pk/wp-content/uploads/2025/12/STZA-Act-2021.pdf",
+    "secondary_sources": [
+      "https://www.stza.gov.pk/resources/"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "right-access-information-act-2017",
+    "title": "Right of Access to Information Act, 2017",
+    "short_name": "Federal RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Parliament of Pakistan",
+    "status": "In force",
+    "date_enacted": "2017-10-12",
+    "last_amended": null,
+    "summary": "The federal access-to-information statute implementing Article 19A for information held by federal public bodies, subject to the Act's procedures, exceptions, and oversight arrangements.",
+    "key_provisions": [
+      "Requires federal public bodies to maintain, index, computerize, and proactively publish specified categories of records.",
+      "Creates procedures for information requests, designated officials, responses, fees, transfers, refusals, and internal handling.",
+      "Establishes the Pakistan Information Commission to decide appeals, issue directions, support implementation, and report to Parliament.",
+      "Defines exceptions, public-interest considerations, offences, penalties, and protections concerning disclosure."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Public information officers",
+      "Pakistan Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-rules-2019",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://www.moib.gov.pk/Downloads/RTI/The-Right-of-Access-to-Information-Act-2017-Gazette.pdf",
+    "secondary_sources": [
+      "https://www.moib.gov.pk/Pages/180/PIC",
+      "https://na.gov.pk/en/acts-tenure.php?tenure_id=11."
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "right-access-information-rules-2019",
+    "title": "Right of Access to Information Rules, 2019",
+    "short_name": "Federal RTI Rules",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Rules",
+    "issuing_body": "Federal Government of Pakistan",
+    "status": "In force",
+    "date_enacted": "2020-05-05",
+    "last_amended": null,
+    "summary": "Procedural rules under the federal Right of Access to Information Act covering designated officers, requests, assistance, notices, records, fees, and delivery of information.",
+    "key_provisions": [
+      "Allows applications on plain paper or a Commission form and limits required applicant details to the information sought, desired format, and contact details.",
+      "Defines designated-officer assistance, transfers, third-party notice and hearing, reasons for denial or delay, and publication of application and cost procedures.",
+      "Provides for record maintenance and computerization, appeals to the Information Commission, Commission meetings, an online complaints facility, and biannual public-body implementation reports."
+    ],
+    "affects": [
+      "Federal public bodies",
+      "Public information officers",
+      "Information applicants",
+      "Pakistan Information Commission"
+    ],
+    "related": [
+      "right-access-information-act-2017"
+    ],
+    "primary_source_url": "https://moib.gov.pk/Downloads/RTI/The-Right-of-Access-to-Information-Rules-2019.pdf",
+    "secondary_sources": [
+      "https://www.moib.gov.pk/Pages/15/Media-laws-Rules"
+    ],
+    "controversy": "The official document is titled Rules, 2019 but its notification is dated 5 May 2020; this record uses the notification date.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "punjab-transparency-rti-act-2013",
+    "title": "Punjab Transparency and Right to Information Act, 2013",
+    "short_name": "Punjab RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of the Punjab",
+    "status": "In force",
+    "date_enacted": "2013-12-16",
+    "last_amended": null,
+    "summary": "Punjab's provincial access-to-information statute, providing a right to information held by provincial public bodies and creating implementation, review, and oversight mechanisms.",
+    "key_provisions": [
+      "Provides access to information held by public bodies and requires proactive disclosure, record maintenance, indexing, and annual reporting.",
+      "Creates the Punjab Information Commission and defines its functions.",
+      "Sets application, transfer, internal-review, exception, penalty, offence, and rulemaking procedures."
+    ],
+    "affects": [
+      "Punjab public bodies",
+      "Public information officers",
+      "Punjab Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://lah.punjab.gov.pk/system/files/RIGHT%20TO%20INFORMATION%20ACT%202013.pdf",
+    "secondary_sources": [
+      "https://ppra.punjab.gov.pk/AR"
+    ],
+    "controversy": null,
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "kp-rti-act-2013",
+    "title": "Khyber Pakhtunkhwa Right to Information Act, 2013",
+    "short_name": "KP RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Khyber Pakhtunkhwa",
+    "status": "Amended",
+    "date_enacted": "2013-11-05",
+    "last_amended": "2015-01-01",
+    "summary": "Khyber Pakhtunkhwa's provincial access-to-information statute, providing access to information held by covered public bodies and establishing disclosure, request, complaint, and oversight mechanisms.",
+    "key_provisions": [
+      "Requires proactive disclosure and designated public information officers in covered public bodies.",
+      "Establishes procedures and time limits for requests, responses, refusals, and complaints.",
+      "Creates the Khyber Pakhtunkhwa Information Commission and gives it complaint, direction, implementation, and reporting functions.",
+      "Defines exemptions, public-interest tests, record-management duties, and penalties."
+    ],
+    "affects": [
+      "Khyber Pakhtunkhwa public bodies",
+      "Public information officers",
+      "Khyber Pakhtunkhwa Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "sindh-transparency-rti-act-2016",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_RIGHT_TO_INFORMATION_ACT_2013.pdf",
+    "secondary_sources": [
+      "https://kpcode.kp.gov.pk/homepage/lawDetails/590",
+      "https://dgipr.kp.gov.pk/acts-laws-policies/"
+    ],
+    "controversy": "The official consolidated text records substitutions made by Khyber Pakhtunkhwa Act No. XXIV of 2015, but the precise amendment date was not stated in the checked source; the year-only placeholder is used.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "sindh-transparency-rti-act-2016",
+    "title": "Sindh Transparency and Right to Information Act, 2016",
+    "short_name": "Sindh RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Sindh",
+    "status": "In force",
+    "date_enacted": "2017-04-12",
+    "last_amended": null,
+    "summary": "Sindh's provincial access-to-information statute, enacted as Sindh Act No. XV of 2017, providing a right to information held by public authorities and creating an information commission and request system.",
+    "key_provisions": [
+      "Requires transparency of actions, proper record maintenance, proactive disclosure, and appointment of designated officials.",
+      "Sets procedures for applications, responses, transfers, fees, refusals, review, and complaints.",
+      "Establishes the Sindh Information Commission and defines its enforcement, guidance, monitoring, and reporting functions.",
+      "Defines exemptions, severability, public-interest considerations, offences, and penalties."
+    ],
+    "affects": [
+      "Sindh public authorities",
+      "Designated officials",
+      "Sindh Information Commission",
+      "Citizens and registered legal persons",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "balochistan-rti-act-2021"
+    ],
+    "primary_source_url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-20-000002.pdf",
+    "secondary_sources": [
+      "https://www.sindhlaws.gov.pk/SindhGazetteDetailDepartment.aspx?DepID=DSC-000002&X=ACT",
+      "https://www.sindhlaws.gov.pk/Library.aspx"
+    ],
+    "controversy": "The Act's title uses 2016, while the official Sindh Code identifies it as Sindh Act No. XV of 2017 and publishes it under 12 April 2017; this record uses the official publication date.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  },
+  {
+    "id": "balochistan-rti-act-2021",
+    "title": "Balochistan Right to Information Act, 2021",
+    "short_name": "Balochistan RTI Act",
+    "domains": [
+      "Access to information"
+    ],
+    "type": "Act",
+    "issuing_body": "Provincial Assembly of Balochistan",
+    "status": "In force",
+    "date_enacted": "2021-02-15",
+    "last_amended": null,
+    "summary": "Balochistan's provincial access-to-information statute, enacted as Act No. II of 2021, establishing rights and procedures for access to information held by provincial public bodies.",
+    "key_provisions": [
+      "Provides for proactive disclosure and access requests to covered provincial public bodies.",
+      "Requires public information officers and procedures for receiving, processing, transferring, and deciding requests.",
+      "Creates oversight and complaint mechanisms through a provincial information commission.",
+      "Defines exceptions, record-management duties, appeal or complaint routes, and penalties."
+    ],
+    "affects": [
+      "Balochistan public bodies",
+      "Public information officers",
+      "Balochistan Information Commission",
+      "Citizens",
+      "Journalists and researchers"
+    ],
+    "related": [
+      "right-access-information-act-2017",
+      "punjab-transparency-rti-act-2013",
+      "kp-rti-act-2013",
+      "sindh-transparency-rti-act-2016"
+    ],
+    "primary_source_url": "https://dpr.gob.pk/document-library/",
+    "secondary_sources": [
+      "https://dpr.gob.pk/wp-content/uploads/2023/11/BALOCHISTAN-right-to-information-act-2021.pdf",
+      "https://pabalochistan.gov.pk/public/acts",
+      "https://balochistancode.gob.pk/lawdir/03e08992-0c6a-40ac-9a9d-913d1bca9f6a.pdf"
+    ],
+    "controversy": "The provincial Assembly identifies the statute as Act No. II of 2021, while the later official rules PDF appears to cite it as Act No. 11 of 2021; the Assembly numbering is used and the discrepancy remains unresolved.",
+    "last_verified": "2026-07-25",
+    "verification": "Verified"
+  }
+]
