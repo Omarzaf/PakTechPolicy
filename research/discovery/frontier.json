@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "note": "The crawl frontier. Each lane lists concrete starting points. Iterations mark targets explored in state.json and may append new targets discovered along the way. A target is never permanently done — re-explore after `recheck_after_days`.",
+  "lanes": {
+    "instruments": {
+      "objective": "Find policy instruments missing from data/policies.json, amendments or status changes to instruments already in it, and working official URLs for the nine records still marked Unverified.",
+      "makes_dashboard": "More advanced — a directory that is incomplete or stale is the single biggest credibility risk.",
+      "recheck_after_days": 30,
+      "targets": [
+        { "id": "pta-laws", "label": "PTA laws, regulations, and policy directives", "url": "https://www.pta.gov.pk/en/laws-regulations" },
+        { "id": "pta-regulations-index", "label": "PTA live regulations index — the real dated listing page", "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30" },
+        { "id": "na-passed-bills", "label": "National Assembly bills passed — as-passed texts, authoritative for new Acts", "url": "https://www.na.gov.pk/en/bills.php?status=pass" },
+        { "id": "moitt-policies", "label": "MoITT policies and downloads", "url": "https://moitt.gov.pk/Policies" },
+        { "id": "na-bills", "label": "National Assembly bills index", "url": "https://na.gov.pk/en/all_bills.php" },
+        { "id": "senate-bills", "label": "Senate of Pakistan bills and passed legislation", "url": "https://senate.gov.pk/en/index.php" },
+        { "id": "pakistan-code", "label": "Pakistan Code — consolidated federal statutes", "url": "https://pakistancode.gov.pk" },
+        { "id": "sbp-regulations", "label": "State Bank of Pakistan circulars, PSD/BPRD regulations", "url": "https://www.sbp.org.pk/psd/index.htm" },
+        { "id": "secp-frameworks", "label": "SECP regulatory frameworks and digital-finance circulars", "url": "https://www.secp.gov.pk/laws/" },
+        { "id": "pkcert", "label": "National CERT advisories, frameworks, and rules", "url": "https://pkcert.gov.pk" },
+        { "id": "pemra", "label": "PEMRA rules and directives touching online media", "url": "https://pemra.gov.pk/rules-regulations" },
+        { "id": "nadra", "label": "NADRA regulations on identity and data sharing", "url": "https://www.nadra.gov.pk" },
+        { "id": "punjab-assembly", "label": "Provincial Assembly of the Punjab — passed acts", "url": "https://www.pap.gov.pk/legislation" },
+        { "id": "sindh-assembly", "label": "Provincial Assembly of Sindh — passed acts", "url": "https://www.pas.gov.pk/index.php/acts/details/en/19" },
+        { "id": "kp-assembly", "label": "Provincial Assembly of Khyber Pakhtunkhwa — acts", "url": "https://www.pakp.gov.pk/acts/" },
+        { "id": "balochistan-assembly", "label": "Provincial Assembly of Balochistan — acts", "url": "https://pabalochistan.gov.pk/acts" },
+        { "id": "unverified-remediation", "label": "Hunt working official URLs for the nine Unverified records", "url": null },
+        { "id": "court-judgments", "label": "Supreme Court and Islamabad High Court judgments altering the effect of listed instruments", "url": "https://www.supremecourt.gov.pk/judgement-search/" }
+      ]
+    },
+    "datasets": {
+      "objective": "Find quantitative datasets that can be layered onto policy records so a reader sees real-world numbers next to the legal text — connectivity, payments, shutdowns, takedowns, exports, prices.",
+      "makes_dashboard": "More advanced and more nuanced — turns a static legal directory into something that shows whether a policy changed anything.",
+      "recheck_after_days": 45,
+      "targets": [
+        { "id": "pta-indicators", "label": "PTA telecom indicators — subscribers, teledensity, broadband", "url": "https://www.pta.gov.pk/en/telecom-indicators" },
+        { "id": "pta-annual-report", "label": "PTA annual reports — enforcement, complaints, spectrum", "url": "https://www.pta.gov.pk/en/annual-reports" },
+        { "id": "sbp-payments", "label": "SBP quarterly Payment Systems Review — digital transaction volumes", "url": "https://www.sbp.org.pk/publications/index2.asp" },
+        { "id": "pbs-ict", "label": "Pakistan Bureau of Statistics — ICT and PSLM household access data", "url": "https://www.pbs.gov.pk" },
+        { "id": "itu-datahub", "label": "ITU DataHub — Pakistan connectivity and affordability indicators", "url": "https://datahub.itu.int/data/?e=PAK" },
+        { "id": "worldbank-wdi", "label": "World Bank Digital Development / WDI indicators for Pakistan", "url": "https://data.worldbank.org/country/pakistan" },
+        { "id": "gsma-connectivity", "label": "GSMA Mobile Connectivity Index — Pakistan scores by pillar", "url": "https://www.mobileconnectivityindex.com" },
+        { "id": "a4ai-affordability", "label": "Affordability of data as share of income", "url": "https://a4ai.org" },
+        { "id": "ooni", "label": "OONI Explorer — measured blocking and interference in Pakistan", "url": "https://explorer.ooni.org/country/PK" },
+        { "id": "cloudflare-radar", "label": "Cloudflare Radar — Pakistan traffic anomalies and outages", "url": "https://radar.cloudflare.com/pk" },
+        { "id": "keepiton", "label": "Access Now #KeepItOn shutdown tracker — Pakistan entries", "url": "https://www.accessnow.org/keepiton/" },
+        { "id": "google-transparency", "label": "Google Transparency Report — Pakistan government removal requests", "url": "https://transparencyreport.google.com/government-removals/overview" },
+        { "id": "meta-transparency", "label": "Meta Transparency Center — Pakistan content restrictions", "url": "https://transparency.meta.com/reports/content-restrictions/" },
+        { "id": "pseb-exports", "label": "PSEB / SBP IT and IT-enabled services export figures", "url": "https://www.pseb.org.pk" },
+        { "id": "freedom-on-net", "label": "Freedom House — Freedom on the Net, Pakistan scores over time", "url": "https://freedomhouse.org/country/pakistan/freedom-net" }
+      ]
+    },
+    "plain-language": {
+      "objective": "Find material that lets a non-lawyer understand what each instrument means for them: plain-language patterns, glossary definitions, who-is-affected framing, and comparable laws in other countries for orientation.",
+      "makes_dashboard": "Easier to understand — this is the lane that decides whether an ordinary person can use the site at all.",
+      "recheck_after_days": 60,
+      "targets": [
+        { "id": "plain-language-standards", "label": "Plain-language writing standards and readability targets for public-interest legal content", "url": "https://www.plainlanguage.gov/guidelines/" },
+        { "id": "govuk-style", "label": "GOV.UK content design patterns for explaining rules to citizens", "url": "https://www.gov.uk/guidance/content-design/writing-for-gov-uk" },
+        { "id": "consumer-faqs-pta", "label": "PTA consumer-facing complaint and rights pages — citizen-level framing", "url": "https://www.pta.gov.pk/en/complaint-management" },
+        { "id": "sbp-consumer", "label": "SBP consumer protection and digital-payments guidance for the public", "url": "https://www.sbp.org.pk/BPRD/CPD/index.htm" },
+        { "id": "comparative-gdpr", "label": "EU GDPR as a reference point for Pakistan's data-protection bill", "url": "https://gdpr-info.eu" },
+        { "id": "comparative-dpdp", "label": "India DPDP Act 2023 — closest regional analogue", "url": "https://www.meity.gov.in/data-protection-framework" },
+        { "id": "explainer-exemplars", "label": "Exemplar policy explainers that everyday readers actually use, for structure and tone", "url": null },
+        { "id": "glossary-terms", "label": "Definitions for the legal/technical jargon appearing in the 51 summaries", "url": null },
+        { "id": "urdu-terminology", "label": "Established Urdu terminology for core digital-rights and telecom concepts", "url": null }
+      ]
+    },
+    "context": {
+      "objective": "Find sourced analysis, litigation, and civil-society critique that populates the `controversy` field and adds nuance the official text omits.",
+      "makes_dashboard": "More nuanced — official summaries alone read like the state's own account of itself.",
+      "recheck_after_days": 30,
+      "targets": [
+        { "id": "drf", "label": "Digital Rights Foundation — research, submissions, and legal analysis", "url": "https://digitalrightsfoundation.pk/publications/" },
+        { "id": "bolobhi", "label": "Bolo Bhi — policy briefs and litigation tracking", "url": "https://bolobhi.org" },
+        { "id": "mmfd", "label": "Media Matters for Democracy — internet-governance research", "url": "https://mediamatters.pk" },
+        { "id": "pakistan-press-foundation", "label": "Pakistan Press Foundation — press-freedom impacts of online rules", "url": "https://pakistanpressfoundation.org" },
+        { "id": "hrcp", "label": "HRCP annual State of Human Rights chapters on expression and privacy", "url": "https://hrcp-web.org" },
+        { "id": "article19", "label": "ARTICLE 19 legal analyses of Pakistani speech and platform rules", "url": "https://www.article19.org" },
+        { "id": "peca-litigation", "label": "PECA and online-content-rules litigation history and outcomes", "url": null },
+        { "id": "telecom-bill-2026-backlash", "label": "The 2026 telecom right-of-way controversy: PM's review committee, Senate objections, landowner-consent requirement", "url": null },
+        { "id": "senate-committee", "label": "Standing committee proceedings and stakeholder objections on IT bills", "url": null },
+        { "id": "industry-response", "label": "Industry and platform responses — P@SHA, AIC, telecom operators", "url": "https://www.pasha.org.pk" },
+        { "id": "press-coverage", "label": "Sustained tech-policy reporting for implementation reality vs text", "url": null }
+      ]
+    }
+  }
+}

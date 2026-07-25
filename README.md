@@ -27,12 +27,28 @@ The build is dependency-free and writes the public site to `dist/`.
 
 Local preview: `http://127.0.0.1:4173/`
 
+## Discovery loop
+
+A continuous research loop crawls official sources, datasets, and civil-society
+analysis for material that would make the directory more complete, more nuanced,
+and easier for a non-lawyer to read. It queues findings for review and never
+edits the dataset or the site itself.
+
+```bash
+/loop /discover
+```
+
+Findings land in `research/discovery/BACKLOG.md`. See
+`research/discovery/README.md` for the lanes, the review commands, and how the
+loop avoids repeating itself.
+
 ## Project structure
 
 - `data/policies.json` — reviewed source of truth
 - `docs/content-schema.md` — frozen v1 data contract and taxonomy
 - `docs/data-quality.md` — snapshot quality, caveats, and verification evidence
 - `research/` — packet outputs and sourcing notes
+- `research/discovery/` — the ongoing discovery loop: frontier, state, backlog
 - `src/` — static application source
 - `tests/` — data and interaction tests
 - `tools/` — build and verification scripts

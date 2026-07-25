@@ -1,0 +1,194 @@
+{
+  "iteration": 1,
+  "lane": "instruments",
+  "explored_on": "2026-07-25",
+  "queries": [
+    "Pakistan Telecommunication Authority regulations 2026 notification new",
+    "Pakistan Personal Data Protection Act 2025 2026 passed status",
+    "PTA \"Fixed Broadband Quality of Service\" Regulations 2025 supersede 2014 regulations",
+    "\"Pakistan Telecommunication (Re-organization) (Amendment)\" Bill 2026 na.gov.pk senate right of way",
+    "Pakistan Telecommunication Re-organization Amendment Bill 2026 text National Assembly (site-scoped: na.gov.pk, senate.gov.pk, moitt.gov.pk, pakistancode.gov.pk)"
+  ],
+  "targets_explored": ["pta-laws", "na-bills", "unverified-remediation"],
+  "dead_ends": [
+    {
+      "target": "Fixed Broadband QoS Regulations 2022 instrument PDF",
+      "reason": "PTA's own press-release page confirms the 2014 regulations were reviewed and revised, but does not link the 2022 instrument itself, and it is not on the current regulations index. The successor document still needs to be located before the 2014 record's status can be changed."
+    },
+    {
+      "target": "Personal Data Protection Bill 2023 remediation",
+      "reason": "Searched for a passed Act or a newer official draft. Secondary legal trackers agree the bill remains Cabinet-approved but not passed by Parliament, and no updated official text was published. The record's Unverified status is currently correct, not a gap."
+    },
+    {
+      "target": "pta.gov.pk/en/laws-regulations",
+      "reason": "The frontier URL is not where PTA actually indexes regulations. The live index is /category/regulations-1674158059-2023-05-30, appended to frontier.json."
+    }
+  ],
+  "new_targets": [
+    {
+      "lane": "instruments",
+      "id": "pta-regulations-index",
+      "label": "PTA live regulations index — the real listing page, dated and current",
+      "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30"
+    },
+    {
+      "lane": "instruments",
+      "id": "na-passed-bills",
+      "label": "National Assembly bills passed — as-passed texts, the authoritative source for new Acts",
+      "url": "https://www.na.gov.pk/en/bills.php?status=pass"
+    },
+    {
+      "lane": "context",
+      "id": "telecom-bill-2026-backlash",
+      "label": "The 2026 telecom right-of-way controversy: PM's review committee, Senate objections, consent requirement",
+      "url": null
+    }
+  ],
+  "proposals": [
+    {
+      "id": "pta-local-peering-ixp-regulations-2026",
+      "kind": "new-record",
+      "title": "Local Peering and Internet Exchange Points Regulations, 2026",
+      "targets": [],
+      "what": "PTA issued the Local Peering and Internet Exchange Points Regulations, 2026 on 22 April 2026, requiring that local internet traffic not be routed over upstream bandwidth or international gateways, and setting terms for establishing and sharing Internet Exchange Points. The gazetted PDF is live on the PTA regulations index and resolves cleanly.",
+      "why_it_helps": "This is a significant 2026 instrument absent from all 51 records, and it is one an ordinary reader can feel: domestic routing is what determines whether local sites load quickly and what operators pay for bandwidth. It also fills a thin spot in the Internet governance and access domain.",
+      "everyday_person_value": "high",
+      "confidence": "high",
+      "effort": "S",
+      "risks": "The record should describe the routing obligation without predicting the price or speed effects operators claim, since those are contested and unmeasured.",
+      "implementation_sketch": "Add one record to data/policies.json: type Regulation, issuing_body Pakistan Telecommunication Authority, status In force, date_enacted 2026-04-22 with day precision, domains [Telecom regulation, Internet governance & access]. Primary source is the gazette PDF; secondary is the PTA regulations index. Then run pnpm verify and pnpm check:sources.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/assets/media/2026-04-22-Local-Peering-and-Internet-Exchange-Points-Regulations,2026.pdf",
+          "title": "Local Peering and Internet Exchange Points Regulations, 2026",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+          "title": "PTA Regulations index",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "pta-subscriber-antecedents-verification-amendment-2026",
+      "kind": "new-record",
+      "title": "Subscribers Antecedents Verification (Amendment) Regulations, 2026",
+      "targets": [],
+      "what": "PTA gazetted the Subscribers Antecedents Verification (Amendment) Regulations, 2026 on 12 May 2026. The notification PDF is published on the PTA regulations index and resolves. These regulations govern how SIM subscribers are identified and verified before service.",
+      "why_it_helps": "SIM verification is the single point where telecom regulation touches nearly every adult in Pakistan, and it sits directly on the seam between telecom rules and personal data. The directory currently has no record of the subscriber verification regime at all, which is a visible gap in the data protection and privacy domain.",
+      "everyday_person_value": "high",
+      "confidence": "high",
+      "effort": "S",
+      "risks": "This is an amending instrument. The record should say what it amends, and the parent Subscribers Antecedents Verification Regulations should be located too or the entry will read as free-floating.",
+      "implementation_sketch": "Add a record with type Regulation, status In force, date_enacted 2026-05-12 day precision, domains [Telecom regulation, Data protection & privacy]. Open a follow-up to find the parent regulations so related[] links properly rather than being empty.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/assets/media/2026-05-12-11-05-26-from-PCP---Gazette-Notification-of-Subscriber-Antecedents-Verification-(Amendments)-Regulations,-2026.pdf",
+          "title": "Gazette Notification — Subscriber Antecedents Verification (Amendments) Regulations, 2026",
+          "publisher": "Pakistan Telecommunication Authority / Printing Corporation of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "telecom-reorganisation-amendment-act-2026",
+      "kind": "new-record",
+      "title": "Pakistan Telecommunication (Re-organization) (Amendment) Act, 2026 — as passed by the National Assembly",
+      "targets": ["public-private-right-of-way-policy-directive-2020"],
+      "what": "The National Assembly passed a bill further amending the Pakistan Telecommunication (Re-organization) Act, 1996. The as-passed text was read directly: it renames right of way as 'access by licensee for Telecommunication Infrastructure', defines 'Private Access' and 'Public Access' for telecom infrastructure including land held by individuals and housing societies, and routes the regime through a new section 27A. It had not cleared the Senate as of this pass.",
+      "why_it_helps": "This is the most consequential live telecom instrument of 2026 and it is missing entirely. It also puts a statutory regime over the same ground as the directory's Unverified 2020 right-of-way directive, so adding it starts to resolve that record rather than leaving it stranded. For an ordinary reader it answers a concrete question: when can a telecom company put a tower or run fibre across property.",
+      "everyday_person_value": "high",
+      "confidence": "medium",
+      "effort": "M",
+      "risks": "Status is genuinely in motion — passed by the NA, still before the Senate, and materially rewritten after a Prime Minister's review committee forced a landowner-consent requirement. The record must use status Bill/Proposed, not In force, and must not describe the amended text as settled law. The as-passed PDF is a scanned image, so provisions must be transcribed by reading, not extracted.",
+      "implementation_sketch": "Add a record with type Bill, status Proposed, issuing_body Parliament of Pakistan, domains [Telecom regulation, Internet governance & access]. Primary source is the na.gov.pk as-passed PDF; secondary is the NA passed-bills index. Set related to public-private-right-of-way-policy-directive-2020. Keep key_provisions to the definitional changes actually read in the text.",
+      "evidence": [
+        {
+          "url": "https://www.na.gov.pk/uploads/documents/6a2a8e28e486b_438.pdf",
+          "title": "[AS PASSED BY THE NATIONAL ASSEMBLY] A Bill further to amend the Pakistan Telecommunication (Re-organization) Act, 1996",
+          "publisher": "National Assembly of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.na.gov.pk/en/bills.php?status=pass",
+          "title": "National Assembly — Bills passed",
+          "publisher": "National Assembly of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://moitt.gov.pk/NewsDetail/OWM1NjNiMjMtMGZiYS00NGQ1LTg0OTAtNGE2ZDlhNzY5ZmYx",
+          "title": "Ministry of IT and Telecommunication statement on the telecom amendment bill",
+          "publisher": "Ministry of Information Technology and Telecommunication",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "broadband-qos-2014-superseded-by-2022-regulations",
+      "kind": "record-update",
+      "title": "The Unverified 2014 broadband QoS record appears superseded by revised 2022 regulations",
+      "targets": ["broadband-quality-of-service-regulations-2014"],
+      "what": "PTA's own announcement states it reviewed the Broadband Quality of Service Regulations, 2014 and issued revised Fixed Broadband Quality of Service (QoS) Regulations, 2022 on 27 September 2022, raising the minimum from 256 kbps to 4 Mbps download and 2 Mbps upload. The current PTA regulations index separately lists a Fixed Broadband QoS Regulations 2025 first amendment, implying a live 2022-based regime.",
+      "why_it_helps": "This is one of the nine Unverified records, and it is currently the directory's weakest kind of entry: an instrument of unclear standing with no working source. Resolving it either retires a stale record or replaces it with the operative one, and the substance is directly legible to an everyday reader, since it is the legal floor for what counts as broadband.",
+      "everyday_person_value": "medium",
+      "confidence": "medium",
+      "effort": "M",
+      "risks": "The evidence is a PTA press-release page, not the 2022 instrument. It says 'reviewed and issued revised' regulations, which is not the same as a formal repeal clause. Do not mark the 2014 record Repealed on this evidence alone — locate the 2022 instrument and read its repeal or savings provision first.",
+      "implementation_sketch": "Find the Fixed Broadband QoS Regulations 2022 PDF and the 2025 first amendment on the PTA regulations index. If a repeal clause is found, add the 2022 regulations as a record, set the 2014 record's status accordingly, and link them via related[]. If not found, leave the 2014 record Unverified and record the outcome in this backlog rather than guessing.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/category/pta-issues-revised-quality-of-service-regulations-for-fixed-broadband-services-378198598-2023-06-01",
+          "title": "PTA Issues Revised Quality of Service Regulations for Fixed Broadband Services",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+          "title": "PTA Regulations index listing Fixed Broadband QoS Regulations 2025 first amendment",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "district-class-licensing-regime-2025-2026",
+      "kind": "new-record",
+      "title": "Class Licensing and Registration (Amendment) Regulations, 2025 and the district-level internet licence",
+      "targets": [],
+      "what": "PTA introduced a district-level Class Licence for Internet Services from 1 January 2026, replacing the earlier model and lowering entry barriers for small and medium operators; 47 district licences were issued in the first half of 2026. The underlying instrument appears to be the Class Licensing and Registration (Amendment) Regulations, 2025 listed on the PTA regulations index.",
+      "why_it_helps": "The directory covers what operators must not do far better than how anyone becomes an operator, and licensing is the mechanism that decides whether small-town and rural areas get an ISP at all. It adds a market-structure dimension the current 51 records lack.",
+      "everyday_person_value": "medium",
+      "confidence": "medium",
+      "effort": "M",
+      "risks": "The link between the district-licence rollout and the 2025 amendment regulations is inferred from the regulations index, not yet read in the instrument. Confirm by opening the 2025 amendment before writing the record; the licence count comes from trade press and should not enter the record as fact.",
+      "implementation_sketch": "Open the Class Licensing and Registration (Amendment) Regulations, 2025 from the PTA regulations index, confirm it is the instrument creating the district-level class licence, then add a record with type Regulation, domains [Telecom regulation, Internet governance & access]. Leave the licence-issuance figures out of the record; they belong in the datasets lane.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+          "title": "PTA Regulations index listing Class Licensing and Registration (Amendment) Regulations, 2025",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/",
+          "title": "PTA Issues 47 New Internet Licenses Across Pakistan",
+          "publisher": "ProPakistani",
+          "accessed": "2026-07-25",
+          "official": false
+        }
+      ]
+    }
+  ]
+}

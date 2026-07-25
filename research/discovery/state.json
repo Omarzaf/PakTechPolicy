@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "created_at": "2026-07-25",
+  "iteration": 1,
+  "last_lane": "instruments",
+  "lane_rotation": [
+    "instruments",
+    "datasets",
+    "plain-language",
+    "context"
+  ],
+  "explored": {
+    "instruments": {
+      "targets_done": [
+        {
+          "id": "pta-laws",
+          "at": "2026-07-25"
+        },
+        {
+          "id": "na-bills",
+          "at": "2026-07-25"
+        },
+        {
+          "id": "unverified-remediation",
+          "at": "2026-07-25"
+        }
+      ],
+      "queries": [
+        "Pakistan Telecommunication Authority regulations 2026 notification new",
+        "Pakistan Personal Data Protection Act 2025 2026 passed status",
+        "PTA \"Fixed Broadband Quality of Service\" Regulations 2025 supersede 2014 regulations",
+        "\"Pakistan Telecommunication (Re-organization) (Amendment)\" Bill 2026 na.gov.pk senate right of way",
+        "Pakistan Telecommunication Re-organization Amendment Bill 2026 text National Assembly (site-scoped: na.gov.pk, senate.gov.pk, moitt.gov.pk, pakistancode.gov.pk)"
+      ]
+    },
+    "datasets": {
+      "targets_done": [],
+      "queries": []
+    },
+    "plain-language": {
+      "targets_done": [],
+      "queries": []
+    },
+    "context": {
+      "targets_done": [],
+      "queries": []
+    }
+  },
+  "seen_urls": [
+    "https://www.pta.gov.pk/assets/media/2026-04-22-Local-Peering-and-Internet-Exchange-Points-Regulations,2026.pdf",
+    "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+    "https://www.pta.gov.pk/assets/media/2026-05-12-11-05-26-from-PCP---Gazette-Notification-of-Subscriber-Antecedents-Verification-(Amendments)-Regulations,-2026.pdf",
+    "https://www.na.gov.pk/uploads/documents/6a2a8e28e486b_438.pdf",
+    "https://www.na.gov.pk/en/bills.php?status=pass",
+    "https://moitt.gov.pk/NewsDetail/OWM1NjNiMjMtMGZiYS00NGQ1LTg0OTAtNGE2ZDlhNzY5ZmYx",
+    "https://www.pta.gov.pk/category/pta-issues-revised-quality-of-service-regulations-for-fixed-broadband-services-378198598-2023-06-01",
+    "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/"
+  ],
+  "proposal_ids": [
+    "pta-local-peering-ixp-regulations-2026",
+    "pta-subscriber-antecedents-verification-amendment-2026",
+    "telecom-reorganisation-amendment-act-2026",
+    "broadband-qos-2014-superseded-by-2022-regulations",
+    "district-class-licensing-regime-2025-2026"
+  ]
+}
