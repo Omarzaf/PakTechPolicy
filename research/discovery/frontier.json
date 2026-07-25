@@ -46,7 +46,8 @@
         { "id": "google-transparency", "label": "Google Transparency Report — Pakistan government removal requests", "url": "https://transparencyreport.google.com/government-removals/overview" },
         { "id": "meta-transparency", "label": "Meta Transparency Center — Pakistan content restrictions", "url": "https://transparency.meta.com/reports/content-restrictions/" },
         { "id": "pseb-exports", "label": "PSEB / SBP IT and IT-enabled services export figures", "url": "https://www.pseb.org.pk" },
-        { "id": "freedom-on-net", "label": "Freedom House — Freedom on the Net, Pakistan scores over time", "url": "https://freedomhouse.org/country/pakistan/freedom-net" }
+        { "id": "freedom-on-net", "label": "Freedom House — Freedom on the Net, Pakistan scores over time", "url": "https://freedomhouse.org/country/pakistan/freedom-net" },
+        { "id": "pta-quarterly-tariff-tracking", "label": "PTA quarterly tracking of the top mobile hybrid and data-only bundle tariffs", "url": "https://www.pta.gov.pk/category/tariff-changes-of-top-15-hybrid-and-data-only-bundles-of-mobile-operators-535601647-2026-07-15" }
       ]
     },
     "plain-language": {

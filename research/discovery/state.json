@@ -1,8 +1,8 @@
 {
   "version": 1,
   "created_at": "2026-07-25",
-  "iteration": 1,
-  "last_lane": "instruments",
+  "iteration": 2,
+  "last_lane": "datasets",
   "lane_rotation": [
     "instruments",
     "datasets",
@@ -34,8 +34,73 @@
       ]
     },
     "datasets": {
-      "targets_done": [],
-      "queries": []
+      "targets_done": [
+        {
+          "id": "pta-indicators",
+          "at": "2026-07-25"
+        },
+        {
+          "id": "pta-annual-report",
+          "at": "2026-07-25"
+        },
+        {
+          "id": "sbp-payments",
+          "at": "2026-07-25"
+        },
+        {
+          "id": "worldbank-wdi",
+          "at": "2026-07-25"
+        }
+      ],
+      "queries": [
+        "site:pta.gov.pk telecom indicators broadband subscribers Pakistan csv json",
+        "site:pta.gov.pk annual report 2024 pdf content blocking complaints takedown Pakistan",
+        "site:sbp.org.pk \"Payment Systems Review\" quarterly 2025 PDF",
+        "site:api.worldbank.org Pakistan ICT service exports indicator API",
+        "site:pta.gov.pk/assets/media \"Annual Report 2024-25\" PTA PDF",
+        "site:pta.gov.pk/assets/media \"ANNUAL REPORT 2024-25\" telecom subscribers complaints content blocking",
+        "site:pta.gov.pk/assets/media filetype:pdf PTA annual report 2024 25",
+        "site:pta.gov.pk/assets/media/ 2025 PTA annual report",
+        "site:data.worldbank.org/indicator/BX.GSR.CCIS.CD ICT service exports annual",
+        "site:databank.worldbank.org/metadataglossary \"BX.GSR.CCIS.CD\" periodicity",
+        "site:api.worldbank.org/v2 \"BX.GSR.CCIS.CD\" \"Periodic\"",
+        "site:worldbank.org World Development Indicators update frequency annual indicators",
+        "site:sbp.org.pk \"Payment Systems Quarterly Review Q3 of FY26\"",
+        "site:sbp.org.pk \"PS-Review-Q3FY26.pdf\"",
+        "site:sbp.org.pk \"Payment Systems Review\" \"January to March, 2026\"",
+        "site:sbp.org.pk \"Annual Payment Systems Review FY25\"",
+        "site:sbp.org.pk/press/2025 \"releases Annual Payment Systems Review for FY25\"",
+        "site:sbp.org.pk \"Annual Payment Systems Review for FY25\" \"November\"",
+        "site:sbp.org.pk \"Annual Payment Systems Review for FY25\" \"2025\"",
+        "site:sbp.org.pk \"Annual-Payment-Systems-Review-FY25.pdf\"",
+        "site:sbp.org.pk \"Second Quarterly Payment Systems Review\" \"FY26\"",
+        "site:sbp.org.pk \"Payment Systems Review of Q2 FY26\"",
+        "site:sbp.org.pk \"PS-Review-Q2FY26.pdf\"",
+        "site:sbp.org.pk \"Payment Systems\" \"December 2025\" \"March\" \"2026\"",
+        "site:sbp.org.pk/press/2025 \"First Quarterly Payment Systems Review of FY26\"",
+        "site:sbp.org.pk \"Payment Systems Quarterly Review - 1st Quarter of 2025 - 26\"",
+        "site:sbp.org.pk \"PS-Review-Q1FY26.pdf\"",
+        "site:datacatalog.worldbank.org World Development Indicators update frequency quarterly",
+        "site:datahelpdesk.worldbank.org WDI update quarterly World Development Indicators",
+        "site:data.worldbank.org/indicator/IT.NET.USER.ZS Pakistan methodology internet users 2024",
+        "site:api.worldbank.org BX.GSR.CCIS.CD Pakistan",
+        "site:databank.worldbank.org/metadataglossary/world-development-indicators/series/IT.NET.USER.ZS",
+        "site:databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD",
+        "site:worldbank.org BX.GSR.CCIS.CD methodology IMF Balance of Payments ICT service exports",
+        "site:itu.int \"Individuals using the Internet\" methodology data collection household survey estimation",
+        "site:itu.int Pakistan \"57.253\" internet 2024",
+        "site:datahub.itu.int Pakistan individuals using internet 57.253 2024",
+        "site:pbs.gov.pk Pakistan internet use 2024 57.253",
+        "site:worldbank.org Pakistan \"57.253\" \"Individuals using the Internet\"",
+        "site:databank.worldbank.org \"ICT service exports (BoP, current US$)\"",
+        "site:worldbank.org \"ICT service exports (BoP, current US$)\" methodology",
+        "site:imf.org BPM6 computer telecommunications information services postal courier services definition",
+        "site:datahelpdesk.worldbank.org \"Balance of payments data are now based on the IMF's 6th edition\"",
+        "site:pta.gov.pk/en/telecom-indicators PTA telecom indicators subscribers teledensity broadband",
+        "site:pta.gov.pk/en/annual-reports PTA annual report 2023 2024 PDF complaints enforcement blocked URLs",
+        "site:pta.gov.pk \"Telecom Indicators\" \"Broadband Subscribers\"",
+        "site:pta.gov.pk \"Annual Report 2023-24\" PTA filetype:pdf"
+      ]
     },
     "plain-language": {
       "targets_done": [],
@@ -54,13 +119,31 @@
     "https://www.na.gov.pk/en/bills.php?status=pass",
     "https://moitt.gov.pk/NewsDetail/OWM1NjNiMjMtMGZiYS00NGQ1LTg0OTAtNGE2ZDlhNzY5ZmYx",
     "https://www.pta.gov.pk/category/pta-issues-revised-quality-of-service-regulations-for-fixed-broadband-services-378198598-2023-06-01",
-    "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/"
+    "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/",
+    "https://www.pta.gov.pk/category/telecom-indicators/164",
+    "https://www.pta.gov.pk/duration-preview-telecom-indicator/27?categoryID=952",
+    "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+    "https://www.pta.gov.pk/category/telecom-indicators/175",
+    "https://www.pta.gov.pk/assets/media/2024-12-16-pta_annual_report.pdf",
+    "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+    "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+    "https://www.sbp.org.pk/assets/documents/press-release/Pr-25-Jun-2026.pdf",
+    "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q2FY26.pdf",
+    "https://api.worldbank.org/v2/country/PAK/indicator/BX.GSR.CCIS.CD?format=json&per_page=100",
+    "https://api.worldbank.org/v2/indicator/BX.GSR.CCIS.CD?format=json",
+    "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD/"
   ],
   "proposal_ids": [
     "pta-local-peering-ixp-regulations-2026",
     "pta-subscriber-antecedents-verification-amendment-2026",
     "telecom-reorganisation-amendment-act-2026",
     "broadband-qos-2014-superseded-by-2022-regulations",
-    "district-class-licensing-regime-2025-2026"
+    "district-class-licensing-regime-2025-2026",
+    "pta-broadband-subscribers-penetration-series",
+    "pta-mobile-broadband-data-usage-series",
+    "pta-unlawful-url-processing-blocking-snapshots",
+    "sbp-retail-payments-by-channel-series",
+    "sbp-raast-volume-value-series",
+    "wdi-ict-service-exports-pakistan"
   ]
 }

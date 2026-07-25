@@ -1,0 +1,139 @@
+{
+  "checked_at": "2026-07-25T20:27:05.952Z",
+  "url_count": 12,
+  "reachable_count": 12,
+  "results": [
+    {
+      "url": "https://www.pta.gov.pk/category/telecom-indicators/164",
+      "final_url": "https://www.pta.gov.pk/category/telecom-indicators/164",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 446653,
+      "reachable": true,
+      "elapsed_ms": 2831,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/duration-preview-telecom-indicator/27?categoryID=952",
+      "final_url": "https://www.pta.gov.pk/duration-preview-telecom-indicator/27?categoryID=952",
+      "http_code": 200,
+      "content_type": "application/json",
+      "size_bytes": 1179,
+      "reachable": true,
+      "elapsed_ms": 853,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+      "final_url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 101511343,
+      "reachable": true,
+      "elapsed_ms": 25180,
+      "exit_code": 28,
+      "error": "curl: (28) Operation timed out after 25000 milliseconds with 101511343 out of 103951101 bytes received"
+    },
+    {
+      "url": "https://www.pta.gov.pk/category/telecom-indicators/175",
+      "final_url": "https://www.pta.gov.pk/category/telecom-indicators/175",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 171010,
+      "reachable": true,
+      "elapsed_ms": 1646,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/assets/media/2024-12-16-pta_annual_report.pdf",
+      "final_url": "https://www.pta.gov.pk/assets/media/2024-12-16-pta_annual_report.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 47521268,
+      "reachable": true,
+      "elapsed_ms": 19405,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+      "final_url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 1679882,
+      "reachable": true,
+      "elapsed_ms": 6852,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+      "final_url": "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 3239662,
+      "reachable": true,
+      "elapsed_ms": 8165,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.sbp.org.pk/assets/documents/press-release/Pr-25-Jun-2026.pdf",
+      "final_url": "https://www.sbp.org.pk/assets/documents/press-release/Pr-25-Jun-2026.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 274831,
+      "reachable": true,
+      "elapsed_ms": 3434,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q2FY26.pdf",
+      "final_url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q2FY26.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 1634692,
+      "reachable": true,
+      "elapsed_ms": 9199,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAK/indicator/BX.GSR.CCIS.CD?format=json&per_page=100",
+      "final_url": "https://api.worldbank.org/v2/country/PAK/indicator/BX.GSR.CCIS.CD?format=json&per_page=100",
+      "http_code": 200,
+      "content_type": "application/json;charset=utf-8",
+      "size_bytes": 14622,
+      "reachable": true,
+      "elapsed_ms": 489,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://api.worldbank.org/v2/indicator/BX.GSR.CCIS.CD?format=json",
+      "final_url": "https://api.worldbank.org/v2/indicator/BX.GSR.CCIS.CD?format=json",
+      "http_code": 200,
+      "content_type": "application/json;charset=utf-8",
+      "size_bytes": 702,
+      "reachable": true,
+      "elapsed_ms": 481,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD/",
+      "final_url": "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD/",
+      "http_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "size_bytes": 52439,
+      "reachable": true,
+      "elapsed_ms": 887,
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

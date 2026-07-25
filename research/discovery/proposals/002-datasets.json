@@ -1,0 +1,315 @@
+{
+  "iteration": 2,
+  "lane": "datasets",
+  "explored_on": "2026-07-25",
+  "queries": [
+    "site:pta.gov.pk telecom indicators broadband subscribers Pakistan csv json",
+    "site:pta.gov.pk annual report 2024 pdf content blocking complaints takedown Pakistan",
+    "site:sbp.org.pk \"Payment Systems Review\" quarterly 2025 PDF",
+    "site:api.worldbank.org Pakistan ICT service exports indicator API",
+    "site:pta.gov.pk/assets/media \"Annual Report 2024-25\" PTA PDF",
+    "site:pta.gov.pk/assets/media \"ANNUAL REPORT 2024-25\" telecom subscribers complaints content blocking",
+    "site:pta.gov.pk/assets/media filetype:pdf PTA annual report 2024 25",
+    "site:pta.gov.pk/assets/media/ 2025 PTA annual report",
+    "site:data.worldbank.org/indicator/BX.GSR.CCIS.CD ICT service exports annual",
+    "site:databank.worldbank.org/metadataglossary \"BX.GSR.CCIS.CD\" periodicity",
+    "site:api.worldbank.org/v2 \"BX.GSR.CCIS.CD\" \"Periodic\"",
+    "site:worldbank.org World Development Indicators update frequency annual indicators",
+    "site:sbp.org.pk \"Payment Systems Quarterly Review Q3 of FY26\"",
+    "site:sbp.org.pk \"PS-Review-Q3FY26.pdf\"",
+    "site:sbp.org.pk \"Payment Systems Review\" \"January to March, 2026\"",
+    "site:sbp.org.pk \"Annual Payment Systems Review FY25\"",
+    "site:sbp.org.pk/press/2025 \"releases Annual Payment Systems Review for FY25\"",
+    "site:sbp.org.pk \"Annual Payment Systems Review for FY25\" \"November\"",
+    "site:sbp.org.pk \"Annual Payment Systems Review for FY25\" \"2025\"",
+    "site:sbp.org.pk \"Annual-Payment-Systems-Review-FY25.pdf\"",
+    "site:sbp.org.pk \"Second Quarterly Payment Systems Review\" \"FY26\"",
+    "site:sbp.org.pk \"Payment Systems Review of Q2 FY26\"",
+    "site:sbp.org.pk \"PS-Review-Q2FY26.pdf\"",
+    "site:sbp.org.pk \"Payment Systems\" \"December 2025\" \"March\" \"2026\"",
+    "site:sbp.org.pk/press/2025 \"First Quarterly Payment Systems Review of FY26\"",
+    "site:sbp.org.pk \"Payment Systems Quarterly Review - 1st Quarter of 2025 - 26\"",
+    "site:sbp.org.pk \"PS-Review-Q1FY26.pdf\"",
+    "site:datacatalog.worldbank.org World Development Indicators update frequency quarterly",
+    "site:datahelpdesk.worldbank.org WDI update quarterly World Development Indicators",
+    "site:data.worldbank.org/indicator/IT.NET.USER.ZS Pakistan methodology internet users 2024",
+    "site:api.worldbank.org BX.GSR.CCIS.CD Pakistan",
+    "site:databank.worldbank.org/metadataglossary/world-development-indicators/series/IT.NET.USER.ZS",
+    "site:databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD",
+    "site:worldbank.org BX.GSR.CCIS.CD methodology IMF Balance of Payments ICT service exports",
+    "site:itu.int \"Individuals using the Internet\" methodology data collection household survey estimation",
+    "site:itu.int Pakistan \"57.253\" internet 2024",
+    "site:datahub.itu.int Pakistan individuals using internet 57.253 2024",
+    "site:pbs.gov.pk Pakistan internet use 2024 57.253",
+    "site:worldbank.org Pakistan \"57.253\" \"Individuals using the Internet\"",
+    "site:databank.worldbank.org \"ICT service exports (BoP, current US$)\"",
+    "site:worldbank.org \"ICT service exports (BoP, current US$)\" methodology",
+    "site:imf.org BPM6 computer telecommunications information services postal courier services definition",
+    "site:datahelpdesk.worldbank.org \"Balance of payments data are now based on the IMF's 6th edition\"",
+    "site:pta.gov.pk/en/telecom-indicators PTA telecom indicators subscribers teledensity broadband",
+    "site:pta.gov.pk/en/annual-reports PTA annual report 2023 2024 PDF complaints enforcement blocked URLs",
+    "site:pta.gov.pk \"Telecom Indicators\" \"Broadband Subscribers\"",
+    "site:pta.gov.pk \"Annual Report 2023-24\" PTA filetype:pdf"
+  ],
+  "targets_explored": [
+    "pta-indicators",
+    "pta-annual-report",
+    "sbp-payments",
+    "worldbank-wdi"
+  ],
+  "dead_ends": [
+    {
+      "target": "PTA frontier URLs /en/telecom-indicators and /en/annual-reports",
+      "reason": "Both original frontier URLs resolve to PTA's page-not-found screen. The working public paths are /category/telecom-indicators/164, /category/telecom-indicators/175, and /category/annual-reports-1432096911-2023-05-30."
+    },
+    {
+      "target": "PTA annual-reports index as a current catalog",
+      "reason": "The live index stops at Annual Report 2023-24 even though the working Annual Report 2024-25 PDF was located at /assets/media/Annual%20Report%202025-25%20Nov%2025.pdf. The index cannot be used alone to determine the latest available report."
+    },
+    {
+      "target": "SBP payment-system CSV, JSON, or API",
+      "reason": "No machine-readable SBP endpoint was found. The usable access path is the text-extractable quarterly and annual PDF annexures. The legacy /psd/pdf/ Q3 FY26 URL returns the SBP home page rather than the report; the working file is under /assets/document/publications/."
+    },
+    {
+      "target": "A complete comparable SBP e-commerce series",
+      "reason": "Annexure A-10 reports card-not-present transactions on domestic e-commerce sites, while account- and wallet-based purchases appear as a current-quarter headline without a matching historical annexure series. Combining them would create a false total, so no e-commerce outcome proposal was made."
+    },
+    {
+      "target": "World Bank IT.NET.USER.ZS as a policy-effect trend",
+      "reason": "The API is accessible, but Pakistan has nulls for 2021-2023 and the next observation jumps from 18.935 percent in 2020 to 57.253 percent in 2024 without a country-specific observation-method flag. It is recorded as a dead end rather than interpolated or presented as a causal trend."
+    }
+  ],
+  "new_targets": [
+    {
+      "lane": "datasets",
+      "id": "pta-quarterly-tariff-tracking",
+      "label": "PTA quarterly tracking of the top mobile hybrid and data-only bundle tariffs",
+      "url": "https://www.pta.gov.pk/category/tariff-changes-of-top-15-hybrid-and-data-only-bundles-of-mobile-operators-535601647-2026-07-15"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "pta-broadband-subscribers-penetration-series",
+      "kind": "dataset-integration",
+      "title": "PTA monthly broadband subscribers and penetration series",
+      "targets": [
+        "telecommunications-policy-2015",
+        "national-broadband-policy-2021-draft",
+        "universal-service-fund-amendment-rules-2023"
+      ],
+      "what": "PTA's public Subscribers page exposes Highcharts charts with client-side CSV/XLS export. It contains monthly broadband subscribers by technology and broadband penetration for July 2025 through June 2026, plus annual observations for FY2018-19 through FY2024-25. An undocumented but working JSON endpoint returns the June 2026 FTTH operator breakdown. The cadence is monthly and annual; June 2026 was available on 25 July 2026, an observed lag of 25 days.",
+      "why_it_helps": "Subscriber totals and penetration let a reader compare universal-access and broadband policy dates with the direction of actual adoption, while the technology split shows whether growth came from mobile broadband or fixed fibre rather than treating every connection as equivalent.",
+      "everyday_person_value": "high",
+      "confidence": "medium",
+      "effort": "M",
+      "risks": "PTA publishes no documented bulk API or field dictionary, most CSV files are generated in the browser, and the page exposes only a rolling twelve-month monthly window. Subscribers generally means subscriptions or SIMs, not unique people. The June 2026 NGMS total is 159,813,442 while the Mobile BB component is 159,549,220; those similarly named series must not be merged until PTA's definitions or the discrepancy are resolved. Association with a policy date would not establish causation.",
+      "implementation_sketch": "After owner acceptance, preserve the raw chart export and JSON response with access dates, normalize only documented labels into a new data/policy-indicators.json keyed to policy ids, and render a compact sourced sparkline in the detail section of src/app.js. Add an indicator-schema test that rejects missing units, cadence, source URL, access date, and duplicate periods.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/category/telecom-indicators/164",
+          "title": "Telecom Indicators — Subscribers",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/duration-preview-telecom-indicator/27?categoryID=952",
+          "title": "FTTH subscribers by operator — June 2026 JSON",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+          "title": "PTA Annual Report 2024-25 — Annexes 10-15, PDF pages 129-130",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "pta-mobile-broadband-data-usage-series",
+      "kind": "dataset-integration",
+      "title": "PTA mobile broadband data-usage series",
+      "targets": [
+        "telecommunications-policy-2015",
+        "national-broadband-policy-2021-draft"
+      ],
+      "what": "PTA's public Mobile Broadband Data Usage page provides client-side CSV/XLS export for total quarterly usage in petabytes and average monthly usage per subscriber. The quarterly series runs from April-June 2023 through January-March 2026, the monthly per-subscriber series from July 2025 through June 2026, and the annual average from FY2018-19 through FY2024-25. Cadence is mixed monthly, quarterly, and annual; at access the monthly series lagged 25 days while the latest quarterly total lagged nearly four months. Annual Report 2024-25 Annex 16 on PDF page 130 supplies an additional June 2021-June 2025 operator series.",
+      "why_it_helps": "Connections alone do not show whether people are meaningfully using broadband. Usage per subscriber and total traffic give a second outcome measure beside access policies and can reveal whether adoption is deepening even when subscriber growth slows.",
+      "everyday_person_value": "medium",
+      "confidence": "medium",
+      "effort": "M",
+      "risks": "There is no documented API or methodology note explaining collection, revisions, operator coverage, or unit conversions; the annual report notes that fixed data usage is estimated. The visible annual and quarterly windows begin at different dates, so they should remain separate series. Traffic can rise because of prices, content, devices, population, or measurement changes; it is not a causal score for a policy.",
+      "implementation_sketch": "After acceptance, export each clearly labelled PTA chart separately, store units and cadence with every series in data/policy-indicators.json, and never splice monthly, quarterly, and annual observations into one line. Add a source note and last-observation badge in the policy detail view, with tests for unit and period consistency.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/category/telecom-indicators/175",
+          "title": "Telecom Indicators — Mobile Broadband Data Usage",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+          "title": "PTA Annual Report 2024-25 — Annex 16 Data Usage, PDF page 130",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "pta-unlawful-url-processing-blocking-snapshots",
+      "kind": "dataset-integration",
+      "title": "PTA unlawful-content URL processing and blocking snapshots",
+      "targets": [
+        "peca-2016",
+        "removal-blocking-online-content-rules-2021",
+        "peca-amendment-2025"
+      ],
+      "what": "PTA Annual Report 2024 has a table titled URLs Processed (FY 2023-24) on PDF page 57, totaling 109,771 across seven categories. Annual Report 2024-25 reports 88,035 URLs blocked during FY2024-25 and breaks the same total down by category and platform on PDF page 59. Cadence is annual. The latest period ended on 30 June 2025 and was 390 days old at access; PDF metadata shows creation on 25 November 2025 and modification on 6 January 2026, roughly 148-190 days after period-end, although that does not establish its public posting date.",
+      "why_it_helps": "These are rare official quantitative snapshots that can sit beside PECA and the online-content rules, showing the scale, stated categories, and platforms of PTA action instead of leaving readers with only procedural legal text.",
+      "everyday_person_value": "high",
+      "confidence": "low",
+      "effort": "M",
+      "risks": "The metric changes from URLs processed for blocking in FY2023-24 to URLs blocked in FY2024-25, and the category labels change. PTA does not explain unique versus repeated URLs, complaints versus decisions, platform compliance, appeals, or restoration. The two totals must not be plotted as a clean decline or treated as a consistent series.",
+      "implementation_sketch": "If accepted, transcribe each report as a separate snapshot in data/policy-indicators.json with its exact measure label, reporting period, categories, and PDF page. Display the methodology break between processed and blocked, keep category and platform tables separate, and add a test that forbids joining observations whose measure labels differ.",
+      "evidence": [
+        {
+          "url": "https://www.pta.gov.pk/assets/media/2024-12-16-pta_annual_report.pdf",
+          "title": "PTA Annual Report 2024 — URLs Processed (FY 2023-24), PDF page 57",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+          "title": "PTA Annual Report 2024-25 — blocked URLs by category and platform, PDF page 59",
+          "publisher": "Pakistan Telecommunication Authority",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "sbp-retail-payments-by-channel-series",
+      "kind": "dataset-integration",
+      "title": "SBP quarterly retail payments by channel",
+      "targets": [
+        "payment-systems-electronic-fund-transfers-act-2007",
+        "electronic-money-institutions-regulations-2019",
+        "digital-banks-framework-2022"
+      ],
+      "what": "SBP's Payment Systems Quarterly Review for Q3 FY26 is a working text-extractable PDF. Annexure A-4 on PDF page 15 gives five quarters from Q3 FY25 through Q3 FY26 for volume in millions and value in PKR billions across ATMs, POS, internet and mobile banking, card-not-present e-commerce, EMI wallets, branchless apps, agents, and branches. The series is quarterly; January-March 2026 data were released on 25 June 2026, an 86-day publication lag and 116-day observation lag at access.",
+      "why_it_helps": "The channel table lets a reader see whether regulated electronic-money and digital-bank infrastructure corresponds with people and firms moving transactions into app, wallet, web, and merchant channels, instead of relying on broad claims about digitization.",
+      "everyday_person_value": "high",
+      "confidence": "high",
+      "effort": "M",
+      "risks": "The report covers formal banking and payment channels only and excludes cash outside the system. SBP's digital classification includes ATM and cash-deposit-machine activity, so digital share is not the same as cashless share. Current-quarter columns are provisional, earlier quarters are revised, branchless reporting changed in FY23, and EMI rows begin in FY23. No CSV or API was found, so successive PDFs must be versioned.",
+      "implementation_sketch": "After acceptance, extract Annexure A-4 from the latest quarterly PDF and the longer FY21-FY25 annual Table A-4 on PDF page 24 into data/policy-indicators.json. Mark provisional and revised observations, replace earlier-quarter values only from newer SBP reports, and add a policy-detail chart with separate volume and value controls plus a formal-channels-only note.",
+      "evidence": [
+        {
+          "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+          "title": "Payment Systems Quarterly Review — Q3 FY26",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+          "title": "Annual Payment Systems Review — FY25",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.sbp.org.pk/assets/documents/press-release/Pr-25-Jun-2026.pdf",
+          "title": "Quarterly Payment Systems Review of Q3 FY26 — press release",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "sbp-raast-volume-value-series",
+      "kind": "dataset-integration",
+      "title": "SBP quarterly Raast transaction volumes and values",
+      "targets": [
+        "payment-systems-electronic-fund-transfers-act-2007",
+        "digital-banks-framework-2022"
+      ],
+      "what": "Annexure A-15 on PDF page 20 of SBP's Q3 FY26 review provides quarterly Raast P2P, bulk, P2M, and total transaction volumes in millions and values in PKR billions for Q3 FY25 through Q3 FY26. The annual review's Table A-15 on PDF page 29 extends totals back to FY22, with P2M beginning only in FY24. Cadence is quarterly; the latest January-March 2026 period was released after an 86-day lag.",
+      "why_it_helps": "Raast is a legible measure of real-time digital-payment use. Separating person-to-person, merchant, and bulk transactions lets readers see which use cases actually expanded beside the payment-system framework rather than reducing the system to a single launch claim.",
+      "everyday_person_value": "medium",
+      "confidence": "high",
+      "effort": "M",
+      "risks": "Raast components began in different phases, so blanks before a component launch are not zero use. The latest quarter is provisional and the next report revises earlier values: the Q3 report revises Q2 FY26 total volume from 645.7 million to 648.4 million and P2M volume from 33.6 million to 36.3 million. Growth is an outcome indicator, not proof that a specific policy caused it.",
+      "implementation_sketch": "After acceptance, extract Table A-15 from the newest quarterly report, retain component start dates and P/R flags, and replace the previous quarter with the newest revised column. Store the source report URL for every observation batch and render separate P2P, P2M, bulk, and total toggles beside the affected policy records.",
+      "evidence": [
+        {
+          "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+          "title": "Payment Systems Quarterly Review — Q3 FY26",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q2FY26.pdf",
+          "title": "Payment Systems Quarterly Review — Q2 FY26",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+          "title": "Annual Payment Systems Review — FY25",
+          "publisher": "State Bank of Pakistan",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    },
+    {
+      "id": "wdi-ict-service-exports-pakistan",
+      "kind": "dataset-integration",
+      "title": "World Bank WDI ICT service exports series for Pakistan",
+      "targets": [
+        "software-development-export-strategy-2023-2027",
+        "digital-pakistan-policy-2018"
+      ],
+      "what": "World Bank WDI indicator BX.GSR.CCIS.CD is available through a tested Pakistan JSON endpoint and is defined by a separate tested metadata endpoint. The live API contains annual Pakistan observations from 1993 through 2025 and reports a database update date of 13 July 2026; the latest 2025 observation was therefore available about six and a half months after year-end. WDI refreshes the database quarterly, while this indicator's observation cadence is annual and its underlying source is IMF Balance of Payments data.",
+      "why_it_helps": "This gives the software-export strategy a concrete external outcome series and lets readers compare the scale and direction of internationally reported ICT-service exports before and during the strategy period, while keeping the broader statistical definition visible.",
+      "everyday_person_value": "medium",
+      "confidence": "low",
+      "effort": "M",
+      "risks": "The measure is not software exports: it includes computer, communications, and information services, and WDI's note also names postal and courier services. Values are nominal current US dollars and move with prices and exchange rates. The official glossary says the BPM6 series is available from 2005, while the live API exposes Pakistan values from 1993; that coverage conflict is unresolved, and the 2013 WDI shift to BPM6 changed classifications. Use a post-2005, preferably post-2013, slice and do not present a seamless 1993-2025 causal trend.",
+      "implementation_sketch": "After acceptance, fetch the JSON API into a dated static snapshot, retain only a documented post-2005 or post-2013 window, and label it exactly ICT service exports (BoP, current US$). Store the API last-updated date and metadata definition, show a nominal-dollar and coverage warning, and test that the source code, units, and observation years remain unchanged before rebuilding.",
+      "evidence": [
+        {
+          "url": "https://api.worldbank.org/v2/country/PAK/indicator/BX.GSR.CCIS.CD?format=json&per_page=100",
+          "title": "Pakistan — ICT service exports (BoP, current US$), JSON data",
+          "publisher": "World Bank, World Development Indicators",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://api.worldbank.org/v2/indicator/BX.GSR.CCIS.CD?format=json",
+          "title": "ICT service exports indicator metadata",
+          "publisher": "World Bank, World Development Indicators",
+          "accessed": "2026-07-25",
+          "official": true
+        },
+        {
+          "url": "https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.GSR.CCIS.CD/",
+          "title": "World Development Indicators metadata glossary — BX.GSR.CCIS.CD",
+          "publisher": "World Bank",
+          "accessed": "2026-07-25",
+          "official": true
+        }
+      ]
+    }
+  ]
+}
