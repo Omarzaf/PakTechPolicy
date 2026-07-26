@@ -85,7 +85,21 @@ Ran the project's own tooling and cross-checked its claims against the data:
 
 ## Suggested next-agent order of work
 
-1. Fix #3 (timeline sort) — small, self-contained, has a clear repro.
-2. Fix #4 (no-JS degradation) — bigger; touches build + HTML.
-3. Resolve #6 (wire link-check into gate **or** fix the doc claim) — decide policy first.
-4. Then #1/#5 if a schema/UX pass is in scope; #2 and the nits are cleanup.
+Findings #3, #6, #2, and #5 are done (see Status update at top). What remains:
+
+1. **#1 status/verification tangle** — schema pass. Separate legal status from the
+   data-quality flag; drop `Unverified` from the `status` enum, drive the badge and
+   the (now-shipped) Verification filter off `verification` only. Touches `data/policies.json`,
+   `tools/verify.mjs`, the docs, and the Status dropdown. Invasive — get a nod first.
+2. **#4 no-JS degradation** — render real metric numbers + a minimal record list into the
+   static HTML at build time so the page isn't broken placeholders without JS. Touches
+   `tools/build.mjs` + `src/index.html`. Invasive — get a nod first.
+3. **#7 deploy** — ship to an Artifact or Vercel so the "genuinely public" criterion is met.
+4. **Nits** — `metric-domains` `|| 12` fallback masks a 0-domains failure; year labels show
+   ambiguous 2-digit years; `verify-site.mjs` isn't part of `pnpm verify`.
+
+### Working-tree / environment notes for whoever picks this up
+- Branch: `feat/pak-tech-policy-v1`. Nothing has been pushed.
+- `research/consolidation-report.json` shows a harmless `generated_at` timestamp drift
+  (from a reproducibility check the owner chose to leave) — not a defect, don't chase it.
+- A local preview server may still be running on `http://127.0.0.1:4173/` (serves live from `dist/`).
