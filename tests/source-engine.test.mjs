@@ -17,6 +17,7 @@ const sources = [
     pakistan_coverage: "Pakistan",
     limitations: "Subscriptions are not people.",
     access_modes: ["Web"],
+    access_status: "Reachable",
   },
   {
     title: "Global payments",
@@ -28,6 +29,7 @@ const sources = [
     pakistan_coverage: "Pakistan included",
     limitations: "Survey estimates.",
     access_modes: ["CSV"],
+    access_status: "Limited",
   },
 ];
 
@@ -39,6 +41,7 @@ test("filters official sources across search and facets", () => {
   );
   assert.equal(filterOfficialSources(sources, { publisherScope: "Pakistan" }).length, 1);
   assert.equal(filterOfficialSources(sources, { resourceType: "Dataset" }).length, 1);
+  assert.equal(filterOfficialSources(sources, { accessStatus: "Limited" }).length, 1);
 });
 
 test("calculates source hub facets and headline metrics", () => {
@@ -48,5 +51,6 @@ test("calculates source hub facets and headline metrics", () => {
     pakistan: 1,
     international: 1,
     publishers: 2,
+    limited: 1,
   });
 });

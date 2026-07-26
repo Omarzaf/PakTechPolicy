@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="sources-page">
-    <a class="skip-link" href="#source-results">Skip to official sources</a>
+    <a class="skip-link" href="#source-directory-title">Skip to official sources</a>
 
     <header class="site-header">
       <a class="brand" href="./" aria-label="Pakistan Technology Policy Index home">
@@ -62,7 +62,11 @@
         <article><strong id="source-total">30</strong><span>reviewed resources</span></article>
         <article><strong id="source-pakistan">15</strong><span>Pakistani sources</span></article>
         <article><strong id="source-international">15</strong><span>international sources</span></article>
-        <article><strong id="source-publishers">15</strong><span>official publishers</span></article>
+        <article>
+          <strong id="source-publishers">15</strong>
+          <span>official publishers</span>
+          <small id="source-access-note">5 access limitations flagged</small>
+        </article>
         <p>Links checked <time id="source-as-of" datetime="2026-07-26">26 Jul 2026</time></p>
       </section>
 
@@ -94,7 +98,7 @@
         <div class="section-heading directory-heading">
           <div>
             <p class="section-kicker">The source directory</p>
-            <h2 id="source-directory-title">Browse reviewed official resources</h2>
+            <h2 id="source-directory-title" tabindex="-1">Browse reviewed official resources</h2>
           </div>
           <p id="source-summary">30 official resources</p>
           <p id="source-announcement" class="sr-only" aria-live="polite"></p>
@@ -128,6 +132,12 @@
             <span>Resource type</span>
             <select id="source-type">
               <option value="">All resource types</option>
+            </select>
+          </label>
+          <label>
+            <span>Access status</span>
+            <select id="source-access">
+              <option value="">All access states</option>
             </select>
           </label>
           <button id="clear-source-filters" type="button">Clear filters</button>
@@ -201,6 +211,13 @@
       <div class="footer-links">
         <a href="./">Policy index</a>
         <a href="./data/official-sources.json">Source data</a>
+        <a
+          href="https://github.com/Omarzaf/PakTechPolicy/tree/feat/pak-tech-policy-v1/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Methods &amp; data quality<span class="sr-only"> (opens in a new tab)</span>
+        </a>
         <a href="https://github.com/Omarzaf/PakTechPolicy" target="_blank" rel="noreferrer">
           GitHub<span class="sr-only"> (opens in a new tab)</span>
         </a>

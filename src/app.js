@@ -70,6 +70,8 @@ const safeUrl = (value) => {
 };
 
 const dateLabel = formatPolicyDate;
+const preferredScrollBehavior = () =>
+  window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth";
 
 const verificationLabel = (value) =>
   value === "Verified" ? "Source checked" : value === "Unverified" ? "Needs review" : value;
@@ -208,9 +210,7 @@ function policyCard(policy, index) {
         <span class="status-badge desktop-status status-${escapeHtml(
           policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
         )}">${escapeHtml(policy.status)}</span>
-        <button class="policy-arrow" type="button" data-open-policy="${escapeHtml(
-          policy.id,
-        )}" aria-label="Open ${escapeHtml(policy.title)}">↗</button>
+        <span class="policy-arrow" aria-hidden="true">↗</span>
       </div>
     </article>
   `;
@@ -331,7 +331,7 @@ function updateState(next, options = {}) {
   renderResults();
   if (options.focusResults) {
     elements.results.focus({ preventScroll: true });
-    $("#directory").scrollIntoView({ behavior: "smooth", block: "start" });
+    $("#directory").scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" });
   }
 }
 

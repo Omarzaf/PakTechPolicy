@@ -6,7 +6,7 @@ export function uniqueSourceValues(sources, field) {
 
 export function filterOfficialSources(
   sources,
-  { query = "", topic = "", publisherScope = "", resourceType = "" } = {},
+  { query = "", topic = "", publisherScope = "", resourceType = "", accessStatus = "" } = {},
 ) {
   const normalizedQuery = query.trim().toLocaleLowerCase();
   return sources.filter((source) => {
@@ -19,6 +19,7 @@ export function filterOfficialSources(
       source.limitations,
       ...(source.topics ?? []),
       ...(source.access_modes ?? []),
+      source.access_status,
     ]
       .join(" ")
       .toLocaleLowerCase();
@@ -26,7 +27,8 @@ export function filterOfficialSources(
       (!normalizedQuery || haystack.includes(normalizedQuery)) &&
       (!topic || source.topics.includes(topic)) &&
       (!publisherScope || source.publisher_scope === publisherScope) &&
-      (!resourceType || source.resource_type === resourceType)
+      (!resourceType || source.resource_type === resourceType) &&
+      (!accessStatus || source.access_status === accessStatus)
     );
   });
 }
@@ -39,5 +41,6 @@ export function getOfficialSourceStats(sources) {
       ({ publisher_scope }) => publisher_scope === "International",
     ).length,
     publishers: new Set(sources.map(({ publisher }) => publisher)).size,
+    limited: sources.filter(({ access_status }) => access_status === "Limited").length,
   };
 }

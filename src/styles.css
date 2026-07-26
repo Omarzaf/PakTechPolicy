@@ -5,12 +5,12 @@
   --ink: #17251f;
   --ink-soft: #53615b;
   --line: #cfc9ba;
-  --line-dark: #9f9a8f;
+  --line-dark: #817d74;
   --green: #006b4f;
   --green-dark: #004b38;
   --green-wash: #dce9df;
   --saffron: #d88b25;
-  --warning: #a96014;
+  --warning: #95520f;
   --danger: #9c433d;
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -287,7 +287,6 @@ a {
   height: 100%;
   padding: 0 1rem;
   border: 0;
-  outline: 0;
   background: transparent;
 }
 
@@ -687,9 +686,8 @@ a {
   width: 100%;
   min-height: 43px;
   padding: 0 0.65rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-dark);
   border-radius: 0;
-  outline: 0;
   background: var(--paper);
   font-size: 0.72rem;
 }
@@ -844,7 +842,7 @@ a {
 
 .policy-sequence {
   padding-top: 0.18rem;
-  color: var(--line-dark);
+  color: var(--ink-soft);
   font-family: var(--serif);
   font-size: 0.75rem;
 }
@@ -1029,12 +1027,6 @@ a {
   border: 1px solid var(--line);
   border-radius: 50%;
   background: transparent;
-  transition: background 120ms ease, color 120ms ease;
-}
-
-.policy-arrow:hover {
-  background: var(--green);
-  color: white;
 }
 
 .empty-state,
@@ -2032,6 +2024,13 @@ dialog::backdrop {
   font-size: 0.72rem;
 }
 
+.source-metric-band small {
+  display: block;
+  margin-top: 0.4rem;
+  color: rgb(255 255 255 / 74%);
+  font-size: 0.64rem;
+}
+
 .source-metric-band > p {
   position: absolute;
   right: 1rem;
@@ -2085,7 +2084,7 @@ dialog::backdrop {
 
 .source-filters {
   display: grid;
-  grid-template-columns: minmax(240px, 1.5fr) repeat(3, minmax(150px, 0.7fr)) auto;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(125px, 0.7fr)) auto;
   gap: 0.8rem;
   align-items: end;
   margin-bottom: 1.2rem;

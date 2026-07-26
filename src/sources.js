@@ -13,6 +13,7 @@ const state = {
   topic: "",
   publisherScope: "",
   resourceType: "",
+  accessStatus: "",
 };
 
 const elements = {
@@ -20,6 +21,7 @@ const elements = {
   topic: $("#source-topic"),
   publisherScope: $("#source-scope"),
   resourceType: $("#source-type"),
+  accessStatus: $("#source-access"),
   summary: $("#source-summary"),
   announcement: $("#source-announcement"),
   results: $("#source-results"),
@@ -79,6 +81,9 @@ function renderMetrics(asOf) {
   $("#source-pakistan").textContent = stats.pakistan;
   $("#source-international").textContent = stats.international;
   $("#source-publishers").textContent = stats.publishers;
+  $("#source-access-note").textContent = `${stats.limited} access limitation${
+    stats.limited === 1 ? "" : "s"
+  } flagged`;
   const date = $("#source-as-of");
   date.dateTime = asOf;
   date.textContent = formatDate(asOf);
@@ -141,6 +146,7 @@ function renderActiveFilters() {
     ["topic", state.topic, state.topic],
     ["publisherScope", state.publisherScope, `${state.publisherScope} official`],
     ["resourceType", state.resourceType, state.resourceType],
+    ["accessStatus", state.accessStatus, `${state.accessStatus} access`],
   ].filter(([, value]) => value);
 
   elements.activeFilters.innerHTML = entries
@@ -162,6 +168,7 @@ function syncUrl() {
     ["topic", state.topic],
     ["scope", state.publisherScope],
     ["type", state.resourceType],
+    ["access", state.accessStatus],
   ]) {
     if (value) params.set(key, value);
   }
@@ -185,6 +192,7 @@ function syncControls() {
   elements.topic.value = state.topic;
   elements.publisherScope.value = state.publisherScope;
   elements.resourceType.value = state.resourceType;
+  elements.accessStatus.value = state.accessStatus;
 }
 
 function updateState(next, options = {}) {
@@ -193,12 +201,21 @@ function updateState(next, options = {}) {
   renderSources({ announce: true });
   if (options.focusResults) {
     elements.results.focus({ preventScroll: true });
-    elements.results.scrollIntoView({ behavior: "smooth", block: "start" });
+    const behavior = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches
+      ? "auto"
+      : "smooth";
+    elements.results.scrollIntoView({ behavior, block: "start" });
   }
 }
 
 function clearFilters() {
-  updateState({ query: "", topic: "", publisherScope: "", resourceType: "" });
+  updateState({
+    query: "",
+    topic: "",
+    publisherScope: "",
+    resourceType: "",
+    accessStatus: "",
+  });
 }
 
 function restoreUrlState() {
@@ -207,6 +224,7 @@ function restoreUrlState() {
   state.topic = params.get("topic") ?? "";
   state.publisherScope = params.get("scope") ?? "";
   state.resourceType = params.get("type") ?? "";
+  state.accessStatus = params.get("access") ?? "";
 }
 
 function bindEvents() {
@@ -220,6 +238,13 @@ function bindEvents() {
   elements.resourceType.addEventListener("change", (event) =>
     updateState({ resourceType: event.target.value }),
   );
+  elements.accessStatus.addEventListener("change", (event) =>
+    updateState({ accessStatus: event.target.value }),
+  );
+  $("#source-filter-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    updateState({ query: elements.query.value }, { focusResults: true });
+  });
   $("#clear-source-filters").addEventListener("click", clearFilters);
   $("[data-clear-source-filters]").addEventListener("click", clearFilters);
 
@@ -230,7 +255,11 @@ function bindEvents() {
       return;
     }
     const remove = event.target.closest("[data-remove-source-filter]");
-    if (remove) updateState({ [remove.dataset.removeSourceFilter]: "" });
+    if (remove) {
+      const key = remove.dataset.removeSourceFilter;
+      updateState({ [key]: "" });
+      elements[key]?.focus();
+    }
   });
 }
 
@@ -243,6 +272,7 @@ async function init() {
     restoreUrlState();
     setOptions(elements.topic, uniqueSourceValues(state.sources, "topics"));
     setOptions(elements.resourceType, uniqueSourceValues(state.sources, "resource_type"));
+    setOptions(elements.accessStatus, uniqueSourceValues(state.sources, "access_status"));
     renderMetrics(payload.as_of);
     bindEvents();
     syncControls();

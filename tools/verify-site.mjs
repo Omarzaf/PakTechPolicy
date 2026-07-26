@@ -68,6 +68,7 @@ if (!failures.length) {
   for (const marker of [
     'id="sources-title"',
     'id="source-filter-form"',
+    'id="source-access"',
     'id="source-results"',
     'id="responsible-comparison"',
   ]) {

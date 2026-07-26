@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#policy-results">Skip to policy directory</a>
+    <a class="skip-link" href="#directory-title">Skip to policy directory</a>
 
     <header class="site-header">
       <a class="brand" href="./" aria-label="Pakistan Technology Policy Index home">
@@ -28,8 +28,8 @@
         </span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#landscape">Landscape</a>
         <a href="#evidence">Evidence</a>
+        <a href="#landscape">Landscape</a>
         <a href="#directory">Directory</a>
         <a href="./sources.html">Official sources</a>
         <a href="#methodology">Methodology</a>
@@ -186,7 +186,7 @@
         <div class="section-heading directory-heading">
           <div>
             <p class="section-kicker">The directory</p>
-            <h2 id="directory-title">Find the instrument behind the rule</h2>
+            <h2 id="directory-title" tabindex="-1">Find the instrument behind the rule</h2>
           </div>
           <p id="results-summary">51 instruments in this snapshot</p>
           <p id="results-announcement" class="sr-only" aria-live="polite"></p>
@@ -292,6 +292,17 @@
               <p>Try a broader search or clear one of the filters.</p>
               <button type="button" data-clear-all>Reset the directory</button>
             </div>
+            <noscript>
+              <section class="static-policy-fallback" aria-labelledby="static-policy-title">
+                <h3 id="static-policy-title">Policy directory</h3>
+                <p>
+                  Interactive filtering needs JavaScript. The reviewed policy records
+                  and official links remain available below.
+                </p>
+                <!-- BUILD:STATIC-POLICY-LIST -->
+                <p><a href="./data/policies.json">Download the complete policy dataset</a></p>
+              </section>
+            </noscript>
           </div>
         </div>
       </section>
@@ -337,6 +348,13 @@
       <div class="footer-links">
         <a href="./sources.html">Official sources</a>
         <a href="./data/policies.json">Policy data</a>
+        <a
+          href="https://github.com/Omarzaf/PakTechPolicy/tree/feat/pak-tech-policy-v1/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Methods &amp; data quality<span class="sr-only"> (opens in a new tab)</span>
+        </a>
         <a href="https://github.com/Omarzaf/PakTechPolicy" target="_blank" rel="noreferrer">
           GitHub<span class="sr-only"> (opens in a new tab)</span>
         </a>
@@ -350,18 +368,6 @@
         <div id="dialog-content"></div>
       </div>
     </dialog>
-
-    <noscript>
-      <section class="static-policy-fallback" aria-labelledby="static-policy-title">
-        <h2 id="static-policy-title">Policy directory</h2>
-        <p>
-          Interactive filtering needs JavaScript. The reviewed policy records
-          and official links remain available below.
-        </p>
-        <!-- BUILD:STATIC-POLICY-LIST -->
-        <p><a href="./data/policies.json">Download the complete policy dataset</a></p>
-      </section>
-    </noscript>
 
     <script type="module" src="./app.js"></script>
   </body>
