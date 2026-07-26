@@ -258,7 +258,13 @@ function renderActiveFilters() {
 }
 
 function renderResults() {
-  state.filtered = filterPolicies(state.policies, state);
+  // The timeline groups records under year headings by comparing each item to
+  // its neighbour, which only reads correctly when the list is in date order.
+  // A title sort would scatter and repeat those headings, so force a
+  // chronological order (honouring newest/oldest) for the timeline view.
+  const effectiveSort =
+    state.view === "timeline" && state.sort === "title" ? "newest" : state.sort;
+  state.filtered = filterPolicies(state.policies, { ...state, sort: effectiveSort });
   const noun = state.filtered.length === 1 ? "instrument" : "instruments";
   const activeCount = countActiveFilters(state);
   elements.summary.textContent = `${state.filtered.length} ${noun}${
@@ -505,7 +511,12 @@ function bindEvents() {
     }
     const viewButton = event.target.closest("[data-view]");
     if (viewButton) {
-      updateState({ view: viewButton.dataset.view });
+      const view = viewButton.dataset.view;
+      const next = { view };
+      // A title sort is meaningless for a timeline; reset it so the sort
+      // control reflects the chronological order the timeline actually uses.
+      if (view === "timeline" && state.sort === "title") next.sort = "newest";
+      updateState(next);
       return;
     }
     const removeButton = event.target.closest("[data-remove-filter]");
