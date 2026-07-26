@@ -46,7 +46,16 @@ export function filterPolicies(policies, filters = {}) {
     const matchesBody =
       !filters.issuingBody || policy.issuing_body === filters.issuingBody;
     const matchesYear = !filters.year || policyYear(policy) === filters.year;
-    return matchesQuery && matchesDomain && matchesStatus && matchesBody && matchesYear;
+    const matchesVerification =
+      !filters.verification || policy.verification === filters.verification;
+    return (
+      matchesQuery &&
+      matchesDomain &&
+      matchesStatus &&
+      matchesBody &&
+      matchesYear &&
+      matchesVerification
+    );
   });
 
   return filtered.toSorted((a, b) => {
@@ -108,7 +117,7 @@ export function getIndexStats(policies) {
 }
 
 export function countActiveFilters(filters) {
-  return ["query", "domain", "status", "issuingBody", "year"].filter(
+  return ["query", "domain", "status", "issuingBody", "year", "verification"].filter(
     (key) => Boolean(filters[key]),
   ).length;
 }

@@ -20,6 +20,7 @@ const state = {
   status: "",
   issuingBody: "",
   year: "",
+  verification: "",
   sort: "newest",
   view: "directory",
 };
@@ -30,6 +31,7 @@ const elements = {
   filterQuery: $("#filter-query"),
   domain: $("#domain-filter"),
   status: $("#status-filter"),
+  verification: $("#verification-filter"),
   body: $("#body-filter"),
   year: $("#year-filter"),
   sort: $("#sort-control"),
@@ -59,6 +61,9 @@ const safeUrl = (value) => {
 };
 
 const dateLabel = formatPolicyDate;
+
+const verificationLabel = (value) =>
+  value === "Verified" ? "Source checked" : value === "Unverified" ? "Needs review" : value;
 
 const domainLabel = (domain) =>
   domain
@@ -243,6 +248,7 @@ function renderActiveFilters() {
     ["status", state.status, state.status],
     ["issuingBody", state.issuingBody, state.issuingBody],
     ["year", state.year, state.year],
+    ["verification", state.verification, verificationLabel(state.verification)],
   ].filter(([, value]) => value);
 
   elements.activeFilters.innerHTML = entries
@@ -289,6 +295,7 @@ function syncControls() {
   elements.filterQuery.value = state.query;
   elements.domain.value = state.domain;
   elements.status.value = state.status;
+  elements.verification.value = state.verification;
   elements.body.value = state.issuingBody;
   elements.year.value = state.year;
   elements.sort.value = state.sort;
@@ -316,6 +323,7 @@ function clearFilters() {
     status: "",
     issuingBody: "",
     year: "",
+    verification: "",
   });
 }
 
@@ -327,6 +335,7 @@ function syncUrl() {
     ["status", state.status],
     ["body", state.issuingBody],
     ["year", state.year],
+    ["verification", state.verification],
     ["view", state.view === "timeline" ? state.view : ""],
   ]) {
     if (value) params.set(key, value);
@@ -343,6 +352,7 @@ function restoreUrlState() {
   state.status = params.get("status") ?? "";
   state.issuingBody = params.get("body") ?? "";
   state.year = params.get("year") ?? "";
+  state.verification = params.get("verification") ?? "";
   state.view = params.get("view") === "timeline" ? "timeline" : "directory";
 }
 
@@ -477,6 +487,9 @@ function bindEvents() {
   );
   elements.status.addEventListener("change", (event) =>
     updateState({ status: event.target.value }),
+  );
+  elements.verification.addEventListener("change", (event) =>
+    updateState({ verification: event.target.value }),
   );
   elements.body.addEventListener("change", (event) =>
     updateState({ issuingBody: event.target.value }),

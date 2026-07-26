@@ -70,6 +70,21 @@ test("sorts newest, oldest, and title", () => {
   );
 });
 
+test("filters by verification and counts it as an active filter", () => {
+  assert.deepEqual(
+    filterPolicies(policies, { verification: "Verified" }).map(({ id }) => id),
+    ["alpha-2024"],
+  );
+  assert.deepEqual(
+    filterPolicies(policies, { verification: "Unverified" }).map(({ id }) => id),
+    ["beta-2022"],
+  );
+  assert.equal(
+    countActiveFilters({ domain: "AI & emerging tech", verification: "Verified" }),
+    2,
+  );
+});
+
 test("aggregates domains and years without double counting records within a domain", () => {
   const domains = aggregateByDomain(policies);
   assert.equal(
