@@ -7,6 +7,8 @@ law is current or that a policy caused an outcome.
 
 **Public site:** [omarzaf.github.io/PakTechPolicy](https://omarzaf.github.io/PakTechPolicy/)
 
+**Final release report:** [26 July 2026 project status](docs/final-project-report-2026-07-26.md)
+
 The 26 July 2026 snapshot contains 51 instruments across 12 domains. Forty-one
 records link to official sources that passed the release audit; ten remain
 visibly marked `Unverified`.
@@ -107,6 +109,8 @@ access, and public-artifact privacy.
 - `docs/indicator-methodology.md` — confidence and comparability rubric
 - `docs/official-sources-schema.md` — Official Sources Hub data contract
 - `docs/data-quality.md` — snapshot quality, caveats, and verification evidence
+- `docs/final-project-report-2026-07-26.md` — final public-release status,
+  verification, governance, and maintenance handoff
 - `research/` — source packets, audit evidence, and discovery notes
 - `src/` — static application source
 - `tests/` — data, accessibility, and interaction contracts
