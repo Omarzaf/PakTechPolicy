@@ -1,0 +1,1686 @@
+{
+  "version": 1,
+  "as_of": "2026-07-25",
+  "indicators": [
+    {
+      "id": "pta-broadband-subscribers-penetration-series",
+      "title": "PTA monthly broadband subscribers and penetration",
+      "policy_ids": [
+        "telecommunications-policy-2015",
+        "national-broadband-policy-2021-draft",
+        "universal-service-fund-amendment-rules-2023"
+      ],
+      "summary": "PTA's Subscribers page publishes monthly broadband subscriber totals and broadband penetration for its rolling twelve-month window.",
+      "cadence": "Monthly",
+      "lag": "June 2026 was available on 25 July 2026, 25 days after the observation month ended.",
+      "confidence": "medium",
+      "latest_period": "2026-06",
+      "methodology_note": "PTA's page labels the measures as broadband subscribers and penetration but does not publish a field dictionary or documented bulk API. Subscriber counts should not be read as unique people.",
+      "risks": "The rolling window can change on later access. Association with policy dates does not establish causation, and PTA does not document revisions or the denominator used for penetration on this page.",
+      "sources": [
+        {
+          "title": "Telecom Indicators — Subscribers",
+          "publisher": "Pakistan Telecommunication Authority",
+          "url": "https://www.pta.gov.pk/category/telecom-indicators/164",
+          "accessed": "2026-07-25",
+          "locator": "Embedded Highcharts paths #monthly-broadband-subscribers-chart and #monthly-broadband-penetration-chart; categories Jul-25 through Jun-26."
+        }
+      ],
+      "groups": [
+        {
+          "id": "broadband-subscribers",
+          "label": "Broadband subscribers",
+          "unit": "subscriptions",
+          "format": "integer",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "total",
+              "label": "Total",
+              "observations": [
+                {
+                  "period": "2025-07",
+                  "label": "Jul 2025",
+                  "value": 151040436,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-08",
+                  "label": "Aug 2025",
+                  "value": 151512774,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-09",
+                  "label": "Sep 2025",
+                  "value": 151956009,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-10",
+                  "label": "Oct 2025",
+                  "value": 152003671,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-11",
+                  "label": "Nov 2025",
+                  "value": 152154095,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-12",
+                  "label": "Dec 2025",
+                  "value": 154685916,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-01",
+                  "label": "Jan 2026",
+                  "value": 157550273,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-02",
+                  "label": "Feb 2026",
+                  "value": 160201356,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-03",
+                  "label": "Mar 2026",
+                  "value": 160962410,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-04",
+                  "label": "Apr 2026",
+                  "value": 161892836,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-05",
+                  "label": "May 2026",
+                  "value": 162408474,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-06",
+                  "label": "Jun 2026",
+                  "value": 163913023,
+                  "provisional": false,
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "broadband-penetration",
+          "label": "Broadband penetration",
+          "unit": "percent",
+          "format": "percent",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "penetration",
+              "label": "Penetration",
+              "observations": [
+                {
+                  "period": "2025-07",
+                  "label": "Jul 2025",
+                  "value": 61,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-08",
+                  "label": "Aug 2025",
+                  "value": 61.09,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-09",
+                  "label": "Sep 2025",
+                  "value": 61.17,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-10",
+                  "label": "Oct 2025",
+                  "value": 61.1,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-11",
+                  "label": "Nov 2025",
+                  "value": 61.05,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-12",
+                  "label": "Dec 2025",
+                  "value": 61.97,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-01",
+                  "label": "Jan 2026",
+                  "value": 63.01,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-02",
+                  "label": "Feb 2026",
+                  "value": 63.96,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-03",
+                  "label": "Mar 2026",
+                  "value": 64.15,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-04",
+                  "label": "Apr 2026",
+                  "value": 64.43,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-05",
+                  "label": "May 2026",
+                  "value": 64.53,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-06",
+                  "label": "Jun 2026",
+                  "value": 65.02,
+                  "provisional": false,
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pta-mobile-broadband-data-usage-series",
+      "title": "PTA mobile broadband data usage",
+      "policy_ids": [
+        "telecommunications-policy-2015",
+        "national-broadband-policy-2021-draft"
+      ],
+      "summary": "PTA's Mobile Broadband Data Usage page publishes total quarterly mobile data usage and average monthly usage per subscriber during each quarter.",
+      "cadence": "Quarterly",
+      "lag": "The latest January–March 2026 quarterly observation was available on 25 July 2026, nearly four months after quarter-end.",
+      "confidence": "medium",
+      "latest_period": "2026-Q1",
+      "methodology_note": "The embedded charts label total traffic in petabytes and average use in GBs per month per subscriber. PTA does not publish collection, revision, or operator-coverage methodology on this page.",
+      "risks": "Traffic is not a causal score for a policy and can change with prices, devices, content, population, and measurement choices. The two measures have different units and remain in separate groups.",
+      "sources": [
+        {
+          "title": "Telecom Indicators — Mobile Broadband Data Usage",
+          "publisher": "Pakistan Telecommunication Authority",
+          "url": "https://www.pta.gov.pk/category/telecom-indicators/175",
+          "accessed": "2026-07-25",
+          "locator": "Embedded Highcharts paths #mobile-data-usage-during-quarter-petabytes-chart and #avarage-mobile-data-usage-gbs-month-subscribers-during-quarter-chart; categories Apr-Jun 23 through Jan-Mar 26."
+        }
+      ],
+      "groups": [
+        {
+          "id": "quarterly-traffic",
+          "label": "Total mobile data usage during quarter",
+          "unit": "petabytes",
+          "format": "integer",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "total",
+              "label": "Petabytes",
+              "observations": [
+                {
+                  "period": "2023-Q2",
+                  "label": "Apr–Jun 2023",
+                  "value": 2788,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2023-Q3",
+                  "label": "Jul–Sep 2023",
+                  "value": 3027,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2023-Q4",
+                  "label": "Oct–Dec 2023",
+                  "value": 3134,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q1",
+                  "label": "Jan–Mar 2024",
+                  "value": 3372,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q2",
+                  "label": "Apr–Jun 2024",
+                  "value": 3488,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q3",
+                  "label": "Jul–Sep 2024",
+                  "value": 3498,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q4",
+                  "label": "Oct–Dec 2024",
+                  "value": 3414,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q1",
+                  "label": "Jan–Mar 2025",
+                  "value": 3560,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q2",
+                  "label": "Apr–Jun 2025",
+                  "value": 3681,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q3",
+                  "label": "Jul–Sep 2025",
+                  "value": 3868,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q4",
+                  "label": "Oct–Dec 2025",
+                  "value": 4031,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-Q1",
+                  "label": "Jan–Mar 2026",
+                  "value": 4208,
+                  "provisional": false,
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quarterly-average-per-subscriber",
+          "label": "Average mobile data usage per month per subscriber during quarter",
+          "unit": "GBs per month per subscriber",
+          "format": "decimal",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "average",
+              "label": "GBs",
+              "observations": [
+                {
+                  "period": "2023-Q2",
+                  "label": "Apr–Jun 2023",
+                  "value": 7.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2023-Q3",
+                  "label": "Jul–Sep 2023",
+                  "value": 8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2023-Q4",
+                  "label": "Oct–Dec 2023",
+                  "value": 8.2,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q1",
+                  "label": "Jan–Mar 2024",
+                  "value": 8.6,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q2",
+                  "label": "Apr–Jun 2024",
+                  "value": 8.7,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q3",
+                  "label": "Jul–Sep 2024",
+                  "value": 8.47,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024-Q4",
+                  "label": "Oct–Dec 2024",
+                  "value": 8.19,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q1",
+                  "label": "Jan–Mar 2025",
+                  "value": 8.38,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q2",
+                  "label": "Apr–Jun 2025",
+                  "value": 8.47,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q3",
+                  "label": "Jul–Sep 2025",
+                  "value": 8.73,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025-Q4",
+                  "label": "Oct–Dec 2025",
+                  "value": 9.02,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2026-Q1",
+                  "label": "Jan–Mar 2026",
+                  "value": 9.03,
+                  "provisional": false,
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pta-unlawful-url-processing-blocking-snapshots",
+      "title": "PTA unlawful-content URL processing and blocking snapshots",
+      "policy_ids": [
+        "peca-2016",
+        "removal-blocking-online-content-rules-2021",
+        "peca-amendment-2025"
+      ],
+      "summary": "Two PTA annual-report snapshots record URLs processed for blocking in FY2023-24 and URLs blocked in FY2024-25.",
+      "cadence": "Annual snapshots",
+      "lag": "The latest snapshot covers the year ending 30 June 2025 and was accessed on 25 July 2026.",
+      "confidence": "low",
+      "latest_period": "FY2024-25",
+      "methodology_note": "The FY2023-24 report table is explicitly titled URLs Processed, while the FY2024-25 report states URLs blocked. PTA does not explain unique versus repeated URLs, complaints versus decisions, or restoration and appeal treatment.",
+      "risks": "The measure label and category structure change between reports. These values must not be interpreted as a comparable trend, decline, or causal policy effect.",
+      "sources": [
+        {
+          "title": "PTA Annual Report 2024",
+          "publisher": "Pakistan Telecommunication Authority",
+          "url": "https://www.pta.gov.pk/assets/media/2024-12-16-pta_annual_report.pdf",
+          "accessed": "2026-07-25",
+          "locator": "PDF page 57, table “URLs Processed (FY 2023-24)”, total 109,771."
+        },
+        {
+          "title": "PTA Annual Report 2024-25",
+          "publisher": "Pakistan Telecommunication Authority",
+          "url": "https://www.pta.gov.pk/assets/media/Annual%20Report%202025-25%20Nov%2025.pdf",
+          "accessed": "2026-07-25",
+          "locator": "PDF page 59, statement that PTA blocked 88,035 URLs during FY2024-25; adjacent platform breakdown."
+        }
+      ],
+      "groups": [
+        {
+          "id": "processed-for-blocking-fy2023-24",
+          "label": "URLs processed for blocking (FY2023-24)",
+          "unit": "URLs",
+          "format": "integer",
+          "comparison_allowed": false,
+          "series": [
+            {
+              "id": "total",
+              "label": "Processed",
+              "observations": [
+                {
+                  "period": "2024-FY",
+                  "label": "FY 2023-24",
+                  "value": 109771,
+                  "provisional": false,
+                  "note": "PTA labels this measure “URLs Processed (FY 2023-24)”.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blocked-fy2024-25",
+          "label": "URLs blocked (FY2024-25)",
+          "unit": "URLs",
+          "format": "integer",
+          "comparison_allowed": false,
+          "series": [
+            {
+              "id": "total",
+              "label": "Blocked",
+              "observations": [
+                {
+                  "period": "2025-FY",
+                  "label": "FY 2024-25",
+                  "value": 88035,
+                  "provisional": false,
+                  "note": "PTA labels this as URLs blocked, not processed for blocking.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sbp-retail-payments-by-channel-series",
+      "title": "SBP quarterly retail payments by channel",
+      "policy_ids": [
+        "payment-systems-electronic-fund-transfers-act-2007",
+        "electronic-money-institutions-regulations-2019",
+        "digital-banks-framework-2022"
+      ],
+      "summary": "Selected digital and retail channels from SBP Annexure A-4 sit beside the table's full quarterly transaction total.",
+      "cadence": "Quarterly",
+      "lag": "Q3 FY26 (January–March 2026) was released on 25 June 2026; the proposal records an 86-day publication lag.",
+      "confidence": "high",
+      "latest_period": "FY2026-Q3",
+      "methodology_note": "Annexure A-4 reports volume in millions and value in PKR billions for banks, MFBs, branchless banking, and EMIs. This integration shows selected channels plus SBP's full-table total, so the visible channel rows do not sum to that total. Q3 FY26 is provisional; Q1 and Q2 FY26 are marked revised in the report.",
+      "risks": "The table covers formal banking and payment channels, not cash transactions outside the system. Digital classifications are not equivalent to cashless use, and later SBP reports can revise prior quarters.",
+      "sources": [
+        {
+          "title": "Payment Systems Quarterly Review — Q3 FY26",
+          "publisher": "State Bank of Pakistan",
+          "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+          "accessed": "2026-07-25",
+          "locator": "Annexure A-4, PDF page 15, “Retail Value Payments – (Bank, MFBs, BBs & EMIs)”; P = provisional and R = revised."
+        }
+      ],
+      "groups": [
+        {
+          "id": "channel-volume",
+          "label": "Selected retail-payment channels — volume",
+          "unit": "million transactions",
+          "format": "decimal",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "atm-cdm",
+              "label": "ATM/CDM",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 272,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 264.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 267.4,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 282.9,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 277.5,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "pos-cp",
+              "label": "POS (card-present)",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 98.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 107.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 123.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 136.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 143.2,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "internet-banking",
+              "label": "Internet banking portal",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 79.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 76.4,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 76.1,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 84.5,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 88.4,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "mobile-banking-apps",
+              "label": "Mobile banking apps",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 502.8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 505.4,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 589.8,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 620.7,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 665,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "ecommerce-cnp",
+              "label": "E-commerce (card-not-present)",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 13.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 14.6,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 14.6,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 15.9,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 16.4,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "emoney-wallets",
+              "label": "E-money wallets",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 43.8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 50.4,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 61.1,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 68.2,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 59.4,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "branchless-digital-apps",
+              "label": "Branchless/digital banking apps",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 1149.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 1203.8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 1731.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 1900.8,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 2164.1,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "total",
+              "label": "Total transactions",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 2461.6,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 2509.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 3129.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 3382.2,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 3697.1,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "channel-value",
+          "label": "Selected retail-payment channels — value",
+          "unit": "PKR billions",
+          "format": "pkr-billion",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "mobile-banking-apps",
+              "label": "Mobile banking apps",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 23300.6,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 23980.3,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 29090.4,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 33017,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 33590.8,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "ecommerce-cnp",
+              "label": "E-commerce (card-not-present)",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 67.8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 68,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 68.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 77.7,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 80.1,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "emoney-wallets",
+              "label": "E-money wallets",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 130,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 142.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 176.4,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 194.6,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 183,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "branchless-digital-apps",
+              "label": "Branchless/digital banking apps",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 3998.8,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 3770.4,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 5585.2,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 6658.7,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 7897.8,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "total",
+              "label": "Total transactions",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 165377.1,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 156709.1,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 156540.7,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 167156.6,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 168843.5,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sbp-raast-volume-value-series",
+      "title": "SBP quarterly Raast transaction volumes and values",
+      "policy_ids": [
+        "payment-systems-electronic-fund-transfers-act-2007",
+        "digital-banks-framework-2022"
+      ],
+      "summary": "SBP Annexure A-15 reports quarterly Raast P2P, bulk, P2M, and total transactions in volume and value.",
+      "cadence": "Quarterly",
+      "lag": "Q3 FY26 (January–March 2026) was released on 25 June 2026; the proposal records an 86-day publication lag.",
+      "confidence": "high",
+      "latest_period": "FY2026-Q3",
+      "methodology_note": "Annexure A-15 reports volume in millions and value in PKR billions. Q3 FY26 is marked provisional and Q2 FY26 revised; component availability varies by rollout phase, so earlier absence is not treated as zero.",
+      "risks": "Raast growth is an outcome indicator, not proof of a specific policy effect. Successive SBP reports revise previous quarters and component start dates differ.",
+      "sources": [
+        {
+          "title": "Payment Systems Quarterly Review — Q3 FY26",
+          "publisher": "State Bank of Pakistan",
+          "url": "https://www.sbp.org.pk/assets/document/publications/PS-Review-Q3FY26.pdf",
+          "accessed": "2026-07-25",
+          "locator": "Annexure A-15, PDF page 20, “Raast Payments Pakistan - Transactions”; P = provisional and R = revised."
+        },
+        {
+          "title": "Annual Payment Systems Review — FY25",
+          "publisher": "State Bank of Pakistan",
+          "url": "https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY25.pdf",
+          "accessed": "2026-07-25",
+          "locator": "Table A-15, PDF page 29, annual Raast totals FY21–FY25; used to confirm phased component availability, not combined with quarterly observations."
+        }
+      ],
+      "groups": [
+        {
+          "id": "raast-volume",
+          "label": "Raast transaction volume by type",
+          "unit": "million transactions",
+          "format": "decimal",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "p2p",
+              "label": "P2P transfers",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 368.3,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 408,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 534.7,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 603,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 664.4,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "bulk",
+              "label": "Bulk payments",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 1.4,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 2,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 4.9,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 9.2,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 21.7,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "p2m",
+              "label": "P2M payments",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 1.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 2.2,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 4.3,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 36.3,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 55.9,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "total",
+              "label": "Total Raast transactions",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 371.2,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 412.1,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 543.9,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 648.4,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 742.1,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "raast-value",
+          "label": "Raast transaction value by type",
+          "unit": "PKR billions",
+          "format": "pkr-billion",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "p2p",
+              "label": "P2P transfers",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 8014.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 8899.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 11280,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 15686.8,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 18884.2,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "bulk",
+              "label": "Bulk payments",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 437.7,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 1085.9,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 1452.1,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 2614.8,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 4063.6,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "p2m",
+              "label": "P2M payments",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 4.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 6.5,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 17,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 177.2,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 319.6,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            },
+            {
+              "id": "total",
+              "label": "Total Raast transactions",
+              "observations": [
+                {
+                  "period": "FY2025-Q3",
+                  "label": "Q3 FY25",
+                  "value": 8456.7,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2025-Q4",
+                  "label": "Q4 FY25",
+                  "value": 9992.3,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "FY2026-Q1",
+                  "label": "Q1 FY26",
+                  "value": 12749.1,
+                  "provisional": false,
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q2",
+                  "label": "Q2 FY26",
+                  "value": 18478.8,
+                  "provisional": false,
+                  "note": "Revised.",
+                  "revised": true
+                },
+                {
+                  "period": "FY2026-Q3",
+                  "label": "Q3 FY26",
+                  "value": 23267.4,
+                  "provisional": true,
+                  "note": "Provisional.",
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wdi-ict-service-exports-pakistan",
+      "title": "World Bank WDI ICT service exports for Pakistan",
+      "policy_ids": [
+        "software-development-export-strategy-2023-2027",
+        "digital-pakistan-policy-2018"
+      ],
+      "summary": "World Development Indicators reports Pakistan's ICT service exports in current US dollars, based on IMF balance-of-payments statistics.",
+      "cadence": "Annual observations; WDI database refreshes quarterly.",
+      "lag": "The 2025 observation was available from the API accessed on 25 July 2026; the API reports its database update date as 13 July 2026.",
+      "confidence": "low",
+      "latest_period": "2025",
+      "methodology_note": "The post-2013 slice avoids presenting pre- and post-2013 classifications as a seamless trend. The metadata defines the measure as computer, communications (including telecommunications and postal/courier), and information services; it is not software exports alone.",
+      "risks": "Values are nominal current US dollars and move with prices and exchange rates. The source organization is IMF balance-of-payments statistics; World Bank API values and methods may be revised. The API exposes older values, while the glossary's BPM6 coverage note creates an unresolved historical-coverage caveat.",
+      "sources": [
+        {
+          "title": "Pakistan — ICT service exports (BoP, current US$), JSON data",
+          "publisher": "World Bank, World Development Indicators",
+          "url": "https://api.worldbank.org/v2/country/PAK/indicator/BX.GSR.CCIS.CD?format=json&per_page=100",
+          "accessed": "2026-07-25",
+          "locator": "JSON response: country PAK, indicator BX.GSR.CCIS.CD, annual observations 2013–2025; response metadata lastupdated 2026-07-13."
+        },
+        {
+          "title": "ICT service exports indicator metadata",
+          "publisher": "World Bank, World Development Indicators",
+          "url": "https://api.worldbank.org/v2/indicator/BX.GSR.CCIS.CD?format=json",
+          "accessed": "2026-07-25",
+          "locator": "JSON metadata sourceNote and sourceOrganization for BX.GSR.CCIS.CD."
+        }
+      ],
+      "groups": [
+        {
+          "id": "ict-service-exports",
+          "label": "ICT service exports",
+          "unit": "current US dollars",
+          "format": "usd",
+          "comparison_allowed": true,
+          "series": [
+            {
+              "id": "pakistan",
+              "label": "Pakistan",
+              "observations": [
+                {
+                  "period": "2013",
+                  "label": "2013",
+                  "value": 861000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2014",
+                  "label": "2014",
+                  "value": 811000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2015",
+                  "label": "2015",
+                  "value": 789000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2016",
+                  "label": "2016",
+                  "value": 873000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2017",
+                  "label": "2017",
+                  "value": 1009000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2018",
+                  "label": "2018",
+                  "value": 1127000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2019",
+                  "label": "2019",
+                  "value": 1292000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2020",
+                  "label": "2020",
+                  "value": 1716000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2021",
+                  "label": "2021",
+                  "value": 2451000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2022",
+                  "label": "2022",
+                  "value": 2650000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2023",
+                  "label": "2023",
+                  "value": 2718000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2024",
+                  "label": "2024",
+                  "value": 3632000000,
+                  "provisional": false,
+                  "revised": false
+                },
+                {
+                  "period": "2025",
+                  "label": "2025",
+                  "value": 4185000000,
+                  "provisional": false,
+                  "revised": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

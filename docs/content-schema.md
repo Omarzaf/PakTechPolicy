@@ -68,3 +68,23 @@ values without implying precision that the source does not establish.
 - Do not infer current legal effect from an old source. Use `Unverified` where
   current status cannot be established.
 - Never invent a missing URL, provision, date, relationship, or status.
+
+## Policy indicator contract
+
+Accepted quantitative evidence lives separately in
+`data/policy-indicators.json`. The top-level object has `version`, `as_of`, and
+an `indicators` array. Each indicator:
+
+- targets one or more existing policy ids;
+- records cadence, publication lag, latest period, confidence, methodology,
+  and interpretation risks;
+- cites at least one official HTTPS source with an access date and exact
+  locator such as an API path or PDF table and page;
+- groups only observations that share a unit and display format;
+- marks every observation as provisional, revised, or neither; and
+- sets `comparison_allowed` to `false` when definitions changed enough that a
+  connecting trend line would mislead.
+
+The release contract rejects unknown policy ids, unsafe source URLs, duplicate
+or unsorted periods, unsupported units, and nonnumeric values. The UI always
+labels these measurements as contextual evidence rather than causal effects.

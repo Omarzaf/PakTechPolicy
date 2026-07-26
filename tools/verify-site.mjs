@@ -10,6 +10,7 @@ const requiredFiles = [
   "policy-engine.js",
   "ui-utils.js",
   "data/policies.json",
+  "data/policy-indicators.json",
 ];
 const failures = [];
 
@@ -22,13 +23,16 @@ for (const file of requiredFiles) {
 }
 
 if (!failures.length) {
-  const [html, css, app, sourceData, builtData] = await Promise.all([
-    readFile(resolve(dist, "index.html"), "utf8"),
-    readFile(resolve(dist, "styles.css"), "utf8"),
-    readFile(resolve(dist, "app.js"), "utf8"),
-    readFile(resolve(root, "data", "policies.json"), "utf8"),
-    readFile(resolve(dist, "data", "policies.json"), "utf8"),
-  ]);
+  const [html, css, app, sourceData, builtData, sourceIndicators, builtIndicators] =
+    await Promise.all([
+      readFile(resolve(dist, "index.html"), "utf8"),
+      readFile(resolve(dist, "styles.css"), "utf8"),
+      readFile(resolve(dist, "app.js"), "utf8"),
+      readFile(resolve(root, "data", "policies.json"), "utf8"),
+      readFile(resolve(dist, "data", "policies.json"), "utf8"),
+      readFile(resolve(root, "data", "policy-indicators.json"), "utf8"),
+      readFile(resolve(dist, "data", "policy-indicators.json"), "utf8"),
+    ]);
 
   for (const marker of [
     'id="landscape"',
@@ -52,17 +56,25 @@ if (!failures.length) {
   if (JSON.stringify(JSON.parse(sourceData)) !== JSON.stringify(JSON.parse(builtData))) {
     failures.push("built dataset does not match data/policies.json");
   }
+  if (
+    JSON.stringify(JSON.parse(sourceIndicators)) !==
+    JSON.stringify(JSON.parse(builtIndicators))
+  ) {
+    failures.push("built indicator dataset does not match data/policy-indicators.json");
+  }
 }
 
 const baseUrl = process.env.PAKTECH_URL ?? "http://127.0.0.1:4173";
 try {
-  const [home, data, privateFile] = await Promise.all([
+  const [home, data, indicators, privateFile] = await Promise.all([
     fetch(`${baseUrl}/`),
     fetch(`${baseUrl}/data/policies.json`),
+    fetch(`${baseUrl}/data/policy-indicators.json`),
     fetch(`${baseUrl}/AGENTS.md`),
   ]);
   if (!home.ok) failures.push(`preview home returned HTTP ${home.status}`);
   if (!data.ok) failures.push(`preview data returned HTTP ${data.status}`);
+  if (!indicators.ok) failures.push(`preview indicators returned HTTP ${indicators.status}`);
   if (privateFile.status !== 404) {
     failures.push(`preview hygiene check expected /AGENTS.md 404, got ${privateFile.status}`);
   }

@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve, sep } from "node:path";
 import { DOMAIN_TAXONOMY } from "../src/policy-engine.js";
+import { collectIndicatorDatasetFailures } from "./indicator-contract.mjs";
 import { assertV1RecordCount } from "./release-contract.mjs";
 
 const root = resolve(import.meta.dirname, "..");
@@ -58,6 +59,7 @@ const allowedType = new Set([
 const allowedPrecision = new Set(["day", "month", "year"]);
 const ids = new Set();
 const failures = [];
+let indicatorCount = 0;
 const isIsoDate = (value) => {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value ?? ""))) return false;
   const date = new Date(`${value}T00:00:00Z`);
@@ -217,6 +219,21 @@ if (releaseMode) {
   } catch (error) {
     failures.push(`source audit unavailable: ${error.message}`);
   }
+
+  try {
+    const indicatorData = JSON.parse(
+      await readFile(resolve(root, "data", "policy-indicators.json"), "utf8"),
+    );
+    indicatorCount = indicatorData.indicators?.length ?? 0;
+    failures.push(
+      ...collectIndicatorDatasetFailures(
+        indicatorData,
+        new Set(policies.map((policy) => policy.id)),
+      ),
+    );
+  } catch (error) {
+    failures.push(`indicator dataset could not be read: ${error.message}`);
+  }
 }
 
 if (failures.length) {
@@ -226,6 +243,6 @@ if (failures.length) {
   console.log(
     `VERIFY_DATA=PASS records=${policies.length} verified=${policies.filter(
       (policy) => policy.verification === "Verified",
-    ).length}`,
+    ).length}${releaseMode ? ` indicators=${indicatorCount}` : ""}`,
   );
 }

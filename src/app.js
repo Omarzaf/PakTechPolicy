@@ -7,13 +7,21 @@ import {
   getIndexStats,
   uniqueValues,
 } from "./policy-engine.js";
-import { decodePolicyIdHash, formatPolicyDate } from "./ui-utils.js";
+import {
+  decodePolicyIdHash,
+  formatIndicatorValue,
+  formatPolicyDate,
+  getLatestObservation,
+  getSparklinePoints,
+  isIndicatorPayload,
+} from "./ui-utils.js";
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
 const state = {
   policies: [],
+  indicators: [],
   filtered: [],
   query: "",
   domain: "",
@@ -364,6 +372,164 @@ function sourceHost(url) {
   }
 }
 
+function renderIndicatorSource(source) {
+  const url = typeof source === "string" ? source : source?.url;
+  if (typeof url !== "string") return "";
+
+  const title =
+    typeof source === "object" && source
+      ? source.title ?? source.publisher ?? source.label ?? sourceHost(url)
+      : sourceHost(url);
+  const locator = typeof source === "object" && source ? source.locator : "";
+  return `<li><a href="${safeUrl(url)}" target="_blank" rel="noreferrer">${escapeHtml(
+    title,
+  )}<span>↗</span></a>${locator ? `<small>${escapeHtml(locator)}</small>` : ""}</li>`;
+}
+
+function renderIndicatorPlot(series, group) {
+  const points = getSparklinePoints(series.observations);
+  const latest = getLatestObservation(series.observations);
+  const latestValue = latest
+    ? formatIndicatorValue(latest.value, group.format)
+    : "No current observation";
+  const ariaLabel = `Trend snapshot for ${series.label}, ${group.label}. Latest value: ${latestValue}.`;
+  const path = points.map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ");
+  const markerClass = group.comparison_allowed ? "" : " is-snapshot";
+
+  return `
+    <svg class="indicator-plot${markerClass}" viewBox="0 0 280 72" role="img" aria-label="${escapeHtml(
+      ariaLabel,
+    )}">
+      ${
+        group.comparison_allowed && points.length > 1
+          ? `<polyline class="indicator-line" points="${path}" />`
+          : ""
+      }
+      ${points
+        .map(
+          (point) =>
+            `<circle class="indicator-point" cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(
+              2,
+            )}" r="3" />`,
+        )
+        .join("")}
+    </svg>
+  `;
+}
+
+function renderIndicatorGroup(group) {
+  const comparability = group.comparison_allowed
+    ? ""
+    : '<p class="indicator-comparability">Not directly comparable</p>';
+  const currentValues = group.series
+    .map((series) => {
+      const latest = getLatestObservation(series.observations);
+      return `
+        <article class="indicator-series">
+          <div class="indicator-series-copy">
+            <h5>${escapeHtml(series.label)}</h5>
+            <p class="indicator-current-value">${escapeHtml(
+              latest ? formatIndicatorValue(latest.value, group.format) : "No current observation",
+            )}</p>
+            <p class="indicator-current-period">${escapeHtml(latest?.label ?? "Period unavailable")}</p>
+          </div>
+          ${renderIndicatorPlot(series, group)}
+        </article>
+      `;
+    })
+    .join("");
+  const rows = group.series
+    .flatMap((series) =>
+      series.observations.map((observation) => {
+        const marker = observation.provisional
+          ? "Provisional"
+          : observation.revised
+            ? "Revised"
+            : "Reported";
+        return `<tr>
+          <th scope="row">${escapeHtml(series.label)}</th>
+          <td>${escapeHtml(observation.label || observation.period)}</td>
+          <td>${escapeHtml(formatIndicatorValue(observation.value, group.format))}</td>
+          <td>${escapeHtml(marker)}</td>
+          <td>${escapeHtml(observation.note ?? "—")}</td>
+        </tr>`;
+      }),
+    )
+    .join("");
+
+  return `
+    <article class="indicator-group">
+      <div class="indicator-group-heading">
+        <div><h4>${escapeHtml(group.label)}</h4><p>${escapeHtml(group.unit)}</p></div>
+        ${comparability}
+      </div>
+      <div class="indicator-series-list">${currentValues}</div>
+      <details class="indicator-raw-data">
+        <summary>View raw data</summary>
+        <div class="indicator-table-wrap">
+          <table>
+            <caption>${escapeHtml(group.label)} raw observations</caption>
+            <thead><tr><th scope="col">Series</th><th scope="col">Period</th><th scope="col">Value</th><th scope="col">Status</th><th scope="col">Notes</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      </details>
+    </article>
+  `;
+}
+
+function renderPolicyIndicators(policyId) {
+  const indicators = state.indicators.filter((indicator) => indicator.policy_ids.includes(policyId));
+  if (!indicators.length) return "";
+
+  return `
+    <section class="indicator-section" aria-labelledby="on-the-ground-heading">
+      <div class="indicator-section-heading">
+        <h3 id="on-the-ground-heading">On the ground</h3>
+        <p>These sourced measurements sit alongside this instrument; they do not establish that it caused a change.</p>
+      </div>
+      ${indicators
+        .map(
+          (indicator) => `
+            <article class="indicator-card">
+              <header>
+                <h4>${escapeHtml(indicator.title)}</h4>
+                <p>${escapeHtml(indicator.summary)}</p>
+              </header>
+              <dl class="indicator-meta">
+                <div><dt>Cadence</dt><dd>${escapeHtml(indicator.cadence)}</dd></div>
+                <div><dt>Lag</dt><dd>${escapeHtml(indicator.lag)}</dd></div>
+                <div><dt>Confidence</dt><dd>${escapeHtml(indicator.confidence)}</dd></div>
+                <div><dt>Latest period</dt><dd>${escapeHtml(indicator.latest_period)}</dd></div>
+              </dl>
+              <div class="indicator-groups">${indicator.groups.map(renderIndicatorGroup).join("")}</div>
+              <div class="indicator-notes">
+                ${
+                  indicator.methodology_note
+                    ? `<p><strong>Methodology:</strong> ${escapeHtml(indicator.methodology_note)}</p>`
+                    : ""
+                }
+                ${
+                  indicator.risks
+                    ? `<p><strong>Interpretation notes:</strong> ${escapeHtml(indicator.risks)}</p>`
+                    : ""
+                }
+              </div>
+              ${
+                indicator.sources.length
+                  ? `<div class="indicator-sources"><h5>Official sources</h5><ul class="source-list indicator-source-list">${indicator.sources
+                      .map(renderIndicatorSource)
+                      .join("")}</ul></div>`
+                  : ""
+              }
+            </article>
+          `,
+        )
+        .join("")}
+    </section>
+  `;
+}
+
 function openPolicy(id, updateHash = true) {
   const policy = state.policies.find((entry) => entry.id === id);
   if (!policy) return;
@@ -417,6 +583,7 @@ function openPolicy(id, updateHash = true) {
           <div><dt>Last verified</dt><dd>${dateLabel(policy.last_verified)}</dd></div>
         </dl>
       </aside>
+      ${renderPolicyIndicators(policy.id)}
       <section>
         <h3>Who it affects</h3>
         <div class="affects-list">
@@ -556,9 +723,17 @@ function bindEvents() {
 
 async function init() {
   try {
-    const response = await fetch("./data/policies.json");
+    const policyRequest = fetch("./data/policies.json");
+    const indicatorRequest = fetch("./data/policy-indicators.json")
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+    const [response, indicatorPayload] = await Promise.all([policyRequest, indicatorRequest]);
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     state.policies = await response.json();
+    state.indicators = isIndicatorPayload(indicatorPayload) ? indicatorPayload.indicators : [];
+    if (indicatorPayload && !state.indicators.length) {
+      console.warn("Policy indicators could not be validated and were not displayed.");
+    }
     restoreUrlState();
     populateFilters();
     renderMetrics();
