@@ -1,8 +1,22 @@
 {
   "name": "pak-tech-policy",
   "version": "1.0.0",
+  "description": "A source-first public index of Pakistan technology policy instruments, official evidence, and contextual indicators.",
   "private": true,
   "type": "module",
+  "author": "Muhammad Umar Zafar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Omarzaf/PakTechPolicy.git"
+  },
+  "homepage": "https://omarzaf.github.io/PakTechPolicy/",
+  "bugs": {
+    "url": "https://github.com/Omarzaf/PakTechPolicy/issues"
+  },
+  "engines": {
+    "node": ">=24"
+  },
   "packageManager": "pnpm@11.10.0",
   "scripts": {
     "build": "node tools/build.mjs",
@@ -11,6 +25,7 @@
     "consolidate": "node tools/consolidate.mjs",
     "dev": "node tools/serve.mjs",
     "discover": "node tools/discovery.mjs",
+    "feedback:tasks": "node tools/prepare-feedback-tasks.mjs",
     "test": "node --test",
     "verify": "node tools/verify.mjs --release",
     "verify:packet": "node tools/verify.mjs",

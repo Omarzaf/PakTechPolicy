@@ -38,3 +38,15 @@ test("source cards use local official brand assets and pastel coordination", () 
   assert.match(css, /--butter-wash: #f3ebcf/);
   assert.match(css, /--peach-wash: #f5e4d8/);
 });
+
+test("generated policy and source records expose context-aware correction forms", () => {
+  for (const source of [app, sourcesApp]) {
+    assert.match(source, /issues\/new/);
+    assert.match(source, /template", "data-correction\.yml"/);
+    assert.match(source, /class="record-feedback-link"/);
+    assert.match(source, /aria-label="Suggest a correction for/);
+  }
+  assert.match(app, /\[Data correction\]: \$\{recordType\} \$\{id\}/);
+  assert.match(sourcesApp, /\[Data correction\]: Source \$\{id\}/);
+  assert.match(css, /\.record-feedback-link/);
+});

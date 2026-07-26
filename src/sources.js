@@ -47,6 +47,13 @@ const safeUrl = (value) => {
   }
 };
 
+const correctionIssueUrl = (id) => {
+  const url = new URL("https://github.com/Omarzaf/PakTechPolicy/issues/new");
+  url.searchParams.set("template", "data-correction.yml");
+  url.searchParams.set("title", `[Data correction]: Source ${id}`);
+  return url.href;
+};
+
 const formatDate = (value) => {
   const date = new Date(`${value}T00:00:00Z`);
   return Number.isNaN(date.valueOf())
@@ -141,11 +148,23 @@ function sourceCard(source) {
         <strong>Read before comparing</strong>
         <p>${escapeHtml(source.limitations)}</p>
       </div>
-      <a class="source-link" href="${safeUrl(source.url)}" target="_blank" rel="noreferrer">
-        Open official source <span aria-hidden="true">↗</span>
-        <small>${escapeHtml(sourceHost(source.url))}</small>
-        <span class="sr-only"> (opens in a new tab)</span>
-      </a>
+      <div class="source-actions">
+        <a class="source-link" href="${safeUrl(source.url)}" target="_blank" rel="noreferrer">
+          Open official source <span aria-hidden="true">↗</span>
+          <small>${escapeHtml(sourceHost(source.url))}</small>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl(source.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(source.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
     </article>
   `;
 }

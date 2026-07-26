@@ -1,0 +1,18 @@
+{
+  "name": "Pakistan Technology Policy Index",
+  "short_name": "Policy Index",
+  "description": "A source-first directory and timeline of technology policy in Pakistan.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#006b4f",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

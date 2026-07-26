@@ -69,6 +69,13 @@ const safeUrl = (value) => {
   }
 };
 
+const correctionIssueUrl = (recordType, id) => {
+  const url = new URL("https://github.com/Omarzaf/PakTechPolicy/issues/new");
+  url.searchParams.set("template", "data-correction.yml");
+  url.searchParams.set("title", `[Data correction]: ${recordType} ${id}`);
+  return url.href;
+};
+
 const dateLabel = formatPolicyDate;
 const preferredScrollBehavior = () =>
   window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth";
@@ -192,7 +199,7 @@ function policyCard(policy, index) {
           <div class="domain-pills">${domains}</div>
           <div class="card-badge-group">
             <span class="status-badge mobile-status status-${escapeHtml(
-              policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+              policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
             )}">${escapeHtml(policy.status)}</span>
             ${verificationBadge(policy)}
           </div>
@@ -211,10 +218,20 @@ function policyCard(policy, index) {
             { precision: policy.date_precision },
           )}</time>
         </div>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
       </div>
       <div class="policy-card-side">
         <span class="status-badge desktop-status status-${escapeHtml(
-          policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+          policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
         )}">${escapeHtml(policy.status)}</span>
         <span class="policy-arrow" aria-hidden="true">↗</span>
       </div>
@@ -247,10 +264,20 @@ function timelineCard(policy, index, policies) {
         </h3>
         <div class="timeline-badges">
           <span class="status-badge status-${escapeHtml(
-            policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+            policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
           )}">${escapeHtml(policy.status)}</span>
           ${verificationBadge(policy)}
         </div>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
       </div>
     </article>
   `;
@@ -692,14 +719,26 @@ function openPolicy(id, updateHash = true) {
       <p class="dialog-short-name">${escapeHtml(policy.short_name || policy.type)}</p>
       <h2 id="dialog-title" tabindex="-1">${escapeHtml(policy.title)}</h2>
       <p class="dialog-summary">${escapeHtml(policy.summary)}</p>
-      <a class="primary-source-link" href="${safeUrl(
-        policy.primary_source_url,
-      )}" target="_blank" rel="noreferrer">
-        Open official source
-        <span aria-hidden="true">↗</span>
-        <small>${escapeHtml(sourceHost(policy.primary_source_url))}</small>
-        <span class="sr-only"> (opens in a new tab)</span>
-      </a>
+      <div class="dialog-actions">
+        <a class="primary-source-link" href="${safeUrl(
+          policy.primary_source_url,
+        )}" target="_blank" rel="noreferrer">
+          Open official source
+          <span aria-hidden="true">↗</span>
+          <small>${escapeHtml(sourceHost(policy.primary_source_url))}</small>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
     </div>
     <div class="dialog-grid">
       <section>

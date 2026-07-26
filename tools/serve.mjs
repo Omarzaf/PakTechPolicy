@@ -10,6 +10,10 @@ const types = new Map([
   [".css", "text/css; charset=utf-8"],
   [".js", "text/javascript; charset=utf-8"],
   [".json", "application/json; charset=utf-8"],
+  [".webmanifest", "application/manifest+json; charset=utf-8"],
+  [".xml", "application/xml; charset=utf-8"],
+  [".txt", "text/plain; charset=utf-8"],
+  [".png", "image/png"],
   [".svg", "image/svg+xml"],
 ]);
 
@@ -34,8 +38,19 @@ const server = createServer(async (request, response) => {
       response.end("Bad request");
       return;
     }
-    response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
-    response.end("Not found");
+    try {
+      const notFound = resolve(root, "404.html");
+      const metadata = await stat(notFound);
+      if (!metadata.isFile()) throw new Error("Missing 404 page");
+      response.writeHead(404, {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store",
+      });
+      createReadStream(notFound).pipe(response);
+    } catch {
+      response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
+      response.end("Not found");
+    }
   }
 });
 

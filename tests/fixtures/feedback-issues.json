@@ -1,0 +1,40 @@
+{
+  "issues": [
+    {
+      "number": 101,
+      "html_url": "https://github.com/Omarzaf/PakTechPolicy/issues/101",
+      "title": "Clarify a policy record's verification date",
+      "state": "open",
+      "labels": [
+        {
+          "name": "data-correction"
+        },
+        {
+          "name": "skillopt-approved"
+        }
+      ],
+      "body": "### Affected page or record\nPolicy record: example-policy\n\n### Feedback type\nData correction\n\n### What did you observe\nThe verification note may predate the cited publication. Contact researcher@example.com or +1 (202) 555-0199.\n\n### Proposed improvement\nCheck the official publication and update only the evidence-backed date.\n\n### Evidence URL\nhttps://example.gov.pk/official-record\n\n### Accessibility context\n_No response_"
+    },
+    {
+      "number": 102,
+      "html_url": "https://github.com/Omarzaf/PakTechPolicy/issues/102",
+      "title": "Improve focus visibility in the source dialog",
+      "state": "open",
+      "labels": [
+        "product-feedback",
+        "skillopt-approved"
+      ],
+      "body": "### Affected page or record\nSource detail dialog\n\n### Feedback type\nAccessibility\n\n### What did you observe\nThe return focus is difficult to locate after closing the dialog.\n\n### Proposed improvement\nRestore focus to the source card and add a regression test.\n\n### Evidence URL\nhttps://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html\n\n### Accessibility context\nKeyboard-only navigation at 200% zoom."
+    },
+    {
+      "number": 103,
+      "html_url": "https://github.com/Omarzaf/PakTechPolicy/issues/103",
+      "title": "Unreviewed suggestion",
+      "state": "open",
+      "labels": [
+        "product-feedback"
+      ],
+      "body": "### What did you observe\nThis issue has not passed maintainer review."
+    }
+  ]
+}

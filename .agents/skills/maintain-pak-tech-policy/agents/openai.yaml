@@ -1,0 +1,5 @@
+interface:
+  display_name: "Maintain PakTechPolicy"
+  short_description: "Review feedback and improve PakTechPolicy safely"
+  brand_color: "#2F7D6A"
+  default_prompt: "Use $maintain-pak-tech-policy to triage approved public feedback and prepare a verified improvement proposal."

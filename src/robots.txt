@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omarzaf.github.io/PakTechPolicy/sitemap.xml

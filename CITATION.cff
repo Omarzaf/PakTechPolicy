@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this dataset or index, please cite the release or commit you consulted."
+title: "Pakistan Technology Policy Index"
+type: dataset
+authors:
+  - family-names: Zafar
+    given-names: Muhammad Umar
+repository-code: "https://github.com/Omarzaf/PakTechPolicy"
+url: "https://omarzaf.github.io/PakTechPolicy/"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-07-26
+abstract: >-
+  A source-first public directory of Pakistan technology-policy instruments,
+  contextual official indicators, and reviewed institutional resources.
+keywords:
+  - Pakistan
+  - technology policy
+  - digital governance
+  - public policy
+  - open data
+preferred-citation:
+  type: dataset
+  authors:
+    - family-names: Zafar
+      given-names: Muhammad Umar
+  title: "Pakistan Technology Policy Index"
+  version: 1.0.0
+  year: 2026
+  publisher:
+    name: "Muhammad Umar Zafar"
+  repository-code: "https://github.com/Omarzaf/PakTechPolicy"
+  url: "https://omarzaf.github.io/PakTechPolicy/"
