@@ -1,0 +1,78 @@
+name: Product or accessibility feedback
+description: Suggest an interface, navigation, accessibility, comprehension, or workflow improvement.
+title: "[Product feedback]: "
+labels:
+  - product-feedback
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping make the index easier to use. GitHub issues are public and require an account. Do not include sensitive, private, or personally identifying information. Feedback is reviewed by a maintainer and never changes the product automatically.
+
+  - type: input
+    id: affected-page
+    attributes:
+      label: Affected page or record
+      description: Provide the route, section, source card, or record ID where the experience occurs.
+      placeholder: "https://omarzaf.github.io/PakTechPolicy/sources.html — filters"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: Feedback type
+      options:
+        - Navigation or information architecture
+        - Search, filtering, or sorting
+        - Content clarity or comprehension
+        - Visual design or responsive layout
+        - Keyboard or screen-reader accessibility
+        - Motion, contrast, zoom, or readability
+        - Download or research workflow
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: What did you observe?
+      description: Describe the task you attempted, what happened, and the result you expected.
+      placeholder: "I tried to… Instead…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed improvement
+      description: Explain what would make the experience clearer, faster, or more accessible.
+      placeholder: "It would help if…"
+    validations:
+      required: true
+
+  - type: input
+    id: evidence-url
+    attributes:
+      label: Evidence or reference URL
+      description: Optional. Link to a relevant standard, official source, comparable pattern, or supporting material.
+      placeholder: "https://…"
+
+  - type: textarea
+    id: accessibility-context
+    attributes:
+      label: Accessibility context
+      description: Include device, browser, assistive technology, input method, zoom, text size, or motion preference when relevant.
+      placeholder: "For example, VoiceOver with Safari on iOS, or keyboard-only at 200% zoom."
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: Public-submission check
+      options:
+        - label: I understand this report is public and contains no sensitive or personally identifying information.
+          required: true
+        - label: I understand that a maintainer will evaluate this suggestion and that submission does not guarantee implementation.
+          required: true

@@ -7,12 +7,82 @@
       name="description"
       content="A source-first directory and timeline of technology policy in Pakistan."
     />
+    <meta name="author" content="Muhammad Umar Zafar" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#f4f1e8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Pakistan Technology Policy Index" />
+    <meta property="og:title" content="Pakistan Technology Policy Index" />
+    <meta
+      property="og:description"
+      content="Explore a source-first map of the laws, bills, regulations, and public policies shaping Pakistan’s digital life."
+    />
+    <meta property="og:url" content="https://omarzaf.github.io/PakTechPolicy/" />
+    <meta
+      property="og:image"
+      content="https://omarzaf.github.io/PakTechPolicy/assets/social-card.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Pakistan Technology Policy Index in a green and pastel editorial layout"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pakistan Technology Policy Index" />
+    <meta
+      name="twitter:description"
+      content="A source-first map of Pakistan’s technology laws, policies, and evidence."
+    />
+    <meta
+      name="twitter:image"
+      content="https://omarzaf.github.io/PakTechPolicy/assets/social-card.png"
+    />
     <title>Pakistan Technology Policy Index</title>
+    <link rel="canonical" href="https://omarzaf.github.io/PakTechPolicy/" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Pakistan Technology Policy Index",
+            "url": "https://omarzaf.github.io/PakTechPolicy/",
+            "description": "A source-first directory and timeline of technology policy in Pakistan.",
+            "creator": {
+              "@type": "Person",
+              "name": "Muhammad Umar Zafar"
+            }
+          },
+          {
+            "@type": "Dataset",
+            "name": "Pakistan Technology Policy Index",
+            "description": "Structured records of Pakistan technology policy instruments with official-source verification notes.",
+            "url": "https://omarzaf.github.io/PakTechPolicy/data/policies.json",
+            "creator": {
+              "@type": "Person",
+              "name": "Muhammad Umar Zafar"
+            },
+            "isAccessibleForFree": true,
+            "keywords": [
+              "Pakistan",
+              "technology policy",
+              "digital governance",
+              "law",
+              "public policy"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#policy-results">Skip to policy directory</a>
+    <a class="skip-link" href="#directory-title">Skip to policy directory</a>
 
     <header class="site-header">
       <a class="brand" href="./" aria-label="Pakistan Technology Policy Index home">
@@ -28,11 +98,13 @@
         </span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#evidence">Evidence</a>
         <a href="#landscape">Landscape</a>
         <a href="#directory">Directory</a>
-        <a href="#methodology">Methodology</a>
+        <a href="./sources.html">Official sources</a>
+        <a href="./methodology.html">Methodology</a>
       </nav>
-      <a class="header-cta" href="#directory">Explore the index</a>
+      <a class="header-cta" href="./sources.html">Source hub</a>
     </header>
 
     <main>
@@ -64,9 +136,27 @@
           </form>
           <div class="hero-links" aria-label="Popular topics">
             <span>Start with</span>
-            <button type="button" data-quick-domain="Cybercrime & online speech">Online speech</button>
-            <button type="button" data-quick-domain="Data protection & privacy">Privacy</button>
-            <button type="button" data-quick-domain="AI & emerging tech">AI policy</button>
+            <button
+              type="button"
+              data-quick-domain="Cybercrime &amp; online speech"
+              aria-pressed="false"
+            >
+              Online speech
+            </button>
+            <button
+              type="button"
+              data-quick-domain="Data protection &amp; privacy"
+              aria-pressed="false"
+            >
+              Privacy
+            </button>
+            <button
+              type="button"
+              data-quick-domain="AI &amp; emerging tech"
+              aria-pressed="false"
+            >
+              AI policy
+            </button>
           </div>
         </div>
 
@@ -76,20 +166,20 @@
             Every entry points to an official document. Where the source or
             current legal status is uncertain, the record is visibly flagged.
           </p>
-          <a href="#methodology">How verification works <span>↗</span></a>
+          <a href="./methodology.html">How verification works <span>↗</span></a>
         </aside>
       </section>
 
       <section class="metric-band" aria-label="Index summary">
         <article>
           <span class="metric-label">Indexed instruments</span>
-          <strong id="metric-total">—</strong>
-          <small>Acts, rules, policies & directives</small>
+          <strong id="metric-total">51</strong>
+          <small>Acts, rules, policies &amp; directives</small>
         </article>
         <article>
           <span class="metric-label">Official sources checked</span>
-          <strong id="metric-verified">—</strong>
-          <small id="metric-verified-note">Human-readable provenance</small>
+          <strong id="metric-verified">41</strong>
+          <small id="metric-verified-note">80% of current records</small>
         </article>
         <article>
           <span class="metric-label">Policy domains</span>
@@ -98,13 +188,38 @@
         </article>
         <article>
           <span class="metric-label">Issuing bodies</span>
-          <strong id="metric-bodies">—</strong>
-          <small>Parliament, ministries & regulators</small>
+          <strong id="metric-bodies">21</strong>
+          <small>Parliament, ministries &amp; regulators</small>
         </article>
         <p class="snapshot-note">
           Curated snapshot
           <time id="snapshot-date" datetime="2026-07-25">25 Jul 2026</time>
         </p>
+      </section>
+
+      <div class="data-alert" id="data-alert" role="status" hidden></div>
+
+      <section class="evidence section-shell" id="evidence" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">The evidence layer</p>
+            <h2 id="evidence-title">What the official data can—and cannot—show</h2>
+          </div>
+          <p>
+            Six reviewed indicator families sit beside relevant policies. They
+            provide context, not proof that a policy caused an outcome.
+          </p>
+        </div>
+        <div id="evidence-overview" class="evidence-grid">
+          <p class="loading-note">
+            Six reviewed indicator families are available in the downloadable
+            evidence dataset.
+          </p>
+        </div>
+        <div class="evidence-actions">
+          <a href="./data/policy-indicators.json" download>Download indicator data ↓</a>
+          <a href="./sources.html">Browse the Official Sources Hub →</a>
+        </div>
       </section>
 
       <section class="landscape section-shell" id="landscape" aria-labelledby="landscape-title">
@@ -128,7 +243,12 @@
               </div>
               <small>Click a row to filter</small>
             </div>
-            <div id="domain-chart" class="domain-chart" aria-label="Policy records by domain"></div>
+            <div
+              id="domain-chart"
+              class="domain-chart"
+              role="group"
+              aria-label="Policy records by domain"
+            ></div>
           </article>
 
           <article class="chart-card">
@@ -139,7 +259,12 @@
               </div>
               <small>By year</small>
             </div>
-            <div id="year-chart" class="year-chart" aria-label="Policy records by year"></div>
+            <div
+              id="year-chart"
+              class="year-chart"
+              role="group"
+              aria-label="Policy records by year"
+            ></div>
             <p class="chart-footnote">Based on enactment, introduction, or publication date.</p>
           </article>
         </div>
@@ -149,9 +274,10 @@
         <div class="section-heading directory-heading">
           <div>
             <p class="section-kicker">The directory</p>
-            <h2 id="directory-title">Find the instrument behind the rule</h2>
+            <h2 id="directory-title" tabindex="-1">Find the instrument behind the rule</h2>
           </div>
-          <p id="results-summary" aria-live="polite">Loading policy records…</p>
+          <p id="results-summary">51 instruments in this snapshot</p>
+          <p id="results-announcement" class="sr-only" aria-live="polite"></p>
         </div>
 
         <div class="explorer">
@@ -219,7 +345,7 @@
 
           <div class="results-panel">
             <div class="results-toolbar">
-              <div class="view-switcher" aria-label="View">
+              <div class="view-switcher" role="group" aria-label="View">
                 <button class="is-active" type="button" data-view="directory" aria-pressed="true">
                   Directory
                 </button>
@@ -235,20 +361,42 @@
               </label>
             </div>
 
-            <div id="active-filters" class="active-filters" aria-label="Active filters"></div>
-            <div id="policy-results" class="policy-results" tabindex="-1"></div>
+            <div
+              id="active-filters"
+              class="active-filters"
+              role="group"
+              aria-label="Active filters"
+            ></div>
+            <div
+              id="policy-results"
+              class="policy-results"
+              role="region"
+              aria-labelledby="directory-title"
+              tabindex="-1"
+            ></div>
             <div id="empty-state" class="empty-state" hidden>
               <span>∅</span>
               <h3>No instruments match those filters</h3>
               <p>Try a broader search or clear one of the filters.</p>
               <button type="button" data-clear-all>Reset the directory</button>
             </div>
+            <noscript>
+              <section class="static-policy-fallback" aria-labelledby="static-policy-title">
+                <h3 id="static-policy-title">Policy directory</h3>
+                <p>
+                  Interactive filtering needs JavaScript. The reviewed policy records
+                  and official links remain available below.
+                </p>
+                <!-- BUILD:STATIC-POLICY-LIST -->
+                <p><a href="./data/policies.json">Download the complete policy dataset</a></p>
+              </section>
+            </noscript>
           </div>
         </div>
       </section>
 
       <section class="methodology" id="methodology" aria-labelledby="methodology-title">
-        <div class="method-number" aria-hidden="true">02</div>
+        <div class="method-number" aria-hidden="true">03</div>
         <div>
           <p class="section-kicker">Editorial method</p>
           <h2 id="methodology-title">Source first. Caution where certainty ends.</h2>
@@ -267,6 +415,72 @@
             <li><span>03</span> Write a neutral plain-language summary</li>
             <li><span>04</span> Flag unresolved status or source gaps</li>
           </ol>
+          <a class="method-link" href="./methodology.html">Read the complete methodology →</a>
+        </div>
+      </section>
+
+      <section class="public-trust section-shell" aria-labelledby="public-trust-title">
+        <div class="trust-heading">
+          <div>
+            <p class="section-kicker">Public trust</p>
+            <h2 id="public-trust-title">Open methods. Visible limits. Correctable records.</h2>
+          </div>
+          <p>
+            This independent, open-source research project is maintained by
+            Muhammad Umar Zafar. Institutions named in the index are sources,
+            not sponsors, and do not endorse this project.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article>
+            <span>01</span>
+            <h3>Editorial independence</h3>
+            <p>
+              Records are selected and summarized for public-interest research.
+              No commissioned or sponsored relationship is represented by this release.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Dated, not continuous</h3>
+            <p>
+              Evidence is reviewed in release snapshots. Dates and unresolved
+              status notes remain visible because law and source availability can change.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Privacy by design</h3>
+            <p>
+              This static site uses no accounts, advertising, analytics, or
+              tracking cookies. External sites have their own privacy practices.
+            </p>
+          </article>
+          <article class="trust-feedback">
+            <span>04</span>
+            <h3>Help improve the index</h3>
+            <p>
+              Corrections and product feedback are reviewed publicly before any
+              change is made. GitHub requires an account; submissions are public,
+              so do not include sensitive information.
+            </p>
+            <div class="trust-actions">
+              <a
+                href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=data-correction.yml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Suggest a correction<span class="sr-only"> (opens in a new tab)</span> ↗
+              </a>
+              <a
+                href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=product-feedback.yml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Leave product feedback<span class="sr-only"> (opens in a new tab)</span> ↗
+              </a>
+            </div>
+          </article>
         </div>
       </section>
     </main>
@@ -284,8 +498,33 @@
           <small>Pakistan · Technology</small>
         </span>
       </div>
-      <p>An independent public-interest research index. No legal advice.</p>
-      <a href="#hero-title">Back to top ↑</a>
+      <p>
+        Maintained by Muhammad Umar Zafar · Independent public-interest research ·
+        No legal advice
+      </p>
+      <div class="footer-links">
+        <a href="./sources.html">Official sources</a>
+        <a href="./data/policies.json">Policy data</a>
+        <a href="./methodology.html">Methods &amp; data quality</a>
+        <a
+          href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=data-correction.yml"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Suggest a correction<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=product-feedback.yml"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Leave feedback<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a href="https://github.com/Omarzaf/PakTechPolicy" target="_blank" rel="noreferrer">
+          GitHub<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a href="#hero-title">Back to top ↑</a>
+      </div>
     </footer>
 
     <dialog id="policy-dialog" aria-labelledby="dialog-title">
@@ -294,13 +533,6 @@
         <div id="dialog-content"></div>
       </div>
     </dialog>
-
-    <noscript>
-      <p class="noscript">
-        This directory needs JavaScript for search and filtering. Each policy
-        source remains available in <code>data/policies.json</code>.
-      </p>
-    </noscript>
 
     <script type="module" src="./app.js"></script>
   </body>

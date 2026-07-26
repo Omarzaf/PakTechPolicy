@@ -1,3 +1,7 @@
 dist/
 node_modules/
 .DS_Store
+research/discovery/audits/adhoc-link-audit.json
+.skillopt-sleep/
+feedback-tasks*.json
+reviewed-issues*.json

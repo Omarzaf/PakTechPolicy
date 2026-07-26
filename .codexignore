@@ -1,2 +1,6 @@
 dist/
 node_modules/
+research/discovery/BACKLOG.md
+.skillopt-sleep/
+feedback-tasks*.json
+reviewed-issues*.json

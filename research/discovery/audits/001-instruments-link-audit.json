@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-07-25T19:37:34.662Z",
+  "url_count": 8,
+  "reachable_count": 8,
+  "results": [
+    {
+      "url": "https://www.pta.gov.pk/assets/media/2026-04-22-Local-Peering-and-Internet-Exchange-Points-Regulations,2026.pdf",
+      "final_url": "https://www.pta.gov.pk/assets/media/2026-04-22-Local-Peering-and-Internet-Exchange-Points-Regulations,2026.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 332949,
+      "reachable": true,
+      "elapsed_ms": 1878,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+      "final_url": "https://www.pta.gov.pk/category/regulations-1674158059-2023-05-30",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 163317,
+      "reachable": true,
+      "elapsed_ms": 1652,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/assets/media/2026-05-12-11-05-26-from-PCP---Gazette-Notification-of-Subscriber-Antecedents-Verification-(Amendments)-Regulations,-2026.pdf",
+      "final_url": "https://www.pta.gov.pk/assets/media/2026-05-12-11-05-26-from-PCP---Gazette-Notification-of-Subscriber-Antecedents-Verification-(Amendments)-Regulations,-2026.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 246062,
+      "reachable": true,
+      "elapsed_ms": 1865,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.na.gov.pk/uploads/documents/6a2a8e28e486b_438.pdf",
+      "final_url": "https://www.na.gov.pk/uploads/documents/6a2a8e28e486b_438.pdf",
+      "http_code": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 2878328,
+      "reachable": true,
+      "elapsed_ms": 2676,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.na.gov.pk/en/bills.php?status=pass",
+      "final_url": "https://www.na.gov.pk/en/bills.php?status=pass",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 152809,
+      "reachable": true,
+      "elapsed_ms": 1549,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://moitt.gov.pk/NewsDetail/OWM1NjNiMjMtMGZiYS00NGQ1LTg0OTAtNGE2ZDlhNzY5ZmYx",
+      "final_url": "https://moitt.gov.pk/NewsDetail/OWM1NjNiMjMtMGZiYS00NGQ1LTg0OTAtNGE2ZDlhNzY5ZmYx",
+      "http_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "size_bytes": 28557,
+      "reachable": true,
+      "elapsed_ms": 1088,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://www.pta.gov.pk/category/pta-issues-revised-quality-of-service-regulations-for-fixed-broadband-services-378198598-2023-06-01",
+      "final_url": "https://www.pta.gov.pk/category/pta-issues-revised-quality-of-service-regulations-for-fixed-broadband-services-378198598-2023-06-01",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 127188,
+      "reachable": true,
+      "elapsed_ms": 1540,
+      "exit_code": 0,
+      "error": null
+    },
+    {
+      "url": "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/",
+      "final_url": "https://propakistani.pk/2026/07/10/pta-issues-47-new-internet-licenses-across-pakistan/",
+      "http_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size_bytes": 341153,
+      "reachable": true,
+      "elapsed_ms": 306,
+      "exit_code": 0,
+      "error": null
+    }
+  ]
+}

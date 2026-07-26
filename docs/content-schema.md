@@ -67,4 +67,41 @@ values without implying precision that the source does not establish.
 - Keep summaries descriptive and avoid legal conclusions.
 - Do not infer current legal effect from an old source. Use `Unverified` where
   current status cannot be established.
+- `verification_note` may record a current source or status problem when the
+  public explanation is necessary; it must be non-empty text when present.
 - Never invent a missing URL, provision, date, relationship, or status.
+
+## Policy indicator contract
+
+Accepted quantitative evidence lives separately in
+`data/policy-indicators.json`. The top-level object has `version`, `as_of`, and
+an `indicators` array. Each indicator:
+
+- targets one or more existing policy ids;
+- records cadence, publication lag, latest period, confidence, methodology,
+  and interpretation risks;
+- cites at least one official HTTPS source with an access date and exact
+  locator such as an API path or PDF table and page;
+- groups only observations that share a unit and display format;
+- marks every observation as provisional, revised, or neither; and
+- sets `comparison_allowed` to `false` when definitions changed enough that a
+  connecting trend line would mislead.
+
+The release contract rejects unknown policy ids, unsafe source URLs, duplicate
+or unsorted periods, unsupported units, and nonnumeric values. The UI always
+labels these measurements as contextual evidence rather than causal effects.
+The confidence rubric and comparison rules are documented in
+`docs/indicator-methodology.md`.
+
+## Official source directory
+
+The dedicated Official Sources Hub reads `data/official-sources.json`. Each
+record identifies the exact official publisher, Pakistan or international
+scope, resource type, controlled topics, Pakistan coverage, stated cadence,
+latest period, access modes, direct HTTPS URL, last-checked date, access status,
+and a public limitation.
+
+The full contract is documented in `docs/official-sources-schema.md`. Release
+validation also requires matching evidence in
+`research/official-sources-link-audit.json`; an automated-check limitation is
+published as `Limited`, never silently treated as reachable.
