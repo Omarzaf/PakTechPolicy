@@ -140,6 +140,12 @@ for (const [index, policy] of policies.entries()) {
       failures.push(`${label}: invalid last_amended_precision`);
     }
     if (
+      policy.last_amended_precision === "month" &&
+      !String(policy.last_amended).endsWith("-01")
+    ) {
+      failures.push(`${label}: month-precision amendment must use day 01`);
+    }
+    if (
       policy.last_amended_precision === "year" &&
       !String(policy.last_amended).endsWith("-01-01")
     ) {
@@ -184,6 +190,32 @@ if (releaseMode) {
     assertV1RecordCount(policies);
   } catch (error) {
     failures.push(error.message);
+  }
+
+  // Enforce the "Verified = reachable source" contract offline. Reachability is
+  // measured by tools/check-sources.mjs and frozen in the committed audit; the
+  // release gate does not hit the network, but it does refuse to ship a Verified
+  // record unless matching, reachable evidence exists for its current URL. This
+  // catches a record flipped to Verified, or a URL changed, without re-auditing.
+  const auditPath = resolve(root, "research", "source-link-audit.json");
+  try {
+    const audit = JSON.parse(await readFile(auditPath, "utf8"));
+    const evidenceById = new Map((audit.results ?? []).map((result) => [result.id, result]));
+    for (const policy of policies) {
+      if (policy.verification !== "Verified") continue;
+      const evidence = evidenceById.get(policy.id);
+      if (!evidence) {
+        failures.push(`${policy.id}: no source-audit evidence for a Verified record`);
+      } else if (evidence.url !== policy.primary_source_url) {
+        failures.push(`${policy.id}: source-audit URL is stale; re-run check:sources`);
+      } else if (!evidence.reachable) {
+        failures.push(
+          `${policy.id}: Verified record failed the source audit (HTTP ${evidence.http_code})`,
+        );
+      }
+    }
+  } catch (error) {
+    failures.push(`source audit unavailable: ${error.message}`);
   }
 }
 

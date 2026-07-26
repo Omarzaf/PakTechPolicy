@@ -30,7 +30,11 @@ judgment, notification, or implementation change exists.
 - 40–60 record release-size contract
 - Cross-packet duplicate detection and documented preferred-record decisions
 - Primary-source HTTP status, final destination, content type, response size,
-  and authentication-redirect rejection
+  and authentication-redirect rejection (network audit, run on demand via
+  `check:sources`)
+- Release-gate cross-check (offline): every `Verified` record must have matching,
+  reachable evidence for its current URL in `research/source-link-audit.json`, so
+  a record cannot ship as `Verified` after its URL changes without re-auditing
 - Conservative status/verification alignment
 - Search, filtering, sorting, aggregation, malformed-hash, date-safety, and
   release-gate tests
