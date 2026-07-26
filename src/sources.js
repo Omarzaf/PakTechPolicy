@@ -3,6 +3,7 @@ import {
   getOfficialSourceStats,
   uniqueSourceValues,
 } from "./source-engine.js";
+import { getSourceBrand } from "./source-brands.js";
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -94,8 +95,22 @@ function sourceCard(source) {
     .map((topic) => `<span class="source-topic">${escapeHtml(topic)}</span>`)
     .join("");
   const accessModes = source.access_modes.map(escapeHtml).join(" · ");
+  const brand = getSourceBrand(source.publisher);
+  const brandMark = brand
+    ? `
+      <span class="source-logo${brand.tone === "dark" ? " source-logo--dark" : ""}">
+        <img
+          src="${escapeHtml(brand.asset)}"
+          alt=""
+          width="48"
+          height="48"
+          decoding="async"
+        />
+      </span>
+    `
+    : "";
   return `
-    <article class="source-card">
+    <article class="source-card source-card--${source.publisher_scope.toLowerCase()}">
       <header>
         <div>
           <span class="official-badge">${escapeHtml(source.publisher_scope)} official</span>
@@ -108,7 +123,10 @@ function sourceCard(source) {
         <p>${escapeHtml(source.resource_type)}</p>
       </header>
       <div class="source-card-main">
-        <p class="source-publisher">${escapeHtml(source.publisher)}</p>
+        <div class="source-brand">
+          ${brandMark}
+          <p class="source-publisher">${escapeHtml(source.publisher)}</p>
+        </div>
         <h3>${escapeHtml(source.title)}</h3>
         <p>${escapeHtml(source.what_it_covers)}</p>
         <div class="source-topics">${topics}</div>
@@ -193,6 +211,11 @@ function syncControls() {
   elements.publisherScope.value = state.publisherScope;
   elements.resourceType.value = state.resourceType;
   elements.accessStatus.value = state.accessStatus;
+  $$("[data-topic-shortcut]").forEach((button) => {
+    const selected = button.dataset.topicShortcut === state.topic;
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
 }
 
 function updateState(next, options = {}) {
@@ -227,7 +250,28 @@ function restoreUrlState() {
   state.accessStatus = params.get("access") ?? "";
 }
 
+function hasOption(select, value) {
+  return [...select.options].some((option) => option.value === value);
+}
+
+function sanitizeRestoredState() {
+  if (!hasOption(elements.topic, state.topic)) state.topic = "";
+  if (!hasOption(elements.publisherScope, state.publisherScope)) {
+    state.publisherScope = "";
+  }
+  if (!hasOption(elements.resourceType, state.resourceType)) {
+    state.resourceType = "";
+  }
+  if (!hasOption(elements.accessStatus, state.accessStatus)) {
+    state.accessStatus = "";
+  }
+}
+
 function bindEvents() {
+  $("#source-filter-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    updateState({ query: elements.query.value }, { focusResults: true });
+  });
   elements.query.addEventListener("input", (event) => updateState({ query: event.target.value }));
   elements.topic.addEventListener("change", (event) =>
     updateState({ topic: event.target.value }),
@@ -241,10 +285,6 @@ function bindEvents() {
   elements.accessStatus.addEventListener("change", (event) =>
     updateState({ accessStatus: event.target.value }),
   );
-  $("#source-filter-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    updateState({ query: elements.query.value }, { focusResults: true });
-  });
   $("#clear-source-filters").addEventListener("click", clearFilters);
   $("[data-clear-source-filters]").addEventListener("click", clearFilters);
 
@@ -273,6 +313,7 @@ async function init() {
     setOptions(elements.topic, uniqueSourceValues(state.sources, "topics"));
     setOptions(elements.resourceType, uniqueSourceValues(state.sources, "resource_type"));
     setOptions(elements.accessStatus, uniqueSourceValues(state.sources, "access_status"));
+    sanitizeRestoredState();
     renderMetrics(payload.as_of);
     bindEvents();
     syncControls();

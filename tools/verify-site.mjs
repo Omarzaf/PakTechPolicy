@@ -1,5 +1,6 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { SOURCE_BRANDS } from "../src/source-brands.js";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
@@ -10,12 +11,16 @@ const requiredFiles = [
   "styles.css",
   "app.js",
   "sources.js",
+  "source-brands.js",
   "source-engine.js",
   "policy-engine.js",
   "ui-utils.js",
   "data/policies.json",
   "data/policy-indicators.json",
   "data/official-sources.json",
+  ...new Set(
+    Object.values(SOURCE_BRANDS).map(({ asset }) => asset.replace(/^\.\//, "")),
+  ),
 ];
 const failures = [];
 
