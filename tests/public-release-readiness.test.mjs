@@ -60,11 +60,12 @@ test("homepage structured data identifies the site and downloadable dataset", as
 });
 
 test("static launch assets and branded recovery route are internally consistent", async () => {
-  const [manifest, robots, sitemap, notFound] = await Promise.all([
+  const [manifest, robots, sitemap, notFound, socialCard] = await Promise.all([
     read("src/site.webmanifest").then(JSON.parse),
     read("src/robots.txt"),
     read("src/sitemap.xml"),
     read("src/404.html"),
+    readFile(new URL("../src/assets/social-card.png", import.meta.url)),
   ]);
 
   assert.equal(manifest.start_url, "./");
@@ -74,9 +75,17 @@ test("static launch assets and branded recovery route are internally consistent"
     assert.match(sitemap, new RegExp(`<loc>${canonical.replaceAll(".", "\\.")}</loc>`));
   }
   assert.match(notFound, /id="not-found-title"/);
+  assert.match(notFound, /<base href="\/PakTechPolicy\/"/);
   assert.match(notFound, /data-correction\.yml/);
+  assert.equal(socialCard.subarray(1, 4).toString("ascii"), "PNG");
+  assert.equal(socialCard.readUInt32BE(16), 1200);
+  assert.equal(socialCard.readUInt32BE(20), 630);
   await Promise.all(
-    ["src/assets/favicon.svg", "src/assets/social-card.svg"].map((path) =>
+    [
+      "src/assets/favicon.svg",
+      "src/assets/social-card.svg",
+      "src/assets/social-card.png",
+    ].map((path) =>
       access(new URL(`../${path}`, import.meta.url)),
     ),
   );
@@ -133,6 +142,7 @@ test("repository governance and feedback forms enforce evidence and human review
   assert.match(dataForm, /Official evidence URL/);
   assert.match(productForm, /Evidence or reference URL/);
   assert.match(feedbackLoop, /skillopt-approved/);
+  assert.match(feedbackLoop, /accepted-for-improvement/);
   assert.match(feedbackLoop, /reviewed: false/);
   assert.match(feedbackLoop, /never edits the product/i);
   assert.match(dataLicense, /src\/assets\/source-logos/);

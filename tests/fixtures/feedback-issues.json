@@ -10,6 +10,9 @@
           "name": "data-correction"
         },
         {
+          "name": "accepted-for-improvement"
+        },
+        {
           "name": "skillopt-approved"
         }
       ],
@@ -22,6 +25,7 @@
       "state": "open",
       "labels": [
         "product-feedback",
+        "accepted-for-improvement",
         "skillopt-approved"
       ],
       "body": "### Affected page or record\nSource detail dialog\n\n### Feedback type\nAccessibility\n\n### What did you observe\nThe return focus is difficult to locate after closing the dialog.\n\n### Proposed improvement\nRestore focus to the source card and add a regression test.\n\n### Evidence URL\nhttps://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html\n\n### Accessibility context\nKeyboard-only navigation at 200% zoom."

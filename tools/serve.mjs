@@ -5,6 +5,7 @@ import { extname, resolve, sep } from "node:path";
 
 const root = resolve(import.meta.dirname, "..", "dist");
 const port = Number.parseInt(process.env.PAKTECH_PORT ?? "4173", 10);
+const projectPath = "/PakTechPolicy";
 const types = new Map([
   [".html", "text/html; charset=utf-8"],
   [".css", "text/css; charset=utf-8"],
@@ -20,7 +21,13 @@ const types = new Map([
 const server = createServer(async (request, response) => {
   try {
     const requestPath = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
-    const candidate = resolve(root, `.${requestPath === "/" ? "/index.html" : requestPath}`);
+    const publicPath =
+      requestPath === projectPath
+        ? "/"
+        : requestPath.startsWith(`${projectPath}/`)
+          ? requestPath.slice(projectPath.length)
+          : requestPath;
+    const candidate = resolve(root, `.${publicPath === "/" ? "/index.html" : publicPath}`);
     if (candidate !== root && !candidate.startsWith(`${root}${sep}`)) {
       response.writeHead(403).end("Forbidden");
       return;

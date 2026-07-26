@@ -30,8 +30,9 @@ external action and SkillOpt proposal under human control.
 1. Read the repository instructions and inspect the current branch and status.
 2. Read the affected UI, data record, methodology, and relevant tests.
 3. Separate factual correction requests from product or accessibility feedback.
-4. Check that the GitHub issue has the maintainer-only `skillopt-approved`
-   label before exporting it.
+4. Check that the GitHub issue has both the evidence-checked
+   `accepted-for-improvement` label and the separate maintainer-only
+   `skillopt-approved` label before exporting it.
 
 ### 2. Prepare a privacy-safe task file
 

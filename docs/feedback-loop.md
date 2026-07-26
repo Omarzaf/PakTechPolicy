@@ -64,8 +64,8 @@ is used:
    issue discussion;
 2. retain only the minimum observation, accepted evidence, desired outcome, and
    public issue reference needed to evaluate an improvement;
-3. confirm the local input preserves the `skillopt-approved` label, then run the
-   repository's deterministic converter:
+3. confirm the local input preserves both `accepted-for-improvement` and
+   `skillopt-approved`, then run the repository's deterministic converter:
 
    ```bash
    node tools/prepare-feedback-tasks.mjs \

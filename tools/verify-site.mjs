@@ -20,6 +20,7 @@ const requiredFiles = [
   "policy-engine.js",
   "ui-utils.js",
   "assets/favicon.svg",
+  "assets/social-card.png",
   "assets/social-card.svg",
   "data/policies.json",
   "data/policy-indicators.json",
@@ -169,6 +170,8 @@ try {
     manifest,
     favicon,
     socialCard,
+    projectHome,
+    projectStyles,
     brandedNotFound,
     privateFile,
     privateDocs,
@@ -185,9 +188,11 @@ try {
     fetch(`${baseUrl}/sitemap.xml`),
     fetch(`${baseUrl}/site.webmanifest`),
     fetch(`${baseUrl}/assets/favicon.svg`),
-    fetch(`${baseUrl}/assets/social-card.svg`),
-    fetch(`${baseUrl}/not-a-real-route`),
-    fetch(`${baseUrl}/AGENTS.md`),
+    fetch(`${baseUrl}/assets/social-card.png`),
+    fetch(`${baseUrl}/PakTechPolicy/`),
+    fetch(`${baseUrl}/PakTechPolicy/styles.css`),
+    fetch(`${baseUrl}/PakTechPolicy/not/a-real-route`),
+    fetch(`${baseUrl}/PakTechPolicy/AGENTS.md`),
     fetch(`${baseUrl}/docs/data-quality.md`),
     fetch(`${baseUrl}/research/source-link-audit.json`),
   ]);
@@ -207,6 +212,12 @@ try {
   if (!favicon.ok) failures.push(`preview favicon returned HTTP ${favicon.status}`);
   if (!socialCard.ok) {
     failures.push(`preview social card returned HTTP ${socialCard.status}`);
+  }
+  if (!projectHome.ok) {
+    failures.push(`preview project-path home returned HTTP ${projectHome.status}`);
+  }
+  if (!projectStyles.ok) {
+    failures.push(`preview project-path stylesheet returned HTTP ${projectStyles.status}`);
   }
   if (brandedNotFound.status !== 404) {
     failures.push(

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
+  ACCEPTANCE_LABEL,
   APPROVAL_LABEL,
   buildTasksPayload,
   sanitizeText,
@@ -29,6 +30,7 @@ test("exports only maintainer-approved issues with an explicit human-review gate
     ["train", "val"],
   );
   assert.ok(payload.tasks.every(({ tags }) => tags.includes(APPROVAL_LABEL)));
+  assert.ok(payload.tasks.every(({ tags }) => tags.includes(ACCEPTANCE_LABEL)));
 });
 
 test("redacts obvious contact details from untrusted issue text", () => {
@@ -52,7 +54,7 @@ test("rejects approved entries that are not canonical repository issues", () => 
         number: 9,
         html_url: "https://example.com/issues/9",
         title: "External payload",
-        labels: [APPROVAL_LABEL],
+        labels: [ACCEPTANCE_LABEL, APPROVAL_LABEL],
       },
     ],
   };
@@ -76,6 +78,23 @@ test("refuses to produce a task file when no issue passed maintainer review", ()
           },
         ],
       }),
-    /no issues carry the required/,
+    /no issues carry both required labels/,
+  );
+});
+
+test("requires acceptance as well as explicit SkillOpt approval", () => {
+  assert.throws(
+    () =>
+      buildTasksPayload({
+        issues: [
+          {
+            number: 2,
+            html_url: "https://github.com/Omarzaf/PakTechPolicy/issues/2",
+            title: "Only optimizer-approved",
+            labels: [APPROVAL_LABEL],
+          },
+        ],
+      }),
+    /both required labels/,
   );
 });

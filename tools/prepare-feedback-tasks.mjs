@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
+export const ACCEPTANCE_LABEL = "accepted-for-improvement";
 export const APPROVAL_LABEL = "skillopt-approved";
 export const TASK_FORMAT = "skillopt_sleep.tasks.v1";
 export const TARGET_SKILL_PATH =
@@ -110,6 +111,7 @@ function issueToTask(issue, split) {
     judge: {},
     tags: [
       "public-feedback",
+      ACCEPTANCE_LABEL,
       APPROVAL_LABEL,
       sanitizeText(type, 80)
         .toLowerCase()
@@ -130,11 +132,16 @@ export function buildTasksPayload(input) {
   }
 
   const approved = issues
-    .filter((issue) => normalizedLabels(issue).includes(APPROVAL_LABEL))
+    .filter((issue) => {
+      const labels = normalizedLabels(issue);
+      return labels.includes(ACCEPTANCE_LABEL) && labels.includes(APPROVAL_LABEL);
+    })
     .sort((left, right) => left.number - right.number);
 
   if (!approved.length) {
-    throw new Error(`no issues carry the required ${APPROVAL_LABEL} label`);
+    throw new Error(
+      `no issues carry both required labels: ${ACCEPTANCE_LABEL} and ${APPROVAL_LABEL}`,
+    );
   }
 
   const numbers = new Set();

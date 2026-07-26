@@ -118,9 +118,10 @@ automatically. See [research/discovery/README.md](research/discovery/README.md).
 
 ## Privacy
 
-The published static site has no accounts, forms, cookies, analytics, advertising
-trackers, or server-side collection. Following a link to GitHub or an official
-source moves you to that service and its privacy practices.
+The project sets no accounts, forms, cookies, analytics, advertising trackers,
+or project-controlled server-side collection. GitHub Pages and external links
+may process ordinary requests under their own infrastructure and privacy
+practices.
 
 ## Licensing and attribution
 
