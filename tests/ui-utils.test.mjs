@@ -66,6 +66,18 @@ test("generates bounded sparkline points for varied, flat, and empty data", () =
   const flatPoints = getSparklinePoints([{ value: 3 }, { value: 3 }]);
   assert.equal(flatPoints.length, 2);
   assert.ok(flatPoints.every((point) => point.y === 36));
+
+  const sharedScalePoints = getSparklinePoints([{ value: 50 }, { value: 75 }], {
+    width: 100,
+    height: 40,
+    padding: 5,
+    minValue: 0,
+    maxValue: 100,
+  });
+  assert.deepEqual(sharedScalePoints, [
+    { value: 50, x: 5, y: 20 },
+    { value: 75, x: 95, y: 12.5 },
+  ]);
 });
 
 test("accepts the released indicator payload and rejects unsafe runtime data", () => {

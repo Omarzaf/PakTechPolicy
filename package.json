@@ -6,6 +6,7 @@
   "packageManager": "pnpm@11.10.0",
   "scripts": {
     "build": "node tools/build.mjs",
+    "check:official-sources": "node tools/check-official-sources.mjs",
     "check:sources": "node tools/check-sources.mjs",
     "consolidate": "node tools/consolidate.mjs",
     "dev": "node tools/serve.mjs",

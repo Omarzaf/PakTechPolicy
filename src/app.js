@@ -46,6 +46,7 @@ const elements = {
   results: $("#policy-results"),
   empty: $("#empty-state"),
   summary: $("#results-summary"),
+  announcement: $("#results-announcement"),
   activeFilters: $("#active-filters"),
   dialog: $("#policy-dialog"),
   dialogContent: $("#dialog-content"),
@@ -152,7 +153,7 @@ function renderYearChart() {
           aria-label="Filter by ${year}, ${count} records">
           <span class="year-count">${count}</span>
           <span class="year-bar" style="--bar-size:${Math.max((count / max) * 100, 4)}%"></span>
-          <span class="year-label">${year.slice(2)}</span>
+          <span class="year-label">${year}</span>
         </button>
       `,
     )
@@ -271,6 +272,14 @@ function renderActiveFilters() {
   elements.activeFilters.hidden = entries.length === 0;
 }
 
+let resultAnnouncementTimer;
+function announceResultSummary(message) {
+  window.clearTimeout(resultAnnouncementTimer);
+  resultAnnouncementTimer = window.setTimeout(() => {
+    elements.announcement.textContent = message;
+  }, 250);
+}
+
 function renderResults() {
   // The timeline groups records under year headings by comparing each item to
   // its neighbour, which only reads correctly when the list is in date order.
@@ -281,9 +290,11 @@ function renderResults() {
   state.filtered = filterPolicies(state.policies, { ...state, sort: effectiveSort });
   const noun = state.filtered.length === 1 ? "instrument" : "instruments";
   const activeCount = countActiveFilters(state);
-  elements.summary.textContent = `${state.filtered.length} ${noun}${
+  const summary = `${state.filtered.length} ${noun}${
     activeCount ? ` · ${activeCount} active filter${activeCount === 1 ? "" : "s"}` : ""
   }`;
+  elements.summary.textContent = summary;
+  announceResultSummary(summary);
 
   elements.results.className = `policy-results view-${state.view}`;
   elements.results.innerHTML =
@@ -344,6 +355,7 @@ function syncUrl() {
     ["body", state.issuingBody],
     ["year", state.year],
     ["verification", state.verification],
+    ["sort", state.sort === "newest" ? "" : state.sort],
     ["view", state.view === "timeline" ? state.view : ""],
   ]) {
     if (value) params.set(key, value);
@@ -361,6 +373,9 @@ function restoreUrlState() {
   state.issuingBody = params.get("body") ?? "";
   state.year = params.get("year") ?? "";
   state.verification = params.get("verification") ?? "";
+  state.sort = ["newest", "oldest", "title"].includes(params.get("sort"))
+    ? params.get("sort")
+    : "newest";
   state.view = params.get("view") === "timeline" ? "timeline" : "directory";
 }
 
@@ -383,16 +398,44 @@ function renderIndicatorSource(source) {
   const locator = typeof source === "object" && source ? source.locator : "";
   return `<li><a href="${safeUrl(url)}" target="_blank" rel="noreferrer">${escapeHtml(
     title,
-  )}<span>↗</span></a>${locator ? `<small>${escapeHtml(locator)}</small>` : ""}</li>`;
+  )}<span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>${
+    locator ? `<small>${escapeHtml(locator)}</small>` : ""
+  }</li>`;
 }
 
-function renderIndicatorPlot(series, group) {
-  const points = getSparklinePoints(series.observations);
+function getIndicatorGroupScale(group) {
+  const values = group.series.flatMap((series) =>
+    series.observations
+      .map(({ value }) => value)
+      .filter((value) => typeof value === "number" && Number.isFinite(value)),
+  );
+  return {
+    min: values.length ? Math.min(...values) : 0,
+    max: values.length ? Math.max(...values) : 0,
+  };
+}
+
+function renderIndicatorPlot(series, group, scale) {
+  const points = getSparklinePoints(series.observations, {
+    minValue: scale.min,
+    maxValue: scale.max,
+  });
+  const first = series.observations.find(
+    ({ value }) => typeof value === "number" && Number.isFinite(value),
+  );
   const latest = getLatestObservation(series.observations);
   const latestValue = latest
     ? formatIndicatorValue(latest.value, group.format)
     : "No current observation";
-  const ariaLabel = `Trend snapshot for ${series.label}, ${group.label}. Latest value: ${latestValue}.`;
+  const firstValue = first ? formatIndicatorValue(first.value, group.format) : "unavailable";
+  const ariaLabel = group.comparison_allowed
+    ? `${series.label}, ${group.label}. ${first?.label ?? "First period"}: ${firstValue}. ${
+        latest?.label ?? "Latest period"
+      }: ${latestValue}. Shared group scale ${formatIndicatorValue(
+        scale.min,
+        group.format,
+      )} to ${formatIndicatorValue(scale.max, group.format)}.`
+    : `${series.label}, ${group.label}. Snapshot ${latest?.label ?? "period unavailable"}: ${latestValue}. Values are not directly comparable.`;
   const path = points.map((point) => `${point.x.toFixed(2)},${point.y.toFixed(2)}`).join(" ");
   const markerClass = group.comparison_allowed ? "" : " is-snapshot";
 
@@ -418,8 +461,11 @@ function renderIndicatorPlot(series, group) {
 }
 
 function renderIndicatorGroup(group) {
+  const scale = getIndicatorGroupScale(group);
   const comparability = group.comparison_allowed
-    ? ""
+    ? `<p class="indicator-scale-note">Shared scale: ${escapeHtml(
+        formatIndicatorValue(scale.min, group.format),
+      )}–${escapeHtml(formatIndicatorValue(scale.max, group.format))}</p>`
     : '<p class="indicator-comparability">Not directly comparable</p>';
   const currentValues = group.series
     .map((series) => {
@@ -433,7 +479,7 @@ function renderIndicatorGroup(group) {
             )}</p>
             <p class="indicator-current-period">${escapeHtml(latest?.label ?? "Period unavailable")}</p>
           </div>
-          ${renderIndicatorPlot(series, group)}
+          ${renderIndicatorPlot(series, group, scale)}
         </article>
       `;
     })
@@ -476,6 +522,72 @@ function renderIndicatorGroup(group) {
       </details>
     </article>
   `;
+}
+
+function renderEvidenceOverview() {
+  const container = $("#evidence-overview");
+  if (!state.indicators.length) {
+    container.innerHTML = `
+      <div class="load-error" role="alert">
+        <h3>Indicator layer unavailable</h3>
+        <p>The policy directory is available, but its contextual metrics could not be loaded.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = state.indicators
+    .map((indicator) => {
+      const latestValues = indicator.groups
+        .flatMap((group) =>
+          group.series.map((series) => {
+            const latest = getLatestObservation(series.observations);
+            return latest
+              ? {
+                  label:
+                    indicator.groups.length > 1
+                      ? `${group.label}: ${series.label}`
+                      : series.label,
+                  value: formatIndicatorValue(latest.value, group.format),
+                  period: latest.label,
+                }
+              : null;
+          }),
+        )
+        .filter(Boolean)
+        .slice(0, 3);
+      const source = indicator.sources[0];
+      const firstPolicy = indicator.policy_ids[0];
+      return `
+        <article class="evidence-card">
+          <header>
+            <span>${escapeHtml(indicator.confidence)} confidence</span>
+            <span>Latest: ${escapeHtml(indicator.latest_period)}</span>
+          </header>
+          <h3>${escapeHtml(indicator.title)}</h3>
+          <p>${escapeHtml(indicator.summary)}</p>
+          <dl>
+            ${latestValues
+              .map(
+                ({ label, value, period }) =>
+                  `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(
+                    value,
+                  )}<small>${escapeHtml(period)}</small></dd></div>`,
+              )
+              .join("")}
+          </dl>
+          <p class="evidence-caveat">${escapeHtml(indicator.risks)}</p>
+          <div class="evidence-card-links">
+            <a href="#policy=${escapeHtml(firstPolicy)}">See linked policy</a>
+            <a href="${safeUrl(source.url)}" target="_blank" rel="noreferrer">
+              Official source <span aria-hidden="true">↗</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
 }
 
 function renderPolicyIndicators(policyId) {
@@ -547,14 +659,15 @@ function openPolicy(id, updateHash = true) {
         ${verificationBadge(policy)}
       </div>
       <p class="dialog-short-name">${escapeHtml(policy.short_name || policy.type)}</p>
-      <h2 id="dialog-title">${escapeHtml(policy.title)}</h2>
+      <h2 id="dialog-title" tabindex="-1">${escapeHtml(policy.title)}</h2>
       <p class="dialog-summary">${escapeHtml(policy.summary)}</p>
       <a class="primary-source-link" href="${safeUrl(
         policy.primary_source_url,
       )}" target="_blank" rel="noreferrer">
         Open official source
-        <span>↗</span>
+        <span aria-hidden="true">↗</span>
         <small>${escapeHtml(sourceHost(policy.primary_source_url))}</small>
+        <span class="sr-only"> (opens in a new tab)</span>
       </a>
     </div>
     <div class="dialog-grid">
@@ -582,6 +695,13 @@ function openPolicy(id, updateHash = true) {
           }</dd></div>
           <div><dt>Last verified</dt><dd>${dateLabel(policy.last_verified)}</dd></div>
         </dl>
+        ${
+          policy.verification_note
+            ? `<div class="record-verification-note"><strong>Verification note</strong><p>${escapeHtml(
+                policy.verification_note,
+              )}</p></div>`
+            : ""
+        }
       </aside>
       ${renderPolicyIndicators(policy.id)}
       <section>
@@ -618,7 +738,7 @@ function openPolicy(id, updateHash = true) {
                     url,
                   )}" target="_blank" rel="noreferrer">${escapeHtml(
                     sourceHost(url),
-                  )} <span>↗</span></a></li>`,
+                  )} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>`,
               )
               .join("")}</ul></section>`
           : ""
@@ -631,8 +751,9 @@ function openPolicy(id, updateHash = true) {
   `;
 
   if (!elements.dialog.open) elements.dialog.showModal();
+  requestAnimationFrame(() => $("#dialog-title", elements.dialogContent)?.focus());
   if (updateHash) {
-    history.replaceState(null, "", `${location.pathname}${location.search}#policy=${id}`);
+    history.pushState(null, "", `${location.pathname}${location.search}#policy=${id}`);
   }
 }
 
@@ -731,12 +852,16 @@ async function init() {
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     state.policies = await response.json();
     state.indicators = isIndicatorPayload(indicatorPayload) ? indicatorPayload.indicators : [];
-    if (indicatorPayload && !state.indicators.length) {
-      console.warn("Policy indicators could not be validated and were not displayed.");
+    if (!state.indicators.length) {
+      const alert = $("#data-alert");
+      alert.hidden = false;
+      alert.textContent =
+        "The policy directory loaded, but contextual technology indicators are unavailable or invalid.";
     }
     restoreUrlState();
     populateFilters();
     renderMetrics();
+    renderEvidenceOverview();
     renderDomainChart();
     renderYearChart();
     bindEvents();

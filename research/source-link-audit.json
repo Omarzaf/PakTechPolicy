@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-07-25T18:48:37.612Z",
+  "checked_at": "2026-07-26T17:13:58.267Z",
   "input": "data/policies.json",
   "record_count": 51,
-  "reachable_count": 42,
+  "reachable_count": 41,
   "results": [
     {
       "id": "data-governance-policy-2026-draft",
@@ -13,7 +13,7 @@
       "content_type": "application/pdf",
       "size_bytes": 444962,
       "reachable": true,
-      "elapsed_ms": 1793,
+      "elapsed_ms": 2468,
       "exit_code": 0,
       "error": null
     },
@@ -26,7 +26,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 153612,
       "reachable": true,
-      "elapsed_ms": 1486,
+      "elapsed_ms": 1762,
       "exit_code": 0,
       "error": null
     },
@@ -39,7 +39,7 @@
       "content_type": "application/pdf",
       "size_bytes": 4078569,
       "reachable": true,
-      "elapsed_ms": 17214,
+      "elapsed_ms": 16678,
       "exit_code": 0,
       "error": null
     },
@@ -52,7 +52,7 @@
       "content_type": "application/pdf",
       "size_bytes": 437575,
       "reachable": true,
-      "elapsed_ms": 1783,
+      "elapsed_ms": 1708,
       "exit_code": 0,
       "error": null
     },
@@ -65,7 +65,7 @@
       "content_type": "application/pdf",
       "size_bytes": 306517,
       "reachable": true,
-      "elapsed_ms": 1783,
+      "elapsed_ms": 1630,
       "exit_code": 0,
       "error": null
     },
@@ -78,7 +78,7 @@
       "content_type": "application/pdf",
       "size_bytes": 231203,
       "reachable": true,
-      "elapsed_ms": 1788,
+      "elapsed_ms": 1673,
       "exit_code": 0,
       "error": null
     },
@@ -91,7 +91,7 @@
       "content_type": "application/pdf",
       "size_bytes": 722224,
       "reachable": true,
-      "elapsed_ms": 1967,
+      "elapsed_ms": 1934,
       "exit_code": 0,
       "error": null
     },
@@ -104,7 +104,7 @@
       "content_type": "application/pdf",
       "size_bytes": 5646730,
       "reachable": true,
-      "elapsed_ms": 3049,
+      "elapsed_ms": 3101,
       "exit_code": 0,
       "error": null
     },
@@ -117,7 +117,7 @@
       "content_type": "application/pdf",
       "size_bytes": 416038,
       "reachable": true,
-      "elapsed_ms": 1690,
+      "elapsed_ms": 1607,
       "exit_code": 0,
       "error": null
     },
@@ -130,7 +130,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1895223,
       "reachable": true,
-      "elapsed_ms": 8649,
+      "elapsed_ms": 9188,
       "exit_code": 0,
       "error": null
     },
@@ -143,7 +143,7 @@
       "content_type": "application/pdf",
       "size_bytes": 292599,
       "reachable": true,
-      "elapsed_ms": 1690,
+      "elapsed_ms": 1798,
       "exit_code": 0,
       "error": null
     },
@@ -156,7 +156,7 @@
       "content_type": "application/pdf",
       "size_bytes": 2054153,
       "reachable": true,
-      "elapsed_ms": 9196,
+      "elapsed_ms": 9501,
       "exit_code": 0,
       "error": null
     },
@@ -169,7 +169,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1814431,
       "reachable": true,
-      "elapsed_ms": 8446,
+      "elapsed_ms": 8122,
       "exit_code": 0,
       "error": null
     },
@@ -182,7 +182,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 773,
+      "elapsed_ms": 766,
       "exit_code": 0,
       "error": null
     },
@@ -195,7 +195,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1326190,
       "reachable": true,
-      "elapsed_ms": 3835,
+      "elapsed_ms": 8449,
       "exit_code": 0,
       "error": null
     },
@@ -208,7 +208,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 86023,
       "reachable": true,
-      "elapsed_ms": 1966,
+      "elapsed_ms": 1935,
       "exit_code": 0,
       "error": null
     },
@@ -221,7 +221,7 @@
       "content_type": "application/pdf",
       "size_bytes": 3600564,
       "reachable": true,
-      "elapsed_ms": 362,
+      "elapsed_ms": 292,
       "exit_code": 0,
       "error": null
     },
@@ -234,7 +234,7 @@
       "content_type": "application/pdf",
       "size_bytes": 689344,
       "reachable": true,
-      "elapsed_ms": 1898,
+      "elapsed_ms": 2043,
       "exit_code": 0,
       "error": null
     },
@@ -247,7 +247,7 @@
       "content_type": "application/pdf",
       "size_bytes": 439871,
       "reachable": true,
-      "elapsed_ms": 1779,
+      "elapsed_ms": 1681,
       "exit_code": 0,
       "error": null
     },
@@ -260,7 +260,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 87695,
       "reachable": true,
-      "elapsed_ms": 2138,
+      "elapsed_ms": 1875,
       "exit_code": 0,
       "error": null
     },
@@ -273,7 +273,7 @@
       "content_type": "application/pdf",
       "size_bytes": 636006,
       "reachable": true,
-      "elapsed_ms": 1830,
+      "elapsed_ms": 1683,
       "exit_code": 0,
       "error": null
     },
@@ -286,7 +286,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1880715,
       "reachable": true,
-      "elapsed_ms": 2364,
+      "elapsed_ms": 2297,
       "exit_code": 0,
       "error": null
     },
@@ -299,7 +299,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 855,
+      "elapsed_ms": 832,
       "exit_code": 0,
       "error": null
     },
@@ -312,7 +312,7 @@
       "content_type": "application/pdf",
       "size_bytes": 475020,
       "reachable": true,
-      "elapsed_ms": 257,
+      "elapsed_ms": 182,
       "exit_code": 0,
       "error": null
     },
@@ -325,7 +325,7 @@
       "content_type": "application/pdf",
       "size_bytes": 15654286,
       "reachable": true,
-      "elapsed_ms": 5854,
+      "elapsed_ms": 4968,
       "exit_code": 0,
       "error": null
     },
@@ -338,7 +338,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 134169,
       "reachable": true,
-      "elapsed_ms": 3350,
+      "elapsed_ms": 3156,
       "exit_code": 0,
       "error": null
     },
@@ -351,7 +351,7 @@
       "content_type": "application/pdf",
       "size_bytes": 676061,
       "reachable": true,
-      "elapsed_ms": 4751,
+      "elapsed_ms": 5188,
       "exit_code": 0,
       "error": null
     },
@@ -364,7 +364,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 292890,
       "reachable": true,
-      "elapsed_ms": 1809,
+      "elapsed_ms": 1613,
       "exit_code": 0,
       "error": null
     },
@@ -377,7 +377,7 @@
       "content_type": "application/pdf",
       "size_bytes": 9081624,
       "reachable": true,
-      "elapsed_ms": 4039,
+      "elapsed_ms": 4219,
       "exit_code": 0,
       "error": null
     },
@@ -390,7 +390,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 747,
+      "elapsed_ms": 766,
       "exit_code": 0,
       "error": null
     },
@@ -403,7 +403,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 746,
+      "elapsed_ms": 758,
       "exit_code": 0,
       "error": null
     },
@@ -416,7 +416,7 @@
       "content_type": "application/pdf",
       "size_bytes": 439787,
       "reachable": true,
-      "elapsed_ms": 4080,
+      "elapsed_ms": 3739,
       "exit_code": 0,
       "error": null
     },
@@ -429,7 +429,7 @@
       "content_type": "application/pdf",
       "size_bytes": 143218,
       "reachable": true,
-      "elapsed_ms": 1242,
+      "elapsed_ms": 1263,
       "exit_code": 0,
       "error": null
     },
@@ -442,7 +442,7 @@
       "content_type": "application/pdf",
       "size_bytes": 255819,
       "reachable": true,
-      "elapsed_ms": 3027,
+      "elapsed_ms": 4226,
       "exit_code": 0,
       "error": null
     },
@@ -455,7 +455,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 798,
+      "elapsed_ms": 808,
       "exit_code": 0,
       "error": null
     },
@@ -468,7 +468,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5544,
       "reachable": false,
-      "elapsed_ms": 127,
+      "elapsed_ms": 114,
       "exit_code": 0,
       "error": null
     },
@@ -481,7 +481,7 @@
       "content_type": "application/pdf",
       "size_bytes": 599594,
       "reachable": true,
-      "elapsed_ms": 3958,
+      "elapsed_ms": 4269,
       "exit_code": 0,
       "error": null
     },
@@ -494,7 +494,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1157459,
       "reachable": true,
-      "elapsed_ms": 1927,
+      "elapsed_ms": 1978,
       "exit_code": 0,
       "error": null
     },
@@ -507,22 +507,22 @@
       "content_type": "application/pdf",
       "size_bytes": 624284,
       "reachable": true,
-      "elapsed_ms": 1904,
+      "elapsed_ms": 1792,
       "exit_code": 0,
       "error": null
     },
     {
       "id": "sindh-transparency-rti-act-2016",
-      "verification": "Verified",
+      "verification": "Unverified",
       "url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-20-000002.pdf",
       "final_url": "https://www.sindhlaws.gov.pk/setup/publications_SindhCode/PUB-NEW-20-000002.pdf",
-      "http_code": 200,
-      "content_type": "application/pdf",
-      "size_bytes": 157742,
-      "reachable": true,
-      "elapsed_ms": 1534,
-      "exit_code": 0,
-      "error": null
+      "http_code": 0,
+      "content_type": null,
+      "size_bytes": 0,
+      "reachable": false,
+      "elapsed_ms": 64088,
+      "exit_code": 28,
+      "error": "curl: (28) Connection timed out after 20009 milliseconds\ncurl: (28) Connection timed out after 20008 milliseconds\ncurl: (28) Connection timed out after 20001 milliseconds"
     },
     {
       "id": "peca-2016",
@@ -533,7 +533,7 @@
       "content_type": "application/pdf",
       "size_bytes": 388722,
       "reachable": true,
-      "elapsed_ms": 1747,
+      "elapsed_ms": 2395,
       "exit_code": 0,
       "error": null
     },
@@ -546,7 +546,7 @@
       "content_type": "application/pdf",
       "size_bytes": 359576,
       "reachable": true,
-      "elapsed_ms": 1959,
+      "elapsed_ms": 2056,
       "exit_code": 0,
       "error": null
     },
@@ -559,7 +559,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 772,
+      "elapsed_ms": 817,
       "exit_code": 0,
       "error": null
     },
@@ -572,9 +572,9 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 20050,
+      "elapsed_ms": 64082,
       "exit_code": 28,
-      "error": "curl: (28) Connection timed out after 20006 milliseconds"
+      "error": "curl: (28) Connection timed out after 20001 milliseconds\ncurl: (28) Connection timed out after 20010 milliseconds\ncurl: (28) Connection timed out after 20011 milliseconds"
     },
     {
       "id": "kp-rti-act-2013",
@@ -585,7 +585,7 @@
       "content_type": "application/pdf",
       "size_bytes": 695329,
       "reachable": true,
-      "elapsed_ms": 1985,
+      "elapsed_ms": 2037,
       "exit_code": 0,
       "error": null
     },
@@ -598,7 +598,7 @@
       "content_type": "application/pdf",
       "size_bytes": 299693,
       "reachable": true,
-      "elapsed_ms": 1800,
+      "elapsed_ms": 2126,
       "exit_code": 0,
       "error": null
     },
@@ -611,7 +611,7 @@
       "content_type": "application/pdf",
       "size_bytes": 343872,
       "reachable": true,
-      "elapsed_ms": 1711,
+      "elapsed_ms": 2121,
       "exit_code": 0,
       "error": null
     },
@@ -624,7 +624,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1126635,
       "reachable": true,
-      "elapsed_ms": 3320,
+      "elapsed_ms": 10527,
       "exit_code": 0,
       "error": null
     },
@@ -637,7 +637,7 @@
       "content_type": "application/pdf",
       "size_bytes": 372601,
       "reachable": true,
-      "elapsed_ms": 2203,
+      "elapsed_ms": 1837,
       "exit_code": 0,
       "error": null
     },
@@ -650,7 +650,7 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 1115,
+      "elapsed_ms": 781,
       "exit_code": 0,
       "error": null
     },
@@ -663,7 +663,7 @@
       "content_type": "application/pdf",
       "size_bytes": 723309,
       "reachable": true,
-      "elapsed_ms": 2426,
+      "elapsed_ms": 2107,
       "exit_code": 0,
       "error": null
     }

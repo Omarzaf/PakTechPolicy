@@ -1,6 +1,6 @@
 # Version 1 data quality
 
-Snapshot date: 2026-07-25
+Snapshot date: 2026-07-26
 
 ## Dataset and grain
 
@@ -11,11 +11,15 @@ Consolidation resolved five duplicate instruments into 51 unique records.
 | Measure | Result |
 |---|---:|
 | Unique policy instruments | 51 |
-| Verified records with reachable official sources | 42 (82.4%) |
-| Unverified records | 9 (17.6%) |
+| Verified records with reachable official sources | 41 (80.4%) |
+| Unverified records | 10 (19.6%) |
 | Policy domains represented | 12 |
 | Issuing bodies represented | 21 |
 | Duplicate instruments resolved | 5 |
+| Quantitative indicator families | 6 |
+| Official Sources Hub resources | 30 |
+| Hub links reachable by automated audit | 25 |
+| Hub links manually opened but automation-limited | 5 |
 
 `Verified` means the official primary URL was opened during research and passed
 the final automated source audit. It does not mean that no later amendment,
@@ -39,25 +43,31 @@ judgment, notification, or implementation change exists.
 - Search, filtering, sorting, aggregation, malformed-hash, date-safety, and
   release-gate tests
 - Static build equivalence between source and published datasets
+- Indicator schema, policy relationships, units, ordering, provisional/revised
+  flags, source URLs, and comparability breaks
+- Official Sources Hub schema, controlled topics, duplicate URLs, access modes,
+  last-checked dates, limitations, and committed reachability evidence
 
 Reproducible evidence lives in:
 
 - `research/source-link-audit.json`
+- `research/discovery/audits/002-datasets-link-audit.json`
+- `research/official-sources-link-audit.json`
 - `research/consolidation-report.json`
 - `research/consolidation-decisions.json`
 - `research/packet-*-notes.md`
 
 ## Findings and remediation
 
-### High confidence: all Verified primary sources passed
+### High confidence: all currently Verified primary sources passed
 
-All 42 records labeled `Verified` returned an acceptable official document or
+All 41 records labeled `Verified` returned an acceptable official document or
 instrument page in the final source audit. This removes the highest-risk failure
 mode: presenting an inaccessible source as checked.
 
-### Medium confidence: nine instruments remain deliberately Unverified
+### Medium confidence: ten instruments remain deliberately Unverified
 
-Nine records have inaccessible primary documents or unresolved current status.
+Ten records have inaccessible primary documents or unresolved current status.
 They remain in the directory for research discoverability but use both
 `verification: Unverified` and `status: Unverified`. Their summaries avoid
 claiming current legal effect.
@@ -65,6 +75,7 @@ claiming current legal effect.
 Affected records:
 
 - `personal-data-protection-bill-2023`
+- `sindh-transparency-rti-act-2016`
 - `removal-blocking-online-content-rules-2021`
 - `public-private-right-of-way-policy-directive-2020`
 - `removal-blocking-online-content-rules-2020`
@@ -84,6 +95,18 @@ Version 1 has no automated ingestion or legal-change monitor. `last_verified`
 captures the review date, and the visible interface calls the data a curated
 snapshot. A future refresh should rerun source auditing and recheck status
 against official catalogs before publication.
+
+### Official Sources Hub: reachable does not mean comparable
+
+The Hub contains 30 curated official resources checked on 26 July 2026. Twenty-five
+returned acceptable content to the automated audit. Five opened during web
+review but returned HTTP 403 or 404 to the automated checker; those cards are
+visibly marked `Limited` and explain the automated-check limitation.
+
+The Hub is not a completeness claim. Each card records what the source covers,
+its Pakistan relevance, stated cadence, latest period, access mode, and a
+limitation. Links do not become dashboard metrics until their measures,
+reference periods, units, revisions, and methodology are separately reviewed.
 
 ## Intended use
 

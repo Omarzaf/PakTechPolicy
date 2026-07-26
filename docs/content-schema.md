@@ -67,6 +67,8 @@ values without implying precision that the source does not establish.
 - Keep summaries descriptive and avoid legal conclusions.
 - Do not infer current legal effect from an old source. Use `Unverified` where
   current status cannot be established.
+- `verification_note` may record a current source or status problem when the
+  public explanation is necessary; it must be non-empty text when present.
 - Never invent a missing URL, provision, date, relationship, or status.
 
 ## Policy indicator contract
@@ -88,3 +90,18 @@ an `indicators` array. Each indicator:
 The release contract rejects unknown policy ids, unsafe source URLs, duplicate
 or unsorted periods, unsupported units, and nonnumeric values. The UI always
 labels these measurements as contextual evidence rather than causal effects.
+The confidence rubric and comparison rules are documented in
+`docs/indicator-methodology.md`.
+
+## Official source directory
+
+The dedicated Official Sources Hub reads `data/official-sources.json`. Each
+record identifies the exact official publisher, Pakistan or international
+scope, resource type, controlled topics, Pakistan coverage, stated cadence,
+latest period, access modes, direct HTTPS URL, last-checked date, access status,
+and a public limitation.
+
+The full contract is documented in `docs/official-sources-schema.md`. Release
+validation also requires matching evidence in
+`research/official-sources-link-audit.json`; an automated-check limitation is
+published as `Limited`, never silently treated as reachable.

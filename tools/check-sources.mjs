@@ -32,6 +32,11 @@ const check = (policy) =>
       "/dev/null",
       "--max-time",
       "20",
+      "--retry",
+      "2",
+      "--retry-delay",
+      "2",
+      "--retry-all-errors",
       "-w",
       "%{http_code}\t%{content_type}\t%{url_effective}\t%{size_download}",
       policy.primary_source_url,
@@ -78,7 +83,10 @@ const check = (policy) =>
   });
 
 const results = [];
-const concurrency = 8;
+// Public-sector hosts often throttle or time out under burst traffic. Keep the
+// audit deliberately gentle so a transient 5xx response is less likely to be
+// mistaken for a broken official source.
+const concurrency = 3;
 for (let index = 0; index < policies.length; index += concurrency) {
   results.push(...(await Promise.all(policies.slice(index, index + concurrency).map(check))));
 }

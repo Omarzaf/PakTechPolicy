@@ -3,10 +3,12 @@
 A public, source-first directory of Pakistan technology policy. Version 1 is a
 static dashboard with client-side search, faceted filters, a timeline, and
 policy detail views. Accepted official datasets add an “On the ground” layer
-without presenting correlation as proof that a policy caused an outcome.
+without presenting correlation as proof that a policy caused an outcome. A
+second-page Official Sources Hub consolidates reviewed Pakistani and
+international institutional resources for technology governance and metrics.
 
-The 2026-07-25 snapshot contains 51 instruments across 12 domains. Forty-two
-records link to official sources that passed the final source audit; nine are
+The 2026-07-26 release contains 51 instruments across 12 domains. Forty-one
+records link to official sources that passed the final source audit; ten are
 visibly marked `Unverified`.
 
 ## Editorial contract
@@ -21,12 +23,17 @@ visibly marked `Unverified`.
 ```bash
 pnpm build
 pnpm test
+pnpm verify
+pnpm check:official-sources
 pnpm dev
 ```
 
 The build is dependency-free and writes the public site to `dist/`.
 
 Local preview: `http://127.0.0.1:4173/`
+
+Public deployment uses the verified `dist/` artifact through GitHub Pages. See
+`docs/deployment.md`; source, research, and agent files are never deployed.
 
 ## Discovery loop
 
@@ -47,7 +54,10 @@ loop avoids repeating itself.
 
 - `data/policies.json` — reviewed policy source of truth
 - `data/policy-indicators.json` — accepted quantitative series and provenance
+- `data/official-sources.json` — reviewed Official Sources Hub directory
 - `docs/content-schema.md` — frozen v1 data contract and taxonomy
+- `docs/indicator-methodology.md` — confidence and comparability rubric
+- `docs/official-sources-schema.md` — Official Sources Hub data contract
 - `docs/data-quality.md` — snapshot quality, caveats, and verification evidence
 - `research/` — packet outputs and sourcing notes
 - `research/discovery/` — the ongoing discovery loop: frontier, state, backlog

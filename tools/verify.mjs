@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { resolve, sep } from "node:path";
 import { DOMAIN_TAXONOMY } from "../src/policy-engine.js";
 import { collectIndicatorDatasetFailures } from "./indicator-contract.mjs";
+import { collectOfficialSourceFailures } from "./official-source-contract.mjs";
 import { assertV1RecordCount } from "./release-contract.mjs";
 
 const root = resolve(import.meta.dirname, "..");
@@ -60,6 +61,7 @@ const allowedPrecision = new Set(["day", "month", "year"]);
 const ids = new Set();
 const failures = [];
 let indicatorCount = 0;
+let officialSourceCount = 0;
 const isIsoDate = (value) => {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value ?? ""))) return false;
   const date = new Date(`${value}T00:00:00Z`);
@@ -157,6 +159,12 @@ for (const [index, policy] of policies.entries()) {
   if (policy.controversy !== null && typeof policy.controversy !== "string") {
     failures.push(`${label}: controversy must be null or a string`);
   }
+  if (
+    "verification_note" in policy &&
+    (typeof policy.verification_note !== "string" || !policy.verification_note.trim())
+  ) {
+    failures.push(`${label}: verification_note must be non-empty text when present`);
+  }
   if (!String(policy.title ?? "").trim()) failures.push(`${label}: title is empty`);
   if (!String(policy.short_name ?? "").trim()) failures.push(`${label}: short_name is empty`);
   if (!String(policy.issuing_body ?? "").trim()) {
@@ -231,8 +239,58 @@ if (releaseMode) {
         new Set(policies.map((policy) => policy.id)),
       ),
     );
+    const indicatorAudit = JSON.parse(
+      await readFile(
+        resolve(root, "research", "discovery", "audits", "002-datasets-link-audit.json"),
+        "utf8",
+      ),
+    );
+    const indicatorEvidenceByUrl = new Map(
+      (indicatorAudit.results ?? []).map((result) => [result.url, result]),
+    );
+    for (const indicator of indicatorData.indicators ?? []) {
+      for (const source of indicator.sources ?? []) {
+        const evidence = indicatorEvidenceByUrl.get(source.url);
+        if (!evidence) {
+          failures.push(`${indicator.id}: no reachability evidence for ${source.url}`);
+        } else if (!evidence.reachable) {
+          failures.push(
+            `${indicator.id}: indicator source failed the audit (HTTP ${evidence.http_code})`,
+          );
+        }
+      }
+    }
   } catch (error) {
     failures.push(`indicator dataset could not be read: ${error.message}`);
+  }
+
+  try {
+    const officialSources = JSON.parse(
+      await readFile(resolve(root, "data", "official-sources.json"), "utf8"),
+    );
+    officialSourceCount = officialSources.sources?.length ?? 0;
+    failures.push(...collectOfficialSourceFailures(officialSources));
+
+    const sourceAudit = JSON.parse(
+      await readFile(resolve(root, "research", "official-sources-link-audit.json"), "utf8"),
+    );
+    const evidenceById = new Map(
+      (sourceAudit.results ?? []).map((result) => [result.id, result]),
+    );
+    for (const source of officialSources.sources ?? []) {
+      const evidence = evidenceById.get(source.id);
+      if (!evidence) {
+        failures.push(`${source.id}: no link-audit evidence for official source`);
+      } else if (evidence.url !== source.url) {
+        failures.push(`${source.id}: official-source audit URL is stale`);
+      } else if (source.access_status === "Reachable" && !evidence.reachable) {
+        failures.push(
+          `${source.id}: published Reachable source failed the audit (HTTP ${evidence.http_code})`,
+        );
+      }
+    }
+  } catch (error) {
+    failures.push(`official source release evidence unavailable: ${error.message}`);
   }
 }
 
@@ -243,6 +301,10 @@ if (failures.length) {
   console.log(
     `VERIFY_DATA=PASS records=${policies.length} verified=${policies.filter(
       (policy) => policy.verification === "Verified",
-    ).length}${releaseMode ? ` indicators=${indicatorCount}` : ""}`,
+    ).length}${
+      releaseMode
+        ? ` indicators=${indicatorCount} official_sources=${officialSourceCount}`
+        : ""
+    }`,
   );
 }

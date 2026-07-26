@@ -71,8 +71,12 @@ export function getSparklinePoints(observations, options = {}) {
 
   if (!values.length) return [];
 
-  const min = Math.min(...values);
-  const max = Math.max(...values);
+  const requestedMin = Number(options.minValue);
+  const requestedMax = Number(options.maxValue);
+  const observedMin = Math.min(...values);
+  const observedMax = Math.max(...values);
+  const min = Number.isFinite(requestedMin) ? Math.min(requestedMin, observedMin) : observedMin;
+  const max = Number.isFinite(requestedMax) ? Math.max(requestedMax, observedMax) : observedMax;
   const xRange = Math.max(width - padding * 2, 0);
   const yRange = Math.max(height - padding * 2, 0);
 

@@ -1582,7 +1582,7 @@
     ],
     "type": "Act",
     "issuing_body": "Provincial Assembly of Sindh",
-    "status": "In force",
+    "status": "Unverified",
     "date_enacted": "2017-04-12",
     "last_amended": null,
     "summary": "Sindh's provincial access-to-information statute, enacted as Sindh Act No. XV of 2017, providing a right to information held by public authorities and creating an information commission and request system.",
@@ -1612,7 +1612,8 @@
     ],
     "controversy": "The Act's title uses 2016, while the official Sindh Code identifies it as Sindh Act No. XV of 2017 and publishes it under 12 April 2017; this record uses the official publication date.",
     "last_verified": "2026-07-25",
-    "verification": "Verified",
+    "verification": "Unverified",
+    "verification_note": "The official Sindh Code catalogue and PDF were located, but both official Sindh government document endpoints failed direct retrieval during the 26 July 2026 release audit. Current legal status was therefore not re-confirmed for this release.",
     "date_precision": "day",
     "last_amended_precision": null
   },
