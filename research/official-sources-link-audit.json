@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-07-26T16:58:21.816Z",
+  "checked_at": "2026-07-26T18:55:59.194Z",
   "input": "data/official-sources.json",
   "record_count": 30,
   "reachable_count": 25,
@@ -14,7 +14,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 446653,
       "reachable": true,
-      "elapsed_ms": 2890,
+      "elapsed_ms": 2738,
       "exit_code": 0,
       "error": null
     },
@@ -28,7 +28,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 159761,
       "reachable": true,
-      "elapsed_ms": 1788,
+      "elapsed_ms": 1901,
       "exit_code": 0,
       "error": null
     },
@@ -42,7 +42,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 162253,
       "reachable": true,
-      "elapsed_ms": 1558,
+      "elapsed_ms": 1764,
       "exit_code": 0,
       "error": null
     },
@@ -56,7 +56,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 132103,
       "reachable": true,
-      "elapsed_ms": 1662,
+      "elapsed_ms": 1927,
       "exit_code": 0,
       "error": null
     },
@@ -70,7 +70,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 127074,
       "reachable": true,
-      "elapsed_ms": 1699,
+      "elapsed_ms": 1747,
       "exit_code": 0,
       "error": null
     },
@@ -84,7 +84,7 @@
       "content_type": "text/html; charset=utf-8",
       "size_bytes": 42785,
       "reachable": true,
-      "elapsed_ms": 999,
+      "elapsed_ms": 1133,
       "exit_code": 0,
       "error": null
     },
@@ -98,7 +98,7 @@
       "content_type": "text/html; charset=utf-8",
       "size_bytes": 32724,
       "reachable": true,
-      "elapsed_ms": 1025,
+      "elapsed_ms": 1071,
       "exit_code": 0,
       "error": null
     },
@@ -112,7 +112,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 36574,
       "reachable": true,
-      "elapsed_ms": 1212,
+      "elapsed_ms": 1469,
       "exit_code": 0,
       "error": null
     },
@@ -126,7 +126,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 655724,
       "reachable": true,
-      "elapsed_ms": 5330,
+      "elapsed_ms": 3164,
       "exit_code": 0,
       "error": null
     },
@@ -140,7 +140,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 461128,
       "reachable": true,
-      "elapsed_ms": 2525,
+      "elapsed_ms": 2928,
       "exit_code": 0,
       "error": null
     },
@@ -154,7 +154,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 87040,
       "reachable": true,
-      "elapsed_ms": 2121,
+      "elapsed_ms": 1970,
       "exit_code": 0,
       "error": null
     },
@@ -168,7 +168,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 154007,
       "reachable": true,
-      "elapsed_ms": 2649,
+      "elapsed_ms": 2723,
       "exit_code": 0,
       "error": null
     },
@@ -182,7 +182,7 @@
       "content_type": "text/html",
       "size_bytes": 1165,
       "reachable": false,
-      "elapsed_ms": 667,
+      "elapsed_ms": 2010,
       "exit_code": 0,
       "error": null
     },
@@ -196,7 +196,7 @@
       "content_type": "text/html",
       "size_bytes": 49519,
       "reachable": true,
-      "elapsed_ms": 1516,
+      "elapsed_ms": 1645,
       "exit_code": 0,
       "error": null
     },
@@ -210,7 +210,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 41720,
       "reachable": true,
-      "elapsed_ms": 1166,
+      "elapsed_ms": 1302,
       "exit_code": 0,
       "error": null
     },
@@ -224,7 +224,7 @@
       "content_type": "text/html",
       "size_bytes": 919,
       "reachable": false,
-      "elapsed_ms": 102,
+      "elapsed_ms": 228,
       "exit_code": 0,
       "error": null
     },
@@ -238,7 +238,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 39442,
       "reachable": true,
-      "elapsed_ms": 657,
+      "elapsed_ms": 1228,
       "exit_code": 0,
       "error": null
     },
@@ -250,11 +250,11 @@
       "final_url": "https://www.itu.int/dms_pub/itu-d/opb/hdb/D-HDB-GCI.01-2024-PDF-E.pdf",
       "http_code": 200,
       "content_type": "application/pdf",
-      "size_bytes": 18165812,
+      "size_bytes": 11632045,
       "reachable": true,
-      "elapsed_ms": 25031,
+      "elapsed_ms": 25077,
       "exit_code": 28,
-      "error": "curl: (28) Operation timed out after 25007 milliseconds with 18165812 out of 18824175 bytes received"
+      "error": "curl: (28) Operation timed out after 25001 milliseconds with 11632045 out of 18824175 bytes received"
     },
     {
       "id": "itu-ict-prices",
@@ -266,7 +266,7 @@
       "content_type": "text/html; charset=utf-8",
       "size_bytes": 88157,
       "reachable": true,
-      "elapsed_ms": 889,
+      "elapsed_ms": 2048,
       "exit_code": 0,
       "error": null
     },
@@ -280,7 +280,7 @@
       "content_type": "application/pdf",
       "size_bytes": 2569940,
       "reachable": true,
-      "elapsed_ms": 4620,
+      "elapsed_ms": 5577,
       "exit_code": 0,
       "error": null
     },
@@ -294,7 +294,7 @@
       "content_type": "text/html;charset=utf-8",
       "size_bytes": 84070,
       "reachable": true,
-      "elapsed_ms": 185,
+      "elapsed_ms": 474,
       "exit_code": 0,
       "error": null
     },
@@ -308,7 +308,7 @@
       "content_type": "text/html;charset=utf-8",
       "size_bytes": 42089,
       "reachable": true,
-      "elapsed_ms": 153,
+      "elapsed_ms": 460,
       "exit_code": 0,
       "error": null
     },
@@ -322,7 +322,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5472,
       "reachable": false,
-      "elapsed_ms": 136,
+      "elapsed_ms": 457,
       "exit_code": 0,
       "error": null
     },
@@ -336,7 +336,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 111489,
       "reachable": true,
-      "elapsed_ms": 719,
+      "elapsed_ms": 533,
       "exit_code": 0,
       "error": null
     },
@@ -350,7 +350,7 @@
       "content_type": "text/html",
       "size_bytes": 182828,
       "reachable": true,
-      "elapsed_ms": 604,
+      "elapsed_ms": 696,
       "exit_code": 0,
       "error": null
     },
@@ -364,7 +364,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5719,
       "reachable": false,
-      "elapsed_ms": 108,
+      "elapsed_ms": 180,
       "exit_code": 0,
       "error": null
     },
@@ -378,7 +378,7 @@
       "content_type": "text/html",
       "size_bytes": 3019,
       "reachable": true,
-      "elapsed_ms": 194,
+      "elapsed_ms": 200,
       "exit_code": 0,
       "error": null
     },
@@ -392,7 +392,7 @@
       "content_type": "text/html; charset=utf-8",
       "size_bytes": 22619,
       "reachable": true,
-      "elapsed_ms": 604,
+      "elapsed_ms": 656,
       "exit_code": 0,
       "error": null
     },
@@ -406,7 +406,7 @@
       "content_type": "text/html; charset=utf-8",
       "size_bytes": 37444,
       "reachable": true,
-      "elapsed_ms": 155,
+      "elapsed_ms": 359,
       "exit_code": 0,
       "error": null
     },
@@ -420,7 +420,7 @@
       "content_type": "text/html",
       "size_bytes": 407,
       "reachable": false,
-      "elapsed_ms": 168,
+      "elapsed_ms": 255,
       "exit_code": 0,
       "error": null
     }
