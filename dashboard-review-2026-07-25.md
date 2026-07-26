@@ -14,8 +14,9 @@ Resolved since the review (committed on `feat/pak-tech-policy-v1`):
 - **#3 timeline sort bug** — FIXED (`de1345b`). Timeline forces chronological order; title sort resets on entering the view. Verified: broken year headers 10 → 0.
 - **#6 source-audit not enforced at release** — FIXED (`70d829b`). `verify --release` now cross-checks the committed `source-link-audit.json` **offline**: a `Verified` record cannot ship unless matching, reachable evidence exists for its current URL. Proven to fail a stale URL. Docs updated to describe the two-tier model.
 - **#2 validator asymmetry** — FIXED (`70d829b`). Month-precision `last_amended` now must use day `01`.
+- **#5 no verification filter** — FIXED (`926553b`). Added a Verification facet (Source checked / Needs review) with URL sync, active-filter chip, and clear-all. Verified in-browser: 42 verified / 9 unverified / 51 total; deep-link `?verification=` restores correctly.
 
-Still open: **#4** (no-JS degradation), **#1** (status/verification tangle), **#5** (verification filter), plus the nits. #1 and #4 are the invasive ones — get an explicit go-ahead before starting them. See "Suggested next-agent order of work" at the bottom.
+Still open: **#4** (no-JS degradation), **#1** (status/verification tangle), plus the nits and **#7** (not deployed). #1 and #4 are the invasive ones — get an explicit go-ahead before starting them. See "Suggested next-agent order of work" at the bottom.
 
 ---
 
