@@ -7,9 +7,79 @@
       name="description"
       content="A source-first directory and timeline of technology policy in Pakistan."
     />
+    <meta name="author" content="Muhammad Umar Zafar" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#f4f1e8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Pakistan Technology Policy Index" />
+    <meta property="og:title" content="Pakistan Technology Policy Index" />
+    <meta
+      property="og:description"
+      content="Explore a source-first map of the laws, bills, regulations, and public policies shaping Pakistan’s digital life."
+    />
+    <meta property="og:url" content="https://omarzaf.github.io/PakTechPolicy/" />
+    <meta
+      property="og:image"
+      content="https://omarzaf.github.io/PakTechPolicy/assets/social-card.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Pakistan Technology Policy Index in a green and pastel editorial layout"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pakistan Technology Policy Index" />
+    <meta
+      name="twitter:description"
+      content="A source-first map of Pakistan’s technology laws, policies, and evidence."
+    />
+    <meta
+      name="twitter:image"
+      content="https://omarzaf.github.io/PakTechPolicy/assets/social-card.png"
+    />
     <title>Pakistan Technology Policy Index</title>
+    <link rel="canonical" href="https://omarzaf.github.io/PakTechPolicy/" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Pakistan Technology Policy Index",
+            "url": "https://omarzaf.github.io/PakTechPolicy/",
+            "description": "A source-first directory and timeline of technology policy in Pakistan.",
+            "creator": {
+              "@type": "Person",
+              "name": "Muhammad Umar Zafar"
+            }
+          },
+          {
+            "@type": "Dataset",
+            "name": "Pakistan Technology Policy Index",
+            "description": "Structured records of Pakistan technology policy instruments with official-source verification notes.",
+            "url": "https://omarzaf.github.io/PakTechPolicy/data/policies.json",
+            "creator": {
+              "@type": "Person",
+              "name": "Muhammad Umar Zafar"
+            },
+            "isAccessibleForFree": true,
+            "keywords": [
+              "Pakistan",
+              "technology policy",
+              "digital governance",
+              "law",
+              "public policy"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#directory-title">Skip to policy directory</a>
@@ -66,9 +136,27 @@
           </form>
           <div class="hero-links" aria-label="Popular topics">
             <span>Start with</span>
-            <button type="button" data-quick-domain="Cybercrime &amp; online speech">Online speech</button>
-            <button type="button" data-quick-domain="Data protection &amp; privacy">Privacy</button>
-            <button type="button" data-quick-domain="AI &amp; emerging tech">AI policy</button>
+            <button
+              type="button"
+              data-quick-domain="Cybercrime &amp; online speech"
+              aria-pressed="false"
+            >
+              Online speech
+            </button>
+            <button
+              type="button"
+              data-quick-domain="Data protection &amp; privacy"
+              aria-pressed="false"
+            >
+              Privacy
+            </button>
+            <button
+              type="button"
+              data-quick-domain="AI &amp; emerging tech"
+              aria-pressed="false"
+            >
+              AI policy
+            </button>
           </div>
         </div>
 
@@ -330,6 +418,71 @@
           <a class="method-link" href="./methodology.html">Read the complete methodology →</a>
         </div>
       </section>
+
+      <section class="public-trust section-shell" aria-labelledby="public-trust-title">
+        <div class="trust-heading">
+          <div>
+            <p class="section-kicker">Public trust</p>
+            <h2 id="public-trust-title">Open methods. Visible limits. Correctable records.</h2>
+          </div>
+          <p>
+            This independent, open-source research project is maintained by
+            Muhammad Umar Zafar. Institutions named in the index are sources,
+            not sponsors, and do not endorse this project.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article>
+            <span>01</span>
+            <h3>Editorial independence</h3>
+            <p>
+              Records are selected and summarized for public-interest research.
+              No commissioned or sponsored relationship is represented by this release.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Dated, not continuous</h3>
+            <p>
+              Evidence is reviewed in release snapshots. Dates and unresolved
+              status notes remain visible because law and source availability can change.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Privacy by design</h3>
+            <p>
+              This static site uses no accounts, advertising, analytics, or
+              tracking cookies. External sites have their own privacy practices.
+            </p>
+          </article>
+          <article class="trust-feedback">
+            <span>04</span>
+            <h3>Help improve the index</h3>
+            <p>
+              Corrections and product feedback are reviewed publicly before any
+              change is made. GitHub requires an account; submissions are public,
+              so do not include sensitive information.
+            </p>
+            <div class="trust-actions">
+              <a
+                href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=data-correction.yml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Suggest a correction<span class="sr-only"> (opens in a new tab)</span> ↗
+              </a>
+              <a
+                href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=product-feedback.yml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Leave product feedback<span class="sr-only"> (opens in a new tab)</span> ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -345,17 +498,27 @@
           <small>Pakistan · Technology</small>
         </span>
       </div>
-      <p>An independent public-interest research index. No legal advice.</p>
+      <p>
+        Maintained by Muhammad Umar Zafar · Independent public-interest research ·
+        No legal advice
+      </p>
       <div class="footer-links">
         <a href="./sources.html">Official sources</a>
         <a href="./data/policies.json">Policy data</a>
         <a href="./methodology.html">Methods &amp; data quality</a>
         <a
-          href="https://github.com/Omarzaf/PakTechPolicy/issues"
+          href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=data-correction.yml"
           target="_blank"
           rel="noreferrer"
         >
-          Report an issue<span class="sr-only"> (opens in a new tab)</span>
+          Suggest a correction<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          href="https://github.com/Omarzaf/PakTechPolicy/issues/new?template=product-feedback.yml"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Leave feedback<span class="sr-only"> (opens in a new tab)</span>
         </a>
         <a href="https://github.com/Omarzaf/PakTechPolicy" target="_blank" rel="noreferrer">
           GitHub<span class="sr-only"> (opens in a new tab)</span>

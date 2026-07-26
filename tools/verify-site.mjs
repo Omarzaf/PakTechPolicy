@@ -1,5 +1,6 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { SOURCE_BRANDS } from "../src/source-brands.js";
 
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
@@ -7,17 +8,40 @@ const requiredFiles = [
   "index.html",
   "sources.html",
   "methodology.html",
+  "404.html",
+  "robots.txt",
+  "sitemap.xml",
+  "site.webmanifest",
   "styles.css",
   "app.js",
   "sources.js",
+  "source-brands.js",
   "source-engine.js",
   "policy-engine.js",
   "ui-utils.js",
+  "assets/favicon.svg",
+  "assets/social-card.png",
+  "assets/social-card.svg",
   "data/policies.json",
   "data/policy-indicators.json",
   "data/official-sources.json",
+  ...new Set(
+    Object.values(SOURCE_BRANDS).map(({ asset }) => asset.replace(/^\.\//, "")),
+  ),
 ];
 const failures = [];
+const tagAttribute = (tag, name) =>
+  tag.match(new RegExp(`\\b${name}\\s*=\\s*["']([^"']+)["']`, "i"))?.[1] ?? "";
+const hasExternalExecutableAsset = (html) =>
+  [...html.matchAll(/<(?:script|link)\b[^>]*>/gi)].some(([tag]) => {
+    const tagName = tag.match(/^<(\w+)/i)?.[1]?.toLowerCase();
+    if (tagName === "script") return /^https?:/i.test(tagAttribute(tag, "src"));
+    const rel = tagAttribute(tag, "rel")
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(Boolean);
+    return rel.includes("stylesheet") && /^https?:/i.test(tagAttribute(tag, "href"));
+  });
 
 for (const file of requiredFiles) {
   try {
@@ -97,13 +121,13 @@ if (!failures.length) {
   ) {
     failures.push("build-time content was not fully rendered");
   }
-  if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(html)) {
+  if (hasExternalExecutableAsset(html)) {
     failures.push("index.html contains an external script or stylesheet");
   }
-  if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(sourcesHtml)) {
+  if (hasExternalExecutableAsset(sourcesHtml)) {
     failures.push("sources.html contains an external script or stylesheet");
   }
-  if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(methodologyHtml)) {
+  if (hasExternalExecutableAsset(methodologyHtml)) {
     failures.push("methodology.html contains an external script or stylesheet");
   }
   if (/url\(\s*["']?https?:/i.test(css)) {
@@ -141,6 +165,14 @@ try {
     data,
     indicators,
     officialSources,
+    robots,
+    sitemap,
+    manifest,
+    favicon,
+    socialCard,
+    projectHome,
+    projectStyles,
+    brandedNotFound,
     privateFile,
     privateDocs,
     privateResearch,
@@ -152,7 +184,15 @@ try {
     fetch(`${baseUrl}/data/policies.json`),
     fetch(`${baseUrl}/data/policy-indicators.json`),
     fetch(`${baseUrl}/data/official-sources.json`),
-    fetch(`${baseUrl}/AGENTS.md`),
+    fetch(`${baseUrl}/robots.txt`),
+    fetch(`${baseUrl}/sitemap.xml`),
+    fetch(`${baseUrl}/site.webmanifest`),
+    fetch(`${baseUrl}/assets/favicon.svg`),
+    fetch(`${baseUrl}/assets/social-card.png`),
+    fetch(`${baseUrl}/PakTechPolicy/`),
+    fetch(`${baseUrl}/PakTechPolicy/styles.css`),
+    fetch(`${baseUrl}/PakTechPolicy/not/a-real-route`),
+    fetch(`${baseUrl}/PakTechPolicy/AGENTS.md`),
     fetch(`${baseUrl}/docs/data-quality.md`),
     fetch(`${baseUrl}/research/source-link-audit.json`),
   ]);
@@ -165,6 +205,26 @@ try {
   if (!indicators.ok) failures.push(`preview indicators returned HTTP ${indicators.status}`);
   if (!officialSources.ok) {
     failures.push(`preview official sources returned HTTP ${officialSources.status}`);
+  }
+  if (!robots.ok) failures.push(`preview robots.txt returned HTTP ${robots.status}`);
+  if (!sitemap.ok) failures.push(`preview sitemap.xml returned HTTP ${sitemap.status}`);
+  if (!manifest.ok) failures.push(`preview manifest returned HTTP ${manifest.status}`);
+  if (!favicon.ok) failures.push(`preview favicon returned HTTP ${favicon.status}`);
+  if (!socialCard.ok) {
+    failures.push(`preview social card returned HTTP ${socialCard.status}`);
+  }
+  if (!projectHome.ok) {
+    failures.push(`preview project-path home returned HTTP ${projectHome.status}`);
+  }
+  if (!projectStyles.ok) {
+    failures.push(`preview project-path stylesheet returned HTTP ${projectStyles.status}`);
+  }
+  if (brandedNotFound.status !== 404) {
+    failures.push(
+      `preview missing-route check expected HTTP 404, got ${brandedNotFound.status}`,
+    );
+  } else if (!(await brandedNotFound.text()).includes('id="not-found-title"')) {
+    failures.push("preview missing-route response did not use the branded 404 page");
   }
   if (privateFile.status !== 404) {
     failures.push(`preview hygiene check expected /AGENTS.md 404, got ${privateFile.status}`);

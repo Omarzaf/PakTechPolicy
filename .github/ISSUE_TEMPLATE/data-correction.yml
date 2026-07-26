@@ -1,0 +1,80 @@
+name: Data correction
+description: Report an inaccurate, outdated, missing, or unclear policy, indicator, or source record.
+title: "[Data correction]: "
+labels:
+  - data-correction
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for improving the public record. GitHub issues are public and require an account. Do not include sensitive, private, or personally identifying information. A maintainer will verify evidence before any change is accepted.
+
+  - type: input
+    id: affected-record
+    attributes:
+      label: Affected page or record
+      description: Provide the page URL and, when available, the stable policy, indicator, or source ID.
+      placeholder: "https://omarzaf.github.io/PakTechPolicy/… — record-id"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: Feedback type
+      options:
+        - Policy fact or legal status
+        - Policy source or link
+        - Quantitative indicator
+        - Official Sources Hub entry
+        - Methodology or limitation
+        - Accessibility or presentation
+        - Missing record
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: What did you observe?
+      description: Quote or summarize the current claim and explain why it may be inaccurate, stale, or unclear.
+      placeholder: "The index currently says…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: Proposed improvement
+      description: State the exact correction or clarification you recommend. Preserve uncertainty when the evidence is incomplete.
+      placeholder: "Change the field or explanation to…"
+    validations:
+      required: true
+
+  - type: input
+    id: evidence-url
+    attributes:
+      label: Official evidence URL
+      description: Link to the strongest official primary source available. Secondary sources may be included as context.
+      placeholder: "https://official-source.example/…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: accessibility-context
+    attributes:
+      label: Accessibility context
+      description: If the issue affects access, describe the device, browser, assistive technology, input method, zoom, or text-size setting used.
+      placeholder: "Optional — for example, keyboard-only in Firefox at 200% zoom."
+
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: Public-submission check
+      options:
+        - label: I understand this report is public and contains no sensitive or personally identifying information.
+          required: true
+        - label: I understand that a reachable source does not by itself prove current legal status.
+          required: true

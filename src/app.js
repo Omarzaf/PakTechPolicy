@@ -69,6 +69,13 @@ const safeUrl = (value) => {
   }
 };
 
+const correctionIssueUrl = (recordType, id) => {
+  const url = new URL("https://github.com/Omarzaf/PakTechPolicy/issues/new");
+  url.searchParams.set("template", "data-correction.yml");
+  url.searchParams.set("title", `[Data correction]: ${recordType} ${id}`);
+  return url.href;
+};
+
 const dateLabel = formatPolicyDate;
 const preferredScrollBehavior = () =>
   window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ? "auto" : "smooth";
@@ -131,7 +138,10 @@ function renderDomainChart() {
   $("#domain-chart").innerHTML = data
     .map(
       ({ domain, count }) => `
-        <button class="domain-row" type="button" data-domain="${escapeHtml(domain)}"
+        <button class="domain-row${state.domain === domain ? " is-selected" : ""}"
+          type="button"
+          data-domain="${escapeHtml(domain)}"
+          aria-pressed="${state.domain === domain}"
           aria-label="Filter by ${escapeHtml(domain)}, ${count} records">
           <span class="domain-name">${escapeHtml(domainLabel(domain))}</span>
           <span class="domain-track" aria-hidden="true">
@@ -151,7 +161,10 @@ function renderYearChart() {
   $("#year-chart").innerHTML = data
     .map(
       ({ year, count }) => `
-        <button class="year-column" type="button" data-year="${year}"
+        <button class="year-column${state.year === year ? " is-selected" : ""}"
+          type="button"
+          data-year="${year}"
+          aria-pressed="${state.year === year}"
           aria-label="Filter by ${year}, ${count} records">
           <span class="year-count">${count}</span>
           <span class="year-bar" style="--bar-size:${Math.max((count / max) * 100, 4)}%"></span>
@@ -186,7 +199,7 @@ function policyCard(policy, index) {
           <div class="domain-pills">${domains}</div>
           <div class="card-badge-group">
             <span class="status-badge mobile-status status-${escapeHtml(
-              policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+              policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
             )}">${escapeHtml(policy.status)}</span>
             ${verificationBadge(policy)}
           </div>
@@ -205,10 +218,20 @@ function policyCard(policy, index) {
             { precision: policy.date_precision },
           )}</time>
         </div>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
       </div>
       <div class="policy-card-side">
         <span class="status-badge desktop-status status-${escapeHtml(
-          policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+          policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
         )}">${escapeHtml(policy.status)}</span>
         <span class="policy-arrow" aria-hidden="true">↗</span>
       </div>
@@ -241,10 +264,20 @@ function timelineCard(policy, index, policies) {
         </h3>
         <div class="timeline-badges">
           <span class="status-badge status-${escapeHtml(
-            policy.status.toLocaleLowerCase().replaceAll(/\s+/g, "-"),
+            policy.status.toLowerCase().replaceAll(/\s+/g, "-"),
           )}">${escapeHtml(policy.status)}</span>
           ${verificationBadge(policy)}
         </div>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
       </div>
     </article>
   `;
@@ -323,6 +356,17 @@ function syncControls() {
     button.classList.toggle("is-active", selected);
     button.setAttribute("aria-pressed", String(selected));
   });
+  $$("[data-domain], [data-quick-domain]").forEach((button) => {
+    const selected =
+      (button.dataset.domain ?? button.dataset.quickDomain) === state.domain;
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
+  $$("[data-year]").forEach((button) => {
+    const selected = button.dataset.year === state.year;
+    button.classList.toggle("is-selected", selected);
+    button.setAttribute("aria-pressed", String(selected));
+  });
 }
 
 function updateState(next, options = {}) {
@@ -377,6 +421,20 @@ function restoreUrlState() {
     ? params.get("sort")
     : "newest";
   state.view = params.get("view") === "timeline" ? "timeline" : "directory";
+}
+
+function hasOption(select, value) {
+  return [...select.options].some((option) => option.value === value);
+}
+
+function sanitizeRestoredState() {
+  if (!hasOption(elements.domain, state.domain)) state.domain = "";
+  if (!hasOption(elements.status, state.status)) state.status = "";
+  if (!hasOption(elements.verification, state.verification)) {
+    state.verification = "";
+  }
+  if (!hasOption(elements.body, state.issuingBody)) state.issuingBody = "";
+  if (!hasOption(elements.year, state.year)) state.year = "";
 }
 
 function sourceHost(url) {
@@ -661,14 +719,26 @@ function openPolicy(id, updateHash = true) {
       <p class="dialog-short-name">${escapeHtml(policy.short_name || policy.type)}</p>
       <h2 id="dialog-title" tabindex="-1">${escapeHtml(policy.title)}</h2>
       <p class="dialog-summary">${escapeHtml(policy.summary)}</p>
-      <a class="primary-source-link" href="${safeUrl(
-        policy.primary_source_url,
-      )}" target="_blank" rel="noreferrer">
-        Open official source
-        <span aria-hidden="true">↗</span>
-        <small>${escapeHtml(sourceHost(policy.primary_source_url))}</small>
-        <span class="sr-only"> (opens in a new tab)</span>
-      </a>
+      <div class="dialog-actions">
+        <a class="primary-source-link" href="${safeUrl(
+          policy.primary_source_url,
+        )}" target="_blank" rel="noreferrer">
+          Open official source
+          <span aria-hidden="true">↗</span>
+          <small>${escapeHtml(sourceHost(policy.primary_source_url))}</small>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a
+          class="record-feedback-link"
+          href="${escapeHtml(correctionIssueUrl("Policy", policy.id))}"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Suggest a correction for ${escapeHtml(policy.title)}"
+        >
+          Suggest correction <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
     </div>
     <div class="dialog-grid">
       <section>
@@ -860,6 +930,7 @@ async function init() {
     }
     restoreUrlState();
     populateFilters();
+    sanitizeRestoredState();
     renderMetrics();
     renderEvidenceOverview();
     renderDomainChart();
@@ -874,7 +945,7 @@ async function init() {
     console.error(error);
     elements.summary.textContent = "The policy dataset could not be loaded.";
     elements.results.innerHTML = `
-      <div class="load-error">
+      <div class="load-error" role="alert">
         <h3>Data unavailable</h3>
         <p>Reload the page or verify that <code>data/policies.json</code> exists.</p>
       </div>
