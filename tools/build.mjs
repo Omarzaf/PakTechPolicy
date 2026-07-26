@@ -44,13 +44,50 @@ const staticSourceList = `<ul>${officialSources.sources
       )}; ${escapeHtml(source.latest_period)}</li>`,
   )
   .join("")}</ul>`;
+const policyVerified = policies.filter(({ verification }) => verification === "Verified").length;
+const policyUnverified = policies.length - policyVerified;
+const officialSourceReachable = officialSources.sources.filter(
+  ({ access_status }) => access_status === "Reachable",
+).length;
+const officialSourceLimited = officialSources.sources.length - officialSourceReachable;
+const snapshotDate = [
+  ...policies.map(({ last_verified }) => last_verified),
+  indicatorData.as_of,
+  officialSources.as_of,
+]
+  .filter(Boolean)
+  .sort()
+  .at(-1);
+const snapshotDateLabel = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC",
+}).format(new Date(`${snapshotDate}T00:00:00Z`));
+const methodologyTokens = {
+  "{{POLICY_TOTAL}}": policies.length,
+  "{{POLICY_VERIFIED}}": policyVerified,
+  "{{POLICY_UNVERIFIED}}": policyUnverified,
+  "{{INDICATOR_TOTAL}}": indicatorData.indicators.length,
+  "{{OFFICIAL_SOURCE_TOTAL}}": officialSources.sources.length,
+  "{{OFFICIAL_SOURCE_REACHABLE}}": officialSourceReachable,
+  "{{OFFICIAL_SOURCE_LIMITED}}": officialSourceLimited,
+  "{{SNAPSHOT_DATE_ISO}}": snapshotDate,
+  "{{SNAPSHOT_DATE_LABEL}}": snapshotDateLabel,
+};
+const renderMethodology = (html) =>
+  Object.entries(methodologyTokens).reduce(
+    (rendered, [token, value]) => rendered.replaceAll(token, String(value)),
+    html,
+  );
 
 await rm(outputDir, { recursive: true, force: true });
 await mkdir(resolve(outputDir, "data"), { recursive: true });
 await cp(sourceDir, outputDir, { recursive: true });
-const [indexHtml, sourcesHtml] = await Promise.all([
+const [indexHtml, sourcesHtml, methodologyHtml] = await Promise.all([
   readFile(resolve(sourceDir, "index.html"), "utf8"),
   readFile(resolve(sourceDir, "sources.html"), "utf8"),
+  readFile(resolve(sourceDir, "methodology.html"), "utf8"),
 ]);
 await Promise.all([
   writeFile(
@@ -61,6 +98,11 @@ await Promise.all([
   writeFile(
     resolve(outputDir, "sources.html"),
     sourcesHtml.replace("<!-- BUILD:STATIC-SOURCE-LIST -->", staticSourceList),
+    "utf8",
+  ),
+  writeFile(
+    resolve(outputDir, "methodology.html"),
+    renderMethodology(methodologyHtml),
     "utf8",
   ),
 ]);

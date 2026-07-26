@@ -43,6 +43,24 @@ jobs:
       - name: Build public site
         run: pnpm build
 
+      - name: Verify served public artifact
+        shell: bash
+        run: |
+          PAKTECH_PORT=4181 pnpm dev > /tmp/paktech-preview.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..20}; do
+            if curl --fail --silent --show-error http://127.0.0.1:4181/ > /dev/null; then
+              break
+            fi
+            if [ "$attempt" -eq 20 ]; then
+              cat /tmp/paktech-preview.log
+              exit 1
+            fi
+            sleep 0.25
+          done
+          PAKTECH_URL=http://127.0.0.1:4181 pnpm verify:site
+
       - name: Configure GitHub Pages
         if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5

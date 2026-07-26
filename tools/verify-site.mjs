@@ -6,6 +6,7 @@ const dist = resolve(root, "dist");
 const requiredFiles = [
   "index.html",
   "sources.html",
+  "methodology.html",
   "styles.css",
   "app.js",
   "sources.js",
@@ -30,6 +31,7 @@ if (!failures.length) {
   const [
     html,
     sourcesHtml,
+    methodologyHtml,
     css,
     app,
     sourcesApp,
@@ -43,6 +45,7 @@ if (!failures.length) {
     await Promise.all([
       readFile(resolve(dist, "index.html"), "utf8"),
       readFile(resolve(dist, "sources.html"), "utf8"),
+      readFile(resolve(dist, "methodology.html"), "utf8"),
       readFile(resolve(dist, "styles.css"), "utf8"),
       readFile(resolve(dist, "app.js"), "utf8"),
       readFile(resolve(dist, "sources.js"), "utf8"),
@@ -74,17 +77,34 @@ if (!failures.length) {
   ]) {
     if (!sourcesHtml.includes(marker)) failures.push(`sources.html missing ${marker}`);
   }
+  for (const marker of [
+    'id="methods-title"',
+    'id="methodology-overview"',
+    'id="verification-rules"',
+    'id="confidence-title"',
+    'id="refresh-title"',
+    'id="downloads-title"',
+    'id="limitations-title"',
+  ]) {
+    if (!methodologyHtml.includes(marker)) {
+      failures.push(`methodology.html missing ${marker}`);
+    }
+  }
   if (
     html.includes("<!-- BUILD:STATIC-POLICY-LIST -->") ||
-    sourcesHtml.includes("<!-- BUILD:STATIC-SOURCE-LIST -->")
+    sourcesHtml.includes("<!-- BUILD:STATIC-SOURCE-LIST -->") ||
+    methodologyHtml.includes("{{")
   ) {
-    failures.push("build-time static fallbacks were not rendered");
+    failures.push("build-time content was not fully rendered");
   }
   if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(html)) {
     failures.push("index.html contains an external script or stylesheet");
   }
   if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(sourcesHtml)) {
     failures.push("sources.html contains an external script or stylesheet");
+  }
+  if (/<(?:script|link)[^>]+(?:src|href)=["']https?:/i.test(methodologyHtml)) {
+    failures.push("methodology.html contains an external script or stylesheet");
   }
   if (/url\(\s*["']?https?:/i.test(css)) {
     failures.push("styles.css contains an external asset");
@@ -114,17 +134,33 @@ if (!failures.length) {
 
 const baseUrl = process.env.PAKTECH_URL ?? "http://127.0.0.1:4173";
 try {
-  const [home, sourcesPage, data, indicators, officialSources, privateFile] =
+  const [
+    home,
+    sourcesPage,
+    methodologyPage,
+    data,
+    indicators,
+    officialSources,
+    privateFile,
+    privateDocs,
+    privateResearch,
+  ] =
     await Promise.all([
     fetch(`${baseUrl}/`),
     fetch(`${baseUrl}/sources.html`),
+    fetch(`${baseUrl}/methodology.html`),
     fetch(`${baseUrl}/data/policies.json`),
     fetch(`${baseUrl}/data/policy-indicators.json`),
     fetch(`${baseUrl}/data/official-sources.json`),
     fetch(`${baseUrl}/AGENTS.md`),
+    fetch(`${baseUrl}/docs/data-quality.md`),
+    fetch(`${baseUrl}/research/source-link-audit.json`),
   ]);
   if (!home.ok) failures.push(`preview home returned HTTP ${home.status}`);
   if (!sourcesPage.ok) failures.push(`preview sources returned HTTP ${sourcesPage.status}`);
+  if (!methodologyPage.ok) {
+    failures.push(`preview methodology returned HTTP ${methodologyPage.status}`);
+  }
   if (!data.ok) failures.push(`preview data returned HTTP ${data.status}`);
   if (!indicators.ok) failures.push(`preview indicators returned HTTP ${indicators.status}`);
   if (!officialSources.ok) {
@@ -132,6 +168,16 @@ try {
   }
   if (privateFile.status !== 404) {
     failures.push(`preview hygiene check expected /AGENTS.md 404, got ${privateFile.status}`);
+  }
+  if (privateDocs.status !== 404) {
+    failures.push(
+      `preview hygiene check expected /docs/data-quality.md 404, got ${privateDocs.status}`,
+    );
+  }
+  if (privateResearch.status !== 404) {
+    failures.push(
+      `preview hygiene check expected /research/source-link-audit.json 404, got ${privateResearch.status}`,
+    );
   }
 } catch (error) {
   failures.push(`preview server unavailable: ${error.message}`);

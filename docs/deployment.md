@@ -1,8 +1,9 @@
 # Public deployment
 
-The public artifact is `dist/`, produced by `pnpm build`. Repository source,
-research files, contributor instructions, and local dependencies must never be
-served.
+The public artifact is `dist/`, produced by `pnpm build`. It contains the policy
+index, Official Sources Hub, public methodology page, and three machine-readable
+datasets. Repository source, research files, contributor instructions, and local
+dependencies must never be served.
 
 GitHub Pages is configured through `.github/workflows/pages.yml`. The workflow:
 
@@ -10,8 +11,9 @@ GitHub Pages is configured through `.github/workflows/pages.yml`. The workflow:
 2. uses Node.js 24 and the pinned pnpm version;
 3. runs tests and offline release verification;
 4. builds `dist/`;
-5. uploads only `dist/`; and
-6. deploys through the protected `github-pages` environment.
+5. serves the built artifact and verifies public routes plus negative privacy checks;
+6. uploads only `dist/`; and
+7. deploys through the protected `github-pages` environment.
 
 Pull requests into the repository's default branch
 `feat/pak-tech-policy-v1` run the test, release-contract, and build steps without

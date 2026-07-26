@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How the Pakistan Technology Policy Index verifies sources, normalizes indicators, publishes limitations, and keeps uncertainty visible."
+    />
+    <meta name="theme-color" content="#f4f1e8" />
+    <title>Methodology &amp; Data Quality · Pakistan Technology Policy Index</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="methodology-page">
+    <a class="skip-link" href="#methodology-overview">Skip to methodology</a>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Pakistan Technology Policy Index home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M8 6.5h16v19H8z" />
+            <path d="M12 11h8M12 16h8M12 21h5" />
+          </svg>
+        </span>
+        <span>
+          <strong>Policy Index</strong>
+          <small>Pakistan · Technology</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="./#landscape">Landscape</a>
+        <a href="./#directory">Directory</a>
+        <a href="./sources.html">Official sources</a>
+        <a href="./methodology.html" aria-current="page">Methodology</a>
+      </nav>
+      <a class="header-cta" href="./sources.html">Source hub</a>
+    </header>
+
+    <main>
+      <section class="methods-hero" aria-labelledby="methods-title">
+        <div>
+          <p class="eyebrow"><span></span>Public method, visible uncertainty</p>
+          <h1 id="methods-title">How this index <em>knows what it knows.</em></h1>
+          <p>
+            The index separates policy records, quantitative indicators, and
+            source discovery. Each layer has its own verification rules so a
+            reachable link is never mistaken for a current law or a comparable metric.
+          </p>
+        </div>
+        <aside>
+          <strong>What “verified” means</strong>
+          <p>
+            The linked official primary source was opened and checked during
+            the stated review. It does not guarantee that no later amendment,
+            judgment, notification, or implementation change exists.
+          </p>
+          <a href="#verification-rules">Read the verification rules ↓</a>
+        </aside>
+      </section>
+
+      <section class="source-metric-band methods-metric-band" aria-label="Release evidence summary">
+        <article>
+          <strong>{{POLICY_TOTAL}}</strong>
+          <span>policy instruments</span>
+        </article>
+        <article>
+          <strong>{{POLICY_VERIFIED}}</strong>
+          <span>official sources checked</span>
+        </article>
+        <article>
+          <strong>{{POLICY_UNVERIFIED}}</strong>
+          <span>records needing review</span>
+        </article>
+        <article>
+          <strong>{{INDICATOR_TOTAL}}</strong>
+          <span>indicator families</span>
+        </article>
+        <p>
+          Release snapshot
+          <time datetime="{{SNAPSHOT_DATE_ISO}}">{{SNAPSHOT_DATE_LABEL}}</time>
+        </p>
+      </section>
+
+      <section
+        class="section-shell methods-section"
+        id="methodology-overview"
+        aria-labelledby="methodology-overview-title"
+        tabindex="-1"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Three evidence layers</p>
+            <h2 id="methodology-overview-title">Different claims need different checks</h2>
+          </div>
+          <p>
+            Keeping the layers separate prevents a strong source in one part of
+            the index from lending false certainty to another.
+          </p>
+        </div>
+        <div class="method-layer-grid">
+          <article class="method-card">
+            <span>01</span>
+            <h3>Policy instruments</h3>
+            <p>
+              Laws, bills, rules, policies, directives, and frameworks are
+              recorded as individual instruments with stable identifiers.
+            </p>
+            <ul>
+              <li>Official primary document preferred</li>
+              <li>Dates preserve known precision</li>
+              <li>Legal status stays conservative</li>
+              <li>Unresolved records remain visibly flagged</li>
+            </ul>
+          </article>
+          <article class="method-card">
+            <span>02</span>
+            <h3>Quantitative indicators</h3>
+            <p>
+              Official observations provide context beside relevant policies,
+              without claiming that a policy caused the measured outcome.
+            </p>
+            <ul>
+              <li>Units and reference periods are explicit</li>
+              <li>Revised and provisional values are retained</li>
+              <li>Definition breaks stop trend comparisons</li>
+              <li>Every series exposes its source locator</li>
+            </ul>
+          </article>
+          <article class="method-card">
+            <span>03</span>
+            <h3>Official Sources Hub</h3>
+            <p>
+              A curated starting point for Pakistani and international official
+              resources relevant to technology governance and metrics.
+            </p>
+            <ul>
+              <li>{{OFFICIAL_SOURCE_TOTAL}} resources across official publishers</li>
+              <li>{{OFFICIAL_SOURCE_REACHABLE}} passed automated reachability checks</li>
+              <li>{{OFFICIAL_SOURCE_LIMITED}} carry visible access limitations</li>
+              <li>Every entry states scope and limitations</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="methods-dark"
+        id="verification-rules"
+        aria-labelledby="verification-rules-title"
+      >
+        <div>
+          <p class="section-kicker">Verification rules</p>
+          <h2 id="verification-rules-title">Certainty is earned one layer at a time.</h2>
+        </div>
+        <div class="method-rule-grid">
+          <article>
+            <strong>Verified policy record</strong>
+            <p>
+              The current record URL matches audited evidence and was opened as an
+              official instrument or official publication during the release review.
+            </p>
+          </article>
+          <article>
+            <strong>Unverified policy record</strong>
+            <p>
+              The primary document is inaccessible, the current legal status is
+              unresolved, or the available official evidence cannot support a
+              more definite claim.
+            </p>
+          </article>
+          <article>
+            <strong>Reachable source-hub link</strong>
+            <p>
+              The resource returned acceptable content to the automated audit.
+              Reachability does not establish completeness, currency, or comparability.
+            </p>
+          </article>
+          <article>
+            <strong>Limited source-hub link</strong>
+            <p>
+              The official resource was identified during review but blocks,
+              redirects, or otherwise limits automated verification. The reason
+              remains visible on its card.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell methods-section" aria-labelledby="confidence-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Indicator confidence</p>
+            <h2 id="confidence-title">Confidence describes the evidence—not importance</h2>
+          </div>
+          <p>
+            A low-confidence series can still matter. The label tells readers
+            how much interpretation was required to normalize it.
+          </p>
+        </div>
+        <div class="method-table-wrap">
+          <table class="method-table">
+            <caption class="sr-only">Indicator confidence levels and evidence standards</caption>
+            <thead>
+              <tr>
+                <th scope="col">Level</th>
+                <th scope="col">Evidence standard</th>
+                <th scope="col">Reader action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="confidence-dot is-high" aria-hidden="true"></span>High</th>
+                <td>Defined official table or dataset with clear units, periods, and revision markers.</td>
+                <td>Check the reference period and any provisional or revised flag.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="confidence-dot is-medium" aria-hidden="true"></span>Medium</th>
+                <td>Official values are available, but field definitions, denominators, or revision practice are incomplete.</td>
+                <td>Read the methodology note before comparing values.</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="confidence-dot is-low" aria-hidden="true"></span>Low</th>
+                <td>The measure is a snapshot, proxy, definition-changing series, or requires material interpretation.</td>
+                <td>Use as context only and keep the published limitation attached.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="method-callout">
+          <strong>Comparison rules</strong>
+          <p>
+            Missing observations are not zero. Publication dates are not
+            reference periods. Accounts, subscriptions, transactions, devices,
+            and people are not interchangeable. Known definition changes are
+            not drawn as continuous trends.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-shell methods-section" aria-labelledby="refresh-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Refreshes &amp; corrections</p>
+            <h2 id="refresh-title">A dated snapshot, not a claim of continuous monitoring</h2>
+          </div>
+          <p>
+            Source availability and legal status can change after publication.
+            The visible dates tell readers when evidence was last checked.
+          </p>
+        </div>
+        <div class="method-process">
+          <ol>
+            <li><span>01</span><div><strong>Re-open official sources</strong><p>Confirm the destination, publisher, document, and access status.</p></div></li>
+            <li><span>02</span><div><strong>Recheck status and definitions</strong><p>Look for amendments, superseding instruments, revisions, and methodological breaks.</p></div></li>
+            <li><span>03</span><div><strong>Run release contracts</strong><p>Validate identifiers, dates, relationships, URLs, units, ordering, and published audit evidence.</p></div></li>
+            <li><span>04</span><div><strong>Publish the new snapshot</strong><p>Update visible dates, preserve uncertainty, and never silently convert missing evidence into certainty.</p></div></li>
+          </ol>
+          <aside>
+            <strong>Corrections are welcome</strong>
+            <p>
+              A useful correction identifies the record, states the proposed
+              change, and cites an official source. The repository provides the
+              public audit trail for review and revision.
+            </p>
+            <a
+              href="https://github.com/Omarzaf/PakTechPolicy/issues"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Review or report an issue<span class="sr-only"> (opens in a new tab)</span> ↗
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="methods-download" aria-labelledby="downloads-title">
+        <div>
+          <p class="section-kicker">Audit the release</p>
+          <h2 id="downloads-title">Download the evidence behind the interface</h2>
+          <p>
+            The public site ships the same machine-readable data used by the
+            interface. Repository documentation records the schemas, release
+            checks, and source-audit evidence.
+          </p>
+        </div>
+        <div class="method-download-grid">
+          <a href="./data/policies.json" download>
+            <strong>Policy records</strong>
+            <span>{{POLICY_TOTAL}} instruments · JSON ↓</span>
+          </a>
+          <a href="./data/policy-indicators.json" download>
+            <strong>Indicator observations</strong>
+            <span>{{INDICATOR_TOTAL}} families · JSON ↓</span>
+          </a>
+          <a href="./data/official-sources.json" download>
+            <strong>Official source directory</strong>
+            <span>{{OFFICIAL_SOURCE_TOTAL}} resources · JSON ↓</span>
+          </a>
+          <a
+            href="https://github.com/Omarzaf/PakTechPolicy/tree/feat/pak-tech-policy-v1/docs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <strong>Technical documentation</strong>
+            <span>Schemas and quality notes<span class="sr-only"> (opens in a new tab)</span> ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-shell methods-section methods-limitations" aria-labelledby="limitations-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Known limitations</p>
+            <h2 id="limitations-title">What this release does not claim</h2>
+          </div>
+        </div>
+        <ul>
+          <li>The index is curated, not exhaustive, and is not legal advice.</li>
+          <li>A verified URL does not prove that an instrument remains legally unchanged.</li>
+          <li>An indicator beside a policy does not establish causation or policy effectiveness.</li>
+          <li>International rankings can embed assumptions that are not specific to Pakistan.</li>
+          <li>Official administrative data may be revised after this snapshot.</li>
+          <li>Automated reachability does not establish methodological suitability.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32">
+            <path d="M8 6.5h16v19H8z" />
+            <path d="M12 11h8M12 16h8M12 21h5" />
+          </svg>
+        </span>
+        <span><strong>Policy Index</strong><small>Pakistan · Technology</small></span>
+      </div>
+      <p>An independent public-interest research index. No legal advice.</p>
+      <div class="footer-links">
+        <a href="./">Policy index</a>
+        <a href="./sources.html">Official sources</a>
+        <a href="./methodology.html" aria-current="page">Methodology</a>
+        <a href="https://github.com/Omarzaf/PakTechPolicy" target="_blank" rel="noreferrer">
+          GitHub<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
