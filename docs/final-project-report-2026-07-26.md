@@ -155,9 +155,9 @@ repository, documentation, and research paths returned `404`.
 - The successful Pages run emitted non-blocking runtime-deprecation annotations
   from GitHub's official Pages actions. Review upstream action versions during
   the next maintenance cycle.
-- The deployed default branch remains named `feat/pak-tech-policy-v1`. Renaming
-  it to `main` is optional repository housekeeping and was deliberately kept
-  outside this release.
+- At the time of this release, the deployed default branch was named
+  `feat/pak-tech-policy-v1`. It was later migrated to `main` at the same commit;
+  the historical branch remains pending separate owner review.
 
 ## Maintenance sequence
 
