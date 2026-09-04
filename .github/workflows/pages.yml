@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
-      - feat/pak-tech-policy-v1
+      - main
   push:
     branches:
-      - feat/pak-tech-policy-v1
+      - main
 
 permissions:
   contents: read

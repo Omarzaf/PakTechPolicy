@@ -15,8 +15,8 @@ GitHub Pages is configured through `.github/workflows/pages.yml`. The workflow:
 6. uploads only `dist/`; and
 7. deploys through the protected `github-pages` environment.
 
-Pull requests into the repository's default branch
-`feat/pak-tech-policy-v1` run the test, release-contract, and build steps without
+Pull requests into the repository's default branch, `main`, run the test,
+release-contract, and build steps without
 receiving Pages permissions or uploading a deployment artifact. The Pages steps
 run only after changes reach the default branch or when a maintainer dispatches
 the workflow manually. GitHub Pages must use **GitHub Actions** as its publishing
