@@ -85,3 +85,18 @@ Method notes:
 - The commerce.gov.pk URLs (rows 6, 7, 13, 14, 22) may still work for a human
   visitor who passes Cloudflare. If an editor confirms that by hand, the
   originals can be restored.
+
+## Gate follow-up: access-protection allowlist
+
+The audit regenerated after this remediation showed three `Verified` records
+outside the 9 October list returning HTTP 403 to curl (also with a browser user
+agent): `sbp-cloud-outsourcing-framework-2023`, `digital-banks-framework-2022`
+(www.sbp.org.pk) and `secp-cloud-adoption-guidelines-2021-draft`
+(www.secp.gov.pk). Each was opened in the built-in browser on 2026-10-10 and
+showed the cited circular or document page. They are recorded in
+`research/access-protection-allowlist.json` with statuses `[403]`, a rationale,
+`confirmed_in_browser: "2026-10-10"` and the exact record ids. The audit marks
+them `reachable: false, access_protected: true`; `verify --release` accepts
+only that allowlisted combination. `www.commerce.gov.pk` is deliberately not
+allowlisted: its Cloudflare human check was not passed, so no document was
+seen there.

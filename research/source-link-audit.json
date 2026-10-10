@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-10T17:09:59.282Z",
+  "checked_at": "2026-10-10T17:13:18.206Z",
   "input": "data/policies.json",
   "record_count": 51,
   "reachable_count": 47,
@@ -13,7 +13,7 @@
       "content_type": "application/pdf",
       "size_bytes": 444962,
       "reachable": true,
-      "elapsed_ms": 1933,
+      "elapsed_ms": 1959,
       "exit_code": 0,
       "error": null
     },
@@ -26,7 +26,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 173390,
       "reachable": true,
-      "elapsed_ms": 2215,
+      "elapsed_ms": 1679,
       "exit_code": 0,
       "error": null
     },
@@ -37,11 +37,11 @@
       "final_url": "https://pkcert.gov.pk/uploads/2026/03/PISF-Merged-Version.pdf",
       "http_code": 200,
       "content_type": "application/pdf",
-      "size_bytes": 2931576,
+      "size_bytes": 4078569,
       "reachable": true,
-      "elapsed_ms": 20047,
-      "exit_code": 28,
-      "error": "curl: (28) Operation timed out after 20005 milliseconds with 2931576 out of 4078569 bytes received"
+      "elapsed_ms": 11987,
+      "exit_code": 0,
+      "error": null
     },
     {
       "id": "national-ai-policy-2025",
@@ -52,7 +52,7 @@
       "content_type": "application/pdf",
       "size_bytes": 437575,
       "reachable": true,
-      "elapsed_ms": 1710,
+      "elapsed_ms": 1914,
       "exit_code": 0,
       "error": null
     },
@@ -65,7 +65,7 @@
       "content_type": "application/pdf",
       "size_bytes": 306517,
       "reachable": true,
-      "elapsed_ms": 1674,
+      "elapsed_ms": 1702,
       "exit_code": 0,
       "error": null
     },
@@ -78,7 +78,7 @@
       "content_type": "application/pdf",
       "size_bytes": 231203,
       "reachable": true,
-      "elapsed_ms": 1675,
+      "elapsed_ms": 1710,
       "exit_code": 0,
       "error": null
     },
@@ -91,7 +91,7 @@
       "content_type": "application/pdf",
       "size_bytes": 722224,
       "reachable": true,
-      "elapsed_ms": 1846,
+      "elapsed_ms": 1915,
       "exit_code": 0,
       "error": null
     },
@@ -104,7 +104,7 @@
       "content_type": "application/pdf",
       "size_bytes": 5646730,
       "reachable": true,
-      "elapsed_ms": 3190,
+      "elapsed_ms": 3060,
       "exit_code": 0,
       "error": null
     },
@@ -117,7 +117,7 @@
       "content_type": "application/pdf",
       "size_bytes": 416038,
       "reachable": true,
-      "elapsed_ms": 1643,
+      "elapsed_ms": 1926,
       "exit_code": 0,
       "error": null
     },
@@ -130,7 +130,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1895223,
       "reachable": true,
-      "elapsed_ms": 2643,
+      "elapsed_ms": 2554,
       "exit_code": 0,
       "error": null
     },
@@ -143,7 +143,7 @@
       "content_type": "application/pdf",
       "size_bytes": 292599,
       "reachable": true,
-      "elapsed_ms": 1633,
+      "elapsed_ms": 1680,
       "exit_code": 0,
       "error": null
     },
@@ -156,7 +156,7 @@
       "content_type": "application/pdf",
       "size_bytes": 2054153,
       "reachable": true,
-      "elapsed_ms": 2567,
+      "elapsed_ms": 8503,
       "exit_code": 0,
       "error": null
     },
@@ -169,7 +169,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1814431,
       "reachable": true,
-      "elapsed_ms": 2710,
+      "elapsed_ms": 3581,
       "exit_code": 0,
       "error": null
     },
@@ -182,7 +182,7 @@
       "content_type": "application/pdf",
       "size_bytes": 660065,
       "reachable": true,
-      "elapsed_ms": 1879,
+      "elapsed_ms": 2288,
       "exit_code": 0,
       "error": null
     },
@@ -195,7 +195,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1326190,
       "reachable": true,
-      "elapsed_ms": 2707,
+      "elapsed_ms": 4364,
       "exit_code": 0,
       "error": null
     },
@@ -208,7 +208,9 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5018,
       "reachable": false,
-      "elapsed_ms": 122,
+      "access_protected": true,
+      "allowlist_rationale": "State Bank of Pakistan web application firewall returns HTTP 403 to curl, including with a browser user agent, while the circular pages open normally in a browser.",
+      "elapsed_ms": 151,
       "exit_code": 0,
       "error": null
     },
@@ -221,7 +223,7 @@
       "content_type": "application/pdf",
       "size_bytes": 3600564,
       "reachable": true,
-      "elapsed_ms": 312,
+      "elapsed_ms": 363,
       "exit_code": 0,
       "error": null
     },
@@ -234,7 +236,7 @@
       "content_type": "application/pdf",
       "size_bytes": 689344,
       "reachable": true,
-      "elapsed_ms": 1698,
+      "elapsed_ms": 1880,
       "exit_code": 0,
       "error": null
     },
@@ -247,7 +249,7 @@
       "content_type": "application/pdf",
       "size_bytes": 439871,
       "reachable": true,
-      "elapsed_ms": 1684,
+      "elapsed_ms": 1635,
       "exit_code": 0,
       "error": null
     },
@@ -260,7 +262,9 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5018,
       "reachable": false,
-      "elapsed_ms": 98,
+      "access_protected": true,
+      "allowlist_rationale": "State Bank of Pakistan web application firewall returns HTTP 403 to curl, including with a browser user agent, while the circular pages open normally in a browser.",
+      "elapsed_ms": 119,
       "exit_code": 0,
       "error": null
     },
@@ -273,7 +277,7 @@
       "content_type": "application/pdf",
       "size_bytes": 636006,
       "reachable": true,
-      "elapsed_ms": 1872,
+      "elapsed_ms": 1948,
       "exit_code": 0,
       "error": null
     },
@@ -286,7 +290,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1880715,
       "reachable": true,
-      "elapsed_ms": 3948,
+      "elapsed_ms": 2429,
       "exit_code": 0,
       "error": null
     },
@@ -299,7 +303,7 @@
       "content_type": "application/pdf",
       "size_bytes": 844286,
       "reachable": true,
-      "elapsed_ms": 1949,
+      "elapsed_ms": 1955,
       "exit_code": 0,
       "error": null
     },
@@ -312,7 +316,7 @@
       "content_type": "application/pdf",
       "size_bytes": 475020,
       "reachable": true,
-      "elapsed_ms": 163,
+      "elapsed_ms": 210,
       "exit_code": 0,
       "error": null
     },
@@ -325,7 +329,7 @@
       "content_type": "application/pdf",
       "size_bytes": 15654286,
       "reachable": true,
-      "elapsed_ms": 5235,
+      "elapsed_ms": 5598,
       "exit_code": 0,
       "error": null
     },
@@ -338,7 +342,9 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 5631,
       "reachable": false,
-      "elapsed_ms": 125,
+      "access_protected": true,
+      "allowlist_rationale": "Securities and Exchange Commission of Pakistan site returns HTTP 403 to curl, including with a browser user agent, while the document page opens normally in a browser.",
+      "elapsed_ms": 137,
       "exit_code": 0,
       "error": null
     },
@@ -351,7 +357,7 @@
       "content_type": "application/pdf",
       "size_bytes": 676061,
       "reachable": true,
-      "elapsed_ms": 2469,
+      "elapsed_ms": 5835,
       "exit_code": 0,
       "error": null
     },
@@ -364,7 +370,7 @@
       "content_type": "text/html; charset=UTF-8",
       "size_bytes": 295710,
       "reachable": true,
-      "elapsed_ms": 1440,
+      "elapsed_ms": 1574,
       "exit_code": 0,
       "error": null
     },
@@ -377,7 +383,7 @@
       "content_type": "application/pdf",
       "size_bytes": 9081624,
       "reachable": true,
-      "elapsed_ms": 4039,
+      "elapsed_ms": 4377,
       "exit_code": 0,
       "error": null
     },
@@ -390,7 +396,7 @@
       "content_type": "application/pdf",
       "size_bytes": 7849494,
       "reachable": true,
-      "elapsed_ms": 3593,
+      "elapsed_ms": 3626,
       "exit_code": 0,
       "error": null
     },
@@ -403,7 +409,7 @@
       "content_type": "application/pdf",
       "size_bytes": 774874,
       "reachable": true,
-      "elapsed_ms": 1875,
+      "elapsed_ms": 2058,
       "exit_code": 0,
       "error": null
     },
@@ -416,7 +422,7 @@
       "content_type": "application/pdf",
       "size_bytes": 439787,
       "reachable": true,
-      "elapsed_ms": 2858,
+      "elapsed_ms": 1783,
       "exit_code": 0,
       "error": null
     },
@@ -429,7 +435,7 @@
       "content_type": "application/pdf",
       "size_bytes": 143218,
       "reachable": true,
-      "elapsed_ms": 2338,
+      "elapsed_ms": 2617,
       "exit_code": 0,
       "error": null
     },
@@ -442,7 +448,7 @@
       "content_type": "application/pdf",
       "size_bytes": 255819,
       "reachable": true,
-      "elapsed_ms": 3388,
+      "elapsed_ms": 1774,
       "exit_code": 0,
       "error": null
     },
@@ -455,7 +461,7 @@
       "content_type": "application/pdf",
       "size_bytes": 768130,
       "reachable": true,
-      "elapsed_ms": 1263,
+      "elapsed_ms": 1052,
       "exit_code": 0,
       "error": null
     },
@@ -468,7 +474,7 @@
       "content_type": "application/pdf",
       "size_bytes": 10489072,
       "reachable": true,
-      "elapsed_ms": 578,
+      "elapsed_ms": 647,
       "exit_code": 0,
       "error": null
     },
@@ -481,7 +487,7 @@
       "content_type": "application/pdf",
       "size_bytes": 599594,
       "reachable": true,
-      "elapsed_ms": 4230,
+      "elapsed_ms": 3498,
       "exit_code": 0,
       "error": null
     },
@@ -494,7 +500,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1157459,
       "reachable": true,
-      "elapsed_ms": 2086,
+      "elapsed_ms": 2114,
       "exit_code": 0,
       "error": null
     },
@@ -507,7 +513,7 @@
       "content_type": "application/pdf",
       "size_bytes": 624284,
       "reachable": true,
-      "elapsed_ms": 4402,
+      "elapsed_ms": 4913,
       "exit_code": 0,
       "error": null
     },
@@ -520,7 +526,7 @@
       "content_type": "application/pdf",
       "size_bytes": 157742,
       "reachable": true,
-      "elapsed_ms": 1566,
+      "elapsed_ms": 1637,
       "exit_code": 0,
       "error": null
     },
@@ -533,7 +539,7 @@
       "content_type": "application/pdf",
       "size_bytes": 388722,
       "reachable": true,
-      "elapsed_ms": 1655,
+      "elapsed_ms": 2348,
       "exit_code": 0,
       "error": null
     },
@@ -546,7 +552,7 @@
       "content_type": "application/pdf",
       "size_bytes": 359576,
       "reachable": true,
-      "elapsed_ms": 2013,
+      "elapsed_ms": 6038,
       "exit_code": 0,
       "error": null
     },
@@ -559,7 +565,7 @@
       "content_type": "application/pdf",
       "size_bytes": 407320,
       "reachable": true,
-      "elapsed_ms": 1306,
+      "elapsed_ms": 1202,
       "exit_code": 0,
       "error": null
     },
@@ -572,9 +578,9 @@
       "content_type": null,
       "size_bytes": 0,
       "reachable": false,
-      "elapsed_ms": 20036,
+      "elapsed_ms": 20034,
       "exit_code": 28,
-      "error": "curl: (28) Connection timed out after 20003 milliseconds"
+      "error": "curl: (28) Connection timed out after 20006 milliseconds"
     },
     {
       "id": "kp-rti-act-2013",
@@ -585,7 +591,7 @@
       "content_type": "application/pdf",
       "size_bytes": 695329,
       "reachable": true,
-      "elapsed_ms": 1933,
+      "elapsed_ms": 2884,
       "exit_code": 0,
       "error": null
     },
@@ -598,7 +604,7 @@
       "content_type": "application/pdf",
       "size_bytes": 299693,
       "reachable": true,
-      "elapsed_ms": 1679,
+      "elapsed_ms": 2890,
       "exit_code": 0,
       "error": null
     },
@@ -611,7 +617,7 @@
       "content_type": "application/pdf",
       "size_bytes": 343872,
       "reachable": true,
-      "elapsed_ms": 1602,
+      "elapsed_ms": 2365,
       "exit_code": 0,
       "error": null
     },
@@ -624,7 +630,7 @@
       "content_type": "application/pdf",
       "size_bytes": 1126635,
       "reachable": true,
-      "elapsed_ms": 2691,
+      "elapsed_ms": 7075,
       "exit_code": 0,
       "error": null
     },
@@ -637,7 +643,7 @@
       "content_type": "application/pdf",
       "size_bytes": 372601,
       "reachable": true,
-      "elapsed_ms": 1872,
+      "elapsed_ms": 1746,
       "exit_code": 0,
       "error": null
     },
@@ -663,7 +669,7 @@
       "content_type": "application/pdf",
       "size_bytes": 723309,
       "reachable": true,
-      "elapsed_ms": 2063,
+      "elapsed_ms": 2033,
       "exit_code": 0,
       "error": null
     }

@@ -1,0 +1,31 @@
+{
+  "description": "Hosts that answer scripted source checks with a bot challenge but serve the cited document to a real browser. A match never marks a URL reachable: tools/check-sources.mjs records reachable: false with access_protected: true, and tools/verify.mjs --release accepts a Verified record only if its host, HTTP status and record id are listed here. Each entry must be re-confirmed in a browser; it is evidence, not a blanket bypass.",
+  "hosts": [
+    {
+      "host": "www.sbp.org.pk",
+      "statuses": [403],
+      "rationale": "State Bank of Pakistan web application firewall returns HTTP 403 to curl, including with a browser user agent, while the circular pages open normally in a browser.",
+      "confirmed_in_browser": "2026-10-10",
+      "record_ids": [
+        "sbp-cloud-outsourcing-framework-2023",
+        "digital-banks-framework-2022"
+      ],
+      "browser_evidence": {
+        "sbp-cloud-outsourcing-framework-2023": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2023 opened: SBP circular page 'BPRD Circular No. 01' (2023), referencing BPRD Circular No. 05 of 2017 on Enterprise Technology Governance and Risk Management.",
+        "digital-banks-framework-2022": "https://www.sbp.org.pk/circulars/bprd-circular-no-01-of-2022 opened: heading 'Licensing and Regulatory Framework for Digital Banks', annex link BPRD-2022-C1-Annex.pdf."
+      }
+    },
+    {
+      "host": "www.secp.gov.pk",
+      "statuses": [403],
+      "rationale": "Securities and Exchange Commission of Pakistan site returns HTTP 403 to curl, including with a browser user agent, while the document page opens normally in a browser.",
+      "confirmed_in_browser": "2026-10-10",
+      "record_ids": [
+        "secp-cloud-adoption-guidelines-2021-draft"
+      ],
+      "browser_evidence": {
+        "secp-cloud-adoption-guidelines-2021-draft": "https://www.secp.gov.pk/document/draft-cloud-adoption-guidelines-for-incorporated-companies/ opened: 'Draft Cloud Adoption Guidelines for Incorporated Companies', created 07/30/2021, attachment SECPs-Cloud-Adoption-Guidelines-for-Incorporated-Companies.pdf."
+      }
+    }
+  ]
+}

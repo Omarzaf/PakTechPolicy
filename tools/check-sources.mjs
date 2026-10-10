@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve, sep } from "node:path";
+import { matchAccessProtection } from "./release-contract.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const getFlag = (name, fallback) => {
@@ -21,6 +22,9 @@ const resolveInsideRoot = (name) => {
 const inputPath = resolveInsideRoot(inputName);
 const outputPath = resolveInsideRoot(outputName);
 const policies = JSON.parse(await readFile(inputPath, "utf8"));
+const allowlist = JSON.parse(
+  await readFile(resolve(root, "research", "access-protection-allowlist.json"), "utf8"),
+);
 
 const check = (policy) =>
   new Promise((complete) => {
@@ -56,6 +60,17 @@ const check = (policy) =>
       const authenticationRedirect = /(?:\/|[?&])(login|sign-?in|auth)(?:\/|[?&#=]|$)/i.test(
         finalUrl,
       );
+      const reachable =
+        httpCode >= 200 &&
+        httpCode < 300 &&
+        supportedContent &&
+        !authenticationRedirect &&
+        sizeBytes >= 512;
+      // Never upgrades reachability: an allowlist match is recorded alongside
+      // reachable: false so the release gate can apply its narrower rule.
+      const protection = reachable
+        ? null
+        : matchAccessProtection(policy.primary_source_url, httpCode, allowlist);
       complete({
         id: policy.id,
         verification: policy.verification,
@@ -64,12 +79,10 @@ const check = (policy) =>
         http_code: httpCode,
         content_type: contentType || null,
         size_bytes: sizeBytes,
-        reachable:
-          httpCode >= 200 &&
-          httpCode < 300 &&
-          supportedContent &&
-          !authenticationRedirect &&
-          sizeBytes >= 512,
+        reachable,
+        ...(protection
+          ? { access_protected: true, allowlist_rationale: protection.rationale }
+          : {}),
         elapsed_ms: Date.now() - started,
         exit_code: exitCode,
         error: stderr.trim() || null,
@@ -93,10 +106,14 @@ const audit = {
 await writeFile(outputPath, `${JSON.stringify(audit, null, 2)}\n`, "utf8");
 
 const unexpected = results.filter(
-  ({ reachable, verification }) => verification === "Verified" && !reachable,
+  ({ id, reachable, verification, access_protected: accessProtected }) =>
+    verification === "Verified" &&
+    !reachable &&
+    !(accessProtected && allowlist.hosts.some((entry) => (entry.record_ids ?? []).includes(id))),
 );
+const protectedCount = results.filter(({ access_protected: flag }) => flag).length;
 console.log(
-  `SOURCE_AUDIT records=${results.length} reachable=${audit.reachable_count} unexpected_failures=${unexpected.length}`,
+  `SOURCE_AUDIT records=${results.length} reachable=${audit.reachable_count} access_protected=${protectedCount} unexpected_failures=${unexpected.length}`,
 );
 if (unexpected.length) {
   console.error(unexpected.map(({ id, http_code }) => `${id}: HTTP ${http_code}`).join("\n"));

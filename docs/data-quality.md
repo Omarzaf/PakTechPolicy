@@ -35,6 +35,11 @@ judgment, notification, or implementation change exists.
 - Release-gate cross-check (offline): every `Verified` record must have matching,
   reachable evidence for its current URL in `research/source-link-audit.json`, so
   a record cannot ship as `Verified` after its URL changes without re-auditing
+- Access-protected sources: hosts that serve bot challenges to scripted
+  clients but were opened in a browser are listed per record in
+  `research/access-protection-allowlist.json`; the audit flags them
+  `access_protected` (never `reachable`) and the release gate accepts only
+  allowlisted host/status/record combinations
 - Conservative status/verification alignment
 - Search, filtering, sorting, aggregation, malformed-hash, date-safety, and
   release-gate tests
