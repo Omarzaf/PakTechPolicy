@@ -3,7 +3,7 @@ import { resolve, sep } from "node:path";
 import { DOMAIN_TAXONOMY } from "../src/policy-engine.js";
 import { collectIndicatorDatasetFailures } from "./indicator-contract.mjs";
 import { collectOfficialSourceFailures } from "./official-source-contract.mjs";
-import { assertV1RecordCount } from "./release-contract.mjs";
+import { assertV1RecordCount, verifiedEvidenceFailures } from "./release-contract.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const fileFlagIndex = process.argv.indexOf("--file");
@@ -207,23 +207,15 @@ if (releaseMode) {
   // release gate does not hit the network, but it does refuse to ship a Verified
   // record unless matching, reachable evidence exists for its current URL. This
   // catches a record flipped to Verified, or a URL changed, without re-auditing.
+  // A non-reachable Verified record passes only if check-sources flagged it
+  // access_protected AND its host, status and record id are listed in the
+  // browser-confirmed access-protection allowlist.
   const auditPath = resolve(root, "research", "source-link-audit.json");
+  const allowlistPath = resolve(root, "research", "access-protection-allowlist.json");
   try {
     const audit = JSON.parse(await readFile(auditPath, "utf8"));
-    const evidenceById = new Map((audit.results ?? []).map((result) => [result.id, result]));
-    for (const policy of policies) {
-      if (policy.verification !== "Verified") continue;
-      const evidence = evidenceById.get(policy.id);
-      if (!evidence) {
-        failures.push(`${policy.id}: no source-audit evidence for a Verified record`);
-      } else if (evidence.url !== policy.primary_source_url) {
-        failures.push(`${policy.id}: source-audit URL is stale; re-run check:sources`);
-      } else if (!evidence.reachable) {
-        failures.push(
-          `${policy.id}: Verified record failed the source audit (HTTP ${evidence.http_code})`,
-        );
-      }
-    }
+    const allowlist = JSON.parse(await readFile(allowlistPath, "utf8"));
+    failures.push(...verifiedEvidenceFailures(policies, audit, allowlist));
   } catch (error) {
     failures.push(`source audit unavailable: ${error.message}`);
   }

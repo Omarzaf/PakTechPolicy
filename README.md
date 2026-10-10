@@ -54,10 +54,20 @@ corepack enable
 pnpm install --frozen-lockfile
 pnpm build
 pnpm dev
+pnpm check:sources   # network audit of primary sources -> research/source-link-audit.json
+pnpm verify          # offline release gate against the committed audit
 ```
 
 The local preview defaults to `http://127.0.0.1:4173/`. The dependency-free
 build writes the public artifact to `dist/`.
+
+Some official hosts return HTTP 403 bot challenges to scripted checks while
+serving the document to a browser. Those hosts are listed, with the statuses,
+a rationale, the browser-confirmation date and the exact record ids, in
+`research/access-protection-allowlist.json`. The source audit still records
+such URLs as `reachable: false`, adding `access_protected: true`; the release
+gate accepts a `Verified` record in that state only when its host, status and
+record id are all allowlisted. Any other failure still fails the release.
 
 ## Verify a release
 
